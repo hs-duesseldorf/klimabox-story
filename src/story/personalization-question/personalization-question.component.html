@@ -1,0 +1,11 @@
+<div class="card text-center">
+  <div class="card-header">Frage zum Thema {{ questionCategory }}</div>
+  <div class="card-body">
+    <h1 class="card-title">{{ questionText }}</h1>
+    <ul>
+      <li *ngFor="let answer of answers">
+        <button class="btn btn-outline-dark">{{ answer.text }}</button>
+      </li>
+    </ul>
+  </div>
+</div>
