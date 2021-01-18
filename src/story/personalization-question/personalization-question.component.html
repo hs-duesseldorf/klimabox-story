@@ -1,11 +1,33 @@
-<div class="card text-center">
-  <div class="card-header">Frage zum Thema {{ questionCategory }}</div>
-  <div class="card-body">
-    <h1 class="card-title">{{ questionText }}</h1>
-    <ul>
-      <li *ngFor="let answer of answers">
-        <button class="btn btn-primary">{{ answer.text }}</button>
-      </li>
-    </ul>
+<div class="container questionContainer mt-5">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-4">
+      <h1>{{ questionText }}</h1>
+    </div>
+    <div class="col-7">
+      <div class="row mb-1" *ngFor="let answer of answers">
+        <div class="col-6">
+          <button class="btn rounded float-left">
+            <a href="{{ answer.articleUrl }}"></a>
+            <img src="{{ answer.imageSource }}" width="500" class="rounded-3">
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+
+<!--
+<div class="card text-center">
+  <div class="card-body">
+    <h1 class="card-title">{{ questionText }}</h1>
+    <div class="list-group list-group-horizontal">
+      <div *ngFor="let answer of answers">
+        <button class="btn rounded">
+          <img src="{{answer.imageSource}}" class="rounded-3"></button>
+      </div>
+    </div>
+  </div>
+</div>
+-->

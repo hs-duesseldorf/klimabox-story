@@ -1,0 +1,9 @@
+h1 {
+  font-size: 45pt;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: #242424;
+}
+.questionContainer {
+  margin-top: 150px !important;
+}
