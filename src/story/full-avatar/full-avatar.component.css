@@ -6,4 +6,18 @@
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
+    border: 2px solid #f7f7f7;
+    box-shadow: none;
+
+}
+.full-avatar-img:hover {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.596);
+    border-color: #ccc;
+}
+.full-avatar-img:active {
+    box-shadow: none;
+    border-color: #AEA79F;
+}
+.app-full-avatar {
+
 }
