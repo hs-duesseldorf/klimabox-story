@@ -1,0 +1,9 @@
+
+.full-avatar-img {
+    display: flex;
+    border-radius: 8px;
+    flex-grow: 1;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
