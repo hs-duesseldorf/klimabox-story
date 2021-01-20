@@ -8,11 +8,13 @@
     margin-bottom: 10px;
     border: 2px solid #f7f7f7;
     box-shadow: none;
+    opacity: 0.5;
 
 }
 .full-avatar-img:hover {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.596);
     border-color: #ccc;
+    opacity: 1;
 }
 .full-avatar-img:active {
     box-shadow: none;
