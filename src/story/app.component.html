@@ -1,4 +1,4 @@
-<div class="toolbar" role="banner">
+<!--<div class="toolbar" role="banner">
   <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
   <span>KLIMABOX</span>
     <div class="spacer"></div>
@@ -48,4 +48,27 @@
   </svg>
 
 </div>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet>-->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand logo" href="#">KLIMABOX |</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">STORY</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">ARCHIV</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">ABOUT</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<app-personalization-question></app-personalization-question>
