@@ -9,7 +9,7 @@ export class PersonalizationQuestionDataService {
   questionText = 'Wie ernährst du dich?';
   answers = [
     {
-      text: 'Fleischbasiert',
+      text: 'Fleischlastig',
       imageSource: './assets/images/fleischlastig.png',
       articleUrl: '#'
     },
