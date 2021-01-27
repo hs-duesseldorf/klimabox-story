@@ -1,0 +1,16 @@
+.logo {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #197EB7;
+  font-size: 30pt;
+}
+nav {
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: rgba(0,0,0,0);
+}
+.nav-item {
+  font-family: Arial, sans-serif;
+  color: #242424 !important;
+  font-size: 25pt;
+}
