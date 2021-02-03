@@ -4,7 +4,7 @@
     height: 100%;
     opacity: 0.5;
     align-self: flex-end;
-    flex-grow: 1;
+    flex-grow: 0;
     width: fit-content;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
@@ -29,7 +29,7 @@
 .full-avatar-second-column {
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
+    flex-grow: 3;
     background-color: #ccc;
     text-align: start;
     align-items: center;
@@ -79,6 +79,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 20px;
 }
 .name {
     font-size: 15pt;
@@ -86,9 +87,10 @@
     white-space: nowrap;
     display: flex;
     flex-shrink: 3;
+    align-self: baseline;
 }
 .description {
     font-size: 12pt;
     display: flex;
-    flex-shrink: 3;
+    align-self: baseline;
 }
