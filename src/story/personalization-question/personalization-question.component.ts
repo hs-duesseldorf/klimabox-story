@@ -8,12 +8,10 @@ import {PersonalizationQuestionDataService} from "../personalization-question-da
 })
 // @ts-ignore
 export class PersonalizationQuestionComponent implements OnInit {
-  questionCategory;
   questionText;
   answers;
 
   constructor(private personalizationQuestionData: PersonalizationQuestionDataService) {
-    this.questionCategory = this.personalizationQuestionData.getQuestionCategory();
     this.questionText = this.personalizationQuestionData.getQuestionText();
     this.answers = this.personalizationQuestionData.getAnswers();
   }
