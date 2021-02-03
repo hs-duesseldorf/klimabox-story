@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 })
 // @ts-ignore
 export class PersonalizationQuestionDataService {
-  questionCategory = 'Ernährung';
   questionText = 'Was isst du gerne?';
   answers = [
     {
@@ -35,10 +34,6 @@ export class PersonalizationQuestionDataService {
   ];
 
   constructor() { }
-
-  getQuestionCategory() {
-    return this.questionCategory;
-  }
 
   getQuestionText() {
     return this.questionText;
