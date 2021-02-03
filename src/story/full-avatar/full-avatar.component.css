@@ -71,14 +71,14 @@
     opacity: 0.8;
 }
 .full-avatar-image-row-element:hover {
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
     border-color: #77216e8f;
 }
 .full-avatar-image-row-element:active img {
     opacity: 1;
 }
 .full-avatar-image-row-element:active {
-    background-color: #d3cfcf;
+    background-color: #f7f7f7;
     border-color: #77216F;
 }
 
