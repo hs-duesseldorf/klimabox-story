@@ -1,1 +1,19 @@
-<p>chart works!</p>
+<div class="container">
+  <div class="chart-head">
+    <p class="h3">
+      Wie viel
+      <select [ngModel]="selectedChart" (ngModelChange)="show($event)" id="chart-selection">
+        <option [ngValue]="chart" *ngFor="let chart of charts">{{chart.title}}</option>
+      </select>
+    </p>
+  </div>
+  <div class="chart-body">
+    <div *ngFor="let consumption of selectedChart.consumptions" class="consumption">
+      <figure class="figure bar rounded" [ngStyle]="{width: calculatePercentage(consumption) + '%'}">
+        <div [ngStyle]="{backgroundImage:'url(' + consumption.imagePath + ')'}" class="bar-background"></div>
+        <span [id]="consumption.topic" class="topic">{{consumption.topic}}</span>
+      </figure>
+      <span [id]="consumption.topic + '-amount'" class="amount">{{consumption.amount}} {{consumption.unit}}</span>
+    </div>
+  </div>
+</div>
