@@ -14,14 +14,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+      BrowserModule,
+      AppRoutingModule,
+      FormsModule
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule
-    ],
   providers: [],
   bootstrap: [AppComponent]
 })
