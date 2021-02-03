@@ -1,9 +1,49 @@
 h1 {
+  margin-left: 50px;
+  margin-top: 200px;
   font-size: 45pt;
   font-weight: bold;
   font-family: Arial, sans-serif;
   color: #242424;
 }
 .questionContainer {
-  margin-top: 150px !important;
+  margin-top: 0px !important;
+  background-image: url("../../assets/images/personalization-question/kapitel1_table_background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 1360px;
+}
+.answerBox {
+  margin-top: 100px;
+  margin-left: 200px;
+}
+.answerOne {
+  margin-left: 80px;
+}
+.answerTwo {
+  margin-left: -300px;
+  margin-top: -50px;
+}
+.answerThree {
+  margin-left: 400px;
+  margin-top: -80px;
+}
+.answerFour {
+  margin-top: -50px;
+}
+.btnAnswer {
+  opacity: 0.70;
+}
+.btn.hover, .btn:hover, .btn.focus, .btn:focus {
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+  outline: 0;
+  opacity: 1;
+}
+.nextButton {
+  font-family: Arial, sans-serif;
+  font-size: 25pt;
+  font-weight: bold;
+  color: #242424;
 }
