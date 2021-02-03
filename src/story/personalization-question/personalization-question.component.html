@@ -1,33 +1,20 @@
-<div class="container questionContainer mt-5">
+<div class="container-fluid questionContainer">
   <div class="row">
     <div class="col-1"></div>
     <div class="col-4">
       <h1>{{ questionText }}</h1>
     </div>
-    <div class="col-7">
-      <div class="row mb-1" *ngFor="let answer of answers">
-        <div class="col-6">
-          <button class="btn rounded float-left">
-            <a href="{{ answer.articleUrl }}"></a>
-            <img src="{{ answer.imageSource }}" width="500" class="rounded-3">
-          </button>
-        </div>
+  </div>
+    <div class="row answerBox">
+      <div class="col-lg-5 foodButton" *ngFor="let answer of answers">
+          <a class="btn btnAnswer {{answer.cssClass}}" href="{{ answer.articleUrl }}"><img src="{{ answer.imageSource }}"></a>
       </div>
     </div>
-  </div>
-</div>
-
-
-<!--
-<div class="card text-center">
-  <div class="card-body">
-    <h1 class="card-title">{{ questionText }}</h1>
-    <div class="list-group list-group-horizontal">
-      <div *ngFor="let answer of answers">
-        <button class="btn rounded">
-          <img src="{{answer.imageSource}}" class="rounded-3"></button>
-      </div>
+  <div class="row">
+    <div class="col-lg-8"></div>
+    <div class="col-lg-4">
+      <button class="btn nextButton">Weiter ohne Auswahl >></button>
     </div>
   </div>
-</div>
--->
+  </div>
+

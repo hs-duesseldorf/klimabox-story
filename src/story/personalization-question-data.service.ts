@@ -6,22 +6,31 @@ import { Injectable } from '@angular/core';
 // @ts-ignore
 export class PersonalizationQuestionDataService {
   questionCategory = 'Ernährung';
-  questionText = 'Wie ernährst du dich?';
+  questionText = 'Was isst du gerne?';
   answers = [
     {
-      text: 'Fleischlastig',
-      imageSource: './assets/images/fleischlastig.png',
-      articleUrl: '#'
+      text: 'Fleisch',
+      imageSource: 'assets/images/personalization-question/fleisch.png',
+      articleUrl: '#',
+      cssClass: 'answerOne'
     },
     {
-      text: 'Vegetarisch',
-      imageSource: './assets/images/vegetarisch.png',
-      articleUrl: '#'
+      text: 'Käse',
+      imageSource: 'assets/images/personalization-question/kaese.png',
+      articleUrl: '#',
+      cssClass: 'answerTwo'
     },
     {
-      text: 'Vegan',
-      imageSource: './assets/images/vegan.png',
-      articleUrl: '#'
+      text: 'Avocado',
+      imageSource: 'assets/images/personalization-question/avocado.png',
+      articleUrl: '#',
+      cssClass: 'answerThree'
+    },
+    {
+      text: 'Eier',
+      imageSource: 'assets/images/personalization-question/eier.png',
+      articleUrl: '#',
+      cssClass: 'answerFour'
     }
   ];
 
