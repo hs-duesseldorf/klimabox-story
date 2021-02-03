@@ -9,12 +9,6 @@
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
 }
-.full-avatar-img:hover {
-    opacity: 0.8;
-}
-.full-avatar-img:active {
-    opacity: 1;
-}
 
 .full-avatar-first-column {
     display: flex;
@@ -65,12 +59,27 @@
   }
 
 .full-avatar-image-row-element {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     flex-grow: 4;
     justify-content: space-between;
     border: 1px solid #ccc;
     border-radius: 8px;
+}
+.full-avatar-image-row-element:hover img {
+    opacity: 0.8;
+}
+.full-avatar-image-row-element:hover {
+    background-color: #f7f7f7;
+    border-color: #77216e8f;
+}
+.full-avatar-image-row-element:active img {
+    opacity: 1;
+}
+.full-avatar-image-row-element:active {
+    background-color: #d3cfcf;
+    border-color: #77216F;
 }
 
 .full-avatar-image-row-text {
