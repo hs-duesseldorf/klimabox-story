@@ -23,4 +23,5 @@ import { NavbarComponent } from './navbar/navbar.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+// @ts-ignore
 export class AppModule { }
