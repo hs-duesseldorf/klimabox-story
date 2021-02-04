@@ -93,7 +93,6 @@
 .name {
     font-size: 15pt;
     font-weight: bold;
-    white-space: nowrap;
     display: flex;
     flex-shrink: 3;
     align-self: baseline;
