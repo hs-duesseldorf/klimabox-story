@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {PersonalizationQuestionDataService} from "../personalization-question-data.service";
+import {Component, Input, OnInit} from '@angular/core';
+import {PersonalQuestion} from './personalQuestion';
 
 @Component({
   selector: 'app-personalization-question',
@@ -8,15 +8,21 @@ import {PersonalizationQuestionDataService} from "../personalization-question-da
 })
 // @ts-ignore
 export class PersonalizationQuestionComponent implements OnInit {
-  questionText;
-  answers;
 
-  constructor(private personalizationQuestionData: PersonalizationQuestionDataService) {
-    this.questionText = this.personalizationQuestionData.getQuestionText();
-    this.answers = this.personalizationQuestionData.getAnswers();
+  @Input() // @ts-ignore
+  personalQuestions: PersonalQuestion[] = [];
+  questionToShow: PersonalQuestion = new PersonalQuestion();
+
+  constructor() {
   }
 
   ngOnInit(): void {
+    if (this.personalQuestions.length  > 0) {
+      this.show(this.personalQuestions[0]);
+    }
   }
 
+  show(question: PersonalQuestion): void {
+    this.questionToShow = question;
+  }
 }
