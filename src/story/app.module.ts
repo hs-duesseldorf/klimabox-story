@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ChartComponent } from './chart/chart.component';
 import {FormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ZoomHeadlineComponent } from './zoom-headline/zoom-headline.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChartComponent,
-    NavbarComponent
+    NavbarComponent,
+    ZoomHeadlineComponent
   ],
   imports: [
       BrowserModule,

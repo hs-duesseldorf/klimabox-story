@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+// @ts-ignore
 export class AppComponent {
   title = 'Klimabox-Story';
 }
