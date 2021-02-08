@@ -1,0 +1,85 @@
+body{
+    height: 8000px;
+}
+#buildingA {
+    position: fixed;
+    right: 0%;
+    bottom: -200%;/*100vh;*/
+    width: 45%;
+}
+#buildingB {
+    position: fixed;
+    right: 41%;
+    bottom: -100%;/*100vh;*/
+    width: 30%;
+}
+#buildingC {
+    position: fixed;
+    right: 70%;
+    bottom: -100%;/*100vh;*/;
+    width: 35%;
+}
+#stars {
+    position: fixed;
+    width: 100%;
+    top:0px;
+    
+}
+#mountain {
+    position: fixed;
+    width: 100%;
+    bottom: -10%;
+}
+#sun {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    top: 100%;
+    left: 0%;
+}
+
+#headline {
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 5%;
+    width: 35%;
+    /*font-size: 100px;
+    font-weight: bold;
+    line-height: 85px;*/
+}
+
+#headline p:nth-child(2) {
+    margin-left: 15px;
+}
+
+#clue {
+    position: fixed;
+    color: white;
+    bottom: 10%;
+    right: 5%;
+    width: 30%;
+    /*font-size: 50px;
+    font-weight: bold;*/
+}
+
+#text {
+    position: fixed;
+    color: white;
+    top: 45%;
+    left: 42%;
+    width: 20%;
+    /*font-size: 50px;
+    line-height: 40px;*/
+    opacity: 0;
+}
+
+#text p:nth-child(1){
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+#text p:nth-child(2){
+    margin-left: 50px;
+}
