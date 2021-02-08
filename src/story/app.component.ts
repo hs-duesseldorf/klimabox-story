@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {HeadlineImage} from './zoom-headline/headlineImage';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +8,7 @@ import {HeadlineImage} from './zoom-headline/headlineImage';
 // @ts-ignore
 export class AppComponent {
   title = 'Klimabox-Story';
-  zoomHeadlineImage: HeadlineImage[] = [];
 
   ngOnInit(): void {
-    let headlineImageMeat = HeadlineImage.createWith('assets/images/zoom-headline/fleisch.png', 'assets/images/zoom-headline/kapitel1_table_background.png' );
-    this.zoomHeadlineImage.push(headlineImageMeat);
   }
 }
