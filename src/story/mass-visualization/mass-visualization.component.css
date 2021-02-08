@@ -1,0 +1,29 @@
+.backgroundContainer {
+  height: 200vh;
+}
+.massContainer {
+  height: 200vh;
+  width: 100vw;
+  margin-left: -1vw;
+}
+.textContainer {
+  background-color: rgba(59, 59, 59, 0.75);
+  border-radius: 20px;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-top: 100vh;
+}
+.headlineText {
+  font-size: 7vh;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+.textBody {
+  font-size: 4vh;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
