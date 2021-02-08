@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Chart} from '../chart/chart';
 import {HeadlineImage} from './headlineImage';
 
 @Component({
