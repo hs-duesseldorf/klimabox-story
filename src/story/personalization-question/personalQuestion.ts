@@ -4,11 +4,13 @@ export class PersonalQuestion {
   private _questionTitle: string;
   private _choices: Choice[];
   private _backgroundImagePath: string;
+  private _link: string;
 
-  static createWith(questionTitle: string, backgroundImage: string): PersonalQuestion {
+  static createWith(questionTitle: string, backgroundImage: string, link: string): PersonalQuestion {
     let question = new PersonalQuestion();
     question._questionTitle = questionTitle;
     question._backgroundImagePath = backgroundImage;
+    question._link = link;
     return question;
   }
 
@@ -16,6 +18,7 @@ export class PersonalQuestion {
     this._questionTitle = '';
     this._backgroundImagePath = '';
     this._choices = [];
+    this._link = '';
   }
 
   addChoice(imagePath: string, link: string, posX: string, posY: string) {
@@ -45,5 +48,13 @@ export class PersonalQuestion {
 
   set backgroundImage(value: string) {
     this._backgroundImagePath = value;
+  }
+
+  get link() {
+    return this._link;
+  }
+
+  set link(value: string) {
+    this._link = value;
   }
 }
