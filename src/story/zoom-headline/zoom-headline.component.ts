@@ -13,6 +13,7 @@ export class ZoomHeadlineComponent implements OnInit {
   @Input()
     // @ts-ignore
   headlineImages: HeadlineImage[] = [];
+  imageToShow: HeadlineImage = new HeadlineImage();
 
   constructor() { }
 
@@ -23,7 +24,7 @@ export class ZoomHeadlineComponent implements OnInit {
   }
 
   show(headlineImage: HeadlineImage): void {
-
+    this.imageToShow = headlineImage;
   }
 
 }
