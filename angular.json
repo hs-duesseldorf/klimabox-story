@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "klimabox-story"
+  "defaultProject": "klimabox-story",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -5,18 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonalizationQuestionComponent } from './personalization-question/personalization-question.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ChapterButtonComponent } from './chapter-button/chapter-button.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonalizationQuestionComponent,
-    NavbarComponent
+    NavbarComponent,
+    ChapterButtonComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 // @ts-ignore
