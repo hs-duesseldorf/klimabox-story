@@ -1,0 +1,22 @@
+.backgroundContainer {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 10vh;
+}
+.imageContainer {
+  height: 90vh;
+  position: relative;
+}
+.imageContainer img {
+  height: 80vh;
+  width: auto;
+  left: 20vh;
+  position: absolute;
+}
+.next-text {
+  font-family: Arial, sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  margin-top: 75vh;
+}

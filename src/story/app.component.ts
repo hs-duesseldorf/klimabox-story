@@ -12,7 +12,7 @@ export class AppComponent {
   zoomHeadlineImage: HeadlineImage[] = [];
 
   ngOnInit(): void {
-    let headlineImageMeat = HeadlineImage.createWith('assets/images/personalization-question/fleisch.png', 'assets/images/personalization-question/kapitel1_table_background.png' );
+    let headlineImageMeat = HeadlineImage.createWith('assets/images/zoom-headline/fleisch.png', 'assets/images/zoom-headline/kapitel1_table_background.png' );
     this.zoomHeadlineImage.push(headlineImageMeat);
   }
 }

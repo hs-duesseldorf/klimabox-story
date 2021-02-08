@@ -11,6 +11,7 @@ export class HeadlineImage {
 
   constructor() {
     this._imagePath = '';
+    this._backgroundImage = '';
   }
 
   set imagePath(value: string) {
