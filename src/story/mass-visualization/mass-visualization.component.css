@@ -1,8 +1,8 @@
 .backgroundContainer {
-  height: 200vh;
+  height: 208vh;
 }
 .massContainer {
-  height: 200vh;
+  height: 208vh;
   width: 100vw;
   margin-left: -1vw;
 }
@@ -26,4 +26,5 @@
   font-weight: bold;
   text-align: center;
   color: white;
+  white-space: pre-line;
 }
