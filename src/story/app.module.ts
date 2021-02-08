@@ -7,13 +7,15 @@ import { PersonalizationQuestionComponent } from './personalization-question/per
 import { ChartComponent } from './chart/chart.component';
 import {FormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ZoomHeadlineComponent } from './zoom-headline/zoom-headline.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonalizationQuestionComponent,
     ChartComponent,
-    NavbarComponent
+    NavbarComponent,
+    ZoomHeadlineComponent
   ],
   imports: [
       BrowserModule,
