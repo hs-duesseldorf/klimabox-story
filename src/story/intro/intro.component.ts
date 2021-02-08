@@ -31,7 +31,7 @@ export class IntroComponent implements OnInit {
     
       gsap.to(clue, {
         scrollTrigger: {
-          trigger: hl,
+          trigger: "hl",
           start: "top top",
           end: "+=300",
           scrub: true,
@@ -42,7 +42,7 @@ export class IntroComponent implements OnInit {
 
       gsap.to(txt, {
         scrollTrigger: {
-          trigger: body,
+          trigger: "body",
           start: "1200px",
           end: "+=800",
           scrub: true
@@ -52,7 +52,7 @@ export class IntroComponent implements OnInit {
 
       gsap.to(sun, {
         scrollTrigger: {
-          trigger: body,
+          trigger: "body",
           start: "1000px",
           end: "+=400",
           scrub: true
@@ -62,7 +62,7 @@ export class IntroComponent implements OnInit {
 
       gsap.to(mountain, {
         scrollTrigger: {
-          trigger: body,
+          trigger: "body",
           start: "2500px",
           scrub: true,
           end: "+=1000px"
@@ -72,7 +72,7 @@ export class IntroComponent implements OnInit {
 
       gsap.to(txt, {
         scrollTrigger: {
-          trigger: body,
+          trigger: "body",
           start: "2500px",
           scrub: true,
           end: "+=400px"
@@ -82,7 +82,7 @@ export class IntroComponent implements OnInit {
 
       gsap.to(building1, {
         scrollTrigger: {
-          trigger: body,
+          trigger: "body",
           start: "3000px",
           scrub: true,
           end: "+=1500px"
@@ -92,7 +92,7 @@ export class IntroComponent implements OnInit {
 
       gsap.to(building2, {
         scrollTrigger: {
-          trigger: body,
+          trigger: "body",
           start: "3000px",
           scrub: true,
           end: "+=1500px"
@@ -102,7 +102,7 @@ export class IntroComponent implements OnInit {
 
       gsap.to(building3, {
         scrollTrigger: {
-          trigger: body,
+          trigger: "body",
           start: "3000px",
           scrub: true,
           end: "+=1500px"
@@ -112,7 +112,7 @@ export class IntroComponent implements OnInit {
 
       gsap.to(building1, {
         scrollTrigger: {
-          trigger: body,
+          trigger: "body",
           start: "5000px",
           scrub: true,
           end: "+=1500px"
@@ -124,7 +124,7 @@ export class IntroComponent implements OnInit {
 
       gsap.to(building2, {
         scrollTrigger: {
-          trigger: body,
+          trigger: "body",
           start: "5000px",
           scrub: true,
           end: "+=1500px"
@@ -135,7 +135,7 @@ export class IntroComponent implements OnInit {
 
       gsap.to(building3, {
         scrollTrigger: {
-          trigger: body,
+          trigger: "body",
           start: "5000px",
           scrub: true,
           end: "+=1500px"
