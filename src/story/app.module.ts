@@ -8,6 +8,7 @@ import { ChartComponent } from './chart/chart.component';
 import {FormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ZoomHeadlineComponent } from './zoom-headline/zoom-headline.component';
+import { MassVisualizationComponent } from './mass-visualization/mass-visualization.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ZoomHeadlineComponent } from './zoom-headline/zoom-headline.component';
     PersonalizationQuestionComponent,
     ChartComponent,
     NavbarComponent,
-    ZoomHeadlineComponent
+    ZoomHeadlineComponent,
+    MassVisualizationComponent
   ],
   imports: [
       BrowserModule,
