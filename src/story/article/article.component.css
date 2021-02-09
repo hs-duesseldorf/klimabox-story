@@ -1,0 +1,103 @@
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#heading {
+    position: relative;
+    margin-bottom: 8%;
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10%;
+    margin-left: -2%;
+}
+
+p {
+    font-size: 30px;
+    margin-left: 3%;
+    margin-right: 3%;
+    color: black;
+    line-height: normal;
+}
+
+.next {
+    font-weight: bold;
+    float: right;
+    margin-right: 0%;
+    margin-top: 5%;
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+}
+
+a:hover {
+    color: grey;
+}
+
+.card {
+    width: 120%;
+    opacity: 0.8;
+    border-radius: 25px;
+    padding: 3%;
+    margin-left: -10%;
+    margin-top: 5%;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 32px;
+        margin-left: 27%;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    .card {
+        width: 60% !important;
+        margin-left: 20% !important;
+    }
+
+    .next {
+        font-size: 26px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    
+    .card {
+        margin-left: 5% !important;
+        width: 90% !important;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    .next {
+        font-size: 30px;
+    }
+
+    h2 {
+        margin-left: 12% !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    h2 {
+        margin-left: 9%;
+    }
+    
+    .card {
+        width: 95%;
+        margin-left: 2%;
+    }
+
+}
