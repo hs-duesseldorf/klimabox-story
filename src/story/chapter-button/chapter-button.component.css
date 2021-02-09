@@ -1,17 +1,24 @@
 .container {
     position: relative;
+    width: 16vw;
+
+    margin: 0.8vw;
 }
-.chapter-button {
-    border-radius: 40px;
-    box-shadow: 10px;
+.button {
+    width: inherit;
+    opacity: 0.6;
 }
-.number{
-    position: absolute;
-  top: 7%;
-  width: 95%;
-  text-align: center;
-  font-size: 120px;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+.button:hover {
+    opacity: 1;
+}
+.chapter-img {
+    width: inherit;
+    border-radius: 2.5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.title {
+    width: inherit;
+    font: 12px Arial, sans-serif;
+    text-align: center;
 }

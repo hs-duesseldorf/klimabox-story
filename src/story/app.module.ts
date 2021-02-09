@@ -7,6 +7,7 @@ import { PersonalizationQuestionComponent } from './personalization-question/per
 import { NavbarComponent } from './navbar/navbar.component';
 import { ChapterButtonComponent } from './chapter-button/chapter-button.component';
 import { HomeComponent } from './home/home.component';
+import { ChaptersService } from './home/chapters.service';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule
   ],
   providers: [
+    ChaptersService
   ],
   bootstrap: [AppComponent]
 })
