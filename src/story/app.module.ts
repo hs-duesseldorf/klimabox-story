@@ -10,7 +10,9 @@ import {FormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ZoomHeadlineComponent } from './zoom-headline/zoom-headline.component';
 import { MassVisualizationComponent } from './mass-visualization/mass-visualization.component';
-
+import { ChapterButtonComponent } from './chapter-button/chapter-button.component';
+import { HomeComponent } from './home/home.component';
+import { ChaptersService } from './home/chapters.service';
 
 @NgModule({
   declarations: [
@@ -20,14 +22,18 @@ import { MassVisualizationComponent } from './mass-visualization/mass-visualizat
     ChartComponent,
     NavbarComponent,
     ZoomHeadlineComponent,
-    MassVisualizationComponent
+    MassVisualizationComponent,
+    ChapterButtonComponent,
+    HomeComponent
   ],
   imports: [
       BrowserModule,
       AppRoutingModule,
       FormsModule
   ],
-  providers: [],
+  providers: [
+    ChaptersService
+  ],
   bootstrap: [AppComponent]
 })
 // @ts-ignore

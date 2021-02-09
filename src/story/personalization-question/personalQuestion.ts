@@ -4,6 +4,7 @@ export class PersonalQuestion {
   private _questionTitle: string;
   private _choices: Choice[];
   private _backgroundImagePath: string;
+
   private _link: string;
 
   static createWith(questionTitle: string, backgroundImage: string, link: string): PersonalQuestion {
@@ -11,6 +12,7 @@ export class PersonalQuestion {
     question._questionTitle = questionTitle;
     question._backgroundImagePath = backgroundImage;
     question._link = link;
+
     return question;
   }
 
@@ -19,6 +21,7 @@ export class PersonalQuestion {
     this._backgroundImagePath = '';
     this._choices = [];
     this._link = '';
+
   }
 
   addChoice(imagePath: string, link: string, posX: string, posY: string) {
