@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ArticleComponent } from './article/article.component';
+import { environment } from '../environments/environment';
 import { IntroComponent } from './intro/intro.component';
 import { PersonalizationQuestionComponent } from './personalization-question/personalization-question.component';
 import { ChartComponent } from './chart/chart.component';
@@ -14,9 +16,11 @@ import { ChapterButtonComponent } from './chapter-button/chapter-button.componen
 import { HomeComponent } from './home/home.component';
 import { ChaptersService } from './home/chapters.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    ArticleComponent,
     IntroComponent,
     PersonalizationQuestionComponent,
     ChartComponent,
@@ -32,7 +36,8 @@ import { ChaptersService } from './home/chapters.service';
       FormsModule
   ],
   providers: [
-    ChaptersService
+    ChaptersService,
+    ...environment.providers
   ],
   bootstrap: [AppComponent]
 })
