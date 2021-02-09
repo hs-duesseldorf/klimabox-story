@@ -1,0 +1,16 @@
+
+.component{
+    padding: 6vw;
+    background-color: transparent;
+    width: inherit;
+}
+.chapters {
+    background-color: transparent;
+    float: left;
+}
+.chapter-button {
+    padding: 5px;
+}
+.start {
+    text-align: right;
+}
