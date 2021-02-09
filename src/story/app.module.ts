@@ -36,11 +36,8 @@ import { ChaptersService } from './home/chapters.service';
       FormsModule
   ],
   providers: [
-    ChaptersService
-  ],
-
-  providers: [
-    ...environment.providers,
+    ChaptersService,
+    ...environment.providers
   ],
   bootstrap: [AppComponent]
 })
