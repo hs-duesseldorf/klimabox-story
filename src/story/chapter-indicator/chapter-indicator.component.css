@@ -1,0 +1,19 @@
+.chapter-number {
+  float: left;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: black;
+  border-radius: 50%;
+  float: left;
+}
+
+.rectangle {
+  height: 30px;
+  width: 5px;
+  margin-left: 18px;
+  background-color: black;
+  clear: both;
+}
