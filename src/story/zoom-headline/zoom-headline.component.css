@@ -1,6 +1,7 @@
 .imageContainer {
   height: 90vh;
   position: relative;
+  margin-top: 20vh;
 }
 .imageContainer img {
   height: 80vh;
