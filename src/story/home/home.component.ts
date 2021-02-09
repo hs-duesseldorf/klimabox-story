@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chapter } from './chapter';
 import { ChaptersService } from './chapters.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class HomeComponent implements OnInit {
   buttonWidth;
 
 
-  constructor(service: ChaptersService) { 
+  constructor(service: ChaptersService, private router: Router) {
     this.chapters = service.getChapters();
     this.screenHeight = (window.screen.height) + "px";
     this.screenWidth = (window.screen.width) + "px";
@@ -34,4 +35,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  routeToChapter(link: string) {
+    this.router.navigateByUrl('/' + link);
+  }
 }

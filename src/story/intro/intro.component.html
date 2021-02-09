@@ -1,24 +1,23 @@
-<html lang="de">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Beispiel für exemplarischen Inhalt im head-Element">
-    <meta name="keywords" content="example, html, head, meta">
-    <link rel="stylesheet" href="../intro/intro.component.css">
-    <!--<link rel="stylesheet" href="example.css">
-    <link rel="start" href="https://wiki.selfhtml.org/wiki/HTML" title="HTML-Dokumentation">-->
-    <title>Exemplarische Kopfdaten</title>
-  </head>
-  <body>
-    
-    <img src="../../assets/images/intro/kapitel1_intro_stars_background.png" id="stars">
-    <img src="../../assets/images/intro/kapitel1_intro_sunrise.png" id="sun">
-    <img src="../../assets/images/intro/kapitel1_intro_stars_foreground.png" id="mountain">
-    <img src="../../assets/images/intro/kapitel1_intro_building-3.png" id="buildingC">
-    <img src="../../assets/images/intro/kapitel1_intro_building-2.png" id="buildingB">
-    <img src="../../assets/images/intro/kapitel1_intro_building-1.png" id="buildingA">
-    <img src="../../assets/images/intro/kapitel1_intro_hl.png" id="headline">
-    <img src="../../assets/images/intro/kapitel1_intro_clue.png" id="clue">
-    <img src="../../assets/images/intro/kapitel1_intro_txt.png" id="text">
-    
-
-  </body>
+<img src="../../assets/images/personalization-question/kapitel1_table_background.png" id="tableBackground">
+<div id="intro">
+  <img src="../../assets/images/intro/kapitel1_intro_stars_background.png" id="stars">
+  <img src="../../assets/images/intro/kapitel1_intro_sunrise.png" id="sun">
+  <img src="../../assets/images/intro/kapitel1_intro_stars_foreground.png" id="mountain">
+  <img src="../../assets/images/intro/kapitel1_intro_building-3.png" id="buildingC">
+  <img src="../../assets/images/intro/kapitel1_intro_building-2.png" id="buildingB">
+  <img src="../../assets/images/intro/kapitel1_intro_building-1.png" id="buildingA">
+  <img src="../../assets/images/intro/kapitel1_intro_hl.png" id="headline">
+  <img src="../../assets/images/intro/kapitel1_intro_clue.png" id="clue">
+  <img src="../../assets/images/intro/kapitel1_intro_txt.png" id="text">
+</div>
+<app-personalization-question [personalQuestions]="question"></app-personalization-question>
+<app-zoom-headline [headlineImages]="zoomHeadlineImage" id="fleisch-headline"></app-zoom-headline>
+<app-mass-visualization [massVisualizations]="massVisualization"></app-mass-visualization>
+<app-article [requestedTopic]="requestedTopic"></app-article>
+<div class="container card">
+  <app-chart [charts]="charts"></app-chart>
+</div>
+<app-personalization-question [personalQuestions]="question2"></app-personalization-question>
+<div id="audioAccordion">
+  <!-- TODO -->
+</div>

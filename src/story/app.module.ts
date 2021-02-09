@@ -15,6 +15,7 @@ import { MassVisualizationComponent } from './mass-visualization/mass-visualizat
 import { ChapterButtonComponent } from './chapter-button/chapter-button.component';
 import { HomeComponent } from './home/home.component';
 import { ChaptersService } from './home/chapters.service';
+import {AudioAccordionComponent} from './audio-accordion/audio-accordion.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ChaptersService } from './home/chapters.service';
     ZoomHeadlineComponent,
     MassVisualizationComponent,
     ChapterButtonComponent,
-    HomeComponent
+    HomeComponent,
+    AudioAccordionComponent
   ],
   imports: [
       BrowserModule,

@@ -4,13 +4,14 @@
         <h2>Kapitelübersicht</h2>
 
         <div class="chapters" *ngFor="let chapter of chapters">
-            <app-chapter-button class="chapter-button" [chapternumber]="chapter.chapternumber" [imgurl]="chapter.imgurl" [title]="chapter.title"></app-chapter-button>
+            <app-chapter-button class="chapter-button" [chapternumber]="chapter.chapternumber"
+                                [imgurl]="chapter.imgurl" [title]="chapter.title" (click)="routeToChapter(chapter.link)"></app-chapter-button>
         </div>
         <div class="start-column">
             <h2 class="start">Starten >></h2>
         </div>
-        
+
     </div>
-    
+
 
 </div>
