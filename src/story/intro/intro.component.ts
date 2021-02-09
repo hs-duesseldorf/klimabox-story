@@ -215,6 +215,26 @@ export class IntroComponent implements OnInit {
       opacity: 0
     });
 
+    gsap.to('#tableBackground', {
+      scrollTrigger: {
+        trigger: '.massContainer',
+        start: 'top top',
+        scrub: true,
+        end: '+=600px'
+      },
+      opacity: 0
+    });
+
+    gsap.to('#tableBackground', {
+      scrollTrigger: {
+        trigger: '.massContainer',
+        start: 'bottom bottom',
+        scrub: true,
+        end: '+=600px'
+      },
+      opacity: 1
+    });
+
   };
 
 }
