@@ -13,8 +13,9 @@ h2 {
     font-size: 45px;
     font-weight: bold;
     color: black;
-    margin-top: 10%;
-    margin-left: -2%;
+    margin-left: 16%;
+    z-index: 1;
+    position: relative;
 }
 
 p {
@@ -29,10 +30,13 @@ p {
     font-weight: bold;
     float: right;
     margin-right: 0%;
-    margin-top: 5%;
+    margin-top: 3%;
     text-decoration: none;
     color: white;
-    font-size: 40px;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2%;
 }
 
 a:hover {
@@ -40,11 +44,11 @@ a:hover {
 }
 
 .card {
-    width: 120%;
+    width: 80%;
     opacity: 0.8;
     border-radius: 25px;
     padding: 3%;
-    margin-left: -10%;
+    margin-left: 10%;
     margin-top: 5%;
 }
 
@@ -61,43 +65,28 @@ a:hover {
     }
 
     .card {
-        width: 60% !important;
-        margin-left: 20% !important;
-    }
-
-    .next {
-        font-size: 26px !important;
+        width: 75%;
     }
 }
 
 @media (max-width: 992px) {
     
     .card {
-        margin-left: 5% !important;
-        width: 90% !important;
+        width: 80%;
     }
 
     p {
         font-size: 24px;
     }
-
-    .next {
-        font-size: 30px;
-    }
-
-    h2 {
-        margin-left: 12% !important;
-    }
 }
 
 @media (max-width: 1200px) {
     h2 {
-        margin-left: 9%;
+        margin-left: 13.5%;
     }
     
     .card {
-        width: 95%;
-        margin-left: 2%;
+        width: 85%;
+        margin-left: 7%;
     }
-
 }
