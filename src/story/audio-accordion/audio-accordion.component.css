@@ -46,9 +46,12 @@
     display: flex;
     flex-direction: row;
     height: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
 }
 .audio-player-header-expand-icon {
-    background-color: beige;
+    background-color: transparent;
     height: 100%;
     padding: 5px;
     cursor: pointer;
