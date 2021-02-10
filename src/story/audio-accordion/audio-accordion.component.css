@@ -12,7 +12,6 @@
     border-radius: 20px;
     background-color: #c5e6f5;
     max-width: 800px;
-    border: 1px solid rgb(214, 214, 214); /* For testing*/
 }
 
 .audio-player-header {
@@ -29,6 +28,7 @@
     display: flex;
     flex-direction: row;
     padding: 5px;
+    justify-content: space-around
 }
 .audio-player-header-name {
     display: flex;
@@ -37,6 +37,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    min-width: 150px;
 }
 .audio-player-header-description {
     display: flex;
@@ -48,7 +49,6 @@
     height: 100%;
     align-items: flex-end;
     justify-content: flex-end;
-    width: 100%;
 }
 .audio-player-header-expand-icon {
     background-color: transparent;
@@ -108,6 +108,7 @@
     }
     .audio-player-header-description {
         font-weight: bold;
+        font-size: smaller;
     }
 }
 
