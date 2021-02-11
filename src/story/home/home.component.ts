@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Chapter } from './chapter';
 import { ChaptersService } from './chapters.service';
-
+import { gsap, snap } from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-home',
@@ -12,26 +13,26 @@ export class HomeComponent implements OnInit {
 
   chapters: Chapter[];
 
-  // chapternumber: number = 1;
-  // imgurl: string = "../assets/home/home_kapitel_1.png";
-  // title: string = "Vom Esstisch zu der Arktis";
-  screenHeight;
-  screenWidth;
-  buttonHeight;
-  buttonWidth;
-
-
   constructor(service: ChaptersService) { 
     this.chapters = service.getChapters();
-    this.screenHeight = (window.screen.height) + "px";
-    this.screenWidth = (window.screen.width) + "px";
-    this.buttonHeight = (window.screen.height / 6 )+ "px";
-    this.buttonWidth = (window.screen.width / 6 ) + "px";
-    console.log(this.screenHeight);
-          console.log(this.screenWidth)
   }
 
   ngOnInit(): void {
+    gsap.registerPlugin(ScrollTrigger)
+    
+    gsap.to(".background", {
+      scrollTrigger: {
+        trigger: ".background",
+        start: "top center",
+        end: "bottom center",
+        scrub: true
+      },
+      y: -50,
+    }
+      )
+    
+  
   }
+  
 
 }

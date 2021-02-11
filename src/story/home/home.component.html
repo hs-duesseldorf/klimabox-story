@@ -1,16 +1,33 @@
-<div class="background">
+<div class="parent">
+    <div class="background">
 
-    <div class="component">
-        <h2>Kapitelübersicht</h2>
-
-        <div class="chapters" *ngFor="let chapter of chapters">
-            <app-chapter-button class="chapter-button" [chapternumber]="chapter.chapternumber" [imgurl]="chapter.imgurl" [title]="chapter.title"></app-chapter-button>
-        </div>
-        <div class="start-column">
-            <h2 class="start">Starten >></h2>
-        </div>
-        
     </div>
-    
-
+    <div class="header">
+        <h1 class="headerfont">Sieh, wie die Klimakrise unsere Welt verändert. <br/>
+            Und was wir dagegen
+            tun können.</h1>
+        <div class="arrow">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+        
+        <section class="bottom">
+            <div class="fade">
+                <br>
+            </div>
+                
+                
+            <div class="component">
+                <h1>Kapitelübersicht</h1>
+                <div class="chapterdiv">
+                    <div class="chapters" *ngFor="let chapter of chapters">
+                        <app-chapter-button class="chapter-button" [chapternumber]="chapter.chapternumber" [imgurl]="chapter.imgurl" [title]="chapter.title"></app-chapter-button>
+                    </div>
+                </div>
+                    <h2 class="start">Starten >></h2>
+                
+                
+            </div>
+        </section>
 </div>
