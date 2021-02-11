@@ -1,8 +1,11 @@
 .container {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    width: 16vw;
-
-    margin: 0.8vw;
+    width: 15vw;
+    align-content: center;
+    align-items: center;
+    margin: 1vw;
 }
 .button {
     width: inherit;
@@ -18,7 +21,11 @@
     
 }
 .title {
+
+    position: relative;
+    margin-top: 2vh;
     width: inherit;
-    font: 12px Arial, sans-serif;
+    max-width: 15.5vw;
+    font: 16px Arial, sans-serif;
     text-align: center;
 }

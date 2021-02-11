@@ -37,3 +37,13 @@
   position: absolute;
   padding-left: 2px;
 }
+
+.card {
+  width: 80%;
+  opacity: 0.8;
+  border-radius: 25px;
+  padding: 3%;
+  margin-left: 10%;
+  margin-top: 35%;
+  margin-bottom: 15%;
+}

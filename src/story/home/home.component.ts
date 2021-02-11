@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Chapter } from './chapter';
 import { ChaptersService } from './chapters.service';
 import {Router} from '@angular/router';
-
+import { gsap, snap } from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-home',
@@ -12,30 +13,28 @@ import {Router} from '@angular/router';
 export class HomeComponent implements OnInit {
 
   chapters: Chapter[];
-
-  // chapternumber: number = 1;
-  // imgurl: string = "../assets/home/home_kapitel_1.png";
-  // title: string = "Vom Esstisch zu der Arktis";
-  screenHeight;
-  screenWidth;
-  buttonHeight;
-  buttonWidth;
-
+  backgroundImagePath: string = 'assets/home/home_header_uncropped.png';
 
   constructor(service: ChaptersService, private router: Router) {
     this.chapters = service.getChapters();
-    this.screenHeight = (window.screen.height) + "px";
-    this.screenWidth = (window.screen.width) + "px";
-    this.buttonHeight = (window.screen.height / 6 )+ "px";
-    this.buttonWidth = (window.screen.width / 6 ) + "px";
-    console.log(this.screenHeight);
-          console.log(this.screenWidth)
   }
 
   ngOnInit(): void {
-  }
+    gsap.registerPlugin(ScrollTrigger)
 
+    gsap.to(".background", {
+      scrollTrigger: {
+        trigger: ".background",
+        start: "top center",
+        end: "bottom center",
+        scrub: true
+      },
+      y: -50,
+    }
+      )
+  }
   routeToChapter(link: string) {
-    this.router.navigateByUrl('/' + link);
+    window.scrollTo(0,0);
+    this.router.navigateByUrl('/' +link );
   }
 }

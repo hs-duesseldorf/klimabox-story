@@ -4,6 +4,8 @@
     margin: 10%;
     justify-content: center;
     height: 100vh;
+  z-index: 1;
+  position: relative;
 }
 
 .audio-player-box {
@@ -12,7 +14,6 @@
     border-radius: 20px;
     background-color: #c5e6f5;
     max-width: 800px;
-    border: 1px solid rgb(214, 214, 214); /* For testing*/
 }
 
 .audio-player-header {
@@ -29,6 +30,7 @@
     display: flex;
     flex-direction: row;
     padding: 5px;
+    justify-content: space-around
 }
 .audio-player-header-name {
     display: flex;
@@ -37,6 +39,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    min-width: 150px;
 }
 .audio-player-header-description {
     display: flex;
@@ -46,9 +49,11 @@
     display: flex;
     flex-direction: row;
     height: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 .audio-player-header-expand-icon {
-    background-color: beige;
+    background-color: transparent;
     height: 100%;
     padding: 5px;
     cursor: pointer;
@@ -105,6 +110,7 @@
     }
     .audio-player-header-description {
         font-weight: bold;
+        font-size: smaller;
     }
 }
 

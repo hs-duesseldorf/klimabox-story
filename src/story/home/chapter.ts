@@ -2,13 +2,13 @@ export class Chapter {
     chapternumber: number;
     imgurl: string;
     title: string;
-    link: string
+    url: string;
 
-    constructor(_chapternumber: number, _imgurl: string, _title: string, _link: string){
+    constructor(_chapternumber: number, _imgurl: string, _title: string, _url: string){
         this.chapternumber = _chapternumber;
         this.imgurl = _imgurl;
         this.title = _title;
-        this.link = _link;
+        this.url = _url;
     }
 
 
