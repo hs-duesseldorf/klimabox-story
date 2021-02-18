@@ -10,10 +10,17 @@
   float: left;
 }
 
+.filled {
+  background-color: blue;
+}
+
+.empty {
+  background-color: black;
+}
+
 .rectangle {
   height: 30px;
   width: 5px;
   margin-left: 18px;
-  background-color: black;
   clear: both;
 }
