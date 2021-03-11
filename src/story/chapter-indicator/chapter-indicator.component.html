@@ -1,0 +1,10 @@
+<div class="chapter-line">
+  <div *ngFor="let chapter of chapters; first as isFirst">
+    <div [ngClass]="{'rectangle':true,
+                     'filled':alreadyVisited(chapter),
+                     'empty':chapter>currentChapter}"
+         *ngIf="!isFirst"></div>
+    <div class="chapter-number">{{chapter}}</div>
+    <div [ngClass]="{'dot':true, 'filled':alreadyVisited(chapter), 'empty':chapter>currentChapter}"></div>
+  </div>
+</div>

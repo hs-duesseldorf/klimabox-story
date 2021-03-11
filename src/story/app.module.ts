@@ -10,12 +10,12 @@ import { PersonalizationQuestionComponent } from './personalization-question/per
 import { ChartComponent } from './chart/chart.component';
 import {FormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ChapterIndicatorComponent } from './chapter-indicator/chapter-indicator.component';
 import { ZoomHeadlineComponent } from './zoom-headline/zoom-headline.component';
 import { MassVisualizationComponent } from './mass-visualization/mass-visualization.component';
 import { ChapterButtonComponent } from './chapter-button/chapter-button.component';
 import { HomeComponent } from './home/home.component';
 import { ChaptersService } from './home/chapters.service';
-
 
 @NgModule({
   declarations: [
@@ -25,6 +25,7 @@ import { ChaptersService } from './home/chapters.service';
     PersonalizationQuestionComponent,
     ChartComponent,
     NavbarComponent,
+    ChapterIndicatorComponent,
     ZoomHeadlineComponent,
     MassVisualizationComponent,
     ChapterButtonComponent,
