@@ -1,0 +1,13 @@
+<div class="container-fluid backgroundContainer"
+     [ngStyle]="{backgroundImage:'linear-gradient(to bottom, ' + massVisualToShow.backgroundColor + ')'}">
+  <div class="massContainer"
+       [ngStyle]="{backgroundImage:'url('+ massVisualToShow.massImage + ')'}">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4 textContainer">
+        <div class="headlineText">{{massVisualToShow.headlineText}}</div>
+        <div class="textBody">{{massVisualToShow.text}}</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 15vw;
+    align-content: center;
+    align-items: center;
+    margin: 1vw;
+}
+.button {
+    width: inherit;
+    opacity: 0.6;
+}
+.button:hover {
+    opacity: 1;
+}
+.chapter-img {
+    width: inherit;
+    border-radius: 2.5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.title {
+
+    position: relative;
+    margin-top: 2vh;
+    width: inherit;
+    max-width: 15.5vw;
+    font: 16px Arial, sans-serif;
+    text-align: center;
+}

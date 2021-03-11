@@ -1,0 +1,40 @@
+.backgroundContainer {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 8%;
+}
+.questionContainer {
+  height: 70vh;
+  position: relative;
+}
+h1 {
+  font-size: 4vh;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: #242424;
+}
+.btnAnswer {
+  opacity: 0.70;
+  position: absolute;
+}
+.btnAnswer img {
+  height: 30vh;
+  width: auto;
+}
+.btn.hover, .btn:hover, .btn.focus, .btn:focus {
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+  outline: 0;
+  opacity: 1;
+}
+.nextButton {
+  font-family: Arial, sans-serif;
+  font-size: 2.5vh;
+  font-weight: bold;
+  color: #242424;
+  margin-top: 65vh;
+  margin-left: 20vw;
+}

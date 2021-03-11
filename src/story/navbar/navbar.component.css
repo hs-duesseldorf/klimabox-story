@@ -2,15 +2,24 @@
   font-family: Arial, sans-serif;
   font-weight: bold;
   color: #197EB7;
-  font-size: 30pt;
+  font-size: 4vh;
+  margin-left: 2vh;
 }
+
 nav {
-  margin-left: 50px;
-  margin-right: 50px;
-  background-color: rgba(0,0,0,0);
+  background-image: linear-gradient(to bottom, rgba(31, 33, 52, 1), rgba(31, 33, 52, 0));
 }
+
 .nav-item {
   font-family: Arial, sans-serif;
-  color: #242424 !important;
-  font-size: 25pt;
+  font-weight: normal;
+  font-size: 3vh;
+}
+
+nav .navbar-nav li a {
+  color: white !important;
+}
+
+a:active {
+  font-weight: bold;
 }
