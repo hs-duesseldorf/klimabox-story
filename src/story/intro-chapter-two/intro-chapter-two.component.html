@@ -1,11 +1,15 @@
 <!--<img src="assets/images/intro/kapitel1_intro_stars_background.png" id="skyBackground">-->
 <div id="intro2">
+  <img src="assets/images/intro/kapitel1_intro_stars_background.png" id="stars">
   <img src="assets/images/intro/kapitel1_intro_sunrise.png" id="sun">
   <img src="assets/images/intro/kapitel1_intro_building-3.png" id="buildingC">
   <img src="assets/images/intro/kapitel1_intro_building-2.png" id="buildingB">
   <img src="assets/images/intro/kapitel1_intro_building-1.png" id="buildingA">
   <img src="assets/images/chapter2/kapitel2_straße_front.png" id="street">
+  <img src="assets/images/intro/kapitel1_intro_clue.png" id="clue">
+  <p id="headline">Kapitel 2</p>
 </div>
+<app-chapter-indicator [numberOfChapters]="5" [currentChapter]="2"></app-chapter-indicator>
 <app-personalization-question [personalQuestions]="question"></app-personalization-question>
 <app-article [requestedTopic]="requestedTopic"></app-article>
 <app-mass-visualization [massVisualizations]="massVisualization"></app-mass-visualization>
