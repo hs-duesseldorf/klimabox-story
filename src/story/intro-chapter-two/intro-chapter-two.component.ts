@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MassVisualization } from '../mass-visualization/massVisualization';
 import {PersonalQuestion} from '../personalization-question/personalQuestion';
 
 @Component({
@@ -10,11 +11,14 @@ export class IntroChapterTwoComponent implements OnInit {
 
   question: PersonalQuestion[] = [];
   requestedTopic: string = 'mobilitaet';
+  massVisualization: MassVisualization[] = []; 
+  charts: Chart[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
     this.createPersonalQuestion();
+    this.createParticleMassVisualization();
   }
 
   private createPersonalQuestion() {
@@ -25,4 +29,17 @@ export class IntroChapterTwoComponent implements OnInit {
     this.question.push(personalQuestionMobility);
   }
 
+  private createParticleMassVisualization() {
+    let massVisualizationParticle = MassVisualization.createWith('', '', '', '');
+    this.massVisualization.push(massVisualizationParticle);
+  }
+
+  private createChart() {
+    let mobilityChart = Chart.createWith('');
+    mobilityChart.addConsumption('', 0, '', '');
+    mobilityChart.addConsumption('', 0, '', '');
+    mobilityChart.addConsumption('', 0, '', '');
+    mobilityChart.addConsumption('', 0, '', '');
+    this.charts.push(mobilityChart);
+  }
 }
