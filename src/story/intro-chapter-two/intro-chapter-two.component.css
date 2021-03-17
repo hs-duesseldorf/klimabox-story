@@ -1,3 +1,6 @@
+#intro2 {
+  overflow-x: hidden;
+}
 #stars {
   position: fixed;
   width: 100%;
@@ -46,4 +49,25 @@
   bottom: 10%;
   right: 5%;
   width: 30%;
+}
+#headline {
+  position: absolute;
+  color: white;
+  font-size: 17pt;
+  bottom: 13.5%;
+  right: 26.7%;
+}
+#text {
+  position: absolute;
+  color: white;
+  top: 20%;
+  left: 15%;
+
+}
+#textheader {
+
+}
+#textline {
+  position: relative;
+  top: -8%;
 }
