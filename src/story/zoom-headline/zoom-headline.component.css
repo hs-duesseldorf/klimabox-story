@@ -1,12 +1,7 @@
-.backgroundContainer {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 10vh;
-}
 .imageContainer {
   height: 90vh;
   position: relative;
+  margin-top: 20vh;
 }
 .imageContainer img {
   height: 80vh;

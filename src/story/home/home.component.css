@@ -2,7 +2,6 @@ body {
     margin: 0px;
 }
 .background {
-    background-image: url("/assets/home/home_header_uncropped.png");
     position: absolute;
     top: 0;
     left: 0;
@@ -93,7 +92,7 @@ h1 {
 .component{
     position: relative;
     padding: 5vw;
-    
+
 }
 .chapterdiv {
     position: relative;

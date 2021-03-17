@@ -1,4 +1,26 @@
-body{
+#backgroundContainer {
+  background-image: url("../../assets/images/personalization-question/kapitel1_table_background.png");
+  position: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 8%;
+  z-index: 0;
+}
+
+#tableBackground {
+  position: fixed;
+  width: 100%;
+  top:0px;
+}
+
+#mass {
+  z-index: 100;
+}
+
+#intro{
     height: 8000px;
 }
 #buildingA {
@@ -23,7 +45,7 @@ body{
     position: fixed;
     width: 100%;
     top:0px;
-    
+
 }
 #mountain {
     position: fixed;

@@ -4,6 +4,8 @@
     margin: 10%;
     justify-content: center;
     height: 100vh;
+  z-index: 1;
+  position: relative;
 }
 
 .audio-player-box {

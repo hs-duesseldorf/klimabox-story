@@ -1,6 +1,5 @@
 <div class="parent">
-    <div class="background">
-
+    <div class="background" [ngStyle]="{backgroundImage:'url(' + backgroundImagePath + ')'}">
     </div>
     <div class="header">
         <h1 class="headerfont">Sieh, wie die Klimakrise unsere Welt verändert. <br/>
@@ -11,23 +10,23 @@
             <span></span>
         </div>
     </div>
-        
+
         <section class="bottom">
             <div class="fade">
                 <br>
             </div>
-                
-                
+
+
             <div class="component">
                 <h1>Kapitelübersicht</h1>
                 <div class="chapterdiv">
                     <div class="chapters" *ngFor="let chapter of chapters">
-                        <app-chapter-button class="chapter-button" [chapternumber]="chapter.chapternumber" [imgurl]="chapter.imgurl" [title]="chapter.title"></app-chapter-button>
+                        <app-chapter-button class="chapter-button" [chapternumber]="chapter.chapternumber" [imgurl]="chapter.imgurl" [title]="chapter.title" (click)="routeToChapter(chapter.url)"></app-chapter-button>
                     </div>
                 </div>
                     <h2 class="start">Starten >></h2>
-                
-                
+
+
             </div>
         </section>
 </div>

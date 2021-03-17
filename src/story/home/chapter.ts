@@ -11,5 +11,5 @@ export class Chapter {
         this.url = _url;
     }
 
-    
+
 }
