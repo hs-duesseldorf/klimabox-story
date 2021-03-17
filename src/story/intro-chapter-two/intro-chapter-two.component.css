@@ -8,16 +8,22 @@
 }
 
 #buildingA {
-  position: fixed;
+  position: absolute;
+  right: 0;
   width: 45%;
+  top: -70%;
 }
 #buildingB {
-  position: fixed;
-  width: 30%;
+  position: absolute;
+  right: 38%;
+  width: 35%;
+  top: 72%;
 }
 #buildingC {
-  position: fixed;
+  position: absolute;
+  right: 70%;
   width: 35%;
+  top: 85%;
 }
 
 #sun {
