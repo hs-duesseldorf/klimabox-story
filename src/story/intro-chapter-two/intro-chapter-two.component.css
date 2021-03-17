@@ -4,7 +4,8 @@
 #stars {
   position: fixed;
   width: 100%;
-  top:0px;
+  top:0;
+  z-index: 0;
 }
 #intro2 {
   height: 200vh;
@@ -55,19 +56,15 @@
   color: white;
   font-size: 17pt;
   bottom: 13.5%;
-  right: 26.7%;
+  right: 28%;
 }
 #text {
   position: absolute;
   color: white;
-  top: 20%;
+  top: 22%;
   left: 15%;
-
-}
-#textheader {
-
+  font-size: 20pt;
 }
 #textline {
   position: relative;
-  top: -8%;
 }
