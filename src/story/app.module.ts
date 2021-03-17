@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 import { IntroComponent } from './intro/intro.component';
 import { PersonalizationQuestionComponent } from './personalization-question/personalization-question.component';
 import { ChartComponent } from './chart/chart.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ZoomHeadlineComponent } from './zoom-headline/zoom-headline.component';
 import { MassVisualizationComponent } from './mass-visualization/mass-visualization.component';
@@ -16,6 +16,7 @@ import { ChapterButtonComponent } from './chapter-button/chapter-button.componen
 import { HomeComponent } from './home/home.component';
 import { ChaptersService } from './home/chapters.service';
 import {AudioAccordionComponent} from './audio-accordion/audio-accordion.component';
+import { QuizComponent } from './quiz/quiz.component';
 
 
 @NgModule({
@@ -30,12 +31,14 @@ import {AudioAccordionComponent} from './audio-accordion/audio-accordion.compone
     MassVisualizationComponent,
     ChapterButtonComponent,
     HomeComponent,
-    AudioAccordionComponent
+    AudioAccordionComponent,
+    QuizComponent
   ],
   imports: [
       BrowserModule,
       AppRoutingModule,
-      FormsModule
+      FormsModule,
+      ReactiveFormsModule
   ],
   providers: [
     ChaptersService,

@@ -20,6 +20,8 @@ export class IntroComponent implements OnInit {
   requestedTopic: String = 'ernaehrung';
   charts: Chart[] = [];
 
+  requestedQuizTopic: string = 'mobilitaet';
+
   constructor() {
   }
 
