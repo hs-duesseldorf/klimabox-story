@@ -16,6 +16,9 @@ import { ChapterButtonComponent } from './chapter-button/chapter-button.componen
 import { HomeComponent } from './home/home.component';
 import { ChaptersService } from './home/chapters.service';
 import {AudioAccordionComponent} from './audio-accordion/audio-accordion.component';
+import { ArticleButtonComponent } from './article-button/article-button.component';
+import { ArticleRecommendationComponent } from './article-recommendation/article-recommendation.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -30,10 +33,13 @@ import {AudioAccordionComponent} from './audio-accordion/audio-accordion.compone
     MassVisualizationComponent,
     ChapterButtonComponent,
     HomeComponent,
-    AudioAccordionComponent
+    AudioAccordionComponent,
+    ArticleButtonComponent,
+    ArticleRecommendationComponent
   ],
   imports: [
       BrowserModule,
+      CommonModule,
       AppRoutingModule,
       FormsModule
   ],
