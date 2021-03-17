@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Chart} from '../chart/chart';
 import { MassVisualization } from '../mass-visualization/massVisualization';
 import {PersonalQuestion} from '../personalization-question/personalQuestion';
 
@@ -10,8 +11,9 @@ import {PersonalQuestion} from '../personalization-question/personalQuestion';
 export class IntroChapterTwoComponent implements OnInit {
 
   question: PersonalQuestion[] = [];
+  question2: PersonalQuestion[] = [];
   requestedTopic: string = 'mobilitaet';
-  massVisualization: MassVisualization[] = []; 
+  massVisualization: MassVisualization[] = [];
   charts: Chart[] = [];
 
   constructor() { }
@@ -19,6 +21,7 @@ export class IntroChapterTwoComponent implements OnInit {
   ngOnInit(): void {
     this.createPersonalQuestion();
     this.createParticleMassVisualization();
+    this.createChart();
   }
 
   private createPersonalQuestion() {
@@ -27,6 +30,11 @@ export class IntroChapterTwoComponent implements OnInit {
     personalQuestionMobility.addChoice('', '#', '', '');
     personalQuestionMobility.addChoice('', '#', '', '');
     this.question.push(personalQuestionMobility);
+    let personalQuestionMobility2 = PersonalQuestion.createWith('', '#');
+    personalQuestionMobility2.addChoice('', '#', '', '');
+    personalQuestionMobility2.addChoice('', '#', '', '');
+    personalQuestionMobility2.addChoice('', '#', '', '');
+    this.question2.push(personalQuestionMobility2);
   }
 
   private createParticleMassVisualization() {
