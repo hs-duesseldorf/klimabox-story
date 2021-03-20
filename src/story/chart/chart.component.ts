@@ -12,6 +12,8 @@ export class ChartComponent implements OnInit {
   @Input()
   charts: Chart[] = [];
   selectedChart: Chart = new Chart();
+  @Input()
+  heading: string = '';
 
   constructor(private changeDetectorRef: ChangeDetectorRef) {
   }
@@ -31,5 +33,13 @@ export class ChartComponent implements OnInit {
     let firstConsumptionAmount = this.selectedChart.consumptions[0].amount;
     let availableWidthInPercent = 80;
     return (availableWidthInPercent/firstConsumptionAmount)*consumption.amount;
+  }
+
+  calculateButtonWidth(): string {
+    return (100/this.charts.length) + "%";
+  }
+
+  hasBackgroundImage(consumption: Consumption) {
+    return consumption.imagePath!='';
   }
 }
