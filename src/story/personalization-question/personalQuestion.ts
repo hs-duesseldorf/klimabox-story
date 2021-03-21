@@ -20,8 +20,8 @@ export class PersonalQuestion {
 
   }
 
-  addChoice(imagePath: string, link: string, posX: string, posY: string) {
-    let choice = new Choice(imagePath, link, posX, posY);
+  addChoice(imagePath: string, link: string, posX: string, posY: string, width: string) {
+    let choice = new Choice(imagePath, link, posX, posY, width);
     this.add(choice);
   }
 

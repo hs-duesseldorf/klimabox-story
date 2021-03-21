@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 import {PersonalQuestion} from './personalQuestion';
 
 @Component({
@@ -26,17 +25,5 @@ export class PersonalizationQuestionComponent implements OnInit {
   show(question: PersonalQuestion): void {
     this.questionToShow = question;
   }
-
-  disableScrolling() {
-    let x = window.scrollX;
-    let y = window.scrollY;
-    window.onscroll = function () {
-      window.scrollTo(x, y);
-    };
-  }
-
-  enableScrolling() {
-    window.onscroll = function () {
-    };
-  }
 }
+

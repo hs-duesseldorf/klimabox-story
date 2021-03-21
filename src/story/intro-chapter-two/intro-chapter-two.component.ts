@@ -8,6 +8,7 @@ import {PersonalQuestion} from '../personalization-question/personalQuestion';
   templateUrl: './intro-chapter-two.component.html',
   styleUrls: ['./intro-chapter-two.component.css']
 })
+// @ts-ignore
 export class IntroChapterTwoComponent implements OnInit {
 
   question: PersonalQuestion[] = [];
@@ -26,14 +27,14 @@ export class IntroChapterTwoComponent implements OnInit {
 
   private createPersonalQuestion() {
     let personalQuestionMobility = PersonalQuestion.createWith('', '#');
-    personalQuestionMobility.addChoice('/assets/images/chapter2/kapitel2_bahn_auswahl.png', '#', '-15', '300');
-    personalQuestionMobility.addChoice('/assets/images/chapter2/kapitel2_fahrrad_auswahl.png', '#', '20', '300');
-    personalQuestionMobility.addChoice('/assets/images/chapter2/kapitel2_auto_auswahl.png', '#', '30', '300');
+    personalQuestionMobility.addChoice('/assets/images/chapter2/Bahn.png', '#', '-650', '80', '8');
+    personalQuestionMobility.addChoice('/assets/images/chapter2/Fahrrad.png', '#', '700', '280', '9');
+    personalQuestionMobility.addChoice('/assets/images/chapter2/Auto.png', '#', '850', '170', '8');
     this.question.push(personalQuestionMobility);
     let personalQuestionMobility2 = PersonalQuestion.createWith('', '#');
-    personalQuestionMobility2.addChoice('', '#', '', '');
-    personalQuestionMobility2.addChoice('', '#', '', '');
-    personalQuestionMobility2.addChoice('', '#', '', '');
+    personalQuestionMobility2.addChoice('', '#', '', '', '');
+    personalQuestionMobility2.addChoice('', '#', '', '','');
+    personalQuestionMobility2.addChoice('', '#', '', '', '');
     this.question2.push(personalQuestionMobility2);
   }
 

@@ -11,6 +11,7 @@ import {Chart} from '../chart/chart';
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.css']
 })
+// @ts-ignore
 export class IntroComponent implements OnInit {
 
   question: PersonalQuestion[] = [];
@@ -35,10 +36,10 @@ export class IntroComponent implements OnInit {
 
   private createFirstPersonalQuestion() {
     let personalQuestionFood = PersonalQuestion.createWith('Was isst du gerne?', '#');
-    personalQuestionFood.addChoice('assets/images/personalization-question/fleisch.png', 'chapter1#fleisch-headline', '-5', '6');
-    personalQuestionFood.addChoice('assets/images/personalization-question/kaese.png', '#', '25', '5');
-    personalQuestionFood.addChoice('assets/images/personalization-question/avocado.png', '#', '5', '28');
-    personalQuestionFood.addChoice('assets/images/personalization-question/eier.png', '#', '25', '36');
+    personalQuestionFood.addChoice('assets/images/personalization-question/fleisch.png', 'chapter1#fleisch-headline', '-5', '6','');
+    personalQuestionFood.addChoice('assets/images/personalization-question/kaese.png', '#', '25', '5','');
+    personalQuestionFood.addChoice('assets/images/personalization-question/avocado.png', '#', '5', '28','');
+    personalQuestionFood.addChoice('assets/images/personalization-question/eier.png', '#', '25', '36','');
     this.question.push(personalQuestionFood);
   }
 
@@ -73,9 +74,9 @@ export class IntroComponent implements OnInit {
 
   private createSecondPersonalQuestion() {
     let personalQuestionFood2 = PersonalQuestion.createWith('Worüber möchtest du mehr erfahren?', '#');
-    personalQuestionFood2.addChoice('assets/images/personalization-question/kaese.png', '#', '25', '5');
-    personalQuestionFood2.addChoice('assets/images/personalization-question/avocado.png', '#', '5', '28');
-    personalQuestionFood2.addChoice('assets/images/personalization-question/eier.png', '#', '25', '36');
+    personalQuestionFood2.addChoice('assets/images/personalization-question/kaese.png', '#', '25', '5','');
+    personalQuestionFood2.addChoice('assets/images/personalization-question/avocado.png', '#', '5', '28','');
+    personalQuestionFood2.addChoice('assets/images/personalization-question/eier.png', '#', '25', '36','');
     this.question2.push(personalQuestionFood2);
   }
 

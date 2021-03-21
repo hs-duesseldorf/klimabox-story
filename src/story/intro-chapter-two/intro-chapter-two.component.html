@@ -5,22 +5,22 @@
   <div id="choiceContainer1">
     <img src="assets/images/chapter2/Gebäude_Background.png" id="building">
     <app-chapter-indicator [numberOfChapters]="5" [currentChapter]="2"></app-chapter-indicator>
-    <p id="headline">Kapitel 2</p>
-      <div id="text">
-          <p><b>Morgens, 8 Uhr</b></p>
-          <p id="textline">Auf dem Weg zur Arbeit</p>
-      </div>
-      <img src="assets/images/intro/kapitel1_intro_clue.png" id="clue">
+    <p id="chapterLine">Kapitel 2</p>
+    <div id="text">
+      <p><b>Morgens, 8 Uhr</b></p>
+      <p id="textline">Auf dem Weg zur Arbeit</p>
+    </div>
+    <img src="assets/images/intro/kapitel1_intro_clue.png" id="clue">
     <app-personalization-question [personalQuestions]="question" id="chapter2_question1"></app-personalization-question>
   </div>
 </div>
 
 
-<app-article [requestedTopic]="requestedTopic"></app-article>
-<app-mass-visualization [massVisualizations]="massVisualization"></app-mass-visualization>
-<!--Quiz Component-->
-<!-- CO2-Rechner-->
-<app-chart [charts]="charts"></app-chart>
-<app-personalization-question [personalQuestions]="question2"></app-personalization-question>
-<app-audio-accordion></app-audio-accordion>
-<app-article-recommendation></app-article-recommendation>
+<!--<app-article [requestedTopic]="requestedTopic"></app-article>-->
+<!--<app-mass-visualization [massVisualizations]="massVisualization"></app-mass-visualization>-->
+<!--&lt;!&ndash;Quiz Component&ndash;&gt;-->
+<!--&lt;!&ndash; CO2-Rechner&ndash;&gt;-->
+<!--<app-chart [charts]="charts"></app-chart>-->
+<!--<app-personalization-question [personalQuestions]="question2"></app-personalization-question>-->
+<!--<app-audio-accordion></app-audio-accordion>-->
+<!--<app-article-recommendation></app-article-recommendation>-->

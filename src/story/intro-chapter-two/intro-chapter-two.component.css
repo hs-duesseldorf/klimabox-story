@@ -1,20 +1,13 @@
-#intro2 {
+/*#intro2 {
   overflow-x: hidden;
   height: 400vh;
-}
+}*/
 #stars {
   position: fixed;
   width: 100%;
   top:0;
   z-index: 0;
 }
-
-#building {
-  position: absolute;
-  width: 100vw;
-  top: -40%;
-}
-
 #sun {
   position: fixed;
   opacity: 0.7;
@@ -22,25 +15,30 @@
   width: 80%;
   left: 10%;
 }
+#building {
+  position: absolute;
+  width: 100vw;
+  top: -400px;
+}
 #clue {
   position: absolute;
   color: white;
-  bottom: 10%;
-  right: 5%;
   width: 30%;
+  top: 850px;
+  left: 1200px;
 }
-#headline {
+#chapterLine {
   position: absolute;
   color: white;
   font-size: 17pt;
-  bottom: 13.5%;
-  right: 28%;
+  top: 810px;
+  left: 1245px;
 }
 #text {
   position: absolute;
   color: white;
-  top: 22%;
-  left: 15%;
+  top: 200px;
+  left: 300px;
   font-size: 20pt;
 }
 #textline {
@@ -48,10 +46,11 @@
 }
 #choiceContainer1 {
   position: relative;
-  z-index: 2;
 }
 #chapter2_question1{
   position: absolute;
+  width: 100%;
+  top: 1200px;
 }
 app-chapter-indicator {
   z-index: 10;
