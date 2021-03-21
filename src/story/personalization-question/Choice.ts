@@ -4,14 +4,14 @@ export class Choice {
   private readonly _link: string;
   private readonly _posX: string;
   private readonly _posY: string;
-  private readonly _width: string;
+  private readonly _zIndex: string;
 
-  constructor(imagePath: string, link: string, posX: string, posY: string, width: string) {
+  constructor(imagePath: string, link: string, posX: string, posY: string, zIndex: string) {
     this._imagePath = imagePath;
     this._link = link;
     this._posX = posX;
     this._posY = posY;
-    this._width = width;
+    this._zIndex = zIndex;
   }
 
   get imagePath() {
@@ -30,8 +30,8 @@ export class Choice {
     return this._posY;
   }
 
-  get width() {
-    return this._width;
+  get zIndex() {
+    return this._zIndex;
   }
 
 }
