@@ -21,6 +21,7 @@ import { ArticleButtonComponent } from './article-button/article-button.componen
 import { ArticleRecommendationComponent } from './article-recommendation/article-recommendation.component';
 import { CommonModule } from '@angular/common';
 import { IntroChapterTwoComponent } from './intro-chapter-two/intro-chapter-two.component';
+import { ContentCarChapterTwoComponent } from './content-car-chapter-two/content-car-chapter-two.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { IntroChapterTwoComponent } from './intro-chapter-two/intro-chapter-two.
     AudioAccordionComponent,
     ArticleButtonComponent,
     ArticleRecommendationComponent,
-    IntroChapterTwoComponent
+    IntroChapterTwoComponent,
+    ContentCarChapterTwoComponent
   ],
   imports: [
       BrowserModule,

@@ -1,0 +1,16 @@
+#graffitiBackground {
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+}
+#posterBackground {
+  position: fixed;
+  z-index: 0;
+  left: 200px;
+  top: 70px;
+}
+#carArticle {
+  position: fixed;
+  top: 200px;
+  z-index: 100;
+}

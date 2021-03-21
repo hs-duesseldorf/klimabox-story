@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 import {PersonalQuestion} from './personalQuestion';
 
 @Component({
@@ -13,7 +14,7 @@ export class PersonalizationQuestionComponent implements OnInit {
   personalQuestions: PersonalQuestion[] = [];
   questionToShow: PersonalQuestion = new PersonalQuestion();
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit(): void {
@@ -24,6 +25,11 @@ export class PersonalizationQuestionComponent implements OnInit {
 
   show(question: PersonalQuestion): void {
     this.questionToShow = question;
+  }
+
+  routeToContent(link: string) {
+    window.scrollTo(0,0);
+    this.router.navigateByUrl('/' +link );
   }
 }
 

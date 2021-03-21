@@ -3,7 +3,7 @@
     <h1>{{ questionToShow.questionTitle }}</h1>
     <div class="row container-sm container-md container-lg container-xl container-xxl">
       <div class="col-12 col-md-8 col-lg-4" *ngFor="let choice of questionToShow.choices">
-        <a class="btn btnAnswer" href="{{ choice.link }}"
+        <a class="btn btnAnswer" (click)="routeToContent(choice.link)"
            [ngStyle]="{left: + choice.posX + 'px', top: + choice.posY + 'px', zIndex: + choice.zIndex}">
           <img src="{{ choice.imagePath }}" alt="choice-image">
         </a>
