@@ -48,8 +48,13 @@
 #textline {
   position: relative;
 }
-
+#choiceContainer1 {
+  position: relative;
+  z-index: 2;
+  top: -40%;
+}
 #chapter2_question1{
-  top: 170%;
+  top: 150%;
   position: absolute;
 }
+
