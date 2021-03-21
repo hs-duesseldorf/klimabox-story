@@ -8,7 +8,7 @@
 }
 .questionContainer {
   height: 70vh;
-  position: relative;
+  position: absolute;
 }
 h1 {
   font-size: 4vh;

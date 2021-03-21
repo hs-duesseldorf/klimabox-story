@@ -1,14 +1,12 @@
 #intro2 {
   overflow-x: hidden;
+  height: 400vh;
 }
 #stars {
   position: fixed;
   width: 100%;
   top:0;
   z-index: 0;
-}
-#intro2 {
-  height: 400vh;
 }
 
 #building {
@@ -53,7 +51,6 @@
   z-index: 2;
 }
 #chapter2_question1{
-  top: 150%;
   position: absolute;
 }
 app-chapter-indicator {
