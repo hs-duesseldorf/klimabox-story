@@ -1,7 +1,7 @@
 .chapter-line {
-  position: absolute;
-  top: 1%;
-  right: 1%;
+  position: fixed;
+  top: 5%;
+  right: 2.5%;
 }
 
 .chapter-number {

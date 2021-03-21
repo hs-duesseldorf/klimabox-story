@@ -11,30 +11,10 @@
   height: 200vh;
 }
 
-#street {
+#building {
   position: absolute;
-  top: 100%;
-  right: 0.01%;
-  width: 110%;
-}
-
-#buildingA {
-  position: absolute;
-  right: 0;
-  width: 45%;
-  top: -70%;
-}
-#buildingB {
-  position: absolute;
-  right: 38%;
-  width: 35%;
-  top: 72%;
-}
-#buildingC {
-  position: absolute;
-  right: 70%;
-  width: 35%;
-  top: 85%;
+  width: 100vw;
+  top: -40%;
 }
 
 #sun {
@@ -67,4 +47,8 @@
 }
 #textline {
   position: relative;
+}
+
+app-personalization-question {
+  top: -50%;
 }
