@@ -41,13 +41,16 @@ export class QuizService {
         }
     ];
 
-    checkAnswer() {
-        if (this.isCorrect()) {
-            this.correctAnswer = true;
+    checkAnswer(): boolean {
+        if (this.isCorrectAnswer()) {
+            return this.correctAnswer = true;
+        }
+        else {
+            return this.correctAnswer = false;
         }
     }
 
-    isCorrect(): boolean {
+    isCorrectAnswer(): boolean {
         return this.quizQuestion.selectedQuizOption === this.quizQuestion.quizAnswer;
     } 
 

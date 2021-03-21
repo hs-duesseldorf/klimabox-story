@@ -5,24 +5,39 @@ h2 {
     margin-left: 12%;
     z-index: 1;
     position: relative;
+    /* margin-bottom: -5%; */
 }
 
-.questionmark {
+.quizFeedback {
     z-index: 1;
     position: relative;
     text-align: right;
-    margin-bottom: -10%;
-    margin-top: -10%;
-    margin-right: 5%;
+    margin-top: -28%;
+    margin-right: -5%;
+    margin-bottom: 5%;
+}
+
+#wrong, #right {
+    z-index: 1;
+    position: relative;
+    float: right !important;
+    margin-top: -28%;
+    margin-right: -5%;  
+    margin-bottom: 8% !important;
+    display: block;
 }
 
 .card {
     width: 80%;
     opacity: 0.8;
     border-radius: 25px;
-    padding: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 15% !important;
+    padding-bottom: 5%;
     margin-left: 10%;
-    margin-top: 5%;
+    /* margin-top: 5%; */
+    margin-bottom: 10%;
 }
 
 .btn {
@@ -41,11 +56,6 @@ h2 {
     text-align: left;
     font-size: 28px;
     padding-left: 2%;
-}
-
-.incorrect {
-    color: #E78182;
-    float: right;
 }
 
 .is-correct {
