@@ -49,6 +49,7 @@
   position: relative;
 }
 
-app-personalization-question {
-  top: -50%;
+#chapter2_question1{
+  top: 170%;
+  position: absolute;
 }

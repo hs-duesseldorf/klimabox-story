@@ -26,9 +26,9 @@ export class IntroChapterTwoComponent implements OnInit {
 
   private createPersonalQuestion() {
     let personalQuestionMobility = PersonalQuestion.createWith('', '#');
-    personalQuestionMobility.addChoice('/assets/images/chapter2/kapitel2_bahn_auswahl.png', '#', '', '');
-    personalQuestionMobility.addChoice('/assets/images/chapter2/kapitel2_fahrrad_auswahl.png', '#', '', '');
-    personalQuestionMobility.addChoice('/assets/images/chapter2/kapitel2_auto_auswahl.png', '#', '', '');
+    personalQuestionMobility.addChoice('/assets/images/chapter2/kapitel2_bahn_auswahl.png', '#', '-15', '');
+    personalQuestionMobility.addChoice('/assets/images/chapter2/kapitel2_fahrrad_auswahl.png', '#', '20', '');
+    personalQuestionMobility.addChoice('/assets/images/chapter2/kapitel2_auto_auswahl.png', '#', '30', '');
     this.question.push(personalQuestionMobility);
     let personalQuestionMobility2 = PersonalQuestion.createWith('', '#');
     personalQuestionMobility2.addChoice('', '#', '', '');
