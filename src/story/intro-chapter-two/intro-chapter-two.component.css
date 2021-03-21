@@ -8,7 +8,7 @@
   z-index: 0;
 }
 #intro2 {
-  height: 200vh;
+  height: 400vh;
 }
 
 #building {
@@ -51,10 +51,12 @@
 #choiceContainer1 {
   position: relative;
   z-index: 2;
-  top: -40%;
 }
 #chapter2_question1{
   top: 150%;
   position: absolute;
+}
+app-chapter-indicator {
+  z-index: 10;
 }
 
