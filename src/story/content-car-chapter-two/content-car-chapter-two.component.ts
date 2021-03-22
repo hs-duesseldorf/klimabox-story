@@ -34,8 +34,7 @@ export class ContentCarChapterTwoComponent implements OnInit {
         trigger: '.massContainer',
         start: 'top bottom',
         scrub: true,
-        end: '+=600px',
-        markers: true
+        end: '+=600px'
       },
       opacity: 0
     });
@@ -45,8 +44,7 @@ export class ContentCarChapterTwoComponent implements OnInit {
         trigger: '.textContainer',
         start: 'bottom top',
         scrub: true,
-        end: '+=1400px',
-        markers: true
+        end: '+=1400px'
       },
       opacity: 0
     });
