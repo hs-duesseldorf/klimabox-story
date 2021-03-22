@@ -5,6 +5,7 @@ import {PersonalQuestion} from '../personalization-question/personalQuestion';
 import {HeadlineImage} from '../zoom-headline/headlineImage';
 import {MassVisualization} from '../mass-visualization/massVisualization';
 import {Chart} from '../chart/chart';
+import {AudioService} from '../services/audio.service';
 
 @Component({
   selector: 'app-intro',
@@ -21,7 +22,7 @@ export class IntroComponent implements OnInit {
   chartHeading: string = 'Öko-Bilanzvergleich';
   charts: Chart[] = [];
 
-  constructor() {
+  constructor(private audioService: AudioService) {
   }
 
   ngOnInit(): void {
@@ -32,6 +33,7 @@ export class IntroComponent implements OnInit {
     this.createSecondPersonalQuestion();
     gsap.registerPlugin(ScrollTrigger);
     this.scroll();
+    this.audioService.playLoop("assets/sounds/morgenmitvoegeln.mp3")
   }
 
   private createFirstPersonalQuestion() {
