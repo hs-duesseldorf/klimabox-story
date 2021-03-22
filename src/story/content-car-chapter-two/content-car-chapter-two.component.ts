@@ -26,4 +26,18 @@ export class ContentCarChapterTwoComponent implements OnInit {
     this.massVisualization.push(massVisualizationParticle);
   }
 
+  /*scroll() {
+
+    gsap.to('', {
+      scrollTrigger: {
+        trigger: '.massContainer',
+        start: 'bottom bottom',
+        scrub: true,
+        end: '+=100px'
+      },
+      opacity: 0
+    });
+
+  }*/
+
 }
