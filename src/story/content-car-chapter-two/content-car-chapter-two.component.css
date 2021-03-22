@@ -22,3 +22,6 @@
   position: relative;
   top: 1200px;
 }
+#particleComponent .backgroundContainer {
+  opacity: 0;
+}

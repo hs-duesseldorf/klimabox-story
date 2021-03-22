@@ -19,6 +19,7 @@ export class ContentCarChapterTwoComponent implements OnInit {
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger);
     this.createParticleMassVisualization();
+    this.scroll();
   }
 
   private createParticleMassVisualization() {
@@ -26,18 +27,30 @@ export class ContentCarChapterTwoComponent implements OnInit {
     this.massVisualization.push(massVisualizationParticle);
   }
 
-  /*scroll() {
+  scroll() {
 
-    gsap.to('', {
+    gsap.from('.massContainer', {
       scrollTrigger: {
         trigger: '.massContainer',
-        start: 'bottom bottom',
+        start: 'top bottom',
         scrub: true,
-        end: '+=100px'
+        end: '+=600px',
+        markers: true
       },
       opacity: 0
     });
 
-  }*/
+    gsap.to('.massContainer', {
+      scrollTrigger: {
+        trigger: '.textContainer',
+        start: 'bottom top',
+        scrub: true,
+        end: '+=1400px',
+        markers: true
+      },
+      opacity: 0
+    });
+
+  }
 
 }
