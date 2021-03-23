@@ -1,6 +1,7 @@
 img {
   position: fixed;
-  top: 15%;
-  right: 5%;
+  top: 25%;
+  right: 1%;
+  width: 1%;
   cursor: pointer;
 }

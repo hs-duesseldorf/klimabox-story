@@ -225,7 +225,8 @@ export class IntroComponent implements OnInit {
         trigger: '.massContainer',
         start: 'top top',
         scrub: true,
-        end: '+=600px'
+        end: '+=600px',
+        onEnter: () => this.audioService.play("assets/audio-accordion/audio/chicken2.mp3")
       },
       opacity: 0
     });

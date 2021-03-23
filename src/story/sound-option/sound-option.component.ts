@@ -8,13 +8,14 @@ import {AudioService} from '../services/audio.service';
 })
 export class SoundOptionComponent implements OnInit {
 
-  isSoundOn: boolean = true;
+  isSoundOn: boolean = false;
   soundIconPath: string = "";
 
   constructor(private audioService: AudioService) { }
 
   ngOnInit(): void {
     this.soundIconPath = this.getSoundIcon();
+    if(!this.isSoundOn) this.audioService.mute();
   }
 
   toggleSound() {
