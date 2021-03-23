@@ -1,7 +1,7 @@
 <div class="container">
     <h5>Das könnte dich auch interessieren: </h5>
     <div class="recommendations" >
-            <app-article-button class="items" *ngFor="let article of articles" [imgurl]="article.imgurl" [title]="article.title" [description]="article.description" [date]="article.date" [url]="article.url"> </app-article-button>
+            <app-article-button class="items" *ngFor="let article of articles" [imgurl]="article.imgurl" [title]="article.title" [description]="article.description" [date]="article.date" [url]="article.url" [isBookmarked]="article.isBookmarked" [tags]="article.tags"> </app-article-button>
     </div>
 
 </div>

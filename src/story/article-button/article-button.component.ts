@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Inject } from '@angular/core';
+import { AfterViewInit, Inject } from '@angular/core';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -7,22 +7,35 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './article-button.component.html',
   styleUrls: ['./article-button.component.css']
 })
-export class ArticleButtonComponent implements OnInit {
+export class ArticleButtonComponent implements OnInit, AfterViewInit {
   @Input() imgurl: string = "";
   @Input() title: string = "";
   @Input() description: string = "";
   @Input() date: string = "";
   @Input() url: string = ""
+  @Input() isBookmarked: boolean = false;
+  @Input() tags: string[] = [];
+  constructor(@Inject(DOCUMENT) private document: Document) { 
 
-  isBookmarked: boolean = false;
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  }
 
   ngOnInit(): void {
+
   }
+
+  ngAfterViewInit(): void {
+    console.log(this.title + " is bookmarked: " + this.isBookmarked + " (ngAfterViewInit)");
+    
+    if(this.isBookmarked == true && document.getElementById(this.title) != null){
+      document.getElementById(this.title)!.style.fill= "#E78182";
+    }
+  }
+
   routeToUrl(link: string){
     this.document.location.href = link;
     console.log("clicked on article");
   }
+
   toggleBookmark() {
     if(document.getElementById(this.title) != null){
       this.isBookmarked = !this.isBookmarked;
