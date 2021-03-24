@@ -28,10 +28,11 @@ export class ContentCarChapterTwoComponent implements OnInit {
 
   private createCarChart() {
     let mobilityChart = Chart.createWith('');
-    mobilityChart.addConsumption('', 0, '', '');
-    mobilityChart.addConsumption('', 0, '', '');
-    mobilityChart.addConsumption('', 0, '', '');
-    mobilityChart.addConsumption('', 0, '', '');
+    mobilityChart.addConsumption('3 km zu Fuß', 45, 'Minuten', '');
+    mobilityChart.addConsumption('Bus / Bahn', 24, 'Minuten', 'assets/images/chapter2/kapitel2_diagramm_ubahn.png');
+    mobilityChart.addConsumption('PKW', 20, 'Minuten', 'assets/images/chapter2/kapitel2_diagramm_pkw.png');
+    mobilityChart.addConsumption('Fahrrad', 12, 'Minuten', 'assets/images/chapter2/kapitel2_diagramm_fahrrad.png');
+
     this.charts.push(mobilityChart);
   }
 
@@ -109,6 +110,17 @@ export class ContentCarChapterTwoComponent implements OnInit {
         end: '+=200px'
       },
       opacity: 0
+    });
+
+    gsap.from('#carQuiz', {
+      scrollTrigger: {
+        trigger: '.massContainer',
+        start: 'bottom top',
+        scrub: true,
+        end: '+=1200px',
+        markers: true
+      },
+      position: 'relative'
     });
 
   }
