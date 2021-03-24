@@ -4,8 +4,8 @@
         <div id="heading" class="card">
             <div class="quizFeedback">
                 <img *ngIf="!this.quizAttempted" src='../../assets/images/chapter2/Questionmark.png' />
-              <img [src]="CORRECT" id="right">
-              <img [src]="WRONG" id="wrong">
+              <img [src]="CORRECT" id="right" />
+              <img [src]="WRONG" id="wrong" />
             </div>
             <div class="card-body">
                 <div id="answer-buttons" *ngFor="let option of quizQuestion.quizOptions">
