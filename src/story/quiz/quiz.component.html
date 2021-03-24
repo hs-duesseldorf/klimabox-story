@@ -4,22 +4,17 @@
         <div id="heading" class="card">
             <div class="quizFeedback">
                 <img *ngIf="!this.quizAttempted" src='../../assets/images/chapter2/Questionmark.png' />
+              <img [src]="CORRECT" id="right">
+              <img [src]="WRONG" id="wrong">
             </div>
             <div class="card-body">
                 <div id="answer-buttons" *ngFor="let option of quizQuestion.quizOptions">
-                    <div>
-                    <!-- <img *ngIf="!!(isCorrect(option.optionNumber) && !!(!(isCorrect(option.optionNumber) && !isIncorrect(option.optionNumber))))" src='../../assets/images/chapter2/Correct.png' id="right"/> -->
-                    <!-- <img *ngIf="!!(this.quizAttempted && isCorrect(option.optionNumber))" src='../../assets/images/chapter2/Correct.png' id="right"/> -->
-                    <img *ngIf="test && this.quizAttempted" src='../../assets/images/chapter2/Correct.png' id="right"/>
-                    <img *ngIf="!test && this.quizAttempted" src='../../assets/images/chapter2/Incorrect.png' id="wrong"/>
-                    <!-- <img *ngIf="!!(isIncorrect(option.optionNumber) && !isCorrect(option.optionNumber)); else right" src='../../assets/images/chapter2/Incorrect.png' id="wrong"/> -->
-                    </div>
-                    <button class="btn" id="content" 
-                    [value]="option.optionNumber" 
+                    <button class="btn" id="content"
+                    [value]="option.optionNumber"
                     [ngClass]="{'is-correct': isCorrect(option.optionNumber), 'is-incorrect': isIncorrect(option.optionNumber)}"
                     (click)="onChange($event)"
                     >{{ option.optionContent }}</button>
-                        
+
                 </div>
             </div>
         </div>

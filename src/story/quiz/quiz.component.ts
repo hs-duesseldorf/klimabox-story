@@ -16,7 +16,10 @@ export class QuizComponent implements OnInit {
   solution = '../../assets/images/chapter2/Questionmark.png';
   quizAttempted: boolean = false;
   test!: boolean;
-  
+  CORRECT!: string;
+  WRONG!: string;
+
+
   @Input() requestedQuizTopic!: string;
 
   constructor(private quizService: QuizService) { }
@@ -50,9 +53,11 @@ export class QuizComponent implements OnInit {
     this.quizAttempted = true;
     console.log("UERBERGABE: " + this.quizQuestion.selectedQuizOption);
     if (this.quizService.checkAnswer(this.quizQuestion.selectedQuizOption) == true) {
+      this.CORRECT = 'assets/images/chapter2/Correct.png';
       this.test = true;
     }
     else if (this.quizService.checkAnswer(this.quizQuestion.selectedQuizOption) == false) {
+      this.WRONG = 'assets/images/chapter2/Incorrect.png';
       this.test = false;
     }
     console.log("INHALT DES BUTTONS: " + event.target.value);

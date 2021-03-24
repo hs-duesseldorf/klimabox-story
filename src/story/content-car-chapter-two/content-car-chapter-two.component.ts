@@ -87,7 +87,8 @@ export class ContentCarChapterTwoComponent implements OnInit {
         trigger: '.massContainer',
         start: 'top bottom',
         scrub: true,
-        end: '+=1200px'
+        endTrigger: '.textContainer',
+        end: 'top top'
       },
       opacity: 0
     });
@@ -95,13 +96,14 @@ export class ContentCarChapterTwoComponent implements OnInit {
     gsap.to('.massContainer', {
       scrollTrigger: {
         trigger: '.textContainer',
-        start: 'bottom top',
+        start: 'top top',
         scrub: true,
-        end: '+=1500px'
+        endTrigger: '.massContainer',
+        end: 'bottom bottom'
       },
       opacity: 0
     });
-
+    /*
     gsap.to('.quiz-component', {
       scrollTrigger: {
         trigger: '.textContainer',
@@ -173,6 +175,7 @@ export class ContentCarChapterTwoComponent implements OnInit {
       },
       top: '-200%'
     });
+     */
   }
 
 }
