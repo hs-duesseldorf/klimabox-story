@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import {gsap} from 'gsap';
 import {MassVisualization} from '../mass-visualization/massVisualization';
+import {Chart} from '../chart/chart';
 
 @Component({
   selector: 'app-content-car-chapter-two',
@@ -14,13 +15,24 @@ export class ContentCarChapterTwoComponent implements OnInit {
   requestedTopic: string = 'mobilitaet';
   massVisualization: MassVisualization[] = [];
   requestedQuizTopic: string = "mobilitaet";
+  charts: Chart[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger);
     this.createParticleMassVisualization();
+    this.createCarChart();
     this.scroll();
+  }
+
+  private createCarChart() {
+    let mobilityChart = Chart.createWith('');
+    mobilityChart.addConsumption('', 0, '', '');
+    mobilityChart.addConsumption('', 0, '', '');
+    mobilityChart.addConsumption('', 0, '', '');
+    mobilityChart.addConsumption('', 0, '', '');
+    this.charts.push(mobilityChart);
   }
 
   private createParticleMassVisualization() {
@@ -35,6 +47,16 @@ export class ContentCarChapterTwoComponent implements OnInit {
         start: '+=50px',
         scrub: true,
         end: '+=200px'
+      },
+      opacity: 0
+    });
+
+    gsap.to('.quiz-component', {
+      scrollTrigger: {
+        trigger: '#articleZoomedOut',
+        start: '+=-1px',
+        scrub: true,
+        end: '+=0px'
       },
       opacity: 0
     });
@@ -67,6 +89,16 @@ export class ContentCarChapterTwoComponent implements OnInit {
         end: '+=1500px'
       },
       opacity: 0
+    });
+
+    gsap.to('.quiz-component', {
+      scrollTrigger: {
+        trigger: '.textContainer',
+        start: 'bottom top',
+        scrub: true,
+        end: '+=1500px'
+      },
+      opacity: 1
     });
 
     gsap.to('#carArticle2', {
