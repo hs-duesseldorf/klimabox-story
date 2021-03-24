@@ -68,6 +68,16 @@ export class ContentCarChapterTwoComponent implements OnInit {
       opacity: 0
     });
 
+    gsap.to('#carArticle2', {
+      scrollTrigger: {
+        trigger: '.textContainer',
+        start: 'bottom top',
+        scrub: true,
+        end: '+=200px'
+      },
+      opacity: 0
+    });
+
   }
 
 }
