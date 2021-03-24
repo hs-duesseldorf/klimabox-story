@@ -28,36 +28,12 @@ export class ContentCarChapterTwoComponent implements OnInit {
   }
 
   scroll() {
-
-    gsap.from('.massContainer', {
-      scrollTrigger: {
-        trigger: '.massContainer',
-        start: 'top bottom',
-        scrub: true,
-        end: '+=600px',
-        markers: true
-      },
-      opacity: 0
-    });
-
-    gsap.to('.massContainer', {
-      scrollTrigger: {
-        trigger: '.textContainer',
-        start: 'bottom top',
-        scrub: true,
-        end: '+=1400px',
-        markers: true
-      },
-      opacity: 0
-    });
-
     gsap.to('#articleZoomedOut', {
       scrollTrigger: {
         trigger: '#articleZoomedOut',
         start: '+=50px',
         scrub: true,
-        end: '+=200px',
-        markers: true
+        end: '+=200px'
       },
       opacity: 0
     });
@@ -67,10 +43,29 @@ export class ContentCarChapterTwoComponent implements OnInit {
         trigger: '#articleZoomedOut',
         start: '+=50px',
         scrub: true,
-        end: '+=500px',
-        markers: true
+        end: '+=500px'
       },
       opacity: 1
+    });
+
+    gsap.from('.massContainer', {
+      scrollTrigger: {
+        trigger: '.massContainer',
+        start: 'top bottom',
+        scrub: true,
+        end: '+=1200px'
+      },
+      opacity: 0
+    });
+
+    gsap.to('.massContainer', {
+      scrollTrigger: {
+        trigger: '.textContainer',
+        start: 'bottom top',
+        scrub: true,
+        end: '+=1500px'
+      },
+      opacity: 0
     });
 
   }
