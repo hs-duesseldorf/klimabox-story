@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {ContentBikeChapterTwoComponent} from './content-bike-chapter-two/content-bike-chapter-two.component';
 import {ContentCarChapterTwoComponent} from './content-car-chapter-two/content-car-chapter-two.component';
 import {HomeComponent} from './home/home.component';
 import {IntroComponent} from './intro/intro.component';
 import {IntroChapterTwoComponent} from './intro-chapter-two/intro-chapter-two.component';
-import { ArticleRecommendationComponent } from './article-recommendation/article-recommendation.component';
 
 const routes: Routes = [
   {path: 'chapter1', component: IntroComponent},

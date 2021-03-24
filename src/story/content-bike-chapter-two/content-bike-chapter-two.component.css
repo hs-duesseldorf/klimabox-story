@@ -1,0 +1,21 @@
+#posterBackground {
+  position: fixed;
+  z-index: 0;
+  top: 70px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#graffitiWall {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  object-fit: cover;
+}
+#bikeAccordion {
+  width: 40%;
+  margin-right: 30%;
+  margin-left: 30%;
+  top: 30%;
+  position: fixed;
+}
