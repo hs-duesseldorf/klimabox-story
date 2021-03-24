@@ -19,12 +19,12 @@ h2 {
 
 #wrong, #right {
     z-index: 1;
-    position: relative;
+    position: relative; 
     float: right !important;
     margin-top: -28%;
     margin-right: -5%;  
     margin-bottom: 8% !important;
-    display: block;
+    /* display: block; */
 }
 
 .card {
@@ -38,6 +38,7 @@ h2 {
     margin-left: 10%;
     /* margin-top: 5%; */
     margin-bottom: 10%;
+    position: relative;
 }
 
 .btn {
@@ -46,6 +47,7 @@ h2 {
     margin-bottom: 2%;
     background-color: #EFEFEF;
     margin-left: 4%;
+    position: sticky;
 }
 
 .btn:hover {

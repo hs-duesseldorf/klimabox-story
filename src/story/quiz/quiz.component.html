@@ -7,12 +7,17 @@
             </div>
             <div class="card-body">
                 <div id="answer-buttons" *ngFor="let option of quizQuestion.quizOptions">
-                    <img *ngIf="!!(isCorrect(option.optionNumber) && !!isIncorrect(option.optionNumber))" src='../../assets/images/chapter2/Correct.png' id="right"/>
-                    <img *ngIf="!!(isIncorrect(option.optionNumber) && !isCorrect(option.optionNumber))" src='../../assets/images/chapter2/Incorrect.png' id="wrong"/>
+                    <div>
+                    <!-- <img *ngIf="!!(isCorrect(option.optionNumber) && !!(!(isCorrect(option.optionNumber) && !isIncorrect(option.optionNumber))))" src='../../assets/images/chapter2/Correct.png' id="right"/> -->
+                    <!-- <img *ngIf="!!(this.quizAttempted && isCorrect(option.optionNumber))" src='../../assets/images/chapter2/Correct.png' id="right"/> -->
+                    <img *ngIf="test && this.quizAttempted" src='../../assets/images/chapter2/Correct.png' id="right"/>
+                    <img *ngIf="!test && this.quizAttempted" src='../../assets/images/chapter2/Incorrect.png' id="wrong"/>
+                    <!-- <img *ngIf="!!(isIncorrect(option.optionNumber) && !isCorrect(option.optionNumber)); else right" src='../../assets/images/chapter2/Incorrect.png' id="wrong"/> -->
+                    </div>
                     <button class="btn" id="content" 
-                    [ngClass]="{'is-correct': isCorrect(option.optionNumber), 'is-incorrect': isIncorrect(option.optionNumber)}"
-                    (click)="onChange($any($event.target).value)"
                     [value]="option.optionNumber" 
+                    [ngClass]="{'is-correct': isCorrect(option.optionNumber), 'is-incorrect': isIncorrect(option.optionNumber)}"
+                    (click)="onChange($event)"
                     >{{ option.optionContent }}</button>
                         
                 </div>

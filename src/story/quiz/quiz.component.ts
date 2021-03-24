@@ -15,6 +15,7 @@ export class QuizComponent implements OnInit {
   option: any = '';
   solution = '../../assets/images/chapter2/Questionmark.png';
   quizAttempted: boolean = false;
+  test!: boolean;
   
   @Input() requestedQuizTopic!: string;
 
@@ -28,11 +29,34 @@ export class QuizComponent implements OnInit {
     this.quizQuestion = this.quizService.getQuizQuestion(this.requestedQuizTopic);
   }
 
-  onChange(quizAnswer: string) {
-    this.quizQuestion.selectedQuizOption = quizAnswer;
+  // onChange(quizAnswer: string) {
+  //   this.quizQuestion.selectedQuizOption = quizAnswer;
+  //   this.quizAttempted = true;
+  //   if (this.quizService.checkAnswer(quizAnswer) == true) {
+  //     this.test = true;
+  //   }
+  //   else if (this.quizService.checkAnswer(quizAnswer) == false) {
+  //     this.test = false;
+  //   }
+  //   // if (this.quizService.isCorrectAnswer) {
+  //   //   this.test = true;
+  //   // }
+  //   this.quizAnswer.emit(quizAnswer);
+  //   console.log("IS CORRECT ANSWER " + this.quizAnswer);
+  // }
+
+  onChange(event: any) {
+    this.quizQuestion.selectedQuizOption = event.target.value;
     this.quizAttempted = true;
-    this.quizAnswer.emit(quizAnswer);
-    //console.log(quizAnswer);
+    console.log("UERBERGABE: " + this.quizQuestion.selectedQuizOption);
+    if (this.quizService.checkAnswer(this.quizQuestion.selectedQuizOption) == true) {
+      this.test = true;
+    }
+    else if (this.quizService.checkAnswer(this.quizQuestion.selectedQuizOption) == false) {
+      this.test = false;
+    }
+    console.log("INHALT DES BUTTONS: " + event.target.value);
+    console.log("ANTWORT IST: " + this.test)
   }
 
   isCorrect(option: string): boolean {
