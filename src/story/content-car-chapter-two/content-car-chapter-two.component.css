@@ -5,6 +5,11 @@
   height: 100%;
   object-fit: cover;
 }
+#car {
+  position: fixed;
+  top: 45%;
+  left: -50%;
+}
 #posterBackground {
   position: fixed;
   z-index: 0;
@@ -67,3 +72,4 @@
   position: fixed;
   top: 3400px;
 }
+

@@ -57,11 +57,21 @@ export class ContentCarChapterTwoComponent implements OnInit {
     gsap.to('#articleZoomedOut', {
       scrollTrigger: {
         trigger: '#articleZoomedOut',
-        start: '+=50px',
+        start: '+=100px',
         scrub: true,
-        end: '+=200px'
+        end: '+=300px'
       },
       opacity: 0
+    });
+
+    gsap.to('#car', {
+      scrollTrigger: {
+        trigger: '#articleZoomedOut',
+        start: '+=5px',
+        scrub: true,
+        end: '+=100px'
+      },
+      left: "60%"
     });
 
     //Quiz verstecken
@@ -114,7 +124,7 @@ export class ContentCarChapterTwoComponent implements OnInit {
     gsap.to('#carArticle2', {
       scrollTrigger: {
         trigger: '.textContainer',
-        start: 'top top',
+        start: 'bottom top',
         scrub: true,
         endTrigger: '.massContainer',
         end: 'bottom bottom'
