@@ -24,6 +24,7 @@ import { CommonModule } from '@angular/common';
 import { IntroChapterTwoComponent } from './intro-chapter-two/intro-chapter-two.component';
 import { ContentCarChapterTwoComponent } from './content-car-chapter-two/content-car-chapter-two.component';
 import { SoundOptionComponent } from './sound-option/sound-option.component';
+import { ContentBikeChapterTwoComponent } from './content-bike-chapter-two/content-bike-chapter-two.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { SoundOptionComponent } from './sound-option/sound-option.component';
     ArticleRecommendationComponent,
     IntroChapterTwoComponent,
     ContentCarChapterTwoComponent,
-    SoundOptionComponent
+    SoundOptionComponent,
+    ContentBikeChapterTwoComponent
   ],
   imports: [
       BrowserModule,

@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: 'chapter1', component: IntroComponent},
   {path: 'chapter2', component: IntroChapterTwoComponent},
   {path: 'chapter2/car', component: ContentCarChapterTwoComponent},
+  {path: 'chapter2/bike', component: ContentBikeChapterTwoComponent},
   {path: 'home', component: HomeComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
