@@ -16,8 +16,8 @@
     </div>
     <div class="footer">
         <div class="tags">
-            <p class="tag" *ngFor="let tag of tags">
-                {{ tag }}
+            <p class="tag" *ngFor="let tag of tags" style="background-color: {{ tag.color }}; color: {{ tag.textcolor }}">
+                {{ tag.title }}
             </p>
         </div>
         <div class="datediv">

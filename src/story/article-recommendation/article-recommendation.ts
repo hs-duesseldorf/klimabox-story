@@ -1,3 +1,5 @@
+import { Tags } from "./tags";
+
 export class ArticleRecommendation {
     title: string;
     description: string;
@@ -5,9 +7,9 @@ export class ArticleRecommendation {
     date: string;
     url: string;
     isBookmarked: boolean;
-    tags: string[];
+    tags: Tags[];
 
-    constructor(_title: string, _description: string, _imgurl: string, _date: string, _url: string, _isBookmarked: boolean, _tags: string[]){
+    constructor(_title: string, _description: string, _imgurl: string, _date: string, _url: string, _isBookmarked: boolean, _tags: Tags[]){
         this.title = _title;
         this.description = _description;
         this.imgurl = _imgurl;

@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { AfterViewInit, Inject } from '@angular/core';
 import { Component, Input, OnInit } from '@angular/core';
+import { Tags } from '../article-recommendation/tags';
 
 @Component({
   selector: 'app-article-button',
@@ -14,7 +15,7 @@ export class ArticleButtonComponent implements OnInit, AfterViewInit {
   @Input() date: string = "";
   @Input() url: string = ""
   @Input() isBookmarked: boolean = false;
-  @Input() tags: string[] = [];
+  @Input() tags: Tags[] = [];
   constructor(@Inject(DOCUMENT) private document: Document) { 
 
   }

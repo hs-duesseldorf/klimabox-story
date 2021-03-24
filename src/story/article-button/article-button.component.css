@@ -1,6 +1,4 @@
-html {
-    --lh: 1.4rem;
-  }
+
 .container{
     position: relative;
     margin: 0;
@@ -14,7 +12,7 @@ html {
     padding: 0px;
     height: inherit;
     width: inherit;
-    margin-bottom: 1vh;
+    margin-bottom: 3px;
     border-radius: 3vh 3vh 0 0;
 }
 .bookmark {
@@ -60,24 +58,28 @@ html {
     display: flex;
     max-height: 5vh;
     justify-content: space-between;
-    align-items: center;
-    font-size: clamp(8px, 1.5vh, 12px);
+    align-items: baseline;
+    font-size: clamp(8px, 1.2vh, 12px);
 }
 .tags{
     display: flex;
     justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 .tag {
     margin: 0 1px 1px 1px;
-    padding: 2px 6px 2px 6px;
+    padding: 1px 8px 1px 8px;
     border-radius: 10px 10px 10px 10px;
-    background-color: lightcoral;
+    background-color: #E3E3E3;
+    color: #6F6F6F;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .datediv{
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: baseline;
 }
 .date{
     height: inherit;
@@ -87,4 +89,5 @@ html {
 .datesvg{
     height: 12px;
     margin-right: 2px;
+    align-self:center;
 }
