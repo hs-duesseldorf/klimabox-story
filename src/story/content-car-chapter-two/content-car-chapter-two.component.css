@@ -54,3 +54,10 @@
   position: fixed;
   top: 20%;
 }
+
+#carChart {
+  width: 100%;
+  position: fixed;
+  top: 1700px;
+  /* top: 20%; */
+}

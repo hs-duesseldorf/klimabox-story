@@ -112,7 +112,7 @@ export class ContentCarChapterTwoComponent implements OnInit {
       opacity: 0
     });
 
-    gsap.from('#carQuiz', {
+    gsap.to('#carQuiz', {
       scrollTrigger: {
         trigger: '.massContainer',
         start: 'bottom top',
@@ -120,7 +120,27 @@ export class ContentCarChapterTwoComponent implements OnInit {
         end: '+=1200px',
         markers: true
       },
-      position: 'relative'
+      top: '-200%'
+    });
+
+    gsap.to('#carChart', {
+      scrollTrigger: {
+        trigger: '#articleZoomedOut',
+        start: '+=-1px',
+        scrub: true,
+        end: '+=0px'
+      },
+      opacity: 0
+    });
+
+    gsap.to('#carChart', {
+      scrollTrigger: {
+        trigger: '.quiz-component',
+        start: 'top top',
+        scrub: true,
+        end: '+=1500px'
+      },
+      opacity: 1
     });
 
   }
