@@ -17,10 +17,12 @@ import { ChapterButtonComponent } from './chapter-button/chapter-button.componen
 import { HomeComponent } from './home/home.component';
 import { ChaptersService } from './home/chapters.service';
 import {AudioAccordionComponent} from './audio-accordion/audio-accordion.component';
+import { QuizComponent } from './quiz/quiz.component';
 import { ArticleButtonComponent } from './article-button/article-button.component';
 import { ArticleRecommendationComponent } from './article-recommendation/article-recommendation.component';
 import { CommonModule } from '@angular/common';
 import { SoundOptionComponent } from './sound-option/sound-option.component';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { SoundOptionComponent } from './sound-option/sound-option.component';
     ChapterButtonComponent,
     HomeComponent,
     AudioAccordionComponent,
+    QuizComponent,
     ArticleButtonComponent,
     ArticleRecommendationComponent,
     SoundOptionComponent

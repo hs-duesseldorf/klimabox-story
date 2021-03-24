@@ -23,6 +23,7 @@ export class IntroComponent implements OnInit {
   charts: Chart[] = [];
 
   constructor(private audioService: AudioService) {
+
   }
 
   ngOnInit(): void {
