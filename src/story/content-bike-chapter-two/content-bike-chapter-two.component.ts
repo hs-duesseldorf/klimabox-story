@@ -19,15 +19,15 @@ export class ContentBikeChapterTwoComponent implements OnInit {
   }
 
   scroll(): void {
-    gsap.to('#bikeAccordion', {
-      scrollTrigger: {
-        trigger: '#triggerDiv',
-        start: '+=0px',
-        scrub: true,
-        end: '+=200px'
-      },
-      top: '-200%'
-    });
+    // gsap.to('#bikeAccordion', {
+    //   scrollTrigger: {
+    //     trigger: '#triggerDiv',
+    //     start: '+=0px',
+    //     scrub: true,
+    //     end: '+=200px'
+    //   },
+    //   top: '-200%'
+    // });
   }
 
 }
