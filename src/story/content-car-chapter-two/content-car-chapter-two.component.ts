@@ -47,7 +47,7 @@ export class ContentCarChapterTwoComponent implements OnInit {
   private createPersonalQuestion() {
     let personalQuestionMobility = PersonalQuestion.createWith('Möchtest du noch mehr erfahren?', '#');
     personalQuestionMobility.addChoice('/assets/images/chapter2/Bahn.png', '#', '-650', '80', '8');
-    personalQuestionMobility.addChoice('/assets/images/chapter2/Fahrrad.png', '#', '700', '280', '9');
+    personalQuestionMobility.addChoice('/assets/images/chapter2/Fahrrad.png', 'chapter2/bike', '700', '280', '9');
     this.question.push(personalQuestionMobility);
   }
 
@@ -140,20 +140,13 @@ export class ContentCarChapterTwoComponent implements OnInit {
         trigger: '.massContainer',
         start: 'bottom top',
         scrub: true,
-        endTrigger: '.quiz-component',
         end: '+=1200px',
         markers: true
       },
-      top: '-200%'
+      top: '-500%'
     });
 
-    /*
-    
-
-    
-
-    
-
+    // Chart von unten ins Bild schieben
     gsap.to('#carChart', {
       scrollTrigger: {
         trigger: '.massContainer',
@@ -162,39 +155,33 @@ export class ContentCarChapterTwoComponent implements OnInit {
         end: '+=1200px',
         markers: true
       },
-      top: '-150%'
+      top: '-500%'
     });
 
+    // Chart von der mitte aus dem Bild schieben
     gsap.to('#carChart', {
       scrollTrigger: {
-        trigger: '#articleZoomedOut',
-        start: '+=-1px',
-        scrub: true,
-        end: '+=0px'
-      },
-      opacity: 0
-    });
-
-    gsap.to('#carChart', {
-      scrollTrigger: {
-        trigger: '.quiz-component',
-        start: 'top top',
-        scrub: true,
-        end: '+=1500px'
-      },
-      opacity: 1
-    });
-
-    gsap.to('#carChart', {
-      scrollTrigger: {
-        trigger: '.quiz-component',
+        trigger: '.massContainer',
         start: 'bottom top',
         scrub: true,
-        end: '+=2000px'
+        end: '+=2400px',
+        markers: true
       },
-      top: '-200%'
+      top: '-500%'
     });
-     */
+
+    // Question von unten ins bild schieben
+    gsap.to('#chapter2_question1', {
+      scrollTrigger: {
+        trigger: '.massContainer',
+        start: 'bottom top',
+        scrub: true,
+        end: '+=2400px',
+        markers: true
+      },
+      top: '-50%'
+    });
+
   }
 
 }
