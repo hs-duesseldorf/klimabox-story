@@ -4,6 +4,7 @@ import {ContentCarChapterTwoComponent} from './content-car-chapter-two/content-c
 import {HomeComponent} from './home/home.component';
 import {IntroComponent} from './intro/intro.component';
 import {IntroChapterTwoComponent} from './intro-chapter-two/intro-chapter-two.component';
+import { ArticleRecommendationComponent } from './article-recommendation/article-recommendation.component';
 
 const routes: Routes = [
   {path: 'chapter1', component: IntroComponent},

@@ -5,6 +5,7 @@ import {PersonalQuestion} from '../personalization-question/personalQuestion';
 import {HeadlineImage} from '../zoom-headline/headlineImage';
 import {MassVisualization} from '../mass-visualization/massVisualization';
 import {Chart} from '../chart/chart';
+import {AudioService} from '../services/audio.service';
 
 @Component({
   selector: 'app-intro',
@@ -18,10 +19,12 @@ export class IntroComponent implements OnInit {
   question2: PersonalQuestion[] = [];
   zoomHeadlineImage: HeadlineImage[] = [];
   massVisualization: MassVisualization[] = [];
-  requestedTopic: String = 'ernaehrung';
+  requestedTopic: string = 'ernaehrung';
+  chartHeading: string = 'Öko-Bilanzvergleich';
   charts: Chart[] = [];
 
-  constructor() {
+  constructor(private audioService: AudioService) {
+
   }
 
   ngOnInit(): void {
@@ -32,6 +35,7 @@ export class IntroComponent implements OnInit {
     this.createSecondPersonalQuestion();
     gsap.registerPlugin(ScrollTrigger);
     this.scroll();
+    this.audioService.playLoop("assets/sounds/morgenmitvoegeln.mp3")
   }
 
   private createFirstPersonalQuestion() {
@@ -59,15 +63,17 @@ export class IntroComponent implements OnInit {
   }
 
   private createChartData() {
-    let co2ConsumptionChart = Chart.createWith('Kg CO2 verursacht...');
+    let co2ConsumptionChart = Chart.createWith('CO2');
     co2ConsumptionChart.addConsumption('1 Kg Fleisch', 120, 'Kg', 'assets/chart/kapitel1_stats_rindfleisch.png');
     co2ConsumptionChart.addConsumption('1 Kg Eier', 60, 'Kg', 'assets/chart/kapitel1_stats_eier.png');
     co2ConsumptionChart.addConsumption('1 Kg Soja', 30, 'Kg', 'assets/chart/kapitel1_stats_vegan.png');
+    co2ConsumptionChart.addConsumption('100 km Autofahren', 100, 'Kg', '');
 
-    let waterConsumptionChart = Chart.createWith('l Wasser verbraucht...');
+    let waterConsumptionChart = Chart.createWith('Wasserverbrauch');
     waterConsumptionChart.addConsumption('1 Kg Fleisch', 100, 'l', 'assets/chart/kapitel1_stats_rindfleisch.png');
     waterConsumptionChart.addConsumption('1 Kg Eier', 70, 'l', 'assets/chart/kapitel1_stats_eier.png');
     waterConsumptionChart.addConsumption('1 Kg Soja', 35, 'l', 'assets/chart/kapitel1_stats_vegan.png');
+    waterConsumptionChart.addConsumption('100 km Autofahren', 40, 'l', '');
 
     this.charts.push(co2ConsumptionChart, waterConsumptionChart);
   }
@@ -221,7 +227,8 @@ export class IntroComponent implements OnInit {
         trigger: '.massContainer',
         start: 'top top',
         scrub: true,
-        end: '+=600px'
+        end: '+=600px',
+        onEnter: () => this.audioService.play("assets/audio-accordion/audio/chicken2.mp3")
       },
       opacity: 0
     });

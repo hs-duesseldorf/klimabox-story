@@ -17,11 +17,14 @@ import { ChapterButtonComponent } from './chapter-button/chapter-button.componen
 import { HomeComponent } from './home/home.component';
 import { ChaptersService } from './home/chapters.service';
 import {AudioAccordionComponent} from './audio-accordion/audio-accordion.component';
+import { QuizComponent } from './quiz/quiz.component';
 import { ArticleButtonComponent } from './article-button/article-button.component';
 import { ArticleRecommendationComponent } from './article-recommendation/article-recommendation.component';
 import { CommonModule } from '@angular/common';
 import { IntroChapterTwoComponent } from './intro-chapter-two/intro-chapter-two.component';
 import { ContentCarChapterTwoComponent } from './content-car-chapter-two/content-car-chapter-two.component';
+import { SoundOptionComponent } from './sound-option/sound-option.component';
+
 
 @NgModule({
   declarations: [
@@ -37,10 +40,12 @@ import { ContentCarChapterTwoComponent } from './content-car-chapter-two/content
     ChapterButtonComponent,
     HomeComponent,
     AudioAccordionComponent,
+    QuizComponent,
     ArticleButtonComponent,
     ArticleRecommendationComponent,
     IntroChapterTwoComponent,
-    ContentCarChapterTwoComponent
+    ContentCarChapterTwoComponent,
+    SoundOptionComponent
   ],
   imports: [
       BrowserModule,
