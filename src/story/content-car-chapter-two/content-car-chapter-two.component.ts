@@ -34,7 +34,8 @@ export class ContentCarChapterTwoComponent implements OnInit {
         trigger: '.massContainer',
         start: 'top bottom',
         scrub: true,
-        end: '+=600px'
+        end: '+=600px',
+        markers: true
       },
       opacity: 0
     });
@@ -44,7 +45,8 @@ export class ContentCarChapterTwoComponent implements OnInit {
         trigger: '.textContainer',
         start: 'bottom top',
         scrub: true,
-        end: '+=1400px'
+        end: '+=1400px',
+        markers: true
       },
       opacity: 0
     });
@@ -54,7 +56,8 @@ export class ContentCarChapterTwoComponent implements OnInit {
         trigger: '#articleZoomedOut',
         start: '+=50px',
         scrub: true,
-        end: '+=200px'
+        end: '+=200px',
+        markers: true
       },
       opacity: 0
     });
@@ -64,7 +67,8 @@ export class ContentCarChapterTwoComponent implements OnInit {
         trigger: '#articleZoomedOut',
         start: '+=50px',
         scrub: true,
-        end: '+=500px'
+        end: '+=500px',
+        markers: true
       },
       opacity: 1
     });

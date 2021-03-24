@@ -8,8 +8,10 @@
 #posterBackground {
   position: fixed;
   z-index: 0;
-  left: 200px;
   top: 70px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 #carArticle {
   position: fixed;
@@ -32,9 +34,10 @@
 }
 
 #graffitiWall {
+  height: 100%;
   width: 100%;
-  bottom: -5%;
   position: fixed;
+  object-fit: cover;
 }
 
 #carArticle2 {
