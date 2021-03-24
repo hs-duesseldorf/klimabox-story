@@ -49,6 +49,26 @@ export class ContentCarChapterTwoComponent implements OnInit {
       opacity: 0
     });
 
+    gsap.to('#articleZoomedOut', {
+      scrollTrigger: {
+        trigger: '#articleZoomedOut',
+        start: '+=50px',
+        scrub: true,
+        end: '+=200px'
+      },
+      opacity: 0
+    });
+
+    gsap.to('#articleZoomedIn', {
+      scrollTrigger: {
+        trigger: '#articleZoomedOut',
+        start: '+=50px',
+        scrub: true,
+        end: '+=500px'
+      },
+      opacity: 1
+    });
+
   }
 
 }
