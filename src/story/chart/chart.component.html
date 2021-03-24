@@ -1,24 +1,33 @@
-<div id="heading" class="card">
-  <div class="card-body">
-    <div class="container">
-      <div class="chart-head">
-        <p class="h3">
-          Wie viel
-          <select [ngModel]="selectedChart" (ngModelChange)="show($event)" id="chart-selection">
-            <option [ngValue]="chart" *ngFor="let chart of charts">{{chart.title}}</option>
-          </select>
-        </p>
-      </div>
-      <div class="chart-body">
-        <div *ngFor="let consumption of selectedChart.consumptions" class="consumption">
-          <figure class="figure bar rounded" [ngStyle]="{width: calculatePercentage(consumption) + '%'}">
-            <div [ngStyle]="{backgroundImage:'url(' + consumption.imagePath + ')'}" class="bar-background"></div>
-            <span [id]="consumption.topic" class="topic">{{consumption.topic}}</span>
-          </figure>
-          <span [id]="consumption.topic + '-amount'" class="amount">{{consumption.amount}} {{consumption.unit}}</span>
+<div class="container-fluid">
+  <div>
+    <h2>{{heading}}</h2>
+  </div>
+  <div id="heading" class="card">
+    <div class="card-body">
+      <div class="container">
+        <div class="chart-body">
+          <div *ngFor="let consumption of selectedChart.consumptions" class="consumption">
+            <figure class="figure bar rounded" [ngStyle]="{width: calculatePercentage(consumption) + '%'}">
+              <div *ngIf="hasBackgroundImage(consumption)"
+                   [ngStyle]="{backgroundImage:'url(' + consumption.imagePath + ')'}" class="bar-background"></div>
+              <div *ngIf="!hasBackgroundImage(consumption)" class="bar-default bar rounded"></div>
+              <span [id]="consumption.topic" class="topic"
+                    [ngClass]="{black: !hasBackgroundImage(consumption), white: hasBackgroundImage(consumption)}">
+                <b>{{consumption.topic}}</b>
+              </span>
+            </figure>
+            <span [id]="consumption.topic + '-amount'" class="amount">
+              {{consumption.amount}} {{consumption.unit}}
+            </span>
+          </div>
         </div>
       </div>
     </div>
-
+  </div>
+  <div class="navigation">
+    <button class="title-button"
+            [ngClass]="{active: chart.title==selectedChart.title, inactive: chart.title!=selectedChart.title}"
+            [ngModel]="chart" (click)="show(chart)" [ngStyle]="{width: calculateButtonWidth()}"
+            *ngFor="let chart of charts" ngDefaultControl>{{chart.title}}</button>
   </div>
 </div>
