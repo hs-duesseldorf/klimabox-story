@@ -8,7 +8,6 @@ import { ArticleRecommendationComponent } from './article-recommendation/article
 const routes: Routes = [
   {path: 'chapter1', component: IntroComponent},
   {path: 'chapter2', component: IntroChapterTwoComponent},
-  {path: 'chapter3', component: ArticleRecommendationComponent},
   {path: 'home', component: HomeComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
