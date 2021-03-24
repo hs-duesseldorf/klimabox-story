@@ -105,3 +105,8 @@
 #text p:nth-child(2){
     margin-left: 50px;
 }
+
+app-sound-option {
+  position: fixed;
+  width: 5%;
+}

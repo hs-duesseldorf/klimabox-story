@@ -1,0 +1,21 @@
+.container{
+    width: 55vw;
+    margin: 20%;
+    padding: 5%;
+}
+.recommendations{
+    margin-top: 6vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.items{
+    display: flex;
+    flex-direction: row;
+    max-width: 21vw;
+    min-height: 10vh;
+}
+h5{
+    font-weight: bold;
+}
