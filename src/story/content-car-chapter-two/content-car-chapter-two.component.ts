@@ -52,6 +52,8 @@ export class ContentCarChapterTwoComponent implements OnInit {
   }
 
   scroll() {
+
+    //Herausgezoomten Artikel ausblenden
     gsap.to('#articleZoomedOut', {
       scrollTrigger: {
         trigger: '#articleZoomedOut',
@@ -62,6 +64,7 @@ export class ContentCarChapterTwoComponent implements OnInit {
       opacity: 0
     });
 
+    //Quiz verstecken
     gsap.to('.quiz-component', {
       scrollTrigger: {
         trigger: '#articleZoomedOut',
@@ -72,6 +75,7 @@ export class ContentCarChapterTwoComponent implements OnInit {
       opacity: 0
     });
 
+    //Gezoomten Artikel einblenden
     gsap.to('#articleZoomedIn', {
       scrollTrigger: {
         trigger: '#articleZoomedOut',
@@ -82,6 +86,7 @@ export class ContentCarChapterTwoComponent implements OnInit {
       opacity: 1
     });
 
+    //Massenvisualisierung einblenden
     gsap.from('.massContainer', {
       scrollTrigger: {
         trigger: '.massContainer',
@@ -93,6 +98,7 @@ export class ContentCarChapterTwoComponent implements OnInit {
       opacity: 0
     });
 
+    //Massenvisualisierung ausblenden
     gsap.to('.massContainer', {
       scrollTrigger: {
         trigger: '.textContainer',
@@ -103,37 +109,50 @@ export class ContentCarChapterTwoComponent implements OnInit {
       },
       opacity: 0
     });
-    /*
-    gsap.to('.quiz-component', {
-      scrollTrigger: {
-        trigger: '.textContainer',
-        start: 'bottom top',
-        scrub: true,
-        end: '+=1500px'
-      },
-      opacity: 1
-    });
 
+    //Artikel ausblenden
     gsap.to('#carArticle2', {
       scrollTrigger: {
         trigger: '.textContainer',
-        start: 'bottom top',
+        start: 'top top',
         scrub: true,
-        end: '+=200px'
+        endTrigger: '.massContainer',
+        end: 'bottom bottom'
       },
       opacity: 0
     });
 
+    //Quiz einblenden
+    gsap.to('.quiz-component', {
+      scrollTrigger: {
+        trigger: '.textContainer',
+        start: 'top top',
+        scrub: true,
+        endTrigger: '.massContainer',
+        end: 'bottom bottom'
+      },
+      opacity: 1
+    });
+
+    //Quiz nach oben schieben
     gsap.to('#carQuiz', {
       scrollTrigger: {
         trigger: '.massContainer',
         start: 'bottom top',
         scrub: true,
+        endTrigger: '.quiz-component',
         end: '+=1200px',
         markers: true
       },
       top: '-200%'
     });
+
+    /*
+    
+
+    
+
+    
 
     gsap.to('#carChart', {
       scrollTrigger: {
