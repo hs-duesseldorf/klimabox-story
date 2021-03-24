@@ -38,8 +38,7 @@
 }
 
 #carArticle2 {
-  width: 66%;
-  position: absolute;
-  left: 17%;
-  top: 10%;
+  width: 100%;
+  position: fixed;
+  top: 20%;
 }
