@@ -21,6 +21,9 @@ import { QuizComponent } from './quiz/quiz.component';
 import { ArticleButtonComponent } from './article-button/article-button.component';
 import { ArticleRecommendationComponent } from './article-recommendation/article-recommendation.component';
 import { CommonModule } from '@angular/common';
+
+import { IntroChapterTwoComponent } from './intro-chapter-two/intro-chapter-two.component';
+
 import { SoundOptionComponent } from './sound-option/sound-option.component';
 
 
@@ -41,6 +44,7 @@ import { SoundOptionComponent } from './sound-option/sound-option.component';
     QuizComponent,
     ArticleButtonComponent,
     ArticleRecommendationComponent,
+    IntroChapterTwoComponent,
     SoundOptionComponent
   ],
   imports: [
