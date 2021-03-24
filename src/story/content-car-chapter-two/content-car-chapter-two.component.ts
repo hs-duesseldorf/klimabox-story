@@ -13,6 +13,7 @@ export class ContentCarChapterTwoComponent implements OnInit {
 
   requestedTopic: string = 'mobilitaet';
   massVisualization: MassVisualization[] = [];
+  requestedQuizTopic: string = "mobilitaet";
 
   constructor() { }
 

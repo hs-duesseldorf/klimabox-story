@@ -28,6 +28,9 @@
 #particleComponent .backgroundContainer {
   opacity: 0;
 }
+#carQuiz .quiz-component{
+  opacity: 0;
+}
 
 #articleZoomedIn {
   opacity: 0;
