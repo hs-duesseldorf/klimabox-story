@@ -140,20 +140,13 @@ export class ContentCarChapterTwoComponent implements OnInit {
         trigger: '.massContainer',
         start: 'bottom top',
         scrub: true,
-        endTrigger: '.quiz-component',
         end: '+=1200px',
         markers: true
       },
-      top: '-200%'
+      top: '-500%'
     });
 
     /*
-    
-
-    
-
-    
-
     gsap.to('#carChart', {
       scrollTrigger: {
         trigger: '.massContainer',
