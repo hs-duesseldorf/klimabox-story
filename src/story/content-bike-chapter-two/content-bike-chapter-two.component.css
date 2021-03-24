@@ -22,8 +22,13 @@
   margin-right: 30%;
   margin-left: 30%;
   top: 30%;
-  position: relative;
-  margin-bottom: 50%;
+  position: fixed;
 }
-
+#article-recommendation {
+  top: 1700px;
+  position: fixed;
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
 

@@ -1,8 +1,8 @@
 .container{
     width: 55vw;
     min-width: 200px;
-    margin-right: clamp(60px, 20%, 250px);
-    margin-left: clamp(60px, 20%, 250px);
+    margin-right: clamp(60px, 20%, 400px);
+    margin-left: clamp(60px, 20%, 400px);
     padding: 5%;
 }
 .recommendations{
@@ -10,12 +10,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+
 }
 .items{
     display: flex;
     flex-direction: row;
-    width: clamp(100px, 21.5vw, 300px);
+    width: clamp(100px, 21.5vw, 500px);
     min-height: 10vh;
 }
 h5{

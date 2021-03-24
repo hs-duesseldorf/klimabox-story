@@ -19,15 +19,28 @@ export class ContentBikeChapterTwoComponent implements OnInit {
   }
 
   scroll(): void {
-    // gsap.to('#bikeAccordion', {
-    //   scrollTrigger: {
-    //     trigger: '#triggerDiv',
-    //     start: '+=0px',
-    //     scrub: true,
-    //     end: '+=200px'
-    //   },
-    //   top: '-200%'
-    // });
+
+    // bewegt bike accordion nach oben weg
+    gsap.to('#bikeAccordion', {
+      scrollTrigger: {
+        trigger: '#triggerDiv',
+        start: '+=0px',
+        scrub: true,
+        end: '+=200px'
+      },
+      top: '-200%'
+    });
+
+    // bewegt article-recommendation nach oben weg
+    gsap.to('#article-recommendation', {
+      scrollTrigger: {
+        trigger: '#triggerDiv',
+        start: '+=200',
+        scrub: true,
+        end: '+=600px'
+      },
+      top: '20%'
+    });
   }
 
 }
