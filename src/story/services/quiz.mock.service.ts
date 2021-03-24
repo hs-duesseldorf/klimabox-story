@@ -41,19 +41,6 @@ export class QuizService {
         }
     ];
 
-    // checkAnswer(): boolean {
-    //     if (this.isCorrectAnswer()) {
-    //         return this.correctAnswer = true;
-    //     }
-    //     else {
-    //         return this.correctAnswer = false;
-    //     }
-    // }
-
-    // isCorrectAnswer(): boolean {
-    //     return this.quizQuestion.selectedQuizOption === this.quizQuestion.quizAnswer;
-    // } 
-
     checkAnswer(selectedAnswer: string): boolean {
         if (selectedAnswer === this.quizQuestions[0].quizAnswer) {
             return this.correctAnswer = true;
@@ -64,8 +51,6 @@ export class QuizService {
         return this.correctAnswer;
     }
 
-    
-
     getQuizQuestion(requestedQuizTopic: string): QuizQuestion {
         let quizQuestionsToSearch = this.quizQuestions;
         let requestedQuizQuestion!: QuizQuestion;
@@ -75,6 +60,6 @@ export class QuizService {
               return requestedQuizQuestion;
             }
         }
-          return requestedQuizQuestion;
+        return requestedQuizQuestion;
     }
 }

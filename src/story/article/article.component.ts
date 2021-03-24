@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
 export class ArticleComponent implements OnInit, OnDestroy {
 
   articles!: Article[];
-  sub!: Subscription;
+  sub: Subscription = new Subscription();
   article!: Article;
   
 
