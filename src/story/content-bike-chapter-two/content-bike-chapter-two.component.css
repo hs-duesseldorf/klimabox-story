@@ -31,4 +31,25 @@
   margin-right: 5%;
   margin-left: 5%;
 }
-
+#graffitiBackground {
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#articleZoomedOut {
+  opacity: 0;
+}
+#small-article-recommendation {
+  position: fixed;
+  width: 90%;
+  margin-right: 7%;
+  margin-left: 3%;
+  transform: scale(0.6, 0.6);
+}
+#bike {
+  position: fixed;
+  top: 40%;
+  left: -10%;
+}

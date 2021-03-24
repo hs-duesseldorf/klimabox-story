@@ -41,6 +41,38 @@ export class ContentBikeChapterTwoComponent implements OnInit {
       },
       top: '20%'
     });
+
+    gsap.to('#contentZoomedIn', {
+      scrollTrigger: {
+        trigger: '#triggerDiv',
+        start: '+=1000',
+        scrub: true,
+        end: '+=1200px'
+      },
+      opacity: 0
+    });
+
+    gsap.to('#articleZoomedOut', {
+      scrollTrigger: {
+        trigger: '#triggerDiv',
+        start: '+=1000',
+        scrub: true,
+        end: '+=1100px'
+      },
+      opacity: 1
+    });
+
+    gsap.to('#bike', {
+      scrollTrigger: {
+        trigger: '#triggerDiv',
+        start: '+=1400',
+        scrub: true,
+        end: '+=1700px'
+      },
+      left: "60%"
+    });
+
+
   }
 
 }
