@@ -1,6 +1,4 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
 import { Article } from '../models/article.model';
 import { ArticleService } from '../services/article.mock.service';
 import { Subscription } from 'rxjs';
@@ -20,7 +18,7 @@ export class ArticleComponent implements OnInit, OnDestroy {
 
   @Input() requestedTopic!: String;
 
-  constructor(private articleService: ArticleService, private route: ActivatedRoute) { }
+  constructor(private articleService: ArticleService) { }
 
   ngOnInit(): void {
     this.getArticle(this.requestedTopic);
