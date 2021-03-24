@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Chart} from '../chart/chart';
 import { MassVisualization } from '../mass-visualization/massVisualization';
 import {PersonalQuestion} from '../personalization-question/personalQuestion';
+import {AudioService} from '../services/audio.service';
 
 @Component({
   selector: 'app-intro-chapter-two',
@@ -17,12 +18,13 @@ export class IntroChapterTwoComponent implements OnInit {
   massVisualization: MassVisualization[] = [];
   charts: Chart[] = [];
 
-  constructor() { }
+  constructor(private audioService: AudioService) { }
 
   ngOnInit(): void {
     this.createPersonalQuestion();
     this.createParticleMassVisualization();
     this.createChart();
+    this.audioService.playLoop("/assets/sounds/zurArbeithintergrungmorgens.mp3");
   }
 
   private createPersonalQuestion() {
