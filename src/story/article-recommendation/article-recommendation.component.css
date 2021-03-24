@@ -1,8 +1,8 @@
 .container{
     width: 55vw;
     min-width: 200px;
-    margin-right: clamp(60px, 15%, 250px);
-    margin-left: clamp(60px, 15%, 250px);
+    margin-right: clamp(60px, 20%, 250px);
+    margin-left: clamp(60px, 20%, 250px);
     padding: 5%;
 }
 .recommendations{
