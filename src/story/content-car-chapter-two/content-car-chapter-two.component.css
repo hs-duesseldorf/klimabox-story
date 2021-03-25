@@ -71,5 +71,7 @@
   width: 100%;
   position: fixed;
   top: 3400px;
+  transform: scale(0.6,0.6);
 }
+
 

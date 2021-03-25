@@ -45,9 +45,9 @@ export class ContentCarChapterTwoComponent implements OnInit {
   }
 
   private createPersonalQuestion() {
-    let personalQuestionMobility = PersonalQuestion.createWith('Möchtest du noch mehr erfahren?', '#');
-    personalQuestionMobility.addChoice('/assets/images/chapter2/Bahn.png', '#', '-650', '80', '8');
-    personalQuestionMobility.addChoice('/assets/images/chapter2/Fahrrad.png', 'chapter2/bike', '700', '280', '9');
+    let personalQuestionMobility = PersonalQuestion.createWith('Worüber möchtest du noch mehr erfahren?', '#');
+    personalQuestionMobility.addChoice('/assets/images/chapter2/Bahn.png', '#', '-250', '300', '8');
+    personalQuestionMobility.addChoice('/assets/images/chapter2/Fahrrad.png', 'chapter2/bike', '1200', '500', '9');
     this.question.push(personalQuestionMobility);
   }
 
@@ -162,10 +162,10 @@ export class ContentCarChapterTwoComponent implements OnInit {
         trigger: '.massContainer',
         start: 'bottom top',
         scrub: true,
-        end: '+=1200px',
+        end: '+=1800px',
         markers: true
       },
-      top: '-500%'
+      top: '50%'
     });
 
     // Chart von der mitte aus dem Bild schieben
@@ -186,10 +186,10 @@ export class ContentCarChapterTwoComponent implements OnInit {
         trigger: '.massContainer',
         start: 'bottom top',
         scrub: true,
-        end: '+=2400px',
+        end: '+=3600px',
         markers: true
       },
-      top: '-50%'
+      top: '-5%'
     });
 
   }
