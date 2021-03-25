@@ -11,6 +11,7 @@
                 <div id="answer-buttons" *ngFor="let option of quizQuestion.quizOptions">
                     <button class="btn" id="content"
                     [value]="option.optionNumber"
+                    [disabled]="disabled"
                     [ngClass]="{'is-correct': isCorrect(option.optionNumber), 'is-incorrect': isIncorrect(option.optionNumber)}"
                     (click)="onChange($event)"
                     >{{ option.optionContent }}</button>

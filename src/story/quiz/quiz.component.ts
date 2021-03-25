@@ -17,6 +17,7 @@ export class QuizComponent implements OnInit {
   quizSolved!: boolean;
   CORRECT!: string;
   WRONG!: string;
+  disabled: boolean = false;
 
 
   @Input() requestedQuizTopic!: string;
@@ -34,7 +35,7 @@ export class QuizComponent implements OnInit {
   onChange(event: any) {
     this.quizQuestion.selectedQuizOption = event.target.value;
     this.quizAttempted = true;
-    // console.log("UERBERGABE: " + this.quizQuestion.selectedQuizOption);
+    this.disabled = true;
     if (this.quizService.checkAnswer(this.quizQuestion.selectedQuizOption) == true) {
       this.CORRECT = '../../assets/images/chapter2/Correct.png';
       this.quizSolved = true;
@@ -43,8 +44,6 @@ export class QuizComponent implements OnInit {
       this.WRONG = '../../assets/images/chapter2/Incorrect.png';
       this.quizSolved = false;
     }
-    // console.log("INHALT DES BUTTONS: " + event.target.value);
-    // console.log("ANTWORT IST: " + this.test)
   }
 
   isCorrect(option: string): boolean {
