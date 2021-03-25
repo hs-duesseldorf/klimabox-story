@@ -63,8 +63,7 @@
 #carChart {
   width: 100%;
   position: fixed;
-  top: 1700px;
-  /* top: 20%; */
+  top: 15%;
 }
 
 #chapter2_question1 {
@@ -74,7 +73,7 @@
   transform: scale(0.6,0.6);
 }
 #contentContainer {
-  height: 9200px;
+  height: 11800px;
 }
 
 

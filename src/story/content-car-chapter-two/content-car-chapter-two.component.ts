@@ -163,36 +163,37 @@ export class ContentCarChapterTwoComponent implements OnInit, OnDestroy {
     });
 
     // Chart von unten ins Bild schieben
-    gsap.to('#carChart', {
+    gsap.from('#carChart', {
       scrollTrigger: {
         trigger: '.massContainer',
-        start: 'bottom top',
+        start: '3500px',
         scrub: true,
         end: '+=1800px'
       },
-      top: '50%'
+      top: '1700px'
     });
 
     // Chart von der mitte aus dem Bild schieben
     gsap.to('#carChart', {
       scrollTrigger: {
         trigger: '.massContainer',
-        start: 'bottom top',
+        start: '6200px',
         scrub: true,
-        end: '+=2400px'
+        end: '+=400px'
       },
-      top: '-500%'
+      top: '-2000px',
+      opacity: 0
     });
 
     // Question von unten ins bild schieben
     gsap.to('#chapter2_question1', {
       scrollTrigger: {
         trigger: '.massContainer',
-        start: 'bottom top',
+        start: '7000px',
         scrub: true,
-        end: '+=3600px'
+        end: '+=600px'
       },
-      top: '-5%'
+      top: '20%'
     });
 
   }
