@@ -12,6 +12,7 @@
   margin-right: 10%;
 }
 #graffitiWall {
+  top: 0px;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -34,6 +35,7 @@
   z-index: 10;
 }
 #graffitiBackground {
+  top: 0px;
   position: fixed;
   z-index: 0;
   width: 100%;
@@ -45,13 +47,18 @@
 }
 #small-article-recommendation {
   position: fixed;
+  top: 0.5%;
   width: 90%;
   margin-right: 7%;
   margin-left: 3%;
   transform: scale(0.6, 0.6);
+  z-index: 10;
 }
 #bike {
   position: fixed;
   top: 40%;
   left: -10%;
+}
+#contentContainer {
+  height: 5000px;
 }

@@ -157,8 +157,7 @@ export class ContentCarChapterTwoComponent implements OnInit, OnDestroy {
         trigger: '.massContainer',
         start: 'bottom top',
         scrub: true,
-        end: '+=1200px',
-        markers: true
+        end: '+=1200px'
       },
       top: '-500%'
     });
@@ -169,8 +168,7 @@ export class ContentCarChapterTwoComponent implements OnInit, OnDestroy {
         trigger: '.massContainer',
         start: 'bottom top',
         scrub: true,
-        end: '+=1800px',
-        markers: true
+        end: '+=1800px'
       },
       top: '50%'
     });
@@ -181,8 +179,7 @@ export class ContentCarChapterTwoComponent implements OnInit, OnDestroy {
         trigger: '.massContainer',
         start: 'bottom top',
         scrub: true,
-        end: '+=2400px',
-        markers: true
+        end: '+=2400px'
       },
       top: '-500%'
     });
@@ -193,8 +190,7 @@ export class ContentCarChapterTwoComponent implements OnInit, OnDestroy {
         trigger: '.massContainer',
         start: 'bottom top',
         scrub: true,
-        end: '+=3600px',
-        markers: true
+        end: '+=3600px'
       },
       top: '-5%'
     });
