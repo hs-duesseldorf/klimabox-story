@@ -37,11 +37,11 @@ export class QuizComponent implements OnInit {
     this.quizAttempted = true;
     this.disabled = true;
     if (this.quizService.checkAnswer(this.quizQuestion.selectedQuizOption) == true) {
-      this.CORRECT = '../../assets/images/chapter2/Correct.png';
+      this.CORRECT = 'assets/images/chapter2/Correct.png';
       this.quizSolved = true;
     }
     else if (this.quizService.checkAnswer(this.quizQuestion.selectedQuizOption) == false) {
-      this.WRONG = '../../assets/images/chapter2/Incorrect.png';
+      this.WRONG = 'assets/images/chapter2/Incorrect.png';
       this.quizSolved = false;
     }
   }

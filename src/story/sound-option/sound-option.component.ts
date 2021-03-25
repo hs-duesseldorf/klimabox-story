@@ -26,6 +26,6 @@ export class SoundOptionComponent implements OnInit {
   }
 
   getSoundIcon(): string {
-    return this.isSoundOn? "/assets/images/sound/icon_sound_is_on.png" : "/assets/images/sound/icon_sound_is_off.png";
+    return this.isSoundOn? "assets/images/sound/icon_sound_is_on.png" : "assets/images/sound/icon_sound_is_off.png";
   }
 }

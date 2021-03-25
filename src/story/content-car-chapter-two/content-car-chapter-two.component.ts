@@ -51,8 +51,8 @@ export class ContentCarChapterTwoComponent implements OnInit, OnDestroy {
 
   private createPersonalQuestion() {
     let personalQuestionMobility = PersonalQuestion.createWith('Worüber möchtest du noch mehr erfahren?', '#');
-    personalQuestionMobility.addChoice('/assets/images/chapter2/Bahn.png', '#', '-250', '300', '8');
-    personalQuestionMobility.addChoice('/assets/images/chapter2/Fahrrad.png', 'chapter2/bike', '1200', '500', '9');
+    personalQuestionMobility.addChoice('assets/images/chapter2/Bahn.png', '#', '-250', '300', '8');
+    personalQuestionMobility.addChoice('assets/images/chapter2/Fahrrad.png', 'chapter2/bike', '1200', '500', '9');
     this.question.push(personalQuestionMobility);
   }
 
