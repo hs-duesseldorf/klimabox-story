@@ -14,8 +14,9 @@ export class SoundOptionComponent implements OnInit {
   constructor(private audioService: AudioService) { }
 
   ngOnInit(): void {
-    this.soundIconPath = this.getSoundIcon();
+    this.isSoundOn = !this.audioService.isMuted();
     if(!this.isSoundOn) this.audioService.mute();
+    this.soundIconPath = this.getSoundIcon();
   }
 
   toggleSound() {

@@ -7,6 +7,7 @@ export class AudioService {
   audioContext: AudioContext;
   mainVolumeControl: GainNode;
   loops: MediaElementAudioSourceNode[] = [];
+  muted: boolean = true;
 
   constructor() {
     this.audioContext = new AudioContext();
@@ -38,10 +39,16 @@ export class AudioService {
   }
 
   mute() {
+    this.muted = true;
     this.mainVolumeControl.gain.value = 0;
   }
 
   unmute() {
+    this.muted = false;
     this.mainVolumeControl.gain.value = 1;
+  }
+
+  isMuted(): boolean {
+    return this.muted;
   }
 }

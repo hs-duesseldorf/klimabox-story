@@ -23,6 +23,7 @@
   margin-left: 30%;
   top: 30%;
   position: fixed;
+  z-index: 10;
 }
 #article-recommendation {
   top: 1700px;
@@ -30,6 +31,7 @@
   width: 90%;
   margin-right: 5%;
   margin-left: 5%;
+  z-index: 10;
 }
 #graffitiBackground {
   position: fixed;

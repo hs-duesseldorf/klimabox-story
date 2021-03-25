@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import {gsap} from 'gsap';
+import {AudioService} from '../services/audio.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ import {gsap} from 'gsap';
 // @ts-ignore
 export class ContentBikeChapterTwoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private audioService: AudioService) { }
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger);
@@ -67,7 +68,8 @@ export class ContentBikeChapterTwoComponent implements OnInit {
         trigger: '#triggerDiv',
         start: '+=1400',
         scrub: true,
-        end: '+=1700px'
+        end: '+=1700px',
+        onEnter: () => this.audioService.play("assets/sounds/Fahrradklingel.mp3")
       },
       left: "60%"
     });

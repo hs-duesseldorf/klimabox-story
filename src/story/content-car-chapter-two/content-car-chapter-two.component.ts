@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import {gsap} from 'gsap';
 import {MassVisualization} from '../mass-visualization/massVisualization';
 import {Chart} from '../chart/chart';
 import { PersonalQuestion } from '../personalization-question/personalQuestion';
+import {AudioService} from '../services/audio.service';
 
 @Component({
   selector: 'app-content-car-chapter-two',
@@ -11,7 +12,7 @@ import { PersonalQuestion } from '../personalization-question/personalQuestion';
   styleUrls: ['./content-car-chapter-two.component.css']
 })
 // @ts-ignore
-export class ContentCarChapterTwoComponent implements OnInit {
+export class ContentCarChapterTwoComponent implements OnInit, OnDestroy {
 
   requestedTopic: string = 'mobilitaet';
   massVisualization: MassVisualization[] = [];
@@ -19,7 +20,7 @@ export class ContentCarChapterTwoComponent implements OnInit {
   charts: Chart[] = [];
   question: PersonalQuestion[] = [];
 
-  constructor() { }
+  constructor(private audioService: AudioService) { }
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger);
@@ -27,6 +28,10 @@ export class ContentCarChapterTwoComponent implements OnInit {
     this.createCarChart();
     this.createPersonalQuestion();
     this.scroll();
+  }
+
+  ngOnDestroy(): void {
+    ScrollTrigger.getById("carMoveTrigger").kill(false);
   }
 
   private createCarChart() {
@@ -52,7 +57,6 @@ export class ContentCarChapterTwoComponent implements OnInit {
   }
 
   scroll() {
-
     //Herausgezoomten Artikel ausblenden
     gsap.to('#articleZoomedOut', {
       scrollTrigger: {
@@ -64,12 +68,15 @@ export class ContentCarChapterTwoComponent implements OnInit {
       opacity: 0
     });
 
+    // Auto von links nach rechts bewegen
     gsap.to('#car', {
       scrollTrigger: {
+        id: "carMoveTrigger",
         trigger: '#articleZoomedOut',
         start: '+=5px',
         scrub: true,
-        end: '+=100px'
+        end: '+=100px',
+        onEnter: () => this.audioService.play("assets/sounds/autohuppen.mp3")
       },
       left: "60%"
     });
