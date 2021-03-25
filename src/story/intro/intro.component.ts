@@ -40,10 +40,10 @@ export class IntroComponent implements OnInit {
 
   private createFirstPersonalQuestion() {
     let personalQuestionFood = PersonalQuestion.createWith('Was isst du gerne?', '#');
-    personalQuestionFood.addChoice('assets/images/personalization-question/fleisch.png', 'chapter1#fleisch-headline', '-5', '6','');
-    personalQuestionFood.addChoice('assets/images/personalization-question/kaese.png', '#', '25', '5','');
-    personalQuestionFood.addChoice('assets/images/personalization-question/avocado.png', '#', '5', '28','');
-    personalQuestionFood.addChoice('assets/images/personalization-question/eier.png', '#', '25', '36','');
+    personalQuestionFood.addChoice('assets/images/personalization-question/fleisch.png', 'chapter1#fleisch-headline', '50', '20','');
+    personalQuestionFood.addChoice('assets/images/personalization-question/kaese.png', '#', '600', '-50','');
+    personalQuestionFood.addChoice('assets/images/personalization-question/avocado.png', '#', '300', '300','');
+    personalQuestionFood.addChoice('assets/images/personalization-question/eier.png', '#', '800', '300','');
     this.question.push(personalQuestionFood);
   }
 
@@ -80,9 +80,9 @@ export class IntroComponent implements OnInit {
 
   private createSecondPersonalQuestion() {
     let personalQuestionFood2 = PersonalQuestion.createWith('Worüber möchtest du mehr erfahren?', '#');
-    personalQuestionFood2.addChoice('assets/images/personalization-question/kaese.png', '#', '25', '5','');
-    personalQuestionFood2.addChoice('assets/images/personalization-question/avocado.png', '#', '5', '28','');
-    personalQuestionFood2.addChoice('assets/images/personalization-question/eier.png', '#', '25', '36','');
+    personalQuestionFood2.addChoice('assets/images/personalization-question/kaese.png', '#', '500', '50','');
+    personalQuestionFood2.addChoice('assets/images/personalization-question/avocado.png', '#', '200', '350','');
+    personalQuestionFood2.addChoice('assets/images/personalization-question/eier.png', '#', '700', '450','');
     this.question2.push(personalQuestionFood2);
   }
 
@@ -235,10 +235,10 @@ export class IntroComponent implements OnInit {
 
     gsap.to('#tableBackground', {
       scrollTrigger: {
-        trigger: '.massContainer',
-        start: 'bottom bottom',
+        trigger: '.textContainer',
+        start: 'bottom top',
         scrub: true,
-        end: '+=600px'
+        end: '+=700px'
       },
       opacity: 1
     });
