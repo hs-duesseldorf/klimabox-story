@@ -1,4 +1,8 @@
 @layer base {
+  body {
+    @apply bg-bg;
+  }
+
   .center-box {
     @apply box-content max-w-5xl mx-auto px-6 sm:px-8;
   }

@@ -6,14 +6,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        em1: {
-          DEFAULT: "#197EB7",
-        },
-        em2: {
-          DEFAULT: "#B1CA6C",
-        },
-        em3: {
-          DEFAULT: "#E78182",
+        em1: { DEFAULT: "#197EB7" },
+        em2: { DEFAULT: "#B1CA6C" },
+        em3: { DEFAULT: "#E78182" },
+        bg: {
+          DEFAULT: "white",
+          alt: "#EFEFEF",
         },
       },
       fontFamily: {
@@ -30,5 +28,8 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  plugins: [
+    require("@tailwindcss/line-clamp"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
