@@ -13,6 +13,7 @@ export const Post: React.FC<{ data: PostData }> = ({
           <Media
             id={featured_media}
             className="object-cover rounded-t-3xl select-none"
+            alt={title.rendered}
           />
         ) : null}
       </div>
