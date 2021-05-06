@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
               Klimabox
             </Link>
           </div>
-          <div className="pb-1 text-2xl flex items-end -mx-3">
+          <div className="pb-1.5 text-2xl flex items-end -mx-3">
             {[
               ["Blog", "/blog"],
               ["Story", "/story"],
