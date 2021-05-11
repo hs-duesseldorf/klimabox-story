@@ -8,6 +8,14 @@
   }
 }
 
+@layer utilities {
+  @variants responsive {
+    .responsive-inset {
+      @apply absolute inset-0 w-full h-full;
+    }
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
