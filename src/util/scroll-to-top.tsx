@@ -14,7 +14,7 @@ export const ScrollToTop: React.FC = () => {
       history.listen(() => {
         window.scrollTo(0, 0);
       }),
-    []
+    [history]
   );
 
   return null;
