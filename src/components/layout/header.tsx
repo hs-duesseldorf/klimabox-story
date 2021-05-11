@@ -32,15 +32,15 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
             )}
           >
             {[
+              ["Story", "/"],
               ["Blog", "/blog"],
-              ["Story", "/story"],
             ].map(([label, path], i) => (
               <Link
                 to={path}
                 key={i}
                 className={cn(
                   "hover:underline mx-3",
-                  pathname.startsWith(path) && "font-extrabold"
+                  pathname === path && "font-extrabold"
                 )}
               >
                 {label}

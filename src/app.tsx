@@ -4,7 +4,6 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { HelmetProvider } from "react-helmet-async";
 
 import { NotFound } from "./pages/not-found";
-import { Home } from "./pages/home";
 import { Stories } from "./pages/stories";
 import { Blog } from "./pages/blog";
 
@@ -17,8 +16,7 @@ export const App: React.FC = () => {
         <Router>
           <Switch>
             <Route path="/blog" component={Blog} />
-            <Route path="/story" component={Stories} />
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Stories} />
             <Route component={NotFound} />
           </Switch>
         </Router>
