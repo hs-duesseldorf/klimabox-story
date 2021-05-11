@@ -25,6 +25,7 @@ module.exports = {
       },
       padding: {
         "1/2": "50%",
+        "2/3": "66.67%",
       },
     },
     screens: {
@@ -35,6 +36,7 @@ module.exports = {
   variants: {
     extend: {
       borderColor: ["hover"],
+      scale: ["group-hover"],
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],
