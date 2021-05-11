@@ -13,7 +13,7 @@ type ChapterProps = {
   id: number;
   title: string;
   imageSrc: string | null;
-  unavailable?: boolean;
+  slug?: string;
 };
 
 const Chapter: React.FC<ChapterProps> = ({ id, title, imageSrc }) => (
@@ -42,18 +42,20 @@ const Chapter: React.FC<ChapterProps> = ({ id, title, imageSrc }) => (
 );
 
 const chapterProps: Omit<ChapterProps, "id">[] = [
-  { title: "Vom Esstisch in die Arktis", imageSrc: carrotsImage },
-  { title: "Mobilität", imageSrc: trainImage },
+  {
+    title: "Vom Esstisch in die Arktis",
+    slug: "vom-esstisch-in-die-arktis",
+    imageSrc: carrotsImage,
+  },
+  { title: "Mobilität", imageSrc: trainImage, slug: "mobilitaet" },
   {
     title: "Big Tech ohne großen Fußabdruck",
     imageSrc: codeImage,
-    unavailable: true,
   },
-  { title: "Nachhaltig shoppen", imageSrc: clothsImage, unavailable: true },
+  { title: "Nachhaltig shoppen", imageSrc: clothsImage },
   {
     title: "Wie unsere Heizkörper das Klima erwärmen",
     imageSrc: stoveImage,
-    unavailable: true,
   },
 ];
 
@@ -64,14 +66,14 @@ export const ChapterOverview: React.FC = () => (
       {chapterProps.map((props, i) => {
         const id = i + 1;
 
-        return props.unavailable ? (
+        return props.slug ? (
+          <Link to={`/${props.slug}`} className="group block" key={i}>
+            <Chapter {...props} id={id} />
+          </Link>
+        ) : (
           <div className="opacity-50" key={i}>
             <Chapter {...props} id={id} />
           </div>
-        ) : (
-          <Link to={`/chapters/${id}`} className="group block" key={i}>
-            <Chapter {...props} id={id} />
-          </Link>
         );
       })}
     </div>

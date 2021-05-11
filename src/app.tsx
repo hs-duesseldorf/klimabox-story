@@ -7,6 +7,8 @@ import { NotFound } from "./pages/not-found";
 import { Stories } from "./pages/stories";
 import { Blog } from "./pages/blog";
 
+import { Chapter1 } from "./pages/chapter1";
+
 export const App: React.FC = () => {
   const queryClient = React.useMemo(() => new QueryClient(), []);
 
@@ -15,6 +17,8 @@ export const App: React.FC = () => {
       <QueryClientProvider client={queryClient}>
         <Router>
           <Switch>
+            <Route path="/vom-esstisch-in-die-arktis" component={Chapter1} />
+
             <Route path="/blog" component={Blog} />
             <Route exact path="/" component={Stories} />
             <Route component={NotFound} />
