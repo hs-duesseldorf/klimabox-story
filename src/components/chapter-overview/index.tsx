@@ -19,7 +19,7 @@ type ChapterProps = {
 const Chapter: React.FC<ChapterProps> = ({ id, title, imageSrc }) => (
   <>
     <div
-      className={`pointer-events-none select-none mb-4 relative pt-2/3 bg-gray-200 shadow-lg ${roundedClass}`}
+      className={`pointer-events-none select-none mb-4 relative pt-1/2 xs:pt-2/3 bg-gray-200 shadow-lg ${roundedClass}`}
     >
       {imageSrc && (
         <img
@@ -60,7 +60,7 @@ const chapterProps: Omit<ChapterProps, "id">[] = [
 export const ChapterOverview: React.FC = () => (
   <div className="center-box 2xl:max-w-layout-max my-20 2xl:my-24">
     <h2 className="text-3xl mb-8 lg:mb-10">Kapitelübersicht</h2>
-    <div className="grid grid-cols-2 sm:grid-cols-3 2xl:grid-cols-5 gap-x-4 gap-y-6 md:gap-x-8 md:gap-y-12 lg:gap-12">
+    <div className="grid grid-cols-1 gap-8 xs:grid-cols-2 sm:grid-cols-3 2xl:grid-cols-5 xs:gap-x-6 md:gap-x-8 md:gap-y-12 lg:gap-12">
       {chapterProps.map((props, i) => {
         const id = i + 1;
 
