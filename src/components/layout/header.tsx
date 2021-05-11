@@ -7,7 +7,7 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
 
   return (
     <div className="absolute w-full top-0 pt-6 pb-6 mb-3 z-10">
-      <div className="center-box 2xl:max-w-layout-max">
+      <div className="center-box">
         <div className="uppercase tracking-wider flex justify-between sm:justify-start">
           <div
             className={cn(

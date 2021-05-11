@@ -15,7 +15,7 @@ export const StorySplash: React.FC = () => (
     </div>
     <div className="absolute inset-x-0 top-0 h-32 2xl:h-48 bg-gradient-to-b from-black opacity-60 pointer-events-none" />
     <div className="relative pt-32 pb-16 xs:pt-40 xs:pb-20 2xl:pt-48 2xl:pb-24">
-      <div className="center-box 2xl:max-w-layout-max">
+      <div className="center-box">
         <h1
           className="text-white font-bold text-3xl xs:text-4xl xs:leading-snug max-w-md 2xl:max-w-xl 2xl:leading-snug 2xl:text-5xl"
           style={{ textShadow: "0 2px 5px black" }}
