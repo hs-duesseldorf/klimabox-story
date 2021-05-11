@@ -8,11 +8,11 @@ export const Post: React.FC<{ data: PostData }> = ({
 }) => {
   return (
     <div className="flex flex-col">
-      <div className="relative aspect-w-2 aspect-h-1 bg-gray-400 rounded-t-3xl">
+      <div className="relative pt-1/2 bg-gray-400 rounded-t-3xl">
         {featured_media ? (
           <Media
             id={featured_media}
-            className="object-cover rounded-t-3xl select-none"
+            className="responsive-inset object-cover rounded-t-3xl select-none"
             alt={title.rendered}
           />
         ) : null}
