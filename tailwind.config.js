@@ -27,6 +27,10 @@ module.exports = {
         "1/2": "50%",
       },
     },
+    screens: {
+      xs: "380px",
+      ...defaultTheme.screens,
+    },
   },
   variants: {
     extend: {},
