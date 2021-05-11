@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        em1: { DEFAULT: "#197EB7" },
+        em1: { DEFAULT: "#197EB7", light: "#3D99CE" },
         em2: { DEFAULT: "#B1CA6C" },
         em3: { DEFAULT: "#E78182" },
         bg: {
@@ -22,6 +22,9 @@ module.exports = {
       },
       maxWidth: {
         "layout-max": "96rem",
+      },
+      padding: {
+        "1/2": "50%",
       },
     },
   },

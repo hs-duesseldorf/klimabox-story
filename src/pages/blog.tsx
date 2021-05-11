@@ -7,7 +7,7 @@ import { PostList } from "../components/post-list";
 export const Blog: React.FC = () => (
   <Layout>
     <SEO title="Blog" />
-    <div className="center-box mt-24 2xl:max-w-layout-max">
+    <div className="center-box mt-40 2xl:max-w-layout-max">
       <PostList />
     </div>
   </Layout>
