@@ -8,7 +8,7 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
   return (
     <div className="absolute w-full top-0 pt-6 pb-6 mb-3 z-10">
       <div className="center-box 2xl:max-w-layout-max">
-        <div className="uppercase tracking-wider flex">
+        <div className="uppercase tracking-wider flex justify-between sm:justify-start">
           <div
             className={cn(
               "text-3xl pb-1 mr-6",
@@ -27,7 +27,7 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
           </div>
           <div
             className={cn(
-              "pb-1.5 text-2xl flex items-end -mx-3",
+              "pb-1.5 text-xl sm:text-2xl text-right sm:flex items-end sm:-mx-3",
               onDark && "text-white"
             )}
           >
@@ -35,16 +35,18 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
               ["Story", "/"],
               ["Blog", "/blog"],
             ].map(([label, path], i) => (
-              <Link
-                to={path}
-                key={i}
-                className={cn(
-                  "hover:underline mx-3",
-                  pathname === path && "font-extrabold"
-                )}
-              >
-                {label}
-              </Link>
+              <div key={i} className="sm:mx-3">
+                <Link
+                  to={path}
+                  className={cn(
+                    "inline-block pt-1 border-b-2 border-transparent transition",
+                    onDark ? "hover:border-white" : "hover:border-black",
+                    pathname === path && "font-extrabold"
+                  )}
+                >
+                  {label}
+                </Link>
+              </div>
             ))}
           </div>
         </div>

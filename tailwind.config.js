@@ -33,7 +33,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      borderColor: ["hover"],
+    },
   },
   plugins: [
     require("@tailwindcss/line-clamp"),
