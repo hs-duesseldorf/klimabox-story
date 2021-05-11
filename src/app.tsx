@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { HelmetProvider } from "react-helmet-async";
 
+import { ScrollToTop } from "./util/scroll-to-top";
+
 import { NotFound } from "./pages/not-found";
 import { Stories } from "./pages/stories";
 import { Blog } from "./pages/blog";
@@ -16,6 +18,7 @@ export const App: React.FC = () => {
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <Router>
+          <ScrollToTop />
           <Switch>
             <Route path="/vom-esstisch-in-die-arktis" component={Chapter1} />
 
