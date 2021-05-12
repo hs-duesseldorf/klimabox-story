@@ -7,7 +7,7 @@ import { ChapterOverview } from "../components/chapter-overview";
 
 export const Stories: React.FC = () => (
   <Layout hasDarkBackground={true}>
-    <SEO title="Story" />
+    <SEO />
     <StorySplash />
     <ChapterOverview />
   </Layout>

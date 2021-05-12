@@ -6,7 +6,7 @@ const siteTitle = "Klimabox";
 export const SEO: React.FC<{ title?: string }> = ({ title }) => {
   return (
     <Helmet>
-      <title>{title ? `${siteTitle} | ${title}` : siteTitle}</title>
+      <title>{title ? `${title} | ${siteTitle}` : siteTitle}</title>
     </Helmet>
   );
 };
