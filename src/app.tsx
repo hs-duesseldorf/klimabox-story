@@ -8,6 +8,7 @@ import { ScrollToTop } from "./util/scroll-to-top";
 import { NotFound } from "./pages/not-found";
 import { Stories } from "./pages/stories";
 import { Blog } from "./pages/blog";
+import { About } from "./pages/about";
 
 import { Chapter1 } from "./pages/chapter1";
 
@@ -23,6 +24,7 @@ export const App: React.FC = () => {
             <Route path="/vom-esstisch-in-die-arktis" component={Chapter1} />
 
             <Route path="/blog" component={Blog} />
+            <Route path="/about" component={About} />
             <Route exact path="/" component={Stories} />
             <Route component={NotFound} />
           </Switch>
