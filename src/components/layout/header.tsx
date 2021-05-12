@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "./button";
 
 import logo from "./logo.svg";
+import logoDark from "./logo-dark.svg";
 import search from "./search.svg";
 
 export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
@@ -21,11 +22,17 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
               )}
             >
               <Link to="/" className="inline-block pr-10 relative font-semibold">
-                <img
-                  src={logo}
-                  alt="Klimabox"
-                  className="w-full h-full"
-                />
+                {
+                  onDark ? <img
+                    src={logo}
+                    alt="Klimabox"
+                    className="w-full h-full"
+                  /> : <img
+                    src={logoDark}
+                    alt="Klimabox"
+                    className="w-full h-full"
+                  />
+                }
               </Link>
             </div>
             <div
