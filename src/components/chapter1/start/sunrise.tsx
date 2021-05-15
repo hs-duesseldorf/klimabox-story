@@ -11,7 +11,7 @@ export const Sunrise: React.FC = () => {
     if (!ref.current) return;
     ref.current.style.opacity = Math.min(
       1,
-      Math.max(0, progress / 0.11)
+      Math.max(0, progress / 0.14)
     ).toString();
   });
 
