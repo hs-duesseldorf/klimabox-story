@@ -10,6 +10,7 @@ import { Stories } from "./pages/stories";
 import { Blog } from "./pages/blog";
 
 import { Chapter1 } from "./pages/chapter1";
+import { Chapter2 } from "./pages/chapter2";
 
 export const App: React.FC = () => {
   const queryClient = React.useMemo(() => new QueryClient(), []);
@@ -21,6 +22,7 @@ export const App: React.FC = () => {
           <ScrollToTop />
           <Switch>
             <Route path="/vom-esstisch-in-die-arktis" component={Chapter1} />
+            <Route path="/mobilitaet" component={Chapter2} />
 
             <Route path="/blog" component={Blog} />
             <Route exact path="/" component={Stories} />
