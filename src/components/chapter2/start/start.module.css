@@ -1,0 +1,46 @@
+.buildingA {
+    width: 45%;
+    top: -70%;
+}
+
+.buildingB {
+    right: 38%;
+    width: 35%;
+    top: 72%;
+}
+
+.buildingC {
+    right: 70%;
+    width: 35%;
+    top: 85%;
+}
+
+.sun {
+    opacity: 0.7;
+    top: 10%;
+    left: 10%;
+}
+
+.street {
+    top: 100%;
+    right: 0.01%;
+    width: 110%;
+}
+
+.clue {
+    bottom: 10%;
+    right: 5%;
+    width: 30%;
+}
+
+.headerline {
+    font-size: 17pt;
+    bottom: 13.5%;
+    right: 28%;
+}
+
+.text {
+    top: 22%;
+    left: 15%;
+    font-size: 20pt;
+}
