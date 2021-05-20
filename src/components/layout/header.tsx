@@ -3,9 +3,8 @@ import cn from "classnames";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./button";
 
-import logo from "./logo.svg";
-import logoDark from "./logo-dark.svg";
-import search from "./search.svg";
+import searchIcon from "./search.svg";
+import searchIconDark from "./searchDark.svg";
 
 export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
   const { pathname } = useLocation();
@@ -22,17 +21,13 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
               )}
             >
               <Link to="/" className="inline-block pr-10 relative font-semibold">
-                {
-                  onDark ? <img
-                    src={logo}
-                    alt="Klimabox"
-                    className="w-full h-full"
-                  /> : <img
-                    src={logoDark}
-                    alt="Klimabox"
-                    className="w-full h-full"
-                  />
-                }
+                <div
+                  className={cn(
+                    "absolute top-1 bottom-0 right-0 w-1",
+                    onDark ? "bg-em1-light" : "bg-em1"
+                  )}
+                />
+                Klimabox
               </Link>
             </div>
             <div
@@ -43,8 +38,7 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
             >
               {[
                 ["Story", "/"],
-                ["Archiv", "/blog"],
-                ["About", "/about"]
+                ["Archiv", "/blog"]
               ].map(([label, path], i) => (
                 <div key={i} className="sm:mx-3">
                   <Link
@@ -61,13 +55,20 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
               ))}
             </div>
           </div>
-          <div className="flex items-center text-white"><img
-            src={search}
-            alt="Suche Icon"
-            className="w-full h-full pr-4"
-          />
-            <Button primaryButton={true}>Einloggen</Button>
-            <Button>Registrieren</Button>
+          <div className="flex items-center text-white">
+            {
+              onDark ? <img
+                src={searchIcon}
+                alt="Suche Icon"
+                className="w-full h-full pr-4"
+              /> : <img
+                src={searchIconDark}
+                alt="Suche Icon"
+                className="w-full h-full pr-4"
+              />
+            }
+            <Button onDark={onDark}>Einloggen</Button>
+            <Button buttonOutline={true} onDark={onDark}>Registrieren</Button>
           </div>
         </div>
       </div>
