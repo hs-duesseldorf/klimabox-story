@@ -7,6 +7,6 @@ export const Sunrise: React.FC = () => (
     <img
       src={img}
       alt="Sternenhimmel"
-      className={ `${styles.sun} fixed w-4/5`}
+      className={ `${styles.sun} fixed inset-0 opacity-0`}
     />
 )

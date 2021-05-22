@@ -2,28 +2,24 @@ import React from "react";
 
 import { ScrollAnimation } from "../../scroll-animation";
 
-import {Background} from "./background";
-import {Sunrise} from "./sunrise";
-import {BuildingA} from "./buildingA";
-import {BuildingB} from "./buildingB";
-import {BuildingC} from "./buildingC";
-import { Street } from './street';
-import { Clue } from './clue';
+import { Background } from "./background";
+import { Sunrise } from "./sunrise";
 import { Headerline } from "./headerline";
-import {Text} from "./text";
+import { Text } from "./text";
+import { Buildings } from "./buildings/buildings";
+import { Continue } from "./continue";
 
-export const StartChapter2: React.FC = () => 
+export const StartChapter2: React.FC = () =>
 (<ScrollAnimation>
-    <div className="overflow-x-hidden">
+    <div className="overflow-overlay">
         <Background/>
         <Sunrise/>
-        <BuildingC/>
-        <BuildingB/>
-        <BuildingA/>
-        <Street/>
-        <Clue/>
-    </div>
-    <Headerline/>
-    <Text/>
+        <div className="relative">
+            <Buildings />
+        </div>
+        <Text/>
+        <Headerline/>
+        <Continue/>
 
+    </div>
 </ScrollAnimation>);

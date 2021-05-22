@@ -1,30 +1,28 @@
 .buildingA {
     width: 45%;
-    top: -70%;
 }
 
 .buildingB {
     right: 38%;
     width: 35%;
-    top: 72%;
+    padding-top: 55%;
 }
 
 .buildingC {
-    right: 70%;
+    right: 65%;
     width: 35%;
-    top: 85%;
+    padding-top: 59%;
 }
 
 .sun {
+    top: 14%;
     opacity: 0.7;
-    top: 10%;
-    left: 10%;
 }
 
 .street {
-    top: 100%;
     right: 0.01%;
     width: 110%;
+    padding-top: 79%;
 }
 
 .clue {
@@ -34,13 +32,16 @@
 }
 
 .headerline {
-    font-size: 17pt;
     bottom: 13.5%;
     right: 28%;
 }
 
 .text {
-    top: 22%;
-    left: 15%;
-    font-size: 20pt;
+    top: 17rem;
+    padding-left: 20%;
+}
+
+.continue{
+    left: 61.5%;
+    top: 73%;
 }
