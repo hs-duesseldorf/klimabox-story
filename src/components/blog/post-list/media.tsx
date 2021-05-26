@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useMediaURLs } from "../../wp";
+import { useMediaURLs } from "../wp";
 
 export const Media: React.FC<{
   id: number;

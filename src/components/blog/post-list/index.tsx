@@ -1,6 +1,6 @@
 import React from "react";
 
-import { usePosts } from "../../wp";
+import { usePosts } from "../wp";
 import { Post } from "./post";
 
 export const PostList: React.FC = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Media } from "./media";
-import { PostData } from "../../wp";
+import { PostData } from "../wp";
 
 export const Post: React.FC<{ data: PostData }> = ({
   data: { title, excerpt, featured_media },
