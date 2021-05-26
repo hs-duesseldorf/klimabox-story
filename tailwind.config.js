@@ -14,9 +14,9 @@ module.exports = {
           alt: "#EFEFEF",
         },
       },
-      fontSize:{
-        "17": "17pt",
-        "20": "20pt",
+      fontSize: {
+        17: "17pt",
+        20: "20pt",
       },
       fontFamily: {
         sans: [
@@ -41,6 +41,7 @@ module.exports = {
     extend: {
       borderColor: ["hover"],
       scale: ["group-hover"],
+      outline: ["focus"],
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],

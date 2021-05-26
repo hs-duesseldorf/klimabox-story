@@ -1,0 +1,14 @@
+.button {
+  svg {
+    fill: rgba(231, 129, 130, 0);
+    transition: 0.2s ease fill;
+  }
+
+  &:hover svg {
+    fill: rgba(231, 129, 130, 0.25);
+  }
+
+  &.active svg {
+    fill: rgba(231, 129, 130, 1);
+  }
+}
