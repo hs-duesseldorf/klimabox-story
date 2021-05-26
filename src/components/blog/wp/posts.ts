@@ -10,12 +10,19 @@ export type PostData = {
   status: string;
   type: string;
   title: StringData;
+  date: string;
   content?: StringData;
   excerpt?: StringData;
   featured_media?: number;
+  _embedded?: {
+    "wp:term": {
+      name: string;
+      slug: string;
+    }[][];
+  };
 };
 
 export const usePosts = () =>
   useQuery<PostData[]>("getPosts", () =>
-    fetch(`${WP_REST_URL}/posts`).then((res) => res.json())
+    fetch(`${WP_REST_URL}/posts?_embed=1`).then((res) => res.json())
   );

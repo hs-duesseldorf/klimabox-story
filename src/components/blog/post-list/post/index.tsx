@@ -4,9 +4,10 @@ import { Media } from "../media";
 import { PostData } from "../../wp";
 
 import { BookmarkButton } from "./bookmark-button";
+import { DetailBar } from "./detail-bar";
 
 export const Post: React.FC<{ data: PostData }> = ({
-  data: { title, excerpt, featured_media },
+  data: { title, excerpt, featured_media, date, _embedded },
 }) => {
   return (
     <div className="flex flex-col relative">
@@ -30,6 +31,9 @@ export const Post: React.FC<{ data: PostData }> = ({
             className="text-sm mt-2 line-clamp-3 max-w-prose"
           />
         )}
+      </div>
+      <div className="pt-3">
+        <DetailBar date={date} term={_embedded && _embedded["wp:term"][0][0]} />
       </div>
       <div className="absolute right-1 -top-5">
         <BookmarkButton />

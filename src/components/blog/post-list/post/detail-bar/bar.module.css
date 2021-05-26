@@ -1,0 +1,17 @@
+.date {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    right: 100%;
+    bottom: 2px;
+    width: 1.5rem;
+    background-size: contain;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-image: url(./calendar.svg);
+  }
+}
