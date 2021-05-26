@@ -14,6 +14,10 @@ module.exports = {
           alt: "#EFEFEF",
         },
       },
+      fontSize:{
+        "17": "17pt",
+        "20": "20pt",
+      },
       fontFamily: {
         sans: [
           "Arial",

@@ -1,0 +1,47 @@
+.buildingA {
+    width: 45%;
+}
+
+.buildingB {
+    right: 38%;
+    width: 35%;
+    padding-top: 55%;
+}
+
+.buildingC {
+    right: 65%;
+    width: 35%;
+    padding-top: 59%;
+}
+
+.sun {
+    top: 14%;
+    opacity: 0.7;
+}
+
+.street {
+    right: 0.01%;
+    width: 110%;
+    padding-top: 79%;
+}
+
+.clue {
+    bottom: 10%;
+    right: 5%;
+    width: 30%;
+}
+
+.headerline {
+    bottom: 13.5%;
+    right: 28%;
+}
+
+.text {
+    top: 17rem;
+    padding-left: 20%;
+}
+
+.continue{
+    left: 61.5%;
+    top: 73%;
+}
