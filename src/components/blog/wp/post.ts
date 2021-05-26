@@ -10,12 +10,21 @@ export type PostData = {
   status: string;
   type: string;
   title: StringData;
+  date: string;
   content?: StringData;
   excerpt?: StringData;
   featured_media?: number;
+  _embedded?: {
+    "wp:term": {
+      name: string;
+      slug: string;
+    }[][];
+  };
 };
 
-export const usePosts = () =>
-  useQuery<PostData[]>("getPosts", () =>
-    fetch(`${WP_REST_URL}/posts`).then((res) => res.json())
+export const usePost = (slug: string) =>
+  useQuery<PostData>(["getPost", slug], () =>
+    fetch(`${WP_REST_URL}/posts/?slug=${slug}&_embed=1`)
+      .then((res) => res.json())
+      .then((res) => res[0])
   );

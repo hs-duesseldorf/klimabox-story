@@ -1,6 +1,6 @@
 import React from "react";
 
-import { usePosts } from "../../wp";
+import { usePosts } from "../wp";
 import { Post } from "./post";
 
 export const PostList: React.FC = () => {
@@ -10,7 +10,7 @@ export const PostList: React.FC = () => {
   if (error || !data) return <div>Es ist ein Fehler aufgetreten.</div>;
 
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 2xl:grid-cols-3 2xl:gap-10">
+    <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:gap-x-10 xl:gap-16 2xl:grid-cols-3">
       {data.map((postData, i) => (
         <Post data={postData} key={i} />
       ))}

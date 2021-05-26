@@ -3,6 +3,10 @@
     @apply bg-bg;
   }
 
+  button {
+    @apply focus:outline-none;
+  }
+
   .center-box {
     @apply box-content max-w-5xl mx-auto px-6 sm:px-8 2xl:max-w-layout-max;
   }
