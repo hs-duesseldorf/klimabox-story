@@ -7,16 +7,20 @@ module.exports = {
     extend: {
       colors: {
         em1: { DEFAULT: "#197EB7", light: "#3D99CE" },
-        em2: { DEFAULT: "#B1CA6C" },
+        em2: { DEFAULT: "#B1CA6C", enhanced: "#B6CF72" },
         em3: { DEFAULT: "#E78182" },
         bg: {
           DEFAULT: "white",
           alt: "#EFEFEF",
         },
+        text: {
+          DEFAULT: "black",
+          muted: "#6f6f6f",
+        },
       },
-      fontSize:{
-        "17": "17pt",
-        "20": "20pt",
+      fontSize: {
+        17: "17pt",
+        20: "20pt",
       },
       fontFamily: {
         sans: [
@@ -41,7 +45,11 @@ module.exports = {
     extend: {
       borderColor: ["hover"],
       scale: ["group-hover"],
+      outline: ["focus"],
     },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  plugins: [
+    require("@tailwindcss/line-clamp"),
+    require("@tailwindcss/typography"),
+  ],
 };

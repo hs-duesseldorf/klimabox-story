@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
 
-import { PostList } from "../components/post-list";
+import { PostList } from "../components/blog/post-list";
 
 export const Blog: React.FC = () => (
   <Layout>
