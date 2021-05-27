@@ -1,24 +1,28 @@
 import React from "react";
 
-import { useScrollProgress } from "../../scroll-animation";
-
 import styles from "./start.module.css";
+import Plx from "react-plx";
 
 export const Sunrise: React.FC = () => {
-  const ref = React.useRef<HTMLDivElement>(null);
 
-  useScrollProgress(({ progress }) => {
-    if (!ref.current) return;
-    ref.current.style.opacity = Math.min(
-      1,
-      Math.max(0, progress / 0.14)
-    ).toString();
-  });
+  const parallaxData = [
+    {
+      start: 0,
+      end: 40,
+      properties: [
+        {
+          startValue: 0,
+          endValue: 1,
+          property: "opacity"
+        }
+      ]
+    }
+  ];
 
   return (
-    <div
-      className={`${styles.sunrise} fixed inset-0 opacity-0 pointer-events-none`}
-      ref={ref}
-    />
+    <Plx parallaxData={parallaxData}>
+      <div id="sunrise" className={`${styles.sunrise} fixed inset-0 w-full h-full pointer-events-none`}
+      />
+    </Plx>
   );
 };
