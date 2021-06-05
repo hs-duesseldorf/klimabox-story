@@ -32,8 +32,7 @@
 }
 
 .headerline {
-    bottom: 13.5%;
-    right: 28%;
+    padding: 0 0 3% 10%;
 }
 
 .text {
@@ -43,5 +42,26 @@
 
 .continue{
     left: 61.5%;
-    top: 73%;
+    top: 28%;
+}
+
+.train{
+    padding-top: 74%;
+    right: 80%;
+    width: 75%;
+    z-index: 1;
+}
+
+.bicycle{
+    padding-top: 87%;
+    width: 20%;
+    right: 75%;
+    z-index: 2;
+}
+
+.car{
+    z-index: 1;
+    width: 63%;
+    top: 67%;
+    left: 31%
 }

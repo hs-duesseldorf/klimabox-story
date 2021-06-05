@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import styles from "../start.module.css";
@@ -8,6 +7,6 @@ export const Street: React.FC = () => (
     <img
       src={img}
       alt="street"
-      className={`${styles.street} absolute`}
+      className={`${styles.street} relative` }
     />
 )
