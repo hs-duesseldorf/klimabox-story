@@ -6,9 +6,10 @@ import { Sunrise } from "./sunrise";
 import { Mountains } from "./mountains";
 import { Text } from "./text";
 import { Buildings } from "./buildings";
+import { Fridge } from "./fridge";
 
 export const Start: React.FC = () => (
-  <div className="text-white">
+  <div className="text-white relative">
     <Background />
     <Sunrise />
     <div className="relative">
@@ -18,8 +19,9 @@ export const Start: React.FC = () => (
       </div>
     </div>
     <Mountains />
-    <div className="relative" style={{ paddingTop: "50vh" }}>
+    <div id="buildings" className="relative" style={{ paddingTop: "50vh" }}>
       <Buildings />
+      <Fridge />
     </div>
   </div>
 );
