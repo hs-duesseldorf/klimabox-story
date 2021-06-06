@@ -8,15 +8,15 @@ import { Train } from "./train";
 import { Bicycle } from './bicycle';
 import { Car } from "./car";
 
-export const Scene: React.FC<{scrollStart: number}> = ({scrollStart}) => {
+export const Scene: React.FC<{ scrollStart: number }> = ({ scrollStart }) => {
   return (
     <div>
       <BuildingC />
       <BuildingB />
       <BuildingA />
-      <Train />
-      <Bicycle />
-      <Car scrollStart = {scrollStart}/>
+      <Train scrollStart={scrollStart} />
+      <Bicycle scrollStart={scrollStart} />
+      <Car scrollStart={scrollStart} />
       <Street />
     </div>
   )
