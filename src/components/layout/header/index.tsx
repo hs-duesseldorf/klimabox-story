@@ -20,7 +20,10 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
                 onDark ? "text-em1-light" : "text-em1"
               )}
             >
-              <Link to="/" className="inline-block pr-10 relative font-semibold">
+              <Link
+                to="/"
+                className="inline-block pr-10 relative font-semibold"
+              >
                 <div
                   className={cn(
                     "absolute top-1 bottom-0 right-0 w-1",
@@ -38,7 +41,7 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
             >
               {[
                 ["Story", "/"],
-                ["Archiv", "/blog"]
+                ["Archiv", "/blog"],
               ].map(([label, path], i) => (
                 <div key={i} className="sm:mx-3">
                   <Link
@@ -56,19 +59,23 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
             </div>
           </div>
           <div className="flex items-center text-white">
-            {
-              onDark ? <img
+            {onDark ? (
+              <img
                 src={searchIcon}
                 alt="Suche Icon"
                 className="w-full h-full pr-4"
-              /> : <img
+              />
+            ) : (
+              <img
                 src={searchIconDark}
                 alt="Suche Icon"
                 className="w-full h-full pr-4"
               />
-            }
+            )}
             <Button onDark={onDark}>Einloggen</Button>
-            <Button buttonOutline={true} onDark={onDark}>Registrieren</Button>
+            <Button buttonOutline={true} onDark={onDark}>
+              Registrieren
+            </Button>
           </div>
         </div>
       </div>
