@@ -4,17 +4,21 @@ import React from "react";
 import styles from "../start.module.css";
 import img from "../asset/kapitel2_fahrrad_auswahl.png";
 import Plx from "react-plx";
+import { ScrollData } from "../interface/Chapter2ScrollData";
 
-export const Bicycle: React.FC<{ scrollStart: number }> = ({ scrollStart }) => {
+export const Bicycle: React.FC<{ scrollData: ScrollData }> = ({ scrollData }) => {
+
+  const [bicycle, setBicycleWidth] = React.useState(0);
+  React.useEffect(() => setBicycleWidth(document.getElementById("bicycle")?.getBoundingClientRect().width as number), [bicycle]);
 
   const parallaxData = [
     {
-      start: scrollStart,
+      start: scrollData.clientHeight,
       end: 4000,
       properties: [
         {
           startValue: 0,
-          endValue: 700,
+          endValue: ( 1 - (bicycle/(scrollData.clientWidth)) ) * 2000,
           property: 'translateX',
         }
       ]
@@ -22,7 +26,7 @@ export const Bicycle: React.FC<{ scrollStart: number }> = ({ scrollStart }) => {
   ];
 
   return (
-    <div className={`${styles.bicycle} absolute`}>
+    <div id="bicycle" className={`${styles.bicycle} absolute`}>
       <Plx parallaxData={parallaxData}>
         <img
           src={img}

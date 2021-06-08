@@ -7,16 +7,17 @@ import { BuildingA } from "./buildingA";
 import { Train } from "./train";
 import { Bicycle } from './bicycle';
 import { Car } from "./car";
+import { ScrollData } from "../interface/Chapter2ScrollData";
 
-export const Scene: React.FC<{ scrollStart: number }> = ({ scrollStart }) => {
+export const Scene: React.FC<{ scrollData: ScrollData }> = ({ scrollData }) => {
   return (
     <div>
       <BuildingC />
       <BuildingB />
       <BuildingA />
-      <Train scrollStart={scrollStart} />
-      <Bicycle scrollStart={scrollStart} />
-      <Car scrollStart={scrollStart} />
+      <Train scrollData={scrollData} />
+      <Bicycle scrollData={scrollData} />
+      <Car scrollData={scrollData} />
       <Street />
     </div>
   )
