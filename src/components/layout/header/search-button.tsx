@@ -6,7 +6,7 @@ export const SearchButton: React.FC = () => (
       width="31.479"
       height="31"
       viewBox="0 0 31.479 31"
-      className="w-16"
+      className="w-10"
       fill="currentColor"
     >
       <path

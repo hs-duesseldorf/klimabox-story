@@ -3,6 +3,8 @@ import cn from "classnames";
 import { Link } from "react-router-dom";
 import { DesktopNav } from "./desktop-nav";
 
+import { MobileNav } from "./mobile-nav";
+
 export type NavItem = {
   path: string;
   label: string;
@@ -24,7 +26,7 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => (
               onDark ? "text-em1-light" : "text-em1"
             )}
           >
-            <Link to="/" className="inline-block pr-10 relative font-semibold">
+            <Link to="/" className="inline-block pr-6 relative font-semibold">
               <div
                 className={cn(
                   "absolute top-1 bottom-0 right-0 w-1",
@@ -35,7 +37,12 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => (
             </Link>
           </div>
           <div className="flex-1">
-            <DesktopNav items={items} onDark={onDark} />
+            <div className="hidden lg:block">
+              <DesktopNav items={items} onDark={onDark} />
+            </div>
+            <div className="lg:hidden">
+              <MobileNav items={items} onDark={onDark} />
+            </div>
           </div>
         </div>
       </div>
