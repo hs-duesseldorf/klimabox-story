@@ -38,6 +38,7 @@ export function MobileNav({
                 "block py-2",
                 pathname === path && "font-extrabold"
               )}
+              key={i}
             >
               {label}
             </Link>
