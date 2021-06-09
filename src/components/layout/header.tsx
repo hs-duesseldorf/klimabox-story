@@ -68,7 +68,9 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
               />
             }
             <Button onDark={onDark}>Einloggen</Button>
-            <Button buttonOutline={true} onDark={onDark}>Registrieren</Button>
+            <Link to="signup">
+              <Button buttonOutline={true} onDark={onDark}>Registrieren</Button>
+            </Link>
           </div>
         </div>
       </div>
