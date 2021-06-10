@@ -6,21 +6,27 @@ import Plx from "react-plx";
 export const Fridge: React.FC = () => {
   const parallaxData = [
     {
-      start: 3300,
-      end: 3350,
+      start: 2800,
+      end: 3100,
+      easing: "easeIn",
       properties: [
+        {
+          startValue: 100,
+          endValue: 0,
+          unit: "%",
+          property: "translateX"
+        },
         {
           startValue: 0,
           endValue: 1,
           property: "opacity"
         }
-
       ]
     }
   ];
 
   return (
-    <Plx parallaxData={parallaxData} className="absolute opacity-0 bottom-0" style={{ top: "220vh" }}>
+    <Plx parallaxData={parallaxData} className="absolute bottom-0 opacity-0" style={{ top: "240vh" }}>
       <div className="pointer-events-none">
         <img src={imageURL} alt="Fridge" className="w-full select-none" />
       </div>

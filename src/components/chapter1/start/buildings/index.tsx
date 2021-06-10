@@ -18,18 +18,18 @@ export const Buildings: React.FC = () => {
           startValue: 100,
           endValue: -800,
           property: "translateX"
-        },
+        }
       ]
     },
     {
-      start: 2840,
-      end: 3400,
+      start: 2640,
+      end: 2900,
       properties: [
         {
           startValue: 0,
           endValue: 10,
           property: "blur"
-        },
+        }
       ]
     }
   ];
