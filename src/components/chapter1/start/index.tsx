@@ -21,7 +21,7 @@ export const Start: React.FC = () => (
     <Mountains />
     <div id="buildings" className="relative" style={{ paddingTop: "50vh" }}>
       <Buildings />
-      <Fridge />
+      <Fridge/>
     </div>
   </div>
 );
