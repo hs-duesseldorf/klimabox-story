@@ -5,13 +5,13 @@
 .buildingB {
     right: 38%;
     width: 35%;
-    padding-top: 55%;
+    padding-top: 40%;
 }
 
 .buildingC {
     right: 65%;
     width: 35%;
-    padding-top: 59%;
+    padding-top: 71%;
 }
 
 .sun {
@@ -22,7 +22,7 @@
 .street {
     right: 0.01%;
     width: 110%;
-    padding-top: 79%;
+    padding-top: 67%;
 }
 
 .clue {
@@ -46,14 +46,14 @@
 }
 
 .train{
-    padding-top: 74%;
+    padding-top: 62%;
     right: 80%;
     width: 75%;
     z-index: 1;
 }
 
 .bicycle{
-    padding-top: 87%;
+    padding-top: 75%;
     width: 20%;
     right: 75%;
     z-index: 2;
@@ -62,7 +62,7 @@
 .car{
     z-index: 1;
     width: 63%;
-    padding-top: 76%;
+    padding-top: 64%;
     left: 31%
 }
 

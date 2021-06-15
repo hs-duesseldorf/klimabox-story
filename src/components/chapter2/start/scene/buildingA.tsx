@@ -7,6 +7,6 @@ export const BuildingA: React.FC = () => (
     <img
       src={img}
       alt="buildingA"
-      className = {`${styles.buildingA} absolute right-0`}
+      className = {`${styles.buildingA} absolute right-0 -top-96`}
     />
 )
