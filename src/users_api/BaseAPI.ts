@@ -12,8 +12,10 @@ class ResponseError extends Error {
 
 export const corsFetchOptions: {
   mode: RequestMode;
+  credentials: RequestCredentials;
 } = {
   mode: 'cors',
+  credentials: 'include'
 };
 
 export const acceptJsonHeaders = {

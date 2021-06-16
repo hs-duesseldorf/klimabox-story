@@ -1,20 +1,18 @@
 import React, { useState } from "react";
-import { createUser } from "../../users_api/UserAPI";
+import { login } from "../../users_api/UserAPI";
 
-export const SignUpForm: React.FC = () => {
+export const SignInForm: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [password_confirmation, setPasswordConfirmation] = useState<string>("");
 
-  const handleSignUp = async () => {
+  const handleSignIn = async () => {
     let data = {
       email: email,
-      password: password,
-      password_confirmation: password_confirmation
+      password: password
     }
     let response;
     try {
-      response = await createUser(data)
+      response = await login(data)
     } catch(error) {
       console.log(error)
     }
@@ -36,14 +34,8 @@ export const SignUpForm: React.FC = () => {
           </label>
           <input value={password} onChange={ (e) => setPassword(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Passwort" />
         </div>
-        <div className="mb-6">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Passwort bestätigen
-          </label>
-          <input value={password_confirmation} onChange={ (e) => setPasswordConfirmation(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Passwort bestätigen" />
-        </div>
         <div className="flex items-center justify-between">
-          <button onClick={ () => handleSignUp() }className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+          <button onClick={ () => handleSignIn() }className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
             Sign Up
           </button>
         </div>

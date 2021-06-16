@@ -17,3 +17,13 @@ export const createUser = (data: any) => {
     user: data
   })
 }
+
+export const login = (data: any) => {
+  return post('/authenticate/', {
+    user: data
+  })
+}
+
+export const currentUser = () => {
+  return get('/sessions/')
+}
