@@ -67,7 +67,9 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
                 className="w-full h-full pr-4"
               />
             }
-            <Button onDark={onDark}>Einloggen</Button>
+            <Link to="signin">
+              <Button onDark={onDark}>Einloggen</Button>
+            </Link>
             <Link to="signup">
               <Button buttonOutline={true} onDark={onDark}>Registrieren</Button>
             </Link>
