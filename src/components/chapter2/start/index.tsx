@@ -1,4 +1,4 @@
-import React from "react";
+import React, { RefObject, useRef } from "react";
 
 import { Background } from "./background";
 import { Sunrise } from "./sunrise";
@@ -40,17 +40,17 @@ const useElementOnScreen = () => {
     return { containerRef, sequence };
 }
 
-const useUpdateScroll = () => {
+const useUpdateScroll = (ref: RefObject<HTMLDivElement>) => {
     const [scrollData, SetScrolldata] = React.useState<ScrollData>({
         streetHeight: 1024,
         clientHeight: 0,
         clientWidth: 0,
         diffClientAndStreetHeight: 0,
     });
-    const [offset, setOffset] = React.useState(0);
-
-    const update = () => {
-        window.onscroll = () => setOffset(document.documentElement.scrollTop)
+    React.useEffect(() => {
+        function handleScroll() { ref.current!.style.top = `-${window.scrollY * 100}%` }
+        window.addEventListener("scroll", handleScroll);
+        
         const streetHeight = document.getElementById("Street")?.getBoundingClientRect().height as number;
         const clientHeight = document.documentElement.clientHeight;
         SetScrolldata({
@@ -59,24 +59,26 @@ const useUpdateScroll = () => {
             clientWidth: document.documentElement.clientWidth,
             diffClientAndStreetHeight: (streetHeight - clientHeight) / clientHeight,
         })
-    }
 
-    React.useEffect(update, [offset]);
+        return () => window.removeEventListener("scroll", handleScroll);
+    },);
     return [scrollData];
 }
 
 export const StartChapter2: React.FC = () => {
 
+    const ref = useRef(null);
+
     const { containerRef, sequence } = useElementOnScreen();
-    const [scrollData] = useUpdateScroll();
+    const [scrollData] = useUpdateScroll(ref);
 
     return (
         <div>
             <div className="text-white relative" style={{ height: "400vh" }}>
                 <Background />
                 <Sunrise />
-                <div className="sticky" style={{ top: `-${scrollData.diffClientAndStreetHeight * 100}%` }}>
-                    <Scene scrollData={scrollData} sequence = {sequence}/>
+                <div className="sticky" ref={ref}>
+                    <Scene scrollData={scrollData} sequence={sequence} />
                 </div>
                 <Text />
                 <Continue />
