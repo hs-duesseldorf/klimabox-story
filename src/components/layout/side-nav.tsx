@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import cn from "classnames";
-import { render } from "react-dom";
+import React from "react";
 //fill color: #197eb7
 type sideNavProps = {
     chapter: number,
@@ -13,47 +11,47 @@ export class SideNav extends React.Component<sideNavProps>{
     render() {
         var color = this.props.hasDarkBackground? "#FFF": "#555";
         return (
-            <div className="fixed top-7 right-0">
+            <div className="fixed top-8 right-0">
                 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 300 600">
                     <g className="right-0 hover:opacity-90" id="nav" data-name="nav" opacity="0.7">
                     <g id="graph" data-name="graph">
-                        <line id="Linie_1-2" data-name="Linie 1-2" x1="300" y1="75"  x2="300" y2="145" stroke={this.props.chapter < 2? color : "#197eb7"} stroke-width="6"/>
-                        <line id="Linie_2-3" data-name="Linie 2-3" x1="300" y1="145" x2="300" y2="215" stroke={this.props.chapter < 3? color : "#197eb7"} stroke-width="6"/>
-                        <line id="Linie_3-4" data-name="Linie 3-4" x1="300" y1="215" x2="300" y2="285" stroke={this.props.chapter < 4? color : "#197eb7"} stroke-width="6"/>
-                        <line id="Linie_4-5" data-name="Linie 4-5" x1="300" y1="285" x2="300" y2="355" stroke={this.props.chapter < 5? color : "#197eb7"} stroke-width="6"/>
+                        <line id="Linie_1-2" data-name="Linie 1-2" x1="300" y1="75"  x2="300" y2="145" stroke={this.props.chapter < 2? color : "#197eb7"} strokeWidth="6"/>
+                        <line id="Linie_2-3" data-name="Linie 2-3" x1="300" y1="145" x2="300" y2="215" stroke={this.props.chapter < 3? color : "#197eb7"} strokeWidth="6"/>
+                        <line id="Linie_3-4" data-name="Linie 3-4" x1="300" y1="215" x2="300" y2="285" stroke={this.props.chapter < 4? color : "#197eb7"} strokeWidth="6"/>
+                        <line id="Linie_4-5" data-name="Linie 4-5" x1="300" y1="285" x2="300" y2="355" stroke={this.props.chapter < 5? color : "#197eb7"} strokeWidth="6"/>
                         <g id="chapter_1" data-name="chapter_1" className="group"> 
                             <a href="/vom-esstisch-in-die-arktis">
                                 <circle id="circle_1" data-name="circle_1" cx="300" cy="75" r="15" fill={this.props.chapter < 1? color : "#197eb7"}/>
-                                <text id="text_1" data-name="text_1" className="transform group-hover:-translate-x-90% transition duration-500 ease-in-out" dx="270" dy="82.5" fill={color} font-size="20" font-family="ArialMT, Arial" text-anchor="end">1</text>
-                                <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="82.5" opacity="0" fill={color} font-size="20" font-family="ArialMT, Arial" text-anchor="end">Vom Esstisch in die Arktis</text>
+                                <text id="text_1" data-name="text_1" className="transform group-hover:-translate-x-90% transition duration-500 ease-in-out" dx="270" dy="82.5" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">1</text>
+                                <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="82.5" opacity="0" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">Vom Esstisch in die Arktis</text>
                             </a>
                         </g>
                         <g id="chapter_2" data-name="chapter_2" className="group"> 
                             <a href="/mobilitaet">
                                 <circle id="circle_2" data-name="circle_2" cx="300" cy="145" r="15" fill={this.props.chapter < 2? color : "#197eb7"}/>
-                                <text id="text_2" data-name="text_2" className="transform group-hover:-translate-x-40% transition duration-500 ease-in-out" dx="270" dy="152.5" fill={color} font-size="20" font-family="ArialMT, Arial" text-anchor="end">2</text>
-                                <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="152.5" opacity="0" fill={color} font-size="20" font-family="ArialMT, Arial" text-anchor="end">Mobilität</text>
+                                <text id="text_2" data-name="text_2" className="transform group-hover:-translate-x-40% transition duration-500 ease-in-out" dx="270" dy="152.5" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">2</text>
+                                <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="152.5" opacity="0" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">Mobilität</text>
                             </a>
                         </g> 
                         <g id="chapter_3" data-name="chapter_3" className="group"> 
                             <a href="">
                                 <circle id="circle_3" data-name="circle_3" cx="300" cy="215" r="15" fill={this.props.chapter < 3? color : "#197eb7"}/>
-                                <text id="text_3" data-name="text_3" className="transform group-hover:-translate-x-95% transition duration-500 ease-in-out" dx="270" dy="222.5" fill={color} font-size="20" font-family="ArialMT, Arial" text-anchor="end">3</text>
-                                <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="222.5" opacity="0" fill={color} font-size="20" font-family="ArialMT, Arial" text-anchor="end">Big Tech ohne Fußabdruck</text>
+                                <text id="text_3" data-name="text_3" className="transform group-hover:-translate-x-95% transition duration-500 ease-in-out" dx="270" dy="222.5" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">3</text>
+                                <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="222.5" opacity="0" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">Big Tech ohne Fußabdruck</text>
                             </a>
                         </g> 
                         <g id="chapter_4" data-name="chapter_4" className="group"> 
                             <a href="">
                                 <circle id="circle_4" data-name="circle_4" cx="300" cy="285" r="15" fill={this.props.chapter < 4? color : "#197eb7"}/>
-                                <text id="text_4" data-name="text_4" className="transform group-hover:-translate-x-3/4 transition duration-500 ease-in-out" dx="270" dy="292.5" fill={color} font-size="20" font-family="ArialMT, Arial" text-anchor="end">4</text>
-                                <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="292.5" opacity="0" fill={color} font-size="20" font-family="ArialMT, Arial" text-anchor="end">Nachhaltig shoppen</text>
+                                <text id="text_4" data-name="text_4" className="transform group-hover:-translate-x-3/4 transition duration-500 ease-in-out" dx="270" dy="292.5" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">4</text>
+                                <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="292.5" opacity="0" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">Nachhaltig shoppen</text>
                             </a>
                         </g> 
                         <g id="chapter_5" data-name="chapter_5" className="group"> 
                             <a href="">
                                 <circle id="circle_5" data-name="circle_5" cx="300" cy="355" r="15" fill={this.props.chapter < 5? color : "#197eb7"}/>
-                                <text id="text_5" data-name="text_5" className="transform group-hover:-translate-x-full transition duration-500 ease-in-out" dx="270" dy="362.5" fill={color} font-size="20" font-family="ArialMT, Arial" text-anchor="end">5</text>
-                                <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="362.5" opacity="0" fill={color} font-size="19" font-family="ArialMT, Arial" text-anchor="end">Wie Heizen das Klima erwärmt</text>
+                                <text id="text_5" data-name="text_5" className="transform group-hover:-translate-x-full transition duration-500 ease-in-out" dx="270" dy="362.5" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">5</text>
+                                <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="362.5" opacity="0" fill={color} fontSize="19" fontFamily="ArialMT, Arial" textAnchor="end">Wie Heizen das Klima erwärmt</text>
                             </a>
                         </g> 
                     </g>
