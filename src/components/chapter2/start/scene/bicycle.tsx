@@ -57,7 +57,7 @@ export const Bicycle: React.FC<{ scrollData: ScrollData, sequence: Sequence }> =
   }
 
   return (
-    <div id="bicycle" className={`${styles.bicycle} absolute`}>
+    <div id="bicycle" className={`${styles.bicycle} absolute -top-96`}>
       <Plx parallaxData={parallaxData}>
         <img
           src={img}

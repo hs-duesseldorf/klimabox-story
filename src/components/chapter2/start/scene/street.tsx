@@ -10,7 +10,7 @@ export const Street: React.FC = () => {
       id="Street"
       src={img}
       alt="street"
-      className={`${styles.street} relative`}
+      className={`${styles.street} absolute -top-96`}
     />
   )
 }

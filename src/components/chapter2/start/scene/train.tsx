@@ -53,7 +53,7 @@ export const Train: React.FC<{ scrollData: ScrollData, sequence: Sequence }> = (
   ];
 
   return (
-    <div id="train" className={`${styles.train} absolute`}>
+    <div id="train" className={`${styles.train} absolute -top-96`}>
       <Plx parallaxData={parallaxData}>
         <img
           src={img}

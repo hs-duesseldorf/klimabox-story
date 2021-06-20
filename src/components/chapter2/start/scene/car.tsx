@@ -55,9 +55,9 @@ export const Car: React.FC<{ scrollData: ScrollData, sequence: Sequence }> = ({ 
   }
 
   return (
-    <div className={`${styles.car} absolute `}>
+    <div className={`${styles.car} absolute -top-96 `}>
       <Plx parallaxData={parallaxData} >
-        <img id="car" src={img} alt="car" className="absolute" style = {{width: "97%"}} />
+        <img id="car" src={img} alt="car" className="absolute " style = {{width: "97%"}} />
         {topicSelection != null ? <Selection topicSelection={topicSelection} /> : null}
       </Plx>
     </div>

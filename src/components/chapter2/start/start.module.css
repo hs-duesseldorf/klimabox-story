@@ -5,7 +5,7 @@
 .buildingB {
     right: 38%;
     width: 35%;
-    padding-top: 40%;
+    padding-top: 63%;
 }
 
 .buildingC {
@@ -22,7 +22,7 @@
 .street {
     right: 0.01%;
     width: 110%;
-    padding-top: 67%;
+    padding-top: 88%;
 }
 
 .clue {
@@ -46,14 +46,14 @@
 }
 
 .train{
-    padding-top: 62%;
+    padding-top: 83.5%;
     right: 80%;
     width: 75%;
     z-index: 1;
 }
 
 .bicycle{
-    padding-top: 75%;
+    padding-top: 96%;
     width: 20%;
     right: 75%;
     z-index: 2;
@@ -62,7 +62,7 @@
 .car{
     z-index: 1;
     width: 63%;
-    padding-top: 64%;
+    padding-top: 88%;
     left: 31%
 }
 
