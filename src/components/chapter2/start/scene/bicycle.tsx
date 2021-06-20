@@ -64,7 +64,7 @@ export const Bicycle: React.FC<{ scrollData: ScrollData, sequence: Sequence }> =
           alt="Bicycle"
           className="absolute"
         />
-        {topicSelection != null ? <Selection topicSelection={topicSelection} /> : null}
+        {topicSelection !== undefined ? <Selection topicSelection={topicSelection} /> : null}
       </Plx>
     </div>
 

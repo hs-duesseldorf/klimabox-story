@@ -25,7 +25,6 @@ export const Train: React.FC<{ scrollData: ScrollData; sequence: Sequence }> =
         ],
       },
     ];
-
     const [silloutteOpacity, setSilloutteOpacity] = React.useState(0.1);
     const mouseEnterHandlerFunction = () => setSilloutteOpacity(1);
     const mouseLeaveHandlerFunction = () => setSilloutteOpacity(0.1);
@@ -49,13 +48,15 @@ export const Train: React.FC<{ scrollData: ScrollData; sequence: Sequence }> =
           },
         };
         break;
+        case Sequence.Intro: topicSelection = undefined; break;
     }
 
     return (
       <div id="train" className={`${styles.train} absolute -top-96`}>
         <Plx parallaxData={parallaxData}>
           <img src={img} alt="train" className="absolute" />
-          {topicSelection != null ? (
+          
+          {topicSelection !== undefined ? (
             <Selection topicSelection={topicSelection} />
           ) : null}
         </Plx>

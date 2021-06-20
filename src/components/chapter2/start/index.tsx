@@ -17,6 +17,8 @@ const useElementOnScreen = () => {
       const [entry] = entries;
       if (entry.isIntersecting && sequence === Sequence.Intro) {
         setSequence(Sequence.Question);
+      }else {
+        setSequence(Sequence.Intro);
       }
     };
     const options = {
@@ -34,7 +36,7 @@ const useElementOnScreen = () => {
         observer.unobserve(containerRef.current as unknown as Element);
       }
     };
-  });
+  },[]);
 
   return { containerRef, sequence };
 };

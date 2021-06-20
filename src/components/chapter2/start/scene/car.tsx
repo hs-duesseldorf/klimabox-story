@@ -50,13 +50,14 @@ export const Car: React.FC<{ scrollData: ScrollData, sequence: Sequence }> = ({ 
         }],
       }
       break;
+      case Sequence.Intro: topicSelection = undefined; break;
   }
 
   return (
     <div className={`${styles.car} absolute -top-96 `}>
       <Plx parallaxData={parallaxData} >
         <img id="car" src={img} alt="car" className="absolute" />
-        {topicSelection != null ? <Selection topicSelection={topicSelection} /> : null}
+        {topicSelection !== undefined? <Selection topicSelection={topicSelection} /> : null}
       </Plx>
     </div>
   )
