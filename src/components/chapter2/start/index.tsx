@@ -41,10 +41,10 @@ const useElementOnScreen = () => {
 
 const useUpdateScroll = (ref: RefObject<HTMLDivElement>) => {
   const [scrollData, setScrolldata] = React.useState<ScrollData>({
-    streetHeight: 1024,
+    streetHeight: 0,
     clientHeight: 0,
     clientWidth: 0,
-    diffClientAndStreetHeight: 0,
+    scrollingOffset: 0,
   });
 
   React.useEffect(() => {
@@ -53,17 +53,17 @@ const useUpdateScroll = (ref: RefObject<HTMLDivElement>) => {
         .getElementById("Street")
         ?.getBoundingClientRect().height as number;
 
+      const offsetTop = document.getElementById("Street")?.offsetTop as number;
+
       const clientHeight = document.documentElement.clientHeight;
       setScrolldata({
         streetHeight: streetHeight,
         clientHeight: clientHeight,
         clientWidth: document.documentElement.clientWidth,
-        diffClientAndStreetHeight: (streetHeight - clientHeight) / clientHeight,
+        scrollingOffset: streetHeight + offsetTop - clientHeight,
       });
 
-      ref.current!.style.top = `-${
-        ((streetHeight - clientHeight) / clientHeight) * 100
-      }%`;
+      ref.current!.style.top = `-${scrollData.scrollingOffset}px`;
     }
     window.addEventListener("scroll", handleScroll);
 
@@ -84,7 +84,7 @@ export const StartChapter2: React.FC = () => {
       <div className="text-white relative" style={{ height: "400vh" }}>
         <Background />
         <Sunrise />
-        <div className="sticky" ref={ref}>
+        <div className="sticky" ref={ref} style={{ top: "0px" }}>
           <Scene scrollData={scrollData} sequence={sequence} />
         </div>
         <Text />
