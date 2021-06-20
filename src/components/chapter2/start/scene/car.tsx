@@ -12,9 +12,6 @@ import carImg from "../asset/kapitel2_auto_auswahl_effekt.png";
 
 
 export const Car: React.FC<{ scrollData: ScrollData, sequence: Sequence }> = ({ scrollData, sequence }) => {
-  const [carWidth, setCarWidth] = React.useState(0);
-  React.useEffect(() => setCarWidth(document.getElementById("car")?.getBoundingClientRect().width as number), [carWidth]);
-
   const parallaxData = [
     {
       start: scrollData.clientHeight,
@@ -22,7 +19,7 @@ export const Car: React.FC<{ scrollData: ScrollData, sequence: Sequence }> = ({ 
       properties: [
         {
           startValue: 0,
-          endValue: (1 - (carWidth / (scrollData.clientWidth))) * 500,
+          endValue: scrollData.clientWidth*0.10,
           property: 'translateX',
         }
       ]
@@ -38,13 +35,14 @@ export const Car: React.FC<{ scrollData: ScrollData, sequence: Sequence }> = ({ 
     case Sequence.Question:
       topicSelection = {
         containerStyle: {
-          width: "99%",
           opacity: silloutteOpacity,
           paddingTop: "6%",
           position: "absolute",
           zIndex: 2,
+          width: "100%",
         },
         selection: [{
+          style: {width: "100%"},
           imagePath: carImg,
           link: "#",
           mouseEnterEventHandler: mouseEnterHandlerFunction,
@@ -57,7 +55,7 @@ export const Car: React.FC<{ scrollData: ScrollData, sequence: Sequence }> = ({ 
   return (
     <div className={`${styles.car} absolute -top-96 `}>
       <Plx parallaxData={parallaxData} >
-        <img id="car" src={img} alt="car" className="absolute " style = {{width: "97%"}} />
+        <img id="car" src={img} alt="car" className="absolute" />
         {topicSelection != null ? <Selection topicSelection={topicSelection} /> : null}
       </Plx>
     </div>

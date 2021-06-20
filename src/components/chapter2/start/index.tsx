@@ -93,7 +93,7 @@ export const StartChapter2: React.FC = () => {
       <div
         ref={containerRef}
         id="chapter2Choice"
-        className="text-white relative font-bold text-2xl xs:text-4xl xs:leading-snug 2xl:leading-snug 2xl:text-5xl"
+        className="text-white absolute font-bold text-2xl xs:text-4xl xs:leading-snug 2xl:leading-snug 2xl:text-5xl"
       >
         <p>Wähle das Verkehrsmittel mit dem du am meisten unterwegs bist</p>
       </div>

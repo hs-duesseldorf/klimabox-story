@@ -11,13 +11,12 @@ export const Selection: React.FC<{ topicSelection: TopicSelection }> = ({
         return (
           <div
             key={selection.imagePath}
-            style={selection.style}
             onMouseLeave={selection.mouseLeaveEventHandler}
             onMouseEnter={selection.mouseEnterEventHandler}
             onClick={selection.mouseClickEventHandler}
           >
             <a href={selection.link}>
-              <img src={selection.imagePath} alt="" />
+              <img src={selection.imagePath} alt="" style={selection.style} />
             </a>
           </div>
         );
