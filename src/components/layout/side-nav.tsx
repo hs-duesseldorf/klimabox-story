@@ -6,8 +6,6 @@ type sideNavProps = {
 }
 export class SideNav extends React.Component<sideNavProps>{
     
-    
-
     render() {
         var color = this.props.hasDarkBackground? "#FFF": "#555";
         return (
