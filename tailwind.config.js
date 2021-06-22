@@ -16,7 +16,10 @@ module.exports = {
         text: {
           DEFAULT: "black",
           muted: "#6f6f6f",
+          pink: "#AA618B",
         },
+        pink: "#AA618B",
+        brown: "#694025",
       },
       fontSize: {
         17: "17pt",
@@ -35,6 +38,9 @@ module.exports = {
         "1/2": "50%",
         "2/3": "66.67%",
       },
+      backgroundImage: theme => ({
+        'massvisualize-pig-pattern': "url('components/chapter1/start/fridge/massvisualize_pig.png')",
+      })
     },
     screens: {
       xs: "380px",
