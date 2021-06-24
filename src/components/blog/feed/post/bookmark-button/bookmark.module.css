@@ -9,6 +9,6 @@
   }
 
   &.active svg {
-    fill: rgba(231, 129, 130, 1);
+    fill: rgba(231, 129, 130, 1) !important;
   }
 }
