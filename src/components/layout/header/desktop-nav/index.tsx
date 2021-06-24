@@ -23,7 +23,11 @@ export const DesktopNav: React.FC<{ items: NavItem[]; onDark?: boolean }> = ({
               className={cn(
                 "inline-block pt-1 border-b-2 border-transparent transition",
                 onDark ? "hover:border-white" : "hover:border-black",
-                pathname === path && "font-extrabold"
+                (pathname === path ||
+                  (pathname.length > 1 &&
+                    path.length > 1 &&
+                    pathname.startsWith(path))) &&
+                  "font-extrabold"
               )}
             >
               {label}
