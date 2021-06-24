@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 import { SEO } from "../../seo";
-import { usePost, PostData } from "../wp";
+import { usePost } from "../wp";
 import { PostHeading } from "./heading";
 import { PostContent } from "./content";
 

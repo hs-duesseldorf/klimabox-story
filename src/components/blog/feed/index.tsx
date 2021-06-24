@@ -4,7 +4,7 @@ import { useFeed, FeedItemData } from "../wp";
 import { Post } from "./post";
 
 export const Feed: React.FC = () => {
-  const { loading, error, data } = useFeed();
+  const { error, data } = useFeed();
 
   const items = React.useMemo<Array<FeedItemData | undefined>>(
     () =>
