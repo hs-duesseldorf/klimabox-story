@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { HelmetProvider } from "react-helmet-async";
 
+import { WPGraphQLClient } from "./components/blog/wp/graphql-client";
+
 import { ScrollToTop } from "./util/scroll-to-top";
 
 import { NotFound } from "./pages/not-found";
@@ -18,20 +20,22 @@ export const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <Router>
-          <ScrollToTop />
-          <Switch>
-            <Route path="/vom-esstisch-in-die-arktis" component={Chapter1} />
-            <Route path="/mobilitaet" component={Chapter2} />
+      <WPGraphQLClient>
+        <QueryClientProvider client={queryClient}>
+          <Router>
+            <ScrollToTop />
+            <Switch>
+              <Route path="/vom-esstisch-in-die-arktis" component={Chapter1} />
+              <Route path="/mobilitaet" component={Chapter2} />
 
-            <Route path="/blog/:slug" component={Post} />
-            <Route path="/blog" component={Blog} />
-            <Route exact path="/" component={Stories} />
-            <Route component={NotFound} />
-          </Switch>
-        </Router>
-      </QueryClientProvider>
+              <Route path="/blog/:slug" component={Post} />
+              <Route path="/blog" component={Blog} />
+              <Route exact path="/" component={Stories} />
+              <Route component={NotFound} />
+            </Switch>
+          </Router>
+        </QueryClientProvider>
+      </WPGraphQLClient>
     </HelmetProvider>
   );
 };

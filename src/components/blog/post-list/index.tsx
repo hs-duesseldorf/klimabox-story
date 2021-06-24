@@ -1,18 +1,18 @@
 import React from "react";
 
-import { usePosts } from "../wp";
+import { useFeed } from "../wp";
 import { Post } from "./post";
 
 export const PostList: React.FC = () => {
-  const { isLoading, error, data } = usePosts();
+  const { loading, error, data } = useFeed();
 
-  if (isLoading) return <div>Loading...</div>;
+  if (loading) return <div>Loading...</div>;
   if (error || !data) return <div>Es ist ein Fehler aufgetreten.</div>;
 
   return (
     <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:gap-x-10 xl:gap-16 2xl:grid-cols-3">
-      {data.map((postData, i) => (
-        <Post data={postData} key={i} />
+      {data.posts.edges.map(({ node }, i) => (
+        <Post data={node} key={i} />
       ))}
     </div>
   );
