@@ -4,7 +4,7 @@
     transition: 0.2s ease fill;
   }
 
-  &:hover svg {
+  &:not([disabled]):hover svg {
     fill: rgba(231, 129, 130, 0.25);
   }
 
