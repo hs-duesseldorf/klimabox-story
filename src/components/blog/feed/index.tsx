@@ -3,7 +3,7 @@ import React from "react";
 import { useFeed } from "../wp";
 import { Post } from "./post";
 
-export const PostList: React.FC = () => {
+export const Feed: React.FC = () => {
   const { loading, error, data } = useFeed();
 
   if (loading) return <div>Loading...</div>;
