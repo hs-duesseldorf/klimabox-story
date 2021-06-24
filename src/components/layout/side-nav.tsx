@@ -1,5 +1,6 @@
 import React from "react";
-//fill color: #197eb7
+import {Link} from "react-router-dom"
+
 type sideNavProps = {
     chapter: number,
     hasDarkBackground?: boolean,
@@ -18,16 +19,18 @@ export class SideNav extends React.Component<sideNavProps>{
                         <line id="Linie_3-4" data-name="Linie 3-4" x1="300" y1="215" x2="300" y2="285" stroke={this.props.chapter < 4? color : "#197eb7"} strokeWidth="6"/>
                         <line id="Linie_4-5" data-name="Linie 4-5" x1="300" y1="285" x2="300" y2="355" stroke={this.props.chapter < 5? color : "#197eb7"} strokeWidth="6"/>
                         <g id="chapter_1" data-name="chapter_1" className="group"> 
+                            <Link to="/vom-esstisch-in-die-arktis">
                                 <circle id="circle_1" data-name="circle_1" cx="300" cy="75" r="15" fill={this.props.chapter < 1? color : "#197eb7"}/>
                                 <text id="text_1" data-name="text_1" className="transform group-hover:-translate-x-90% transition duration-500 ease-in-out" dx="270" dy="82.5" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">1</text>
                                 <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="82.5" opacity="0" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">Vom Esstisch in die Arktis</text>
+                            </Link>
                         </g>
                         <g id="chapter_2" data-name="chapter_2" className="group"> 
-                            <a href="/mobilitaet">
+                            <Link to="/mobilitaet">
                                 <circle id="circle_2" data-name="circle_2" cx="300" cy="145" r="15" fill={this.props.chapter < 2? color : "#197eb7"}/>
                                 <text id="text_2" data-name="text_2" className="transform group-hover:-translate-x-40% transition duration-500 ease-in-out" dx="270" dy="152.5" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">2</text>
                                 <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="152.5" opacity="0" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">Mobilität</text>
-                            </a>
+                            </Link>
                         </g> 
                         <g id="chapter_3" data-name="chapter_3" className="group"> 
                                 <circle id="circle_3" data-name="circle_3" cx="300" cy="215" r="15" fill={this.props.chapter < 3? color : "#197eb7"}/>
