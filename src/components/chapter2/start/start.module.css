@@ -1,78 +1,128 @@
 .buildingA {
-    width: 45%;
+  width: 45%;
 }
 
 .buildingB {
-    right: 38%;
-    width: 35%;
-    padding-top: 63%;
+  right: 38%;
+  width: 35%;
+  padding-top: 63%;
 }
 
 .buildingC {
-    right: 65%;
-    width: 35%;
-    padding-top: 71%;
+  right: 65%;
+  width: 35%;
+  padding-top: 71%;
 }
 
 .sun {
-    top: 14%;
-    opacity: 0.7;
+  top: 14%;
+  opacity: 0.7;
 }
 
 .street {
-    right: 0.01%;
-    width: 110%;
-    padding-top: 88%;
+  right: 0.01%;
+  width: 110%;
+  padding-top: 88%;
 }
 
 .clue {
-    bottom: 10%;
-    right: 5%;
-    width: 30%;
+  bottom: 10%;
+  right: 5%;
+  width: 30%;
 }
 
 .headerline {
-    padding: 0 0 3% 10%;
+  padding: 0 0 3% 10%;
 }
 
 .text {
-    top: 17rem;
-    padding-left: 20%;
+  top: 17rem;
+  padding-left: 20%;
 }
 
-.continue{
-    left: 61.5%;
-    top: 10%;
+.continue {
+  left: 61.5%;
+  top: 10%;
 }
 
-.train{
-    padding-top: 83.5%;
-    right: 80%;
-    width: 75%;
-    z-index: 1;
+.train {
+  padding-top: 83.5%;
+  right: 80%;
+  width: 75%;
+  z-index: 1;
 }
 
-.bicycle{
-    padding-top: 96%;
-    width: 20%;
-    right: 75%;
-    z-index: 2;
+.bicycle {
+  padding-top: 96%;
+  width: 20%;
+  right: 75%;
+  z-index: 2;
 }
 
-.car{
-    z-index: 1;
-    width: 63%;
-    padding-top: 82%;
-    left: 31%
+.car {
+  z-index: 1;
+  width: 63%;
+  padding-top: 82%;
+  left: 31%;
 }
 
-canvas {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100vw;
-    max-height: 100vh;
-    width: 100vw;
-    height: 100vh;
-  }
+.graffiti {
+  top: 12rem;
+}
+
+.graffitiBackground {
+  left: 21.7%;
+  top: 54.5rem;
+  width: 28%;
+}
+
+.hochhaus {
+  left: 155%;
+  top: -19rem;
+}
+
+.endScene {
+  width: 100%;
+  left: 189%;
+  z-index: -1;
+}
+
+.streetEnd {
+  top: 41rem;
+}
+
+.wall {
+  top: 19rem;
+}
+
+.allWeHaveIsNow {
+  top: 58rem;
+  left: 71%;
+}
+
+.streetlamp {
+  top: 59rem;
+  left: 38.5%;
+  z-index: 1;
+}
+
+.takeItEasy {
+  top: 76rem;
+  left: 53%;
+}
+
+.human {
+  top: 79.15rem;
+  left: 27%;
+  z-index: 1;
+}
+
+.door {
+  top: 69rem;
+  left: 69%;
+}
+
+.telephone {
+  top: 79.5rem;
+  left: 92.5%;
+}

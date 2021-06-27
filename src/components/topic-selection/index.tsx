@@ -15,9 +15,11 @@ export const Selection: React.FC<{ topicSelection: TopicSelection }> = ({
             onMouseEnter={selection.mouseEnterEventHandler}
             onClick={selection.mouseClickEventHandler}
           >
-            <a href={selection.link}>
+            {selection.link !== undefined? 
+              <img src={selection.imagePath} alt="" style={selection.style}/>:            
+             <a href={selection.link}>
               <img src={selection.imagePath} alt="" style={selection.style} />
-            </a>
+            </a>}
           </div>
         );
       })}

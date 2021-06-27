@@ -24,6 +24,22 @@ export const Train: React.FC<{ scrollData: ScrollData; sequence: Sequence }> =
           },
         ],
       },
+      {
+        start: 3800,
+        duration: 800,
+        properties: [
+          {
+            startValue: scrollData.clientWidth * 0.25,
+            endValue: scrollData.clientWidth * 2,
+            property: "translateX",
+          },
+          {
+            startValue: 1,
+            endValue: 0,
+            property: "opacity"
+          }
+        ],
+      },
     ];
     const [silloutteOpacity, setSilloutteOpacity] = React.useState(0.1);
     const mouseEnterHandlerFunction = () => setSilloutteOpacity(1);
@@ -36,7 +52,6 @@ export const Train: React.FC<{ scrollData: ScrollData; sequence: Sequence }> =
           selection: [
             {
               imagePath: trainImg,
-              link: "#",
               mouseEnterEventHandler: mouseEnterHandlerFunction,
               mouseLeaveEventHandler: mouseLeaveHandlerFunction,
             },

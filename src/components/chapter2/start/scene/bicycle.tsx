@@ -13,9 +13,6 @@ import { TopicSelection } from "../../../topic-selection/interfaces/selection";
 
 export const Bicycle: React.FC<{ scrollData: ScrollData, sequence: Sequence }> = ({ scrollData, sequence }) => {
 
-  const [bicycle, setBicycleWidth] = React.useState(0);
-  React.useEffect(() => setBicycleWidth(document.getElementById("bicycle")?.getBoundingClientRect().width as number), [bicycle]);
-
   const parallaxData = [
     {
       start: scrollData.clientHeight,
@@ -23,8 +20,24 @@ export const Bicycle: React.FC<{ scrollData: ScrollData, sequence: Sequence }> =
       properties: [
         {
           startValue: 0,
-          endValue: ( 1 - (bicycle/(scrollData.clientWidth)) ) * 700,
+          endValue: scrollData.clientWidth*0.35,
           property: 'translateX',
+        }
+      ]
+    },
+    {
+      start: 3800,
+      duration: 800,
+      properties: [
+        {
+          startValue: scrollData.clientWidth*0.35,
+          endValue: scrollData.clientWidth*1,
+          property: 'translateX',
+        },
+        {
+          startValue: 1,
+          endValue: 0,
+          property: "opacity"
         }
       ]
     },
@@ -48,7 +61,6 @@ export const Bicycle: React.FC<{ scrollData: ScrollData, sequence: Sequence }> =
         },
         selection: [{
           imagePath: carImg,
-          link: "#",
           mouseEnterEventHandler: mouseEnterHandlerFunction,
           mouseLeaveEventHandler: mouseLeaveHandlerFunction,
         }],

@@ -10,7 +10,7 @@ import { Sequence } from "./interface/Chapter2Enum";
 
 const useElementOnScreen = () => {
   const [sequence, setSequence] = React.useState<Sequence>(Sequence.Intro);
-  const containerRef = React.useRef<HTMLDivElement>(null);
+  const containerRef = React.useRef<HTMLParagraphElement>(null);
 
   React.useEffect(() => {
     const callbackFunction = (entries) => {
@@ -77,28 +77,32 @@ const useUpdateScroll = (ref: RefObject<HTMLDivElement>) => {
 
 export const StartChapter2: React.FC = () => {
   const ref = useRef(null);
+  const [viewHeight, setViewHeight] = React.useState("400vh");
 
   const { containerRef, sequence } = useElementOnScreen();
   const [scrollData] = useUpdateScroll(ref);
 
   return (
     <div>
-      <div className="text-white relative" style={{ height: "400vh" }}>
+      <div className="text-white relative" style={{ height: `${viewHeight}` }}>
         <Background />
         <Sunrise />
+
         <div className="sticky" ref={ref} style={{ top: "0px" }}>
-          <Scene scrollData={scrollData} sequence={sequence} />
+          <Scene scrollData={scrollData} sequence={sequence} setViewHeight= {setViewHeight}/>
         </div>
         <Text />
         <Continue />
-      </div>
-      <div
-        ref={containerRef}
+        <div
         id="chapter2Choice"
         className="text-white absolute font-bold text-2xl xs:text-4xl xs:leading-snug 2xl:leading-snug 2xl:text-5xl"
-      >
-        <p>Wähle das Verkehrsmittel mit dem du am meisten unterwegs bist</p>
+        style={{ top: "400vh" }}
+        >
+        <p ref={containerRef}>Wähle das Verkehrsmittel mit dem du am meisten unterwegs bist</p>
+        </div>
+
       </div>
+      
     </div>
   );
 };

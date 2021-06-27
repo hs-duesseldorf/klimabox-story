@@ -10,8 +10,12 @@ import { Sequence } from "../interface/Chapter2Enum";
 import { Selection } from '../../../topic-selection';
 import carImg from "../asset/kapitel2_auto_auswahl_effekt.png";
 
+export const Car: React.FC<{ 
+  scrollData: ScrollData, 
+  sequence: Sequence,
+  setViewHeight: React.Dispatch<React.SetStateAction<string>> }> = 
+  ({ scrollData, sequence, setViewHeight }) => {
 
-export const Car: React.FC<{ scrollData: ScrollData, sequence: Sequence }> = ({ scrollData, sequence }) => {
   const parallaxData = [
     {
       start: scrollData.clientHeight,
@@ -29,6 +33,10 @@ export const Car: React.FC<{ scrollData: ScrollData, sequence: Sequence }> = ({ 
   const [silloutteOpacity, setSilloutteOpacity] = React.useState(0.1);
   const mouseEnterHandlerFunction = () => setSilloutteOpacity(1);
   const mouseLeaveHandlerFunction = () => setSilloutteOpacity(0.1);
+  const mouseClickEventHandlerFunction = () => {
+    setViewHeight("800vh");
+    console.log(document.documentElement.scrollTop);
+  }
 
   let topicSelection: TopicSelection | undefined = undefined;
   switch (sequence) {
@@ -44,9 +52,9 @@ export const Car: React.FC<{ scrollData: ScrollData, sequence: Sequence }> = ({ 
         selection: [{
           style: {width: "100%"},
           imagePath: carImg,
-          link: "#",
           mouseEnterEventHandler: mouseEnterHandlerFunction,
           mouseLeaveEventHandler: mouseLeaveHandlerFunction,
+          mouseClickEventHandler: mouseClickEventHandlerFunction,
         }],
       }
       break;

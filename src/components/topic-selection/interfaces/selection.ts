@@ -6,7 +6,7 @@ export interface TopicSelection{
 
 export interface Selection{
     imagePath: string;
-    link: string; 
+    link?: string; 
     style?: {};
     mouseEnterEventHandler?: () => void;
     mouseLeaveEventHandler?: () => void;
