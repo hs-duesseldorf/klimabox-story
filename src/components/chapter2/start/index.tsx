@@ -5,8 +5,8 @@ import { Sunrise } from "./sunrise";
 import { Continue } from "./continue";
 import { Scene } from "./scene/scene";
 import { Text } from "./text";
-import { ScrollData } from "./interface/Chapter2ScrollData";
 import { Sequence } from "./interface/Chapter2Enum";
+import { getParallaxData } from "./animationParallaxData";
 
 const useElementOnScreen = () => {
   const [sequence, setSequence] = React.useState<Sequence>(Sequence.Intro);
@@ -17,7 +17,7 @@ const useElementOnScreen = () => {
       const [entry] = entries;
       if (entry.isIntersecting && sequence === Sequence.Intro) {
         setSequence(Sequence.Question);
-      }else {
+      } else {
         setSequence(Sequence.Intro);
       }
     };
@@ -36,43 +36,24 @@ const useElementOnScreen = () => {
         observer.unobserve(containerRef.current as unknown as Element);
       }
     };
-  },[]);
+  }, []);
 
   return { containerRef, sequence };
 };
 
 const useUpdateScroll = (ref: RefObject<HTMLDivElement>) => {
-  const [scrollData, setScrolldata] = React.useState<ScrollData>({
-    streetHeight: 0,
-    clientHeight: 0,
-    clientWidth: 0,
-    scrollingOffset: 0,
-  });
-
   React.useEffect(() => {
     function handleScroll() {
       const streetHeight = document
         .getElementById("Street")
         ?.getBoundingClientRect().height as number;
-
       const offsetTop = document.getElementById("Street")?.offsetTop as number;
-
       const clientHeight = document.documentElement.clientHeight;
-      setScrolldata({
-        streetHeight: streetHeight,
-        clientHeight: clientHeight,
-        clientWidth: document.documentElement.clientWidth,
-        scrollingOffset: streetHeight + offsetTop - clientHeight,
-      });
-
-      ref.current!.style.top = `-${scrollData.scrollingOffset}px`;
+      ref.current!.style.top = `-${streetHeight + offsetTop - clientHeight}px`;
     }
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   });
-
-  return [scrollData];
 };
 
 export const StartChapter2: React.FC = () => {
@@ -80,29 +61,34 @@ export const StartChapter2: React.FC = () => {
   const [viewHeight, setViewHeight] = React.useState("400vh");
 
   const { containerRef, sequence } = useElementOnScreen();
-  const [scrollData] = useUpdateScroll(ref);
+  useUpdateScroll(ref);
+  const [parallaxData, setParallaxData] = React.useState<any>(getParallaxData(Sequence.Intro, document.documentElement.clientHeight, document.documentElement.clientWidth));
 
   return (
     <div>
       <div className="text-white relative" style={{ height: `${viewHeight}` }}>
         <Background />
         <Sunrise />
-
         <div className="sticky" ref={ref} style={{ top: "0px" }}>
-          <Scene scrollData={scrollData} sequence={sequence} setViewHeight= {setViewHeight}/>
+          <Scene
+            sequence={sequence}
+            setViewHeight={setViewHeight}
+            parallaxData={parallaxData}
+            setParallaxData = {setParallaxData}
+          />
         </div>
         <Text />
         <Continue />
         <div
-        id="chapter2Choice"
-        className="text-white absolute font-bold text-2xl xs:text-4xl xs:leading-snug 2xl:leading-snug 2xl:text-5xl"
-        style={{ top: "400vh" }}
+          id="chapter2Choice"
+          className="text-white absolute font-bold text-2xl xs:text-4xl xs:leading-snug 2xl:leading-snug 2xl:text-5xl"
+          style={{ top: "400vh" }}
         >
-        <p ref={containerRef}>Wähle das Verkehrsmittel mit dem du am meisten unterwegs bist</p>
+          <p ref={containerRef}>
+            Wähle das Verkehrsmittel mit dem du am meisten unterwegs bist
+          </p>
         </div>
-
       </div>
-      
     </div>
   );
 };

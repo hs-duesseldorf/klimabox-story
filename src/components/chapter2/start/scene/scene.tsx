@@ -12,14 +12,14 @@ import { EndScreen } from "./endScreen";
 import { Train } from "./train";
 import { Bicycle } from "./bicycle";
 import { Car } from "./car";
-import { ScrollData } from "../interface/Chapter2ScrollData";
 import { Sequence } from "../interface/Chapter2Enum";
 
 export const Scene: React.FC<{
-  scrollData: ScrollData;
   sequence: Sequence;
   setViewHeight: React.Dispatch<React.SetStateAction<string>>;
-}> = ({ scrollData, sequence, setViewHeight }) => {
+  parallaxData: any;
+  setParallaxData: React.Dispatch<React.SetStateAction<any>>;
+}> = ({ sequence, setViewHeight, parallaxData, setParallaxData }) => {
   return (
     <div>
       <Plx>
@@ -31,12 +31,13 @@ export const Scene: React.FC<{
         <EndScreen/>
       </Plx>
 
-      <Train scrollData={scrollData} sequence={sequence} />
-      <Bicycle scrollData={scrollData} sequence={sequence} />
+      <Train sequence={sequence} parallaxData = {parallaxData.trainData} />
+      <Bicycle sequence={sequence} parallaxData = {parallaxData.bicylceData}/>
       <Car
-        scrollData={scrollData}
         sequence={sequence}
         setViewHeight={setViewHeight}
+        parallaxData = {parallaxData.carData}
+        setParallaxData = {setParallaxData}
       />
       <Street />
     </div>

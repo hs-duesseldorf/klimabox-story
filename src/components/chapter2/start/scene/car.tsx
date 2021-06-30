@@ -3,32 +3,19 @@ import React from "react";
 import styles from "../start.module.css";
 import img from "../asset/kapitel2_auto_auswahl.png";
 import Plx from "react-plx";
-import { ScrollData } from "../interface/Chapter2ScrollData";
 import { TopicSelection } from "../../../topic-selection/interfaces/selection";
 import { Sequence } from "../interface/Chapter2Enum";
 
-import { Selection } from '../../../topic-selection';
+import { Selection } from "../../../topic-selection";
 import carImg from "../asset/kapitel2_auto_auswahl_effekt.png";
+import { getParallaxData } from "../animationParallaxData";
 
-export const Car: React.FC<{ 
-  scrollData: ScrollData, 
-  sequence: Sequence,
-  setViewHeight: React.Dispatch<React.SetStateAction<string>> }> = 
-  ({ scrollData, sequence, setViewHeight }) => {
-
-  const parallaxData = [
-    {
-      start: scrollData.clientHeight,
-      end: 3000,
-      properties: [
-        {
-          startValue: 0,
-          endValue: scrollData.clientWidth*0.10,
-          property: 'translateX',
-        }
-      ]
-    },
-  ];
+export const Car: React.FC<{
+  sequence: Sequence;
+  setViewHeight: React.Dispatch<React.SetStateAction<string>>;
+  parallaxData: any;
+  setParallaxData: React.Dispatch<React.SetStateAction<any>>;
+}> = ({sequence, setViewHeight, parallaxData, setParallaxData }) => {
 
   const [silloutteOpacity, setSilloutteOpacity] = React.useState(0.1);
   const mouseEnterHandlerFunction = () => setSilloutteOpacity(1);
@@ -36,7 +23,8 @@ export const Car: React.FC<{
   const mouseClickEventHandlerFunction = () => {
     setViewHeight("800vh");
     console.log(document.documentElement.scrollTop);
-  }
+    setParallaxData(getParallaxData(Sequence.Car, document.documentElement.clientHeight, document.documentElement.clientWidth ))
+  };
 
   let topicSelection: TopicSelection | undefined = undefined;
   switch (sequence) {
@@ -49,24 +37,30 @@ export const Car: React.FC<{
           zIndex: 2,
           width: "100%",
         },
-        selection: [{
-          style: {width: "100%"},
-          imagePath: carImg,
-          mouseEnterEventHandler: mouseEnterHandlerFunction,
-          mouseLeaveEventHandler: mouseLeaveHandlerFunction,
-          mouseClickEventHandler: mouseClickEventHandlerFunction,
-        }],
-      }
+        selection: [
+          {
+            style: { width: "100%" },
+            imagePath: carImg,
+            mouseEnterEventHandler: mouseEnterHandlerFunction,
+            mouseLeaveEventHandler: mouseLeaveHandlerFunction,
+            mouseClickEventHandler: mouseClickEventHandlerFunction,
+          },
+        ],
+      };
       break;
-      case Sequence.Intro: topicSelection = undefined; break;
+    case Sequence.Intro:
+      topicSelection = undefined;
+      break;
   }
 
   return (
     <div className={`${styles.car} absolute -top-96 `}>
-      <Plx parallaxData={parallaxData} >
+      <Plx parallaxData={parallaxData}>
         <img id="car" src={img} alt="car" className="absolute" />
-        {topicSelection !== undefined? <Selection topicSelection={topicSelection} /> : null}
+        {topicSelection !== undefined ? (
+          <Selection topicSelection={topicSelection} />
+        ) : null}
       </Plx>
     </div>
-  )
-}
+  );
+};
