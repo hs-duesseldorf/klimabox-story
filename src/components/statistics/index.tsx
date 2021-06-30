@@ -55,7 +55,11 @@ export function Statistics({ tabs }: StatisticsProps): JSX.Element {
                 className={`font-bold line-clamp-1 ${
                   bgIsDark ? "text-white" : "text-black"
                 }`}
-                style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" }}
+                style={
+                  bgIsDark
+                    ? { textShadow: "0 1px 3px rgba(0, 0, 0, .75)" }
+                    : undefined
+                }
               >
                 {label}
               </span>
