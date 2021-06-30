@@ -64,7 +64,9 @@ export function Statistics({ tabs }: StatisticsProps): JSX.Element {
                 {label}
               </span>
               <div className="absolute inset-y-0 flex items-center w-40 pl-4 left-full">
-                {value} {unit}
+                <div>
+                  {value} {unit}
+                </div>
               </div>
             </div>
           ))}
