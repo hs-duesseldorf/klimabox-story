@@ -9,29 +9,31 @@ import { Buildings } from "./buildings";
 import { Fridge } from "./fridge";
 import { BlackScreen } from "./blackScreen";
 import mountainBackground from "./background/background.png";
-import fridgeBackground from "./fridge/kapitel1_table_background-4.png";
+import fridgeBackground from "./fridge/kapitel1_fridge_background.png";
 import { useIntersection } from "use-intersection";
 
 export const Start: React.FC = () => {
-    const fridgeScene = useRef<HTMLDivElement>(null);
-    const intersectingFridgeScene = useIntersection(fridgeScene);
+    const mountainScene = useRef<HTMLDivElement>(null);
+    const intersectingMountainScene = useIntersection(mountainScene);
 
     return (
       <div className="text-white relative">
-        {intersectingFridgeScene ? <Background img={fridgeBackground} alt="mountains" /> :
-          <Background img={mountainBackground} alt="mountains" />}
-        {intersectingFridgeScene ? "" : <Sunrise />}
-        <div className="relative">
-          <Heading />
-          <div style={{ paddingTop: "45vh" }}>
-            <Text />
+        <div ref={mountainScene}>
+          {intersectingMountainScene ? <Background img={mountainBackground} alt="mountains" /> :
+            <Background img={fridgeBackground} alt="mountains" />}
+          {intersectingMountainScene ? <Sunrise /> : ""}
+          <div className="relative">
+            <Heading />
+            <div style={{ paddingTop: "45vh" }}>
+              <Text />
+            </div>
+          </div>
+          {intersectingMountainScene ? <Mountains /> : ""}
+          <div id="buildings" className="relative" style={{ paddingTop: "50vh" }}>
+            <Buildings />
           </div>
         </div>
-        {intersectingFridgeScene ? "" : <Mountains />}
-        <div id="buildings" className="relative" style={{ paddingTop: "50vh" }}>
-          <Buildings />
-        </div>
-        <div ref={fridgeScene}>
+        <div>
           <div className="relative" style={{ paddingTop: "100vh" }}><BlackScreen />
           </div>
           <div id="fridge" className="relative h-screen">

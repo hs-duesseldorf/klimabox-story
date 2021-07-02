@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
-
+import Plx from "react-plx";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import imageURL1 from "./kapitel1_table_meat.png";
 import imageURL2 from "./kapitel1_table_avocado.png";
 import imageURL3 from "./kapitel1_table_milk.png";
-
-import Plx from "react-plx";
 
 export const Fridge: React.FC = () => {
     const [text, setText] = React.useState("Wähle aus, was du am liebsten isst");
@@ -47,6 +46,7 @@ export const Fridge: React.FC = () => {
       }
     ];
 
+
     const onClickFridgeItem = (item: string) => {
       setItemSelected(true);
 
@@ -81,28 +81,40 @@ export const Fridge: React.FC = () => {
       }
     };
 
+
+    const resetFridgeItems = () => {
+      setItemSelected(false);
+      // @ts-ignore
+      avocadoContainer.current.style.display = "block";
+      // @ts-ignore
+      milkContainer.current.style.display = "block";
+      // @ts-ignore
+      meatContainer.current.style.display = "block";
+      setText("Wähle aus, was du am liebsten isst");
+
+    };
+
     return (
       <>
-
-        <Plx parallaxData={parallaxData1} className="absolute bottom-0 opacity-0 z-30 h-screen w-screen">
+        <Plx parallaxData={parallaxData1} className="absolute bottom-0 opacity-0 z-30 h-screen w-screen"
+             id="fridge-items">
           <div className="absolute cursor-pointer" onClick={() => onClickFridgeItem("meat")}
-               style={{ top: "91%", left: "19%" }} id="meat" ref={meatContainer}><img src={imageURL1} alt="Meat"
-                                                                                      className="w-48 select-none" />
+               style={{ top: "62%", left: "15%" }} id="meat" ref={meatContainer}><img src={imageURL1} alt="Meat"
+                                                                                      className="w-64 select-none" />
           </div>
           <div className="absolute cursor-pointer" onClick={() => onClickFridgeItem("avocado")}
-               style={{ top: "88%", left: "30%" }} id="avocado" ref={avocadoContainer}><img src={imageURL2}
+               style={{ top: "57%", left: "35%" }} id="avocado" ref={avocadoContainer}><img src={imageURL2}
                                                                                             alt="Avocado"
-                                                                                            className="w-36 select-none" />
+                                                                                            className="w-52 select-none" />
           </div>
           <div className="absolute cursor-pointer" onClick={() => onClickFridgeItem("milk")}
-               style={{ top: "80%", left: "41%" }} id="milk" ref={milkContainer}><img src={imageURL3} alt="Milk"
-                                                                                      className="w-20 select-none" />
+               style={{ top: "43%", left: "56%" }} id="milk" ref={milkContainer}><img src={imageURL3} alt="Milk"
+                                                                                      className="w-32 select-none" />
           </div>
-          <div className="absolute text-xl xs:text-2xl sm:text-3xl text-black font-bold max-w-sm"
-               style={{ top: "78%", left: "20%" }}>{text}
+          <div className="absolute text-xl xs:text-2xl sm:text-3xl md:text-4xl text-black font-bold max-w-sm"
+               style={{ top: "34%", left: "21%" }}>{text}
           </div>
         </Plx>
-
         {
           itemSelected ?
             <div className="h-screen">
@@ -123,7 +135,8 @@ export const Fridge: React.FC = () => {
                    style={{ top: "340vh" }}>
                 <div className="flex flex-col justify-center items-center w-screen h-screen text-black"><h2
                   className="w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold mb-20">{text}</h2>
-                  <div className="w-1/2 mb-6">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                  <div className="w-1/2 mb-6 xs:text-xl sm:text-2xl">Lorem ipsum dolor sit amet, consetetur sadipscing
+                    elitr, sed diam nonumy
                     eirmod tempor invidunt ut
                     labore et dolore magna aliquyam erat, sed diam voluptua.
 
@@ -133,7 +146,8 @@ export const Fridge: React.FC = () => {
                     eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
                     est Lorem ipsum dolor sit amet.
                   </div>
-                  <div className="w-1/2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                  <div className="w-1/2 xs:text-xl sm:text-2xl">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    sed diam nonumy eirmod
                     tempor invidunt ut
                     labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur
                     sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
@@ -146,10 +160,13 @@ export const Fridge: React.FC = () => {
                   className="w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold mb-20">Ökobilanz-Vergleich</h2>
                   <div className="w-1/2 mb-6">Grafik
                   </div>
+                  <div className="cursor-pointer w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold hover:text-white" onClick={resetFridgeItems}><AnchorLink
+                    href="#fridge-items">Ein anderes Lebensmittel auswählen</AnchorLink>
+                  </div>
                 </div>
               </Plx>
-
             </div>
+
             : ""
         }
       </>
