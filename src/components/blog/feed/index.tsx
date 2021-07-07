@@ -28,7 +28,7 @@ function PostList() {
   return (
     <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:gap-x-10 xl:gap-16 2xl:grid-cols-3">
       {items.map((data, i) => (
-        <Post data={undefined} key={i} />
+        <Post data={data} key={i} />
       ))}
     </div>
   );
