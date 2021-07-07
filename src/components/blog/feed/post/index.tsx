@@ -77,10 +77,7 @@ export const Post: React.FC<{ data?: FeedItemData }> = ({ data }) => {
       </div>
       {parsedData && (
         <div className="pt-3">
-          <DetailBar
-            date={parsedData.date}
-            term={parsedData.tags && parsedData.tags[0]}
-          />
+          <DetailBar date={parsedData.date} terms={parsedData.tags} />
         </div>
       )}
       <div className="absolute right-1 -top-5">
