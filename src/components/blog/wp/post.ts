@@ -1,30 +1,26 @@
-import { useQuery } from "react-query";
+import { gql, useQuery } from "@apollo/client";
 
-import { WP_REST_URL } from "./config";
-
-type StringData = { rendered: string; protected?: boolean };
+const POST = gql`
+  query GetPost($slug: ID!) {
+    post(id: $slug, idType: SLUG) {
+      id
+      slug
+      title
+      date
+      content
+    }
+  }
+`;
 
 export type PostData = {
-  id: number;
-  slug: string;
-  status: string;
-  type: string;
-  title: StringData;
-  date: string;
-  content?: StringData;
-  excerpt?: StringData;
-  featured_media?: number;
-  _embedded?: {
-    "wp:term": {
-      name: string;
-      slug: string;
-    }[][];
+  post: {
+    id: string;
+    slug: string;
+    title: string;
+    date: string;
+    content: string;
   };
 };
 
 export const usePost = (slug: string) =>
-  useQuery<PostData>(["getPost", slug], () =>
-    fetch(`${WP_REST_URL}/posts/?slug=${slug}&_embed=1`)
-      .then((res) => res.json())
-      .then((res) => res[0])
-  );
+  useQuery<PostData, { slug: string }>(POST, { variables: { slug } });

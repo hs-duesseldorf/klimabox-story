@@ -1,0 +1,21 @@
+.button {
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.bar {
+  background-size: auto 100%;
+  transition: 2s theme("transitionTimingFunction.out") all;
+
+  &:not(.active) {
+    opacity: 0;
+    width: 0 !important;
+  }
+}

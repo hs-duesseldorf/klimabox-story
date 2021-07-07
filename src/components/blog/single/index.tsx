@@ -8,19 +8,19 @@ import { PostContent } from "./content";
 
 export const SinglePost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { isLoading, error, data } = usePost(slug);
+  const { loading, error, data } = usePost(slug);
 
   return (
     <div className="center-box max-w-2xl">
-      {isLoading ? (
+      {loading ? (
         "Loading..."
       ) : error || !data ? (
         "Es ist ein Fehler aufgetreten."
       ) : (
         <>
-          <SEO title={data.title.rendered} />
-          <PostHeading post={data} />
-          <PostContent post={data} />
+          <SEO title={data.post.title} />
+          <PostHeading post={data.post} />
+          <PostContent post={data.post} />
         </>
       )}
     </div>

@@ -1,0 +1,46 @@
+.menuButtonActive > div {
+  background-color: theme("colors.gray.50");
+
+  &:nth-child(1) {
+    transform: translate(0) rotate(45deg);
+  }
+  &:nth-child(2) {
+    opacity: 0;
+  }
+  &:nth-child(3) {
+    transform: translate(0) rotate(-45deg);
+  }
+}
+
+.menuButton {
+  position: relative;
+  width: 5.5rem;
+  height: 5.1rem;
+
+  @media (min-width: theme("screens.sm")) {
+    width: 6.5rem;
+  }
+}
+
+.menuButtonBar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2.5rem;
+  height: 0.25rem;
+
+  margin-left: -1.25rem;
+  margin-top: -0.125rem;
+
+  pointer-events: none;
+
+  transition: 0.2s ease all;
+
+  &:nth-child(1) {
+    transform: translateY(-0.62rem);
+  }
+  &:nth-child(3) {
+    transform: translateY(0.62rem);
+  }
+}

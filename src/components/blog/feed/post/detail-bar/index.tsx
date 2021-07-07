@@ -1,10 +1,11 @@
 import React from "react";
 
+import { TagData } from "../../../wp";
 import styles from "./bar.module.css";
 
 export const DetailBar: React.FC<{
   date: string;
-  term?: { name: string; slug: string };
+  term?: TagData;
 }> = ({ date, term }) => (
   <div className="flex items-center justify-between">
     <div>
