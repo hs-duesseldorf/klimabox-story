@@ -3,7 +3,7 @@ import React from "react";
 import { useFeed, FeedItemData } from "../wp";
 import { Post } from "./post";
 import { FilterControl } from "./filter-control";
-import { Spinner } from "./spinner";
+import { Spinner } from "../../spinner";
 
 function PostList() {
   const { loading, error, data } = useFeed();
