@@ -1,8 +1,9 @@
 import { gql, useQuery } from "@apollo/client";
+import { useFilterTags } from "../feed/filtering";
 
 const FEED = gql`
-  query GetFeed($param: String) {
-    posts(first: 20, where: { search: $param }) {
+  query GetFeed($param: String, $tags: [String]) {
+    posts(first: 20, where: { search: $param, tagSlugAnd: $tags }) {
       edges {
         node {
           id
@@ -58,4 +59,12 @@ type FeedData = {
   };
 };
 
-export const useFeed = () => useQuery<FeedData, { param?: string }>(FEED);
+export function useFeed() {
+  const tags = useFilterTags();
+
+  return useQuery<FeedData, { param?: string; tags?: string[] }>(FEED, {
+    variables: {
+      tags: tags.map((tag) => tag.slug),
+    },
+  });
+}
