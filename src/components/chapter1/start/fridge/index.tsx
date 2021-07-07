@@ -57,6 +57,8 @@ export const Fridge: React.FC = () => {
           // @ts-ignore
           milkContainer.current.style.display = "none";
           setText("Fleisch & Wurst");
+          setFactTitle("46 Schweine");
+          setFact("isst ein Mensch");
           break;
         case "avocado":
           // @ts-ignore
@@ -65,6 +67,7 @@ export const Fridge: React.FC = () => {
           milkContainer.current.style.display = "none";
           setText("Avocado");
           setFactTitle("200 Avocados");
+          setFact("isst ein Mensch");
           break;
         case "milk":
           // @ts-ignore
@@ -160,8 +163,10 @@ export const Fridge: React.FC = () => {
                   className="w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold mb-20">Ökobilanz-Vergleich</h2>
                   <div className="w-1/2 mb-6">Grafik
                   </div>
-                  <div className="cursor-pointer w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold hover:text-white" onClick={resetFridgeItems}><AnchorLink
-                    href="#fridge-items">Ein anderes Lebensmittel auswählen</AnchorLink>
+                  <div className="cursor-pointer w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold hover:text-white"
+                       onClick={resetFridgeItems}><AnchorLink offset="-100"
+                                                              href="#fridge-items">Ein anderes Lebensmittel
+                    auswählen</AnchorLink>
                   </div>
                 </div>
               </Plx>
