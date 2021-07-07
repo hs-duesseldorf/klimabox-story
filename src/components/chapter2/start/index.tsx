@@ -7,6 +7,7 @@ import { Scene } from "./scene/scene";
 import { Text } from "./text";
 import { Sequence } from "./interface/Chapter2Enum";
 import { getParallaxData } from "./animationParallaxData";
+import { getContentData } from './content';
 
 const useElementOnScreen = () => {
   const [sequence, setSequence] = React.useState<Sequence>(Sequence.Intro);
@@ -50,6 +51,10 @@ const useUpdateScroll = (ref: RefObject<HTMLDivElement>) => {
       const offsetTop = document.getElementById("Street")?.offsetTop as number;
       const clientHeight = document.documentElement.clientHeight;
       ref.current!.style.top = `-${streetHeight + offsetTop - clientHeight}px`;
+      /*console.log(
+        document.documentElement.clientHeight +
+          document.documentElement.scrollTop
+      );*/
     }
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -62,7 +67,14 @@ export const StartChapter2: React.FC = () => {
 
   const { containerRef, sequence } = useElementOnScreen();
   useUpdateScroll(ref);
-  const [parallaxData, setParallaxData] = React.useState<any>(getParallaxData(Sequence.Intro, document.documentElement.clientHeight, document.documentElement.clientWidth));
+  const [parallaxData, setParallaxData] = React.useState<any>(
+    getParallaxData(
+      Sequence.Intro,
+      document.documentElement.clientHeight,
+      document.documentElement.clientWidth
+    )
+  );
+  const [contentData, setContentData] = React.useState(getContentData(Sequence.Intro));
 
   return (
     <div>
@@ -74,7 +86,9 @@ export const StartChapter2: React.FC = () => {
             sequence={sequence}
             setViewHeight={setViewHeight}
             parallaxData={parallaxData}
-            setParallaxData = {setParallaxData}
+            setParallaxData={setParallaxData}
+            contentData={contentData}
+            setContentData = {setContentData}
           />
         </div>
         <Text />

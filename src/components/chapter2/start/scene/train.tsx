@@ -13,6 +13,7 @@ export const Train: React.FC<{
   sequence: Sequence;
   parallaxData: any;
 }> = ({sequence, parallaxData }) => {
+  
   const [silloutteOpacity, setSilloutteOpacity] = React.useState(0.1);
   const mouseEnterHandlerFunction = () => setSilloutteOpacity(1);
   const mouseLeaveHandlerFunction = () => setSilloutteOpacity(0.1);

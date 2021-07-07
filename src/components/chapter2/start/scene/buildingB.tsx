@@ -1,12 +1,17 @@
 import React from "react";
-
+import Plx from "react-plx";
 import styles from "../start.module.css";
-import img from "../asset/kapitel1_intro_building-2.png";
+import img from "../asset/kapitel2_intro_building-2.png";
 
-export const BuildingB: React.FC = () => (
-    <img
-      src={img}
-      alt="BuildingB"
-      className={`${styles.buildingB} absolute -top-96`}
-    />
-)
+export const BuildingB: React.FC<{ parallaxData: any }> = ({
+  parallaxData
+}) => {
+  return (
+    <div className={`${styles.buildingB} absolute -top-96`}>
+      <Plx parallaxData={parallaxData}
+      animateWhenNotInViewport={true}>
+        <img src={img} alt="buildingB" className={`absolute`} />
+      </Plx>
+    </div>
+  );
+};

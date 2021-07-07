@@ -1,17 +1,18 @@
 .buildingA {
-  width: 45%;
+  width: 48%;
+  left: 52%;
 }
 
 .buildingB {
-  right: 38%;
-  width: 35%;
-  padding-top: 63%;
+  right: -26%;
+  width: 100%;
+  top: 34rem;
 }
 
 .buildingC {
   right: 65%;
   width: 35%;
-  padding-top: 71%;
+  top: 35rem;
 }
 
 .sun {
@@ -22,7 +23,7 @@
 .street {
   right: 0.01%;
   width: 110%;
-  padding-top: 88%;
+  top: 66rem;
 }
 
 .clue {
@@ -46,14 +47,14 @@
 }
 
 .train {
-  padding-top: 83.5%;
+  top: 60rem;
   right: 80%;
   width: 75%;
   z-index: 1;
 }
 
 .bicycle {
-  padding-top: 96%;
+  top: 72rem;
   width: 20%;
   right: 75%;
   z-index: 2;
@@ -62,17 +63,17 @@
 .car {
   z-index: 1;
   width: 63%;
-  padding-top: 82%;
+  top: 58rem;
   left: 31%;
 }
 
 .graffiti {
-  top: 12rem;
+  top: 0rem;
 }
 
 .graffitiBackground {
   left: 21.7%;
-  top: 54.5rem;
+  top: 42.5rem;
   width: 28%;
 }
 
@@ -125,4 +126,9 @@
 .telephone {
   top: 79.5rem;
   left: 92.5%;
+}
+
+.massenvisualsierung{
+  opacity: 1;
+  top: 100rem;
 }

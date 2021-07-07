@@ -1,5 +1,4 @@
 import React from "react";
-
 import Plx from "react-plx";
 
 import { Street } from "./street";
@@ -19,27 +18,42 @@ export const Scene: React.FC<{
   setViewHeight: React.Dispatch<React.SetStateAction<string>>;
   parallaxData: any;
   setParallaxData: React.Dispatch<React.SetStateAction<any>>;
-}> = ({ sequence, setViewHeight, parallaxData, setParallaxData }) => {
+  contentData: any;
+  setContentData: React.Dispatch<React.SetStateAction<any>>;
+}> = ({
+  sequence,
+  setViewHeight,
+  parallaxData,
+  setParallaxData,
+  contentData,
+  setContentData,
+}) => {
   return (
     <div>
-      <Plx>
-        <BuildingC />
-        <BuildingB />
-        <BuildingA />
-        <Graffiti />
-        <BuildingD />
-        <EndScreen/>
-      </Plx>
+      <Plx parallaxData={parallaxData.scene} animateWhenNotInViewport={true}>
+        <BuildingC parallaxData={parallaxData.backgroundData} />
+        <BuildingB parallaxData={parallaxData.backgroundData} />
+        <BuildingA parallaxData={parallaxData.backgroundData} />
+        <Graffiti
+          parallaxData={parallaxData.backgroundData}
+          contentData={contentData.introTextData}
+          parallaxDataMassenvisualsierung = {parallaxData.massenvisualisierung}
+        />
+        <BuildingD parallaxData={parallaxData.backgroundData} />
+        <EndScreen parallaxData={parallaxData.backgroundData} />
 
-      <Train sequence={sequence} parallaxData = {parallaxData.trainData} />
-      <Bicycle sequence={sequence} parallaxData = {parallaxData.bicylceData}/>
-      <Car
-        sequence={sequence}
-        setViewHeight={setViewHeight}
-        parallaxData = {parallaxData.carData}
-        setParallaxData = {setParallaxData}
-      />
-      <Street />
+        <Train sequence={sequence} parallaxData={parallaxData.trainData} />
+        <Bicycle sequence={sequence} parallaxData={parallaxData.bicylceData} />
+        <Car
+          sequence={sequence}
+          setViewHeight={setViewHeight}
+          parallaxData={parallaxData.carData}
+          setParallaxData={setParallaxData}
+          setContentData={setContentData}
+        />
+
+        <Street />
+      </Plx>
     </div>
   );
 };
