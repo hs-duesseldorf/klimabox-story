@@ -1,0 +1,24 @@
+@keyframes anim {
+  25% {
+    transform: rotateX(180deg) rotateY(0);
+  }
+  50% {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  75% {
+    transform: rotateX(0) rotateY(180deg);
+  }
+  100% {
+    transform: rotateX(0) rotateY(0);
+  }
+}
+
+.base {
+  animation-name: anim;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.09, 0.57, 0.49, 0.9);
+  animation-iteration-count: infinite;
+  width: 50px;
+  height: 50px;
+  background: theme("colors.em1.DEFAULT");
+}
