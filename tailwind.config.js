@@ -12,6 +12,7 @@ module.exports = {
         bg: {
           DEFAULT: "white",
           alt: "#EFEFEF",
+          "alt-hover": "#E8E8E8",
         },
         text: {
           DEFAULT: "black",
@@ -21,6 +22,11 @@ module.exports = {
         pink: "#AA618B",
         brown: "#694025",
       },
+      fill: (theme) => ({
+        em1: { DEFAULT: "#197EB7", light: "#3D99CE" },
+        em2: { DEFAULT: "#B1CA6C", enhanced: "#B6CF72" },
+        em3: { DEFAULT: "#E78182" },
+      }),
       fontSize: {
         17: "17pt",
         20: "20pt",
@@ -40,7 +46,20 @@ module.exports = {
       },
       backgroundImage: theme => ({
         'massvisualize-pig-pattern': "url('components/chapter1/start/fridge/massvisualize_pig.png')",
-      })
+      }),
+      spacing: {
+        "10%": "10%",
+        "20%": "20%",
+        "30%": "30%",
+        "40%": "40%",
+        "50%": "50%",
+        "60%": "60%",
+        "70%": "70%",
+        "80%": "80%",
+        "90%": "90%",
+        "95%": "95%",
+        "100%": "100%",
+      },
     },
     screens: {
       xs: "380px",
@@ -52,6 +71,9 @@ module.exports = {
       borderColor: ["hover"],
       scale: ["group-hover"],
       outline: ["focus"],
+      translate: ["active", "group-hover"],
+      transform: ["group-hover"],
+      fill: ["hover", "group-hover"],
     },
   },
   plugins: [
