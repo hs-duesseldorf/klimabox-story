@@ -1,5 +1,6 @@
 .date {
   position: relative;
+  z-index: 1;
 
   &:before {
     content: "";
@@ -13,5 +14,40 @@
     background-position: top left;
     background-repeat: no-repeat;
     background-image: url(./calendar.svg);
+  }
+}
+
+.tags {
+  position: relative;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 6rem;
+    z-index: 1;
+    pointer-events: none;
+
+    background: linear-gradient(to right, transparent, white 50%, white 100%);
+  }
+
+  & > button {
+    background: theme("colors.em2.DEFAULT");
+    transition: 0.2s ease background-color;
+    color: white;
+    border-radius: theme("borderRadius.xl");
+    padding: theme("padding[0.5]") theme("padding.3");
+    margin-right: theme("margin[1.5]");
+
+    &:hover {
+      background: theme("colors.em2.enhanced");
+    }
   }
 }

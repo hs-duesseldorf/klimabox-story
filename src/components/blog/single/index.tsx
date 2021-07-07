@@ -5,6 +5,7 @@ import { SEO } from "../../seo";
 import { usePost } from "../wp";
 import { PostHeading } from "./heading";
 import { PostContent } from "./content";
+import { Spinner } from "../../spinner";
 
 export const SinglePost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -13,7 +14,7 @@ export const SinglePost: React.FC = () => {
   return (
     <div className="center-box max-w-2xl">
       {loading ? (
-        "Loading..."
+        <Spinner />
       ) : error || !data ? (
         "Es ist ein Fehler aufgetreten."
       ) : (
