@@ -50,6 +50,7 @@ export function Statistics({ tabs }: StatisticsProps): JSX.Element {
                 backgroundImage: `url(${textureURL})`,
                 width: `${Math.floor(10000 * (value / max)) / 100}%`,
               }}
+              key={i}
             >
               <span
                 className={`font-bold line-clamp-1 ${
