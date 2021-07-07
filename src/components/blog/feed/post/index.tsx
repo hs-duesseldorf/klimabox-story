@@ -1,4 +1,5 @@
 import React from "react";
+import cn from "classnames";
 import { Link } from "react-router-dom";
 
 import { FeedItemData, TagData } from "../../wp";
@@ -6,6 +7,8 @@ import { FeedItemData, TagData } from "../../wp";
 import { PostImage } from "./image";
 import { BookmarkButton } from "./bookmark-button";
 import { DetailBar } from "./detail-bar";
+
+import styles from "./post.module.css";
 
 export type ParsedPostData = {
   path: string;
@@ -41,7 +44,7 @@ export const Post: React.FC<{ data?: FeedItemData }> = ({ data }) => {
   );
 
   return (
-    <div className="flex flex-col relative">
+    <div className={cn(!data && styles.pulse, "flex flex-col relative")}>
       <PostImage data={parsedData} />
       <div className="flex-1 py-3 px-4 bg-bg-alt md:py-4 md:px-5">
         <div className="uppercase font-semibold leading-snug text-lg">
