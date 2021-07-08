@@ -35,7 +35,12 @@
     z-index: 1;
     pointer-events: none;
 
-    background: linear-gradient(to right, transparent, white 50%, white 100%);
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      white 50%,
+      white 100%
+    );
   }
 
   & > button {
