@@ -14,7 +14,7 @@ const FEED = gql`
           featuredImage {
             node {
               id
-              sourceUrl
+              sourceUrl(size: LARGE)
             }
           }
           tags {
