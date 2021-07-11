@@ -27,14 +27,15 @@ const useElementOnScreen = () => {
       rootMargin: "0px",
       threshold: 1,
     };
+    const copyRef = containerRef;
     const observer = new IntersectionObserver(callbackFunction, options);
-    if (containerRef.current) {
-      observer.observe(containerRef.current as unknown as Element);
+    if (copyRef.current) {
+      observer.observe(copyRef.current as unknown as Element);
     }
 
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current as unknown as Element);
+      if (copyRef.current) {
+        observer.unobserve(copyRef.current as unknown as Element);
       }
     };
   }, []);
