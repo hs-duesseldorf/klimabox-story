@@ -38,6 +38,7 @@ export const Scene: React.FC<{
           parallaxData={parallaxData.backgroundData}
           contentData={contentData.introTextData}
           parallaxDataMassenvisualsierung = {parallaxData.massenvisualisierung}
+          parallaxDataMassenvisualsierungBackground = {parallaxData.massenvisualisierungBackground}
         />
         <BuildingD parallaxData={parallaxData.backgroundData} />
         <EndScreen parallaxData={parallaxData.backgroundData} />

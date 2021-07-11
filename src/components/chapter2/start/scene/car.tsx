@@ -70,14 +70,7 @@ export const Car: React.FC<{
   return (
     <div className={`${styles.car} absolute -top-96 `}>
       <Plx
-        parallaxData={parallaxData}
-        onPlxStart={() =>
-          console.log("StartCar " + document.documentElement.scrollTop)
-        }
-        onPlxEnd={() =>
-          console.log("EndeCar " + document.documentElement.scrollTop)
-        }
-      >
+        parallaxData={parallaxData}>
         <img id="car" src={img} alt="car" className="absolute" />
         {topicSelection !== undefined ? (
           <Selection topicSelection={topicSelection} />

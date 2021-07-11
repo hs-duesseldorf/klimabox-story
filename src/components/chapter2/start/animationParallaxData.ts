@@ -86,6 +86,19 @@ export const getParallaxData = (
             ],
           },
         ],
+        massenvisualisierungBackground: [
+          {
+            start: clientHeight * 7,
+            end: clientHeight * 9,
+            properties: [
+              {
+                startValue: 0,
+                endValue: -clientHeight * 3,
+                property: "translateY",
+              },
+            ],
+          },
+        ],
       };
 
     case Sequence.Car:
@@ -208,7 +221,7 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 1,
-                endValue: 2,
+                endValue: 2.2,
                 property: "scale",
               },
               {
@@ -222,12 +235,91 @@ export const getParallaxData = (
         massenvisualisierung: [
           {
             start: clientHeight * 7,
-            end: clientHeight * 9,
+            end: clientHeight * 10,
             properties: [
               {
                 startValue: 0,
                 endValue: -clientHeight * 3,
                 property: "translateY",
+              },
+            ],
+          },
+        ],
+        massenvisualisierungBackground: [
+          {
+            start: clientHeight * 7,
+            end: clientHeight * 10,
+            properties: [
+              {
+                startValue: 0,
+                endValue: -clientHeight * 3,
+                property: "translateY",
+              },
+            ],
+          },
+          {
+            start: clientHeight * 7,
+            end: clientHeight * 7.5,
+            properties: [
+              {
+                startValue: 0,
+                endValue: 100,
+                property: "translateX",
+              },
+            ],
+          },
+          {
+            start: clientHeight * 7.5,
+            end: clientHeight * 8,
+            properties: [
+              {
+                startValue: 100,
+                endValue: -100,
+                property: "translateX",
+              },
+            ],
+          },
+          {
+            start: clientHeight * 8,
+            end: clientHeight * 8.5,
+            properties: [
+              {
+                startValue: -100,
+                endValue: 100,
+                property: "translateX",
+              },
+            ],
+          },
+          {
+            start: clientHeight * 8.5,
+            end: clientHeight * 9,
+            properties: [
+              {
+                startValue: 100,
+                endValue: -100,
+                property: "translateX",
+              },
+            ],
+          },
+          {
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
+            properties: [
+              {
+                startValue: -100,
+                endValue: 100,
+                property: "translateX",
+              },
+            ],
+          },
+          {
+            start: clientHeight * 9.5,
+            end: clientHeight * 10,
+            properties: [
+              {
+                startValue: 100,
+                endValue: -100,
+                property: "translateX",
               },
             ],
           },

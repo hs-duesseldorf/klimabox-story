@@ -10,10 +10,11 @@ import { IntroTextData } from "../../../intro-text/interfaces/interface";
 import { Massenvisualisierung } from "./massenvisualisierung";
 
 export const Graffiti: React.FC<{
-  parallaxData: any;
+  parallaxData: [];
   contentData: IntroTextData;
-  parallaxDataMassenvisualsierung: any;
-}> = ({ parallaxData, contentData, parallaxDataMassenvisualsierung }) => {
+  parallaxDataMassenvisualsierung: [];
+  parallaxDataMassenvisualsierungBackground: [];
+}> = ({ parallaxData, contentData, parallaxDataMassenvisualsierung, parallaxDataMassenvisualsierungBackground }) => {
   return (
     <div className="absolute left-full w-full">
       <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
@@ -28,7 +29,12 @@ export const Graffiti: React.FC<{
           className={`${styles.graffitiBackground} absolute`}
         />
         <IntroText introTextData={contentData} />
-        <Massenvisualisierung parallaxData={parallaxDataMassenvisualsierung} />
+        <Massenvisualisierung
+          parallaxData={parallaxDataMassenvisualsierung}
+          massenvisualisierungBackground={
+            parallaxDataMassenvisualsierungBackground
+          }
+        />
       </Plx>
     </div>
   );
