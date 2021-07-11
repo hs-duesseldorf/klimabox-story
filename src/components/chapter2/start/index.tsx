@@ -7,40 +7,35 @@ import { Scene } from "./scene/scene";
 import { Text } from "./text";
 import { Sequence } from "./interface/Chapter2Enum";
 import { getParallaxData } from "./animationParallaxData";
-import { getContentData } from './content';
+import { getContentData } from "./content";
 
-const useElementOnScreen = () => {
-  const [sequence, setSequence] = React.useState<Sequence>(Sequence.Intro);
-  const containerRef = React.useRef<HTMLParagraphElement>(null);
+const useElementOnScreen = (
+  elementRef: RefObject<Element>,
+  root: null,
+  rootMargin: "0px",
+  threshold: 0
+) => {
+  const [entry, setEntry] = React.useState<IntersectionObserverEntry>();
+
+  const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
+    setEntry(entry);
+  }
 
   React.useEffect(() => {
-    const callbackFunction = (entries) => {
-      const [entry] = entries;
-      if (entry.isIntersecting && sequence === Sequence.Intro) {
-        setSequence(Sequence.Question);
-      } else {
-        setSequence(Sequence.Intro);
-      }
-    };
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 1,
-    };
-    const copyRef = containerRef;
-    const observer = new IntersectionObserver(callbackFunction, options);
-    if (copyRef.current) {
-      observer.observe(copyRef.current as unknown as Element);
-    }
+    const node = elementRef?.current; // DOM Ref
+    const hasIOSupport = !!window.IntersectionObserver;
 
-    return () => {
-      if (copyRef.current) {
-        observer.unobserve(copyRef.current as unknown as Element);
-      }
-    };
-  }, []);
+    if (!hasIOSupport || !node) return
 
-  return { containerRef, sequence };
+    const observerParams = { threshold, root, rootMargin }
+    const observer = new IntersectionObserver(updateEntry, observerParams);
+
+    observer.observe(node);
+
+    return () => observer.disconnect();
+
+  }, [elementRef, threshold, root, rootMargin]);
+  return entry;
 };
 
 const useUpdateScroll = (ref: RefObject<HTMLDivElement>) => {
@@ -63,10 +58,18 @@ const useUpdateScroll = (ref: RefObject<HTMLDivElement>) => {
 };
 
 export const StartChapter2: React.FC = () => {
+  const [sequence, setSequence] = React.useState<Sequence>(Sequence.Intro);
   const ref = useRef(null);
+  const containerRef = useRef(null);
   const [viewHeight, setViewHeight] = React.useState("400vh");
 
-  const { containerRef, sequence } = useElementOnScreen();
+  const entry = useElementOnScreen(containerRef, null, "0px", 0);
+
+  React.useEffect(() => {
+    setSequence( s => entry?.isIntersecting && s === Sequence.Intro ? Sequence.Question : Sequence.Intro); 
+  }, [entry?.isIntersecting, setSequence])
+
+
   useUpdateScroll(ref);
   const [parallaxData, setParallaxData] = React.useState<any>(
     getParallaxData(
@@ -75,7 +78,9 @@ export const StartChapter2: React.FC = () => {
       document.documentElement.clientWidth
     )
   );
-  const [contentData, setContentData] = React.useState(getContentData(Sequence.Intro));
+  const [contentData, setContentData] = React.useState(
+    getContentData(Sequence.Intro)
+  );
 
   return (
     <div>
@@ -89,7 +94,7 @@ export const StartChapter2: React.FC = () => {
             parallaxData={parallaxData}
             setParallaxData={setParallaxData}
             contentData={contentData}
-            setContentData = {setContentData}
+            setContentData={setContentData}
           />
         </div>
         <Text />
