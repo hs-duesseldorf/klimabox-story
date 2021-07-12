@@ -6,7 +6,7 @@ import { BookmarkButton } from "./bookmark-button";
 
 export const PostHeading: React.FC<PostData> = ({ post }) => (
   <div className="flex max-w-full">
-    <div className="mr-4">
+    <div className="flex-1 mr-4">
       <div className="mb-2">
         <PostDate date={new Date(post.date)} />
       </div>
