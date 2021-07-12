@@ -7,8 +7,8 @@ import styles from "./bookmark.module.css";
 
 export const BookmarkButton: React.FC<{
   disabled?: boolean;
-  disableShadow?: boolean;
-}> = ({ disabled, disableShadow }) => {
+  onSolidBackground?: boolean;
+}> = ({ disabled, onSolidBackground }) => {
   const [active, setActive] = React.useState(false);
 
   return (
@@ -18,7 +18,14 @@ export const BookmarkButton: React.FC<{
       disabled={disabled}
     >
       <div className="pointer-events-none">
-        <BookmarkIcon disableShadow={disableShadow} />
+        <BookmarkIcon
+          {...(onSolidBackground
+            ? {
+                disableShadow: true,
+                strokeWidth: 3,
+              }
+            : undefined)}
+        />
       </div>
     </button>
   );

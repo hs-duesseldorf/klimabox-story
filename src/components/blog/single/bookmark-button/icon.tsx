@@ -1,4 +1,10 @@
-export function BookmarkIcon({ disableShadow }: { disableShadow?: boolean }) {
+export function BookmarkIcon({
+  disableShadow,
+  strokeWidth,
+}: {
+  strokeWidth?: number;
+  disableShadow?: boolean;
+}) {
   return (
     <svg
       width="56.455"
@@ -8,7 +14,8 @@ export function BookmarkIcon({ disableShadow }: { disableShadow?: boolean }) {
       stroke="#e78182"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth="2"
+      strokeWidth={strokeWidth !== undefined ? strokeWidth : 2}
+      className="overflow-visible"
     >
       {!disableShadow && (
         <defs>

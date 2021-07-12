@@ -6,7 +6,7 @@ import { BookmarkButton } from "./bookmark-button";
 
 export const PostHeading: React.FC<PostData> = ({ post }) => (
   <div className="flex">
-    <div className="flex-1">
+    <div className="flex-1 mr-2">
       <div className="mb-2">
         <PostDate date={new Date(post.date)} />
       </div>
@@ -16,7 +16,7 @@ export const PostHeading: React.FC<PostData> = ({ post }) => (
       />
     </div>
     <div className="flex-shrink-0">
-      <BookmarkButton disableShadow={true} />
+      <BookmarkButton onSolidBackground={true} />
     </div>
   </div>
 );
