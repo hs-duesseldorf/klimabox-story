@@ -5,13 +5,13 @@ import { PostDate } from "./date";
 import { BookmarkButton } from "./bookmark-button";
 
 export const PostHeading: React.FC<PostData> = ({ post }) => (
-  <div className="flex">
-    <div className="flex-1 mr-2">
+  <div className="flex max-w-full">
+    <div className="mr-4">
       <div className="mb-2">
         <PostDate date={new Date(post.date)} />
       </div>
       <h1
-        className="text-3xl uppercase text-em3 leading-snug md:leading-snug mb-16"
+        className="text-xl font-bold sm:font-normal sm:text-3xl uppercase text-em3 leading-snug md:leading-snug mb-16"
         dangerouslySetInnerHTML={{ __html: post.title }}
       />
     </div>

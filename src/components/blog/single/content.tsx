@@ -4,7 +4,7 @@ import { PostData } from "../wp";
 
 export const PostContent: React.FC<PostData> = ({ post }) => (
   <div
-    className="prose prose-lg"
+    className="relative prose prose-lg overflow-hidden"
     dangerouslySetInnerHTML={{ __html: post.content }}
   />
 );
