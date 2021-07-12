@@ -4,6 +4,7 @@ export type StateList<T> = {
   items: T[];
   add(term: T): void;
   remove(term: T): void;
+  clear(): void;
 };
 
 export function createStateList<T extends { id: string }, State extends object>(
@@ -14,29 +15,23 @@ export function createStateList<T extends { id: string }, State extends object>(
     return { items, ...actions };
   }
 
+  function innerSet(fn: (items: T[]) => T[]) {
+    set(
+      (state) =>
+        ({
+          [name]: create(fn((state[name] as StateList<T>).items)),
+        } as State)
+    );
+  }
+
   const actions: Omit<StateList<T>, "items"> = {
     add: (item) =>
-      set((state) => {
-        const { items } = state[name] as StateList<T>;
-        return {
-          [name]: create(
-            !items.find((other) => item.id === other.id)
-              ? [...items, item]
-              : items
-          ),
-        } as State;
-      }),
-    remove: (item) =>
-      set(
-        (state) =>
-          ({
-            [name]: create(
-              (state[name] as StateList<T>).items.filter(
-                (other) => item.id !== other.id
-              )
-            ),
-          } as State)
+      innerSet((items) =>
+        !items.find((other) => item.id === other.id) ? [...items, item] : items
       ),
+    remove: (item) =>
+      innerSet((items) => items.filter((other) => item.id !== other.id)),
+    clear: () => innerSet(() => []),
   };
 
   return create([]);

@@ -4,7 +4,7 @@ export function TagsFilterControl() {
   const { items: tags, remove: removeTag } = useFilteredTags();
 
   return (
-    <div className="mb-8 flex -m-1 text-lg">
+    <div className="mb-8 flex justify-center -m-1 text-lg">
       {!tags.length ? (
         <div className="py-0.5 m-1 select-none">&nbsp;</div>
       ) : (
@@ -15,7 +15,7 @@ export function TagsFilterControl() {
           >
             {term.name}
             <button
-              className="inline-block ml-3 font-bold select-none"
+              className="ml-3 font-bold select-none"
               onClick={() => removeTag(term)}
             >
               X
