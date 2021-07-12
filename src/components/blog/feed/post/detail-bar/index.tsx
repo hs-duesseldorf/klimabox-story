@@ -1,22 +1,25 @@
 import React from "react";
 
 import { TagData } from "../../../wp";
+import { useFilteredTags } from "../../fitering";
+import { PostDate } from "../../../single/date";
 import styles from "./bar.module.css";
+
+function TagButton({ term }: { term: TagData }) {
+  const addTag = useFilteredTags().add;
+  return <button onClick={() => addTag(term)}>{term.name}</button>;
+}
 
 export const DetailBar: React.FC<{
   date: string;
-  term?: TagData;
-}> = ({ date, term }) => (
-  <div className="flex items-center justify-between">
-    <div>
-      {term && (
-        <button className="bg-em2 hover:bg-em2-enhanced text-white rounded-xl px-3 py-0.5 cursor-pointer">
-          {term.name}
-        </button>
-      )}
+  terms?: TagData[];
+}> = ({ date, terms }) => (
+  <div className="flex items-end justify-between">
+    <div className={styles.tags}>
+      {terms && terms.map((term, i) => <TagButton term={term} key={i} />)}
     </div>
-    <div className={`${styles.date} text-text-muted leading-tight`}>
-      {new Intl.DateTimeFormat("de-DE").format(new Date(date))}
+    <div className="flex-shrink-0">
+      <PostDate date={new Date(date)} />
     </div>
   </div>
 );
