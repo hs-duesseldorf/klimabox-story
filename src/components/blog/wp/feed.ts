@@ -1,9 +1,12 @@
 import { gql, useQuery } from "@apollo/client";
-import { useFilterTags } from "../feed/filtering";
+import { useFilteredTags, useFilteredCategories } from "../feed/fitering";
 
 const FEED = gql`
-  query GetFeed($param: String, $tags: [String]) {
-    posts(first: 20, where: { search: $param, tagSlugAnd: $tags }) {
+  query GetFeed($param: String, $tags: [String], $categories: [ID]) {
+    posts(
+      first: 20
+      where: { search: $param, tagSlugAnd: $tags, categoryIn: $categories }
+    ) {
       edges {
         node {
           id
@@ -20,6 +23,7 @@ const FEED = gql`
           tags {
             edges {
               node {
+                id
                 slug
                 name
               }
@@ -32,6 +36,7 @@ const FEED = gql`
 `;
 
 export type TagData = {
+  id: string;
   slug: string;
   name: string;
 };
@@ -60,11 +65,16 @@ type FeedData = {
 };
 
 export function useFeed() {
-  const tags = useFilterTags();
+  const tags = useFilteredTags().items;
+  const categories = useFilteredCategories().items;
 
-  return useQuery<FeedData, { param?: string; tags?: string[] }>(FEED, {
+  return useQuery<
+    FeedData,
+    { param?: string; tags?: string[]; categories?: number[] }
+  >(FEED, {
     variables: {
       tags: tags.map((tag) => tag.slug),
+      categories: categories.map((category) => category.databaseId),
     },
   });
 }
