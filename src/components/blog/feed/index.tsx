@@ -43,8 +43,10 @@ export const Feed: React.FC = () => {
 
   return (
     <>
-      <FilterControl />
-      <div className="mb-4">
+      <div className="mb-12">
+        <FilterControl />
+      </div>
+      <div className="mb-6">
         <SortMethodSelection<FeedItemData> setSortMethod={setSortMethod} />
       </div>
       <PostList sortMethod={sortMethod} />
