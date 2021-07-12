@@ -1,3 +1,3 @@
 export * from "./post";
-export * from "./posts";
-export * from "./media";
+export * from "./feed";
+export * from "./categories";

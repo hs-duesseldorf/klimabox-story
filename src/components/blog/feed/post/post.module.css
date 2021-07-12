@@ -1,0 +1,28 @@
+@keyframes anim {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.pulse {
+  animation-name: anim;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+
+  &:nth-child(4n - 2) {
+    animation-delay: 0.5s;
+  }
+  &:nth-child(4n - 1) {
+    animation-delay: 1s;
+  }
+  &:nth-child(4n) {
+    animation-delay: 1.5s;
+  }
+}

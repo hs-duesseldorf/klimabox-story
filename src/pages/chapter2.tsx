@@ -5,7 +5,7 @@ import { SEO } from "../components/seo";
 import {StartChapter2} from "../components/chapter2/start";
 
 export const Chapter2: React.FC = () => (
-  <Layout hasDarkBackground={true}>
+  <Layout chapter={2} hasDarkBackground={true}>
     <SEO title="Mobilität" />
     <StartChapter2 />
   </Layout>

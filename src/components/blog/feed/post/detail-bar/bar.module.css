@@ -1,0 +1,18 @@
+.tags {
+  position: relative;
+  flex: 1;
+  margin: -theme("margin[1]");
+
+  & > button {
+    background: theme("colors.em2.DEFAULT");
+    transition: 0.2s ease background-color;
+    color: white;
+    border-radius: theme("borderRadius.xl");
+    padding: theme("padding[0.5]") theme("padding.3");
+    margin: theme("margin[1]");
+
+    &:hover {
+      background: theme("colors.em2.enhanced");
+    }
+  }
+}

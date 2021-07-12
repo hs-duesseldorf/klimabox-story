@@ -6,7 +6,7 @@ import { StorySplash } from "../components/story-splash";
 import { ChapterOverview } from "../components/chapter-overview";
 
 export const Stories: React.FC = () => (
-  <Layout hasDarkBackground={true}>
+  <Layout hasDarkBackground={true} chapter={0}>
     <SEO />
     <StorySplash />
     <ChapterOverview />
