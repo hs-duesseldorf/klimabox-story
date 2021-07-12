@@ -13,11 +13,13 @@ export const DetailBar: React.FC<{
   date: string;
   terms?: TagData[];
 }> = ({ date, terms }) => (
-  <div className="flex items-center justify-between">
+  <div className="flex items-end justify-between">
     <div className={styles.tags}>
       {terms && terms.map((term, i) => <TagButton term={term} key={i} />)}
     </div>
-    <div className={`${styles.date} text-text-muted leading-tight`}>
+    <div
+      className={`${styles.date} flex-shrink-0 ml-2 text-text-muted leading-tight`}
+    >
       {new Intl.DateTimeFormat("de-DE").format(new Date(date))}
     </div>
   </div>

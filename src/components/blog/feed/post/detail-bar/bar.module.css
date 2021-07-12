@@ -19,29 +19,8 @@
 
 .tags {
   position: relative;
-  text-overflow: clip;
-  white-space: nowrap;
-  overflow: hidden;
   flex: 1;
-
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 6rem;
-    z-index: 1;
-    pointer-events: none;
-
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0),
-      white 50%,
-      white 100%
-    );
-  }
+  margin: -theme("margin[1]");
 
   & > button {
     background: theme("colors.em2.DEFAULT");
@@ -49,7 +28,7 @@
     color: white;
     border-radius: theme("borderRadius.xl");
     padding: theme("padding[0.5]") theme("padding.3");
-    margin-right: theme("margin[1.5]");
+    margin: theme("margin[1]");
 
     &:hover {
       background: theme("colors.em2.enhanced");
