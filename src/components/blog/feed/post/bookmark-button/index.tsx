@@ -5,9 +5,10 @@ import { BookmarkIcon } from "./icon";
 
 import styles from "./bookmark.module.css";
 
-export const BookmarkButton: React.FC<{ disabled?: boolean }> = ({
-  disabled,
-}) => {
+export const BookmarkButton: React.FC<{
+  disabled?: boolean;
+  disableShadow?: boolean;
+}> = ({ disabled, disableShadow }) => {
   const [active, setActive] = React.useState(false);
 
   return (
@@ -17,7 +18,7 @@ export const BookmarkButton: React.FC<{ disabled?: boolean }> = ({
       disabled={disabled}
     >
       <div className="pointer-events-none">
-        <BookmarkIcon />
+        <BookmarkIcon disableShadow={disableShadow} />
       </div>
     </button>
   );

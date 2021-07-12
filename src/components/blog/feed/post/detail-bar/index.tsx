@@ -18,7 +18,7 @@ export const DetailBar: React.FC<{
     <div className={styles.tags}>
       {terms && terms.map((term, i) => <TagButton term={term} key={i} />)}
     </div>
-    <div className="flex-shrink-0 ml-2">
+    <div className="flex-shrink-0">
       <PostDate date={new Date(date)} />
     </div>
   </div>

@@ -3,6 +3,7 @@
   z-index: 1;
   color: theme("textColor.text.muted");
   line-height: theme("lineHeight.tight");
+  margin-left: 1.5rem;
 
   &:before {
     content: "";
