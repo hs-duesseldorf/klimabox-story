@@ -2,7 +2,7 @@ import React from "react";
 
 import type { PostData } from "../wp";
 import { PostDate } from "./date";
-import { BookmarkButton } from "../feed/post/bookmark-button";
+import { BookmarkButton } from "./bookmark-button";
 
 export const PostHeading: React.FC<PostData> = ({ post }) => (
   <div className="flex">

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { FeedItemData, TagData } from "../../wp";
 
 import { PostImage } from "./image";
-import { BookmarkButton } from "./bookmark-button";
+import { BookmarkButton } from "../../single/bookmark-button";
 import { DetailBar } from "./detail-bar";
 
 import styles from "./post.module.css";
