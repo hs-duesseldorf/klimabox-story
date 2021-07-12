@@ -1,11 +1,11 @@
 import React from "react";
 
 import { TagData } from "../../../wp";
-import { useFilterActions } from "../../filtering";
+import { useFilteredTags } from "../../fitering";
 import styles from "./bar.module.css";
 
 function TagButton({ term }: { term: TagData }) {
-  const { addTag } = useFilterActions();
+  const addTag = useFilteredTags().add;
   return <button onClick={() => addTag(term)}>{term.name}</button>;
 }
 

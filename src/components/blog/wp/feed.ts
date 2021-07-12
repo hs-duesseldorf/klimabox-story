@@ -1,5 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
-import { useFilterTags } from "../feed/filtering";
+import { useFilteredTags } from "../feed/fitering";
 
 const FEED = gql`
   query GetFeed($param: String, $tags: [String], $categories: [ID]) {
@@ -23,6 +23,7 @@ const FEED = gql`
           tags {
             edges {
               node {
+                id
                 slug
                 name
               }
@@ -35,6 +36,7 @@ const FEED = gql`
 `;
 
 export type TagData = {
+  id: string;
   slug: string;
   name: string;
 };
@@ -63,7 +65,7 @@ type FeedData = {
 };
 
 export function useFeed() {
-  const tags = useFilterTags();
+  const tags = useFilteredTags().items;
 
   return useQuery<
     FeedData,

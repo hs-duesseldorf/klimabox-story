@@ -1,8 +1,7 @@
-import { useFilterTags, useFilterActions } from "./filtering";
+import { useFilteredTags } from "../fitering";
 
-export function FilterControl() {
-  const tags = useFilterTags();
-  const { removeTag } = useFilterActions();
+export function TagsFilterControl() {
+  const { items: tags, remove: removeTag } = useFilteredTags();
 
   return (
     <div className="mb-8 flex -m-1 text-lg">
