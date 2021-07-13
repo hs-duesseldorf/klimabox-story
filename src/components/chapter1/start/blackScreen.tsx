@@ -20,7 +20,7 @@ export class BlackScreen extends React.Component<{ parallaxData?: [], style?: an
 
     return (
       <Plx parallaxData={parallaxData} style={style}>
-        <div className="bg-black w-full h-screen" />
+        <div className="bg-black w-full h-screen z-30" />
       </Plx>);
   }
 }

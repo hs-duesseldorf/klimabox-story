@@ -34,7 +34,7 @@ export const Start: React.FC = () => {
           </div>
         </div>
         <div>
-          <div className="relative" style={{ paddingTop: "100vh" }}><BlackScreen />
+          <div className="relative z-30" style={{ paddingTop: "100vh" }}><BlackScreen />
           </div>
           <div id="fridge" className="relative h-screen">
             <Fridge />

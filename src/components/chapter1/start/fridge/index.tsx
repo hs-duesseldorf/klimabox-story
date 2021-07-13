@@ -104,23 +104,23 @@ export const Fridge: React.FC = () => {
 
   return (
     <>
-      <Plx parallaxData={parallaxData1} className="absolute bottom-0 opacity-0 z-30 h-screen w-screen"
+      <Plx parallaxData={parallaxData1} className="absolute bottom-0 opacity-0 z-0 h-screen w-screen"
            id="fridge-items">
-        <div className="absolute cursor-pointer" onClick={() => onClickFridgeItem("meat")}
-             style={{ top: "62%", left: "15%" }} id="meat" ref={meatContainer}><img src={imageURL1} alt="Meat"
+        <div className="fixed cursor-pointer" onClick={() => onClickFridgeItem("meat")}
+             style={{ top: "45%", left: "15%" }} id="meat" ref={meatContainer}><img src={imageURL1} alt="Meat"
                                                                                     className="w-64 select-none" />
         </div>
-        <div className="absolute cursor-pointer" onClick={() => onClickFridgeItem("avocado")}
-             style={{ top: "57%", left: "35%" }} id="avocado" ref={avocadoContainer}><img src={imageURL2}
+        <div className="fixed cursor-pointer" onClick={() => onClickFridgeItem("avocado")}
+             style={{ top: "40%", left: "35%" }} id="avocado" ref={avocadoContainer}><img src={imageURL2}
                                                                                           alt="Avocado"
                                                                                           className="w-52 select-none" />
         </div>
-        <div className="absolute cursor-pointer" onClick={() => onClickFridgeItem("milk")}
-             style={{ top: "43%", left: "56%" }} id="milk" ref={milkContainer}><img src={imageURL3} alt="Milk"
+        <div className="fixed cursor-pointer" onClick={() => onClickFridgeItem("milk")}
+             style={{ top: "26%", left: "56%" }} id="milk" ref={milkContainer}><img src={imageURL3} alt="Milk"
                                                                                     className="w-32 select-none" />
         </div>
-        <div className="absolute text-xl xs:text-2xl sm:text-3xl md:text-4xl text-black font-bold max-w-sm"
-             style={{ top: "34%", left: "21%" }}>{text}
+        <div className="fixed text-xl xs:text-2xl sm:text-3xl md:text-4xl text-white font-bold max-w-sm"
+             style={{ top: "14%", left: "25%" }}>{text}
         </div>
       </Plx>
       {
@@ -141,27 +141,33 @@ export const Fridge: React.FC = () => {
             </Plx>
             <Plx className="absolute"
                  style={{ top: "340vh" }}>
-              <div className="flex flex-col justify-center items-center w-screen h-screen text-white"><h2
-                className="w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold mb-20">{text}</h2>
-                <div className="w-1/2 mb-6 xs:text-xl sm:text-2xl">Lorem ipsum dolor sit amet, consetetur sadipscing
-                  elitr, sed diam nonumy
-                  eirmod tempor invidunt ut
-                  labore et dolore magna aliquyam erat, sed diam voluptua.
+              <div
+                className="flex flex-col justify-center items-center w-screen h-screen text-white ">
+                <div className="w-1/2 p-2 backdrop-filter backdrop-blur-md">
+                  <h2
+                    className="w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold mb-20">{text}</h2>
+                  <div className="mb-6 xs:text-xl sm:text-2xl">Lorem ipsum dolor sit amet, consetetur sadipscing
+                    elitr, sed diam nonumy
+                    eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua.
 
-                  At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                  sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                  eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                  est Lorem ipsum dolor sit amet.
-                </div>
-                <div className="w-1/2 xs:text-xl sm:text-2xl">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                  sed diam nonumy eirmod
-                  tempor invidunt ut
-                  labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur
-                  sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                  labore et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur
-                  sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                  labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                    vero
+                    eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                    est Lorem ipsum dolor sit amet.
+                  </div>
+                  <div className="xs:text-xl sm:text-2xl ">Lorem ipsum dolor sit amet, consetetur sadipscing
+                    elitr,
+                    sed diam nonumy eirmod
+                    tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur
+                    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur
+                    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua.
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col justify-center items-center w-screen h-screen text-black"><h2
