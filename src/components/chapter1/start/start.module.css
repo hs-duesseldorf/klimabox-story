@@ -18,3 +18,7 @@
 .sunrise {
   background: radial-gradient(circle at bottom, #9b5a00, transparent);
 }
+
+.height {
+  height: 1600px;
+}

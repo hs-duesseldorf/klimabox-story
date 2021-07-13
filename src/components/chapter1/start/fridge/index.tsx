@@ -6,6 +6,7 @@ import imageURL1 from "./kapitel1_table_meat.png";
 import imageURL2 from "./kapitel1_table_avocado.png";
 import imageURL3 from "./kapitel1_table_milk.png";
 import { CO2Statistics } from "../../../statistics/co2";
+import styles from "../start.module.css";
 
 export const Fridge: React.FC = () => {
   const [text, setText] = React.useState("Wähle aus, was du am liebsten isst");
@@ -43,6 +44,23 @@ export const Fridge: React.FC = () => {
           startValue: 0.90,
           endValue: 1,
           property: "opacity"
+        },
+        {
+          startValue: 1,
+          endValue: 1.2,
+          property: "scale"
+        }
+      ]
+    },
+    {
+      start: 3500,
+      end: 3800,
+      easing: "easeIn",
+      properties: [
+        {
+          startValue: 1,
+          endValue: 1.1,
+          property: "scale"
         }
       ]
     }
@@ -116,7 +134,7 @@ export const Fridge: React.FC = () => {
                                                                                           className="w-52 select-none" />
         </div>
         <div className="fixed cursor-pointer" onClick={() => onClickFridgeItem("milk")}
-             style={{ top: "26%", left: "56%" }} id="milk" ref={milkContainer}><img src={imageURL3} alt="Milk"
+             style={{ top: "28%", left: "56%" }} id="milk" ref={milkContainer}><img src={imageURL3} alt="Milk"
                                                                                     className="w-32 select-none" />
         </div>
         <div className="fixed text-xl xs:text-2xl sm:text-3xl md:text-4xl text-white font-bold max-w-sm"
@@ -126,24 +144,23 @@ export const Fridge: React.FC = () => {
       {
         itemSelected ?
           <div className="h-screen">
-            <Plx parallaxData={parallaxData2} className="absolute bg-gradient-to-b from-pink to-yellow-800 h-auto"
+            <Plx parallaxData={parallaxData2} className={`absolute ${styles.height}`}
                  style={{ top: "150vh" }}>
               <div
-                className={`flex justify-center items-end w-screen h-screen ${visualization} -mt-6 font-bold`}>
+                className={`flex justify-center items-center w-screen ${visualization} bg-contain bg-no-repeat -mt-6 font-bold ${styles.height}`}>
                 <div
-                  className="flex flex-col justify-center items-center bg-gradient-to-b from-pink to-yellow-800 rounded-lg">
+                  className="flex flex-col justify-center items-center backdrop-filter backdrop-blur-lg rounded-lg">
                   <div className="text-3xl xs:text-5xl sm:text-6xl my-12 mx-40">{factTitle}</div>
                   <div className="text-xl xs:text-2xl sm:text-4xl">{fact}</div>
                   <div className="text-xl xs:text-2xl sm:text-4xl mb-12">in seinem Leben</div>
                 </div>
               </div>
-              <div className={`w-screen h-screen ${visualization} -mt-6`} />
             </Plx>
             <Plx className="absolute"
-                 style={{ top: "340vh" }}>
+                 style={{ top: "350vh" }}>
               <div
                 className="flex flex-col justify-center items-center w-screen h-screen text-white ">
-                <div className="w-1/2 p-2 backdrop-filter backdrop-blur-md">
+                <div className="w-1/2 p-2 backdrop-filter backdrop-blur-lg">
                   <h2
                     className="w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold mb-20">{text}</h2>
                   <div className="mb-6 xs:text-xl sm:text-2xl">Lorem ipsum dolor sit amet, consetetur sadipscing

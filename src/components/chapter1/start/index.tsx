@@ -22,14 +22,14 @@ export const Start: React.FC = () => {
           {intersectingMountainScene ? <Background img={mountainBackground} alt="mountains" /> :
             <Background img={fridgeBackground} alt="mountains" />}
           {intersectingMountainScene ? <Sunrise /> : ""}
-          <div className="relative">
+          <div className="relative z-30">
             <Heading />
             <div style={{ paddingTop: "45vh" }}>
               <Text />
             </div>
           </div>
           {intersectingMountainScene ? <Mountains /> : ""}
-          <div id="buildings" className="relative" style={{ paddingTop: "50vh" }}>
+          <div id="buildings" className="relative z-30" style={{ paddingTop: "50vh" }}>
             <Buildings />
           </div>
         </div>

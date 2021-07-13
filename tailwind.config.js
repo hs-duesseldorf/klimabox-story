@@ -46,8 +46,8 @@ module.exports = {
       },
       backgroundImage: theme => ({
         'massvisualize-pig-pattern': "url('components/chapter1/start/fridge/massvisualize_pig.png')",
-        'massvisualize-avocado-pattern': "url('components/chapter1/start/fridge/massvisualize_pig.png')",
-        'massvisualize-milk-pattern': "url('components/chapter1/start/fridge/massvisualize_pig.png')",
+        'massvisualize-avocado-pattern': "url('components/chapter1/start/fridge/avocado.gif')",
+        'massvisualize-milk-pattern': "url('components/chapter1/start/fridge/milk.gif')",
       }),
       spacing: {
         "10%": "10%",
