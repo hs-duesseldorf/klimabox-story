@@ -8,6 +8,7 @@ import { Text } from "./text";
 import { Sequence } from "./interface/Chapter2Enum";
 import { getParallaxData } from "./animationParallaxData";
 import { getContentData } from "./content";
+import { QuizStatistics } from "../../quiz-statistics";
 
 const useElementOnScreen = (
   elementRef: RefObject<Element>,
@@ -66,7 +67,7 @@ export const StartChapter2: React.FC = () => {
   const entry = useElementOnScreen(containerRef, null, "0px", 0);
 
   React.useEffect(() => {
-    setSequence( s => entry?.isIntersecting && s === Sequence.Intro ? Sequence.Question : Sequence.Intro); 
+    setSequence( s => entry?.isIntersecting && s === Sequence.Intro ? Sequence.Question : s); 
   }, [entry?.isIntersecting, setSequence])
 
 
@@ -95,6 +96,7 @@ export const StartChapter2: React.FC = () => {
             setParallaxData={setParallaxData}
             contentData={contentData}
             setContentData={setContentData}
+            setSequence = {setSequence}
           />
         </div>
         <Text />

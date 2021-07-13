@@ -5,7 +5,6 @@ import styles from "../start.module.css";
 import img from "../asset/kapitel2_massenvisualisierung.png";
 import { IntroText } from "../../../intro-text";
 import { IntroTextData } from "./../../../intro-text/interfaces/interface";
-import { Statistics } from "../../../statistics";
 
 export const Massenvisualisierung: React.FC<{
   parallaxData: [];
@@ -34,43 +33,7 @@ export const Massenvisualisierung: React.FC<{
       left: "23%",
     },
   };
-
-  const statisticsProps: [
-    {
-      title: string | JSX.Element;
-      unit: string | JSX.Element;
-      data: [
-        {
-          textureURL: string;
-          label: string | JSX.Element;
-          value: number;
-          bgIsDark?: boolean;
-        }
-      ];
-    }
-  ] = [
-    {
-      title: (
-        <>
-          CO<sub>2</sub>
-        </>
-      ),
-      unit: (
-        <>
-          kg CO<sub>2</sub>
-        </>
-      ),
-      data: [
-        {
-          textureURL: "meatTexture",
-          label: "1kg Rindfleisch",
-          value: 120,
-          bgIsDark: true,
-        },
-      ],
-    },
-  ];
-
+  
   return (
     <div className={` ${styles.massenvisualsierung}  absolute w-full `}>
       <Plx

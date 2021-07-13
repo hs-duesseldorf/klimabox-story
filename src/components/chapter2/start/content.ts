@@ -46,10 +46,6 @@ export const getContentData = (sequence: Sequence) => {
             whiteSpace: "pre-wrap",
           },
           containerStyle: {
-            position: "absolute",
-            top: "46rem",
-            width: "24%",
-            left: "24%",
             backgroundColor: "rgba(255, 255, 255, 0.8)",
           },
         },

@@ -20,6 +20,7 @@ export const Scene: React.FC<{
   setParallaxData: React.Dispatch<React.SetStateAction<any>>;
   contentData: any;
   setContentData: React.Dispatch<React.SetStateAction<any>>;
+  setSequence: React.Dispatch<React.SetStateAction<Sequence>>;
 }> = ({
   sequence,
   setViewHeight,
@@ -27,6 +28,7 @@ export const Scene: React.FC<{
   setParallaxData,
   contentData,
   setContentData,
+  setSequence
 }) => {
   return (
     <div>
@@ -35,10 +37,14 @@ export const Scene: React.FC<{
         <BuildingB parallaxData={parallaxData.backgroundData} />
         <BuildingA parallaxData={parallaxData.backgroundData} />
         <Graffiti
-          parallaxData={parallaxData.backgroundData}
-          contentData={contentData.introTextData}
+          parallaxData={parallaxData.backgroundData} 
           parallaxDataMassenvisualsierung = {parallaxData.massenvisualisierung}
           parallaxDataMassenvisualsierungBackground = {parallaxData.massenvisualisierungBackground}
+          parallaxDataIntroText = {parallaxData.parallaxDataIntroText}
+          parallaxDataModule = {parallaxData.parallaxDataModule}
+          contentDataIntroText ={contentData.introTextData}
+          contentDataModule = {null}
+          sequence = {sequence}
         />
         <BuildingD parallaxData={parallaxData.backgroundData} />
         <EndScreen parallaxData={parallaxData.backgroundData} />
@@ -47,10 +53,11 @@ export const Scene: React.FC<{
         <Bicycle sequence={sequence} parallaxData={parallaxData.bicylceData} />
         <Car
           sequence={sequence}
-          setViewHeight={setViewHeight}
           parallaxData={parallaxData.carData}
+          setViewHeight={setViewHeight}
           setParallaxData={setParallaxData}
           setContentData={setContentData}
+          setSequence = {setSequence}
         />
 
         <Street />

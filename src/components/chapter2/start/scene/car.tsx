@@ -13,16 +13,18 @@ import { getContentData } from "./../content";
 
 export const Car: React.FC<{
   sequence: Sequence;
+  parallaxData: [];
+  setSequence: React.Dispatch<React.SetStateAction<Sequence>>;
   setViewHeight: React.Dispatch<React.SetStateAction<string>>;
-  parallaxData: any;
   setParallaxData: React.Dispatch<React.SetStateAction<any>>;
   setContentData: React.Dispatch<React.SetStateAction<any>>;
 }> = ({
   sequence,
-  setViewHeight,
   parallaxData,
+  setViewHeight,
   setParallaxData,
   setContentData,
+  setSequence,
 }) => {
   
   const [silloutteOpacity, setSilloutteOpacity] = React.useState(0.1);
@@ -38,6 +40,7 @@ export const Car: React.FC<{
       )
     );
     setContentData(getContentData(Sequence.Car));
+    setSequence(Sequence.Car);
   };
 
   let topicSelection: TopicSelection | undefined = undefined;

@@ -99,6 +99,43 @@ export const getParallaxData = (
             ],
           },
         ],
+        parallaxDataIntroText: [
+          {
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity",
+              },
+            ],
+          },
+        ],
+        parallaxDataModule: [
+          {
+            start: clientHeight * 0,
+            end: clientHeight * 1,
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity",
+              },
+            ],
+          },
+          {
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
+            properties: [
+              {
+                startValue: 0,
+                endValue: 1,
+                property: "opacity",
+              },
+            ],
+          },
+        ]
       };
 
     case Sequence.Car:
@@ -324,6 +361,43 @@ export const getParallaxData = (
             ],
           },
         ],
+        parallaxDataIntroText: [
+          {
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity",
+              },
+            ],
+          },
+        ],
+        parallaxDataModule: [
+          {
+            start: clientHeight * 0,
+            end: clientHeight * 1,
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity",
+              },
+            ],
+          },
+          {
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
+            properties: [
+              {
+                startValue: 0,
+                endValue: 1,
+                property: "opacity",
+              },
+            ],
+          },
+        ]
       };
 
     default:

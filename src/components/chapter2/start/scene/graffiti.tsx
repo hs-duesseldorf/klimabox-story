@@ -5,16 +5,30 @@ import Plx from "react-plx";
 import styles from "../start.module.css";
 import img from "../asset/kapitel2_graffiti.png";
 import graffitiTextBackgroundImg from "../asset/kapitel2_graffiti_text_background.png";
-import { IntroText } from "../../../intro-text";
 import { IntroTextData } from "../../../intro-text/interfaces/interface";
 import { Massenvisualisierung } from "./massenvisualisierung";
+import { GraffitiContent } from "./graffitiContent";
+import { Sequence } from "../interface/Chapter2Enum";
 
 export const Graffiti: React.FC<{
   parallaxData: [];
-  contentData: IntroTextData;
   parallaxDataMassenvisualsierung: [];
   parallaxDataMassenvisualsierungBackground: [];
-}> = ({ parallaxData, contentData, parallaxDataMassenvisualsierung, parallaxDataMassenvisualsierungBackground }) => {
+  parallaxDataIntroText: [];
+  parallaxDataModule: [];
+  contentDataIntroText: IntroTextData;
+  contentDataModule: any;
+  sequence: Sequence;
+}> = ({
+  parallaxData,
+  parallaxDataMassenvisualsierung,
+  parallaxDataMassenvisualsierungBackground,
+  parallaxDataIntroText,
+  parallaxDataModule,
+  contentDataIntroText,
+  contentDataModule,
+  sequence,
+}) => {
   return (
     <div className="absolute left-full w-full">
       <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
@@ -28,7 +42,13 @@ export const Graffiti: React.FC<{
           alt="graffitiBackground"
           className={`${styles.graffitiBackground} absolute`}
         />
-        <IntroText introTextData={contentData} />
+        <GraffitiContent
+          contentDataIntroText={contentDataIntroText}
+          contentDataModule={contentDataModule}
+          sequence={sequence}
+          parallaxDataIntroText={parallaxDataIntroText}
+          parallaxDataModule={parallaxDataModule}
+        ></GraffitiContent>
         <Massenvisualisierung
           parallaxData={parallaxDataMassenvisualsierung}
           massenvisualisierungBackground={
