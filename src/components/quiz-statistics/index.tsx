@@ -24,7 +24,6 @@ export const QuizStatistics:React.FC<{quiz: Quizinterface}> = ({quiz}) => {
     if(allRightAnswers === revealed){
       setImage(wrongImg);
     }
-
   }
 
   return (
@@ -32,11 +31,10 @@ export const QuizStatistics:React.FC<{quiz: Quizinterface}> = ({quiz}) => {
       width: "160%"}}>
       <div className="title mb-4">
         <p
-          className="font-bold text-lg"
+          className="font-bold text-base"
           style={{ width: "55%", left: "55%", top: 0, color: "black" }}
         >
-          Wie lange steht ein Auto in Deutschland am Tag ungenutzt auf seinem
-          Parkplatz
+          {quiz.title}
         </p>
         <img
           className="absolute"
