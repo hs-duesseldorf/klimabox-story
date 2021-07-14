@@ -12,6 +12,10 @@ import { Train } from "./train";
 import { Bicycle } from "./bicycle";
 import { Car } from "./car";
 import { Sequence } from "../interface/Chapter2Enum";
+import { EndscreenStreet } from "./endScreenStreet";
+import { Human } from "./human";
+import { StreetLamp } from "./streetlamp";
+import { Quizinterface } from './../../../quiz-statistics/interface/quiz-interface';
 
 export const Scene: React.FC<{
   sequence: Sequence;
@@ -21,6 +25,8 @@ export const Scene: React.FC<{
   contentData: any;
   setContentData: React.Dispatch<React.SetStateAction<any>>;
   setSequence: React.Dispatch<React.SetStateAction<Sequence>>;
+  quizData: Quizinterface,
+  setQuizData: React.Dispatch<React.SetStateAction<Quizinterface>>;
 }> = ({
   sequence,
   setViewHeight,
@@ -28,7 +34,9 @@ export const Scene: React.FC<{
   setParallaxData,
   contentData,
   setContentData,
-  setSequence
+  setSequence,
+  quizData,
+  setQuizData
 }) => {
   return (
     <div>
@@ -43,11 +51,14 @@ export const Scene: React.FC<{
           parallaxDataIntroText = {parallaxData.parallaxDataIntroText}
           parallaxDataModule = {parallaxData.parallaxDataModule}
           contentDataIntroText ={contentData.introTextData}
-          contentDataModule = {null}
+          contentDataModule = {quizData}
           sequence = {sequence}
         />
         <BuildingD parallaxData={parallaxData.backgroundData} />
         <EndScreen parallaxData={parallaxData.backgroundData} />
+        <EndscreenStreet parallaxData={parallaxData.backgroundData}/>
+        <Human parallaxData={parallaxData.backgroundData}/>
+        <StreetLamp parallaxData={parallaxData.backgroundData}/>
 
         <Train sequence={sequence} parallaxData={parallaxData.trainData} />
         <Bicycle sequence={sequence} parallaxData={parallaxData.bicylceData} />
@@ -58,9 +69,10 @@ export const Scene: React.FC<{
           setParallaxData={setParallaxData}
           setContentData={setContentData}
           setSequence = {setSequence}
+          setQuizData = {setQuizData}
         />
 
-        <Street />
+        <Street parallaxData={parallaxData.street} />
       </Plx>
     </div>
   );

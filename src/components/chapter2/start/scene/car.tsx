@@ -10,6 +10,8 @@ import { Selection } from "../../../topic-selection";
 import carImg from "../asset/kapitel2_auto_auswahl_effekt.png";
 import { getParallaxData } from "../animationParallaxData";
 import { getContentData } from "./../content";
+import { Quizinterface } from './../../../quiz-statistics/interface/quiz-interface';
+import { getQuiz } from "../quizData";
 
 export const Car: React.FC<{
   sequence: Sequence;
@@ -18,6 +20,7 @@ export const Car: React.FC<{
   setViewHeight: React.Dispatch<React.SetStateAction<string>>;
   setParallaxData: React.Dispatch<React.SetStateAction<any>>;
   setContentData: React.Dispatch<React.SetStateAction<any>>;
+  setQuizData: React.Dispatch<React.SetStateAction<Quizinterface>>;
 }> = ({
   sequence,
   parallaxData,
@@ -25,6 +28,7 @@ export const Car: React.FC<{
   setParallaxData,
   setContentData,
   setSequence,
+  setQuizData,
 }) => {
   
   const [silloutteOpacity, setSilloutteOpacity] = React.useState(0.1);
@@ -41,6 +45,7 @@ export const Car: React.FC<{
     );
     setContentData(getContentData(Sequence.Car));
     setSequence(Sequence.Car);
+    setQuizData(getQuiz(Sequence.Car));
   };
 
   let topicSelection: TopicSelection | undefined = undefined;

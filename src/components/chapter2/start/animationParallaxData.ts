@@ -73,6 +73,19 @@ export const getParallaxData = (
             ],
           },
         ],
+        street: [
+          {
+            start: clientHeight * 11,
+            end: clientHeight * 13,
+            properties: [
+              {
+                startValue: 0,
+                endValue: -clientWidth,
+                property: "translateX",
+              },
+            ],
+          },
+        ],
         massenvisualisierung: [
           {
             start: clientHeight * 7,
@@ -135,7 +148,7 @@ export const getParallaxData = (
               },
             ],
           },
-        ]
+        ],
       };
 
     case Sequence.Car:
@@ -179,6 +192,33 @@ export const getParallaxData = (
               },
             ],
           },
+          {
+            start: clientHeight * 10,
+            end: clientHeight * 11,
+            properties: [
+              {
+                startValue: 1.5,
+                endValue: 1,
+                property: "scale",
+              },
+              {
+                startValue: -clientWidth * 1,
+                endValue: clientWidth * 0.1,
+                property: "translateX",
+              },
+            ],
+          },
+          {
+            start: clientHeight * 12,
+            end: clientHeight * 14,
+            properties: [
+              {
+                startValue: clientWidth * 0.1,
+                endValue: -clientWidth * 0.6,
+                property: "translateX",
+              },
+            ],
+          },
         ],
         bicylceData: [
           {
@@ -200,11 +240,6 @@ export const getParallaxData = (
                 startValue: clientWidth * 0.35,
                 endValue: clientWidth * 1,
                 property: "translateX",
-              },
-              {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity",
               },
             ],
           },
@@ -250,6 +285,28 @@ export const getParallaxData = (
               },
             ],
           },
+          {
+            start: clientHeight * 10,
+            end: clientHeight * 11,
+            properties: [
+              {
+                startValue: -clientWidth * 0.8,
+                endValue: -clientWidth * 0.9,
+                property: "translateX",
+              },
+            ],
+          },
+          {
+            start: clientHeight * 12,
+            end: clientHeight * 14,
+            properties: [
+              {
+                startValue: -clientWidth * 0.9,
+                endValue: -clientWidth * 1.87,
+                property: "translateX",
+              },
+            ],
+          },
         ],
         scene: [
           {
@@ -264,6 +321,35 @@ export const getParallaxData = (
               {
                 startValue: 0,
                 endValue: -clientWidth * 0.1,
+                property: "translateX",
+              },
+            ],
+          },
+          {
+            start: clientHeight * 10,
+            end: clientHeight * 11,
+            properties: [
+              {
+                startValue: 2.2,
+                endValue: 1,
+                property: "scale",
+              },
+              {
+                startValue: -clientWidth * 0.1,
+                endValue: 0,
+                property: "translateX",
+              },
+            ],
+          },
+        ],
+        street: [
+          {
+            start: clientHeight * 12,
+            end: clientHeight * 14,
+            properties: [
+              {
+                startValue: 0,
+                endValue: -clientWidth,
                 property: "translateX",
               },
             ],
@@ -397,7 +483,7 @@ export const getParallaxData = (
               },
             ],
           },
-        ]
+        ],
       };
 
     default:

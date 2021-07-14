@@ -8,7 +8,7 @@ import { Text } from "./text";
 import { Sequence } from "./interface/Chapter2Enum";
 import { getParallaxData } from "./animationParallaxData";
 import { getContentData } from "./content";
-import { QuizStatistics } from "../../quiz-statistics";
+import { getQuiz } from "./quizData";
 
 const useElementOnScreen = (
   elementRef: RefObject<Element>,
@@ -48,10 +48,6 @@ const useUpdateScroll = (ref: RefObject<HTMLDivElement>) => {
       const offsetTop = document.getElementById("Street")?.offsetTop as number;
       const clientHeight = document.documentElement.clientHeight;
       ref.current!.style.top = `-${streetHeight + offsetTop - clientHeight}px`;
-      /*console.log(
-        document.documentElement.clientHeight +
-          document.documentElement.scrollTop
-      );*/
     }
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -83,6 +79,10 @@ export const StartChapter2: React.FC = () => {
     getContentData(Sequence.Intro)
   );
 
+  const [quizData, setQuizData] = React.useState(
+    getQuiz(Sequence.Car)
+    )
+
   return (
     <div>
       <div className="text-white relative" style={{ height: `${viewHeight}` }}>
@@ -97,6 +97,8 @@ export const StartChapter2: React.FC = () => {
             contentData={contentData}
             setContentData={setContentData}
             setSequence = {setSequence}
+            quizData = {quizData}
+            setQuizData = {setQuizData}
           />
         </div>
         <Text />

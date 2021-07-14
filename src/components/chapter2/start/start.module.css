@@ -86,10 +86,14 @@
   width: 100%;
   left: 189%;
   z-index: -1;
+  top: -20rem;
 }
 
 .streetEnd {
-  top: 41rem;
+  left: 201%;
+  width: 100%;
+  transform: scale(1.3);
+  top: 14rem;
 }
 
 .wall {
@@ -102,8 +106,8 @@
 }
 
 .streetlamp {
-  top: 59rem;
-  left: 38.5%;
+  top: 38rem;
+  left: 231.5%;
   z-index: 1;
 }
 
@@ -113,8 +117,8 @@
 }
 
 .human {
-  top: 79.15rem;
-  left: 27%;
+  top: 59.15rem;
+  left: 219%;
   z-index: 1;
 }
 
@@ -128,7 +132,13 @@
   left: 92.5%;
 }
 
-.massenvisualsierung{
+.massenvisualsierung {
   opacity: 1;
   top: 100rem;
+}
+
+.graffitiContent {
+  top: 46rem;
+  width: 24%;
+  left: 24%;
 }

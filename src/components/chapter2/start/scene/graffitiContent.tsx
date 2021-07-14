@@ -13,7 +13,7 @@ import styles from "../start.module.css";
 export const GraffitiContent: React.FC<{
   contentDataIntroText: IntroTextData;
   parallaxDataIntroText: [];
-  contentDataModule: any;
+  contentDataModule: Quizinterface;
   parallaxDataModule: [];
   sequence: Sequence;
 }> = ({
@@ -48,46 +48,17 @@ export const GraffitiContent: React.FC<{
     ],
   };
 
-
-
-  const quizProp: Quizinterface = {
-    choices: [{
-      choice: "18 Stunden",
-      answere: false,
-      revealed: false,
-    },
-    {
-      choice: "23 Stunden",
-      answere: true,
-      revealed: false,
-    },
-    {
-      choice: "12 Stunden",
-      answere: false,
-      revealed: false,
-    },
-    {
-      choice: "21 Stunden",
-      answere: true,
-      revealed: false,
-    }]
-  }
-
-
   return (
-    <div
-      className="absolute"
-      style={{ top: "46rem", width: "24%", left: "24%" }}
-    >
+    <div className={`absolute ${styles.graffitiContent}`}>
       <Plx parallaxData={parallaxDataIntroText} animateWhenNotInViewport={true}>
         <IntroText introTextData={contentDataIntroText} />
       </Plx>
       <Plx parallaxData={parallaxDataModule} animateWhenNotInViewport={true}>
-          {sequence !== Sequence.Car ? (
-            <Statistics tabs={statisticsProps.content} />
-          ) : (
-            <QuizStatistics quiz = {quizProp}/>
-          )}
+        {sequence !== Sequence.Car ? (
+          <Statistics tabs={statisticsProps.content} />
+        ) : (
+          <QuizStatistics quiz={contentDataModule} />
+        )}
       </Plx>
     </div>
   );
