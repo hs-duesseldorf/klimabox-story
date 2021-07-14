@@ -47,7 +47,8 @@ const useUpdateScroll = (ref: RefObject<HTMLDivElement>) => {
         ?.getBoundingClientRect().height as number;
       const offsetTop = document.getElementById("Street")?.offsetTop as number;
       const clientHeight = document.documentElement.clientHeight;
-      ref.current!.style.top = `-${streetHeight + offsetTop - clientHeight}px`;
+      if(ref.current)
+        ref.current.style.top = `-${streetHeight + offsetTop - clientHeight}px`;
     }
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
