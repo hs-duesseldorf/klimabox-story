@@ -17,11 +17,6 @@ export const EndScreen: React.FC<{ parallaxData: any }> = ({
       <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
         <img src={wallImg} alt="wall" className={`${styles.wall} absolute`} />
         <img
-          src={streetLampImg}
-          alt="streetLamp"
-          className={`${styles.streetlamp} absolute`}
-        />
-        <img
           src={takeItEasyImg}
           alt="takeItEasy"
           className={`${styles.takeItEasy} absolute`}

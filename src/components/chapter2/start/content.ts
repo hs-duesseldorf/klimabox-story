@@ -4,6 +4,7 @@ import { Stats } from "./interface/interface";
 import BicycleTexture from "./asset/BicycleTexture.png";
 import CarTexture from "./asset/CarTexture.png";
 import TrainTexture from "./asset/TrainTexture.png";
+import FernVerkehrTexture from "./asset/FernverkehrTexture.png";
 
 export const getContentData = (sequence: Sequence) => {
   switch (sequence) {
@@ -87,47 +88,116 @@ export const getContentData = (sequence: Sequence) => {
           },
         },
       };
+    case Sequence.Train:
+      return {
+        introTextData: {
+          title: "Vorbei am Stau mit ÖPNV! ",
+          text:
+            "Wer kennt es nicht? Man hastet eilig los, um die nächste Bahn zu bekommen und wartet dann doch am Bahnsteig, weil diese Verspätung hat. Man möchte im Bus gemütlich ein Buch lesen oder Musik hören und stattdessen steht man gedrängt zwischen Fremden und hat das Piepen der Bustür im Ohr.  \n \n" +
+            "Das Fahren mit den Öffis ist manchmal nicht so, wie man es sich vorgestellt hat. Volle Busse, verspätete Bahnen, und Preise, sorgen dafür, dass Viele die Fahrt unattraktiv und unflexibel finden. Sie vergessen dabei aber häufig die Momente, in denen sie mit dem Auto im Stau standen, sich über die Fahrweise Anderer ausließen und dass der ÖPNV sie in den meisten Fällen sicher und entspannt von A nach B gebracht hat. Der ÖPNV ist eine tolle Alternative zum Individualverkehr!  \n \n " +
+            "Diejenigen, die mit dem Bus oder der Bahn fahren, verursachen nämlich zwei Drittel weniger CO2 als PKW-Fahrer:innen und leisten damit einen entscheidenden Beitrag zum Klimaschutz. Deshalb ist es umso wichtiger, den öffentlichen Nahverkehr in Zukunft noch attraktiver zu gestalten. Dabei stellt sich allerdings zuerst die Frage: Wie kann man die Bürger:innen dazu ermutigen, ihr Auto häufiger stehen zu lassen?  \n \n " +
+            "Mancherorts wird der Nahverkehr deshalb bereits kostenlos angeboten oder zumindest kostengünstig in Form eines Jahrestickets für nur 365€, wie es derzeit zum Beispiel in Wien zu erhalten ist. Aber wie realistisch sind solche Mobilitätskonzepte in Gegenden, in denen vielleicht noch nicht kräftig in den Ausbau und die Modernisierung des ÖPNVs investiert wurde? Ein kostenloses Modell würde zum Beispiel in Düsseldorf und im Ruhrgebiet einen Ausfall von jährlich rund 1,3 Milliarden Euro bedeuten. Flächendeckende Fahrten gratis oder für wenig Geld dürften demnach hier vorerst Wunschdenken bleiben. Deshalb sind Investitionen in Faktoren wie Pünktlichkeit und Taktung bei der Verkehrsmittelwahl wichtig, um Personen das Fahren mit Öffis schmackhaft zu machen. Hinsichtlich Klimaschutz sind und bleiben diese nämlich eine super Alternative zum Autoverkehr!  ",
+          titleStyle: {
+            fontSize: "20px",
+            fontWeight: "bold",
+            color: "black",
+          },
+          textStyle: {
+            wordWrap: "break-word",
+            fontSize: "10px",
+            color: "black",
+            whiteSpace: "pre-wrap",
+            height: "18rem",
+            overflowY: "auto",
+          },
+          containerStyle: {
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+          },
+        },
+      };
   }
 };
 
-
 export const getStatsData = (sequence: Sequence) => {
   const bicycle: Stats = {
-    tabs: [{
-      title: "3KM",
-      unit: "Minuten",
-      data: [
-        {
-          textureURL: TrainTexture,
-          label: "Bus / Bahn",
-          value: 24,
-          bgIsDark: true,
-        },
-        {
-          textureURL: CarTexture,
-          label: "PKW",
-          value: 20,
-          bgIsDark: true,
-        },
-        {
-          textureURL: BicycleTexture,
-          label: "Fahrrad",
-          value: 12,
-          bgIsDark: true,
-        },
-        {
-          textureURL: "meatTexture",
-          label: "3Km zu Fuß",
-          value: 45,
-          bgIsDark: false,
-        },
-      ]
-    }]
-  }
+    tabs: [
+      {
+        title: "Strecke 3KM",
+        unit: "Minuten",
+        data: [
+          {
+            textureURL: TrainTexture,
+            label: "Bus / Bahn",
+            value: 24,
+            bgIsDark: true,
+          },
+          {
+            textureURL: CarTexture,
+            label: "PKW",
+            value: 20,
+            bgIsDark: true,
+          },
+          {
+            textureURL: BicycleTexture,
+            label: "Fahrrad",
+            value: 12,
+            bgIsDark: true,
+          },
+          {
+            textureURL: "meatTexture",
+            label: "3KM zu Fuß",
+            value: 45,
+            bgIsDark: false,
+          },
+        ],
+      },
+    ],
+  };
 
-  switch(sequence){
-    case Sequence.Car: return bicycle;
-    case Sequence.Bicycle : return bicycle;
-    default: return bicycle;
+  const train: Stats = {
+    tabs: [
+      {
+        title: "Treibhausgasemissionen",
+        unit: "g CO2-Äquivalente",
+        data: [
+          {
+            textureURL: FernVerkehrTexture,
+            label: "Fernverkehr",
+            value: 29,
+            bgIsDark: true,
+          },
+          {
+            textureURL: TrainTexture,
+            label: "Straßenbahn",
+            value: 55,
+            bgIsDark: true,
+          },
+          {
+            textureURL: BicycleTexture,
+            label: "PKW",
+            value: 143,
+            bgIsDark: true,
+          },
+          {
+            textureURL: "meatTexture",
+            label: "1KM Inland-Flug",
+            value: 214,
+            bgIsDark: false,
+          },
+        ],
+      },
+    ],
+  };
+
+  switch (sequence) {
+    case Sequence.Car:
+      return bicycle;
+    case Sequence.Bicycle:
+      return bicycle;
+    case Sequence.Train:
+      console.log("should have train data");
+      return train;
+    default:
+      return bicycle;
   }
-}
+};
