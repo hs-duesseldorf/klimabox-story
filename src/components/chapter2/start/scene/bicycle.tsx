@@ -42,7 +42,7 @@ export const Bicycle: React.FC<{
 
   return (
     <div id="bicycle" className={`${styles.bicycle} absolute -top-96`}>
-      <Plx parallaxData={parallaxData}>
+      <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
         <img src={img} alt="Bicycle" className="absolute" />
         {topicSelection !== undefined ? (
           <Selection topicSelection={topicSelection} />

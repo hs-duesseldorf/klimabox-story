@@ -43,7 +43,7 @@ export const Train: React.FC<{
 
   return (
     <div id="train" className={`${styles.train} absolute -top-96`}>
-      <Plx parallaxData={parallaxData}>
+      <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
         <img src={img} alt="train" className="absolute" />
 
         {topicSelection !== undefined ? (

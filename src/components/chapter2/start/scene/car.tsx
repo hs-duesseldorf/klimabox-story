@@ -78,7 +78,7 @@ export const Car: React.FC<{
   return (
     <div className={`${styles.car} absolute -top-96 `}>
       <Plx
-        parallaxData={parallaxData}>
+        parallaxData={parallaxData} animateWhenNotInViewport={true}>
         <img id="car" src={img} alt="car" className="absolute" />
         {topicSelection !== undefined ? (
           <Selection topicSelection={topicSelection} />
