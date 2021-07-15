@@ -7,7 +7,7 @@ export const Sunrise: React.FC = () => {
 
   const parallaxData = [
     {
-      start: 0,
+      start: ".morning",
       end: 40,
       properties: [
         {
@@ -20,7 +20,7 @@ export const Sunrise: React.FC = () => {
   ];
 
   return (
-    <Plx parallaxData={parallaxData}>
+    <Plx parallaxData={parallaxData} className="opacity-0">
       <div id="sunrise" className={`${styles.sunrise} fixed inset-0 w-full h-full pointer-events-none`}
       />
     </Plx>
