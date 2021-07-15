@@ -17,7 +17,10 @@ module.exports = {
         text: {
           DEFAULT: "black",
           muted: "#6f6f6f",
+          pink: "#AA618B",
         },
+        pink: "#AA618B",
+        brown: "#694025",
       },
       fill: (theme) => ({
         em1: { DEFAULT: "#197EB7", light: "#3D99CE" },
@@ -41,6 +44,11 @@ module.exports = {
         "1/2": "50%",
         "2/3": "66.67%",
       },
+      backgroundImage: theme => ({
+        'massvisualize-pig-pattern': "url('components/chapter1/start/fridge/massvisualize_pig.png')",
+        'massvisualize-avocado-pattern': "url('components/chapter1/start/fridge/avocado.gif')",
+        'massvisualize-milk-pattern': "url('components/chapter1/start/fridge/milk.gif')",
+      }),
       spacing: {
         "10%": "10%",
         "20%": "20%",
@@ -60,7 +68,6 @@ module.exports = {
       ...defaultTheme.screens,
     },
   },
-
   variants: {
     extend: {
       borderColor: ["hover"],

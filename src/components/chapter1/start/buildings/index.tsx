@@ -18,25 +18,25 @@ export const Buildings: React.FC = () => {
           startValue: 100,
           endValue: -800,
           property: "translateX"
-        },
+        }
       ]
     },
     {
-      start: 3440,
-      end: 3500,
+      start: 2640,
+      end: 2900,
       properties: [
         {
           startValue: 0,
           endValue: 10,
           property: "blur"
-        },
+        }
       ]
     }
   ];
   return (
     <Plx parallaxData={parallaxData}>
-      <div className="pointer-events-none">
-        <img src={imageURL} alt="Stadtd" className="w-full select-none" />
+      <div className="pointer-events-none overflow-x-hidden">
+        <img src={imageURL} alt="Stadt" className="w-full select-none" />
       </div>
     </Plx>
   );
