@@ -25,9 +25,6 @@ export const GraffitiContent: React.FC<{
   parallaxDataModule,
   sequence,
 }) => {
-
-  console.log(statsDataModule);
-
   return (
     <div className={`absolute ${styles.graffitiContent}`}>
       <Plx parallaxData={parallaxDataIntroText} animateWhenNotInViewport={true}>

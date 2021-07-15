@@ -195,7 +195,6 @@ export const getStatsData = (sequence: Sequence) => {
     case Sequence.Bicycle:
       return bicycle;
     case Sequence.Train:
-      console.log("should have train data");
       return train;
     default:
       return bicycle;
