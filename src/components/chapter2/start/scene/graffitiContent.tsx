@@ -14,39 +14,17 @@ export const GraffitiContent: React.FC<{
   contentDataIntroText: IntroTextData;
   parallaxDataIntroText: [];
   contentDataModule: Quizinterface;
+  statsDataModule: Stats;
   parallaxDataModule: [];
   sequence: Sequence;
 }> = ({
   contentDataIntroText,
   parallaxDataIntroText,
   contentDataModule,
+  statsDataModule,
   parallaxDataModule,
   sequence,
 }) => {
-  const statisticsProps: Stats = {
-    content: [
-      {
-        title: (
-          <>
-            CO<sub>2</sub>
-          </>
-        ),
-        unit: (
-          <>
-            kg CO<sub>2</sub>
-          </>
-        ),
-        data: [
-          {
-            textureURL: "meatTexture",
-            label: "1kg Rindfleisch",
-            value: 120,
-            bgIsDark: true,
-          },
-        ],
-      },
-    ],
-  };
 
   return (
     <div className={`absolute ${styles.graffitiContent}`}>
@@ -55,7 +33,9 @@ export const GraffitiContent: React.FC<{
       </Plx>
       <Plx parallaxData={parallaxDataModule} animateWhenNotInViewport={true}>
         {sequence !== Sequence.Car ? (
-          <Statistics tabs={statisticsProps.content} />
+          <div className="absolute w-full top-0">
+            <Statistics tabs={statsDataModule.tabs} />
+          </div>
         ) : (
           <QuizStatistics quiz={contentDataModule} />
         )}

@@ -9,6 +9,8 @@ import { IntroTextData } from "../../../intro-text/interfaces/interface";
 import { Massenvisualisierung } from "./massenvisualisierung";
 import { GraffitiContent } from "./graffitiContent";
 import { Sequence } from "../interface/Chapter2Enum";
+import { Stats } from "../interface/interface";
+import { Quizinterface } from './../../../quiz-statistics/interface/quiz-interface';
 
 export const Graffiti: React.FC<{
   parallaxData: [];
@@ -17,7 +19,8 @@ export const Graffiti: React.FC<{
   parallaxDataIntroText: [];
   parallaxDataModule: [];
   contentDataIntroText: IntroTextData;
-  contentDataModule: any;
+  contentDataModule: Quizinterface;
+  statsData: Stats;
   sequence: Sequence;
 }> = ({
   parallaxData,
@@ -27,6 +30,7 @@ export const Graffiti: React.FC<{
   parallaxDataModule,
   contentDataIntroText,
   contentDataModule,
+  statsData,
   sequence,
 }) => {
   return (
@@ -45,6 +49,7 @@ export const Graffiti: React.FC<{
         <GraffitiContent
           contentDataIntroText={contentDataIntroText}
           contentDataModule={contentDataModule}
+          statsDataModule = {statsData}
           sequence={sequence}
           parallaxDataIntroText={parallaxDataIntroText}
           parallaxDataModule={parallaxDataModule}

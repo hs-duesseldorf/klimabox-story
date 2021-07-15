@@ -1,4 +1,9 @@
 import { Sequence } from "./interface/Chapter2Enum";
+import { Stats } from "./interface/interface";
+
+import BicycleTexture from "./asset/BicycleTexture.png";
+import CarTexture from "./asset/CarTexture.png";
+import TrainTexture from "./asset/TrainTexture.png";
 
 export const getContentData = (sequence: Sequence) => {
   switch (sequence) {
@@ -55,5 +60,74 @@ export const getContentData = (sequence: Sequence) => {
           },
         },
       };
+    case Sequence.Bicycle:
+      return {
+        introTextData: {
+          title: "Fahr-flixt gute Entscheidung!",
+          text:
+            "Von einem Bild wie in den Niederlanden, wo die Fahrradwege teilweise so breit sind wie die Straßen und wo sich das Fahrrad längst von einem bloßen Fortbewegungsmittel zu einem festen Bestandteil des alltäglichen Lebens entwickelt hat, sind wir in Deutschland noch ein bisschen entfernt. Aber auch hierzulande gewinnt der “Drahtesel” immer weiter an Beliebtheit ... und das aus gutem Grund! \n \n" +
+            "Fahrrad fahren produziert im Gegensatz zum Auto keine klimaschädlichen Gase, ist gesundheitsfördernd, platzsparend, geräuscharm und günstig. Besonders auf kurzen Strecken von weniger als 10 km lohnt es sich weder ökologisch noch ökonomisch, das Auto zu nehmen, statt mit dem Fahrrad zu fahren. Mittelgroße Einkäufe lassen sich ganz einfach mit Fahrradkorb oder Lastenrad transportieren. Staus in Städten zur Rush-Hour könnten verhindert werden, indem innerstädtische Arbeitswege ohne Auto zurückgelegt werden. Außerdem benötigen Fahrradwege und Parkplätze deutlich weniger Platz, was der weiteren Versiegelung von Bodenflächen entgegenwirkt und damit der Natur und dem Klima etwas Gutes tut. \n \n" +
+            "Wenn die Deutschen im Durchschnitt statt rund 300 km so wie die Niederländer rund 1.000 km im Jahr mit dem Fahrrad fahren, könnten wir bis zu 10 Millionen Tonnen CO2 einsparen. Das ist unfassbar viel, wenn man bedenkt, dass wir alle lediglich zwei Kilometer mehr am Tag mit dem Fahrrad statt mit dem Auto zurücklegen müssten, um dieses Ziel zu erreichen!  \n \n" +
+            "Doch um das Fahrradfahren für mehr Menschen attraktiv zu machen, muss noch viel passieren. Nur rund 40% der Deutschen geben an, regelmäßig mit dem Fahrrad zu fahren. Ein möglicher Grund dafür ist vor allem die immer noch zu geringe Zahl an Fahrradwegen und Fahrradstellplätzen. An diesen und weiteren Punkten muss weitergearbeitet werden, um den Radverkehr in Zukunft weiter zu fördern.",
+          titleStyle: {
+            fontSize: "20px",
+            fontWeight: "bold",
+            color: "black",
+          },
+          textStyle: {
+            wordWrap: "break-word",
+            fontSize: "10px",
+            color: "black",
+            whiteSpace: "pre-wrap",
+            height: "18rem",
+            overflowY: "auto",
+          },
+          containerStyle: {
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+          },
+        },
+      };
   }
 };
+
+
+export const getStatsData = (sequence: Sequence) => {
+  const bicycle: Stats = {
+    tabs: [{
+      title: "3KM",
+      unit: "Minuten",
+      data: [
+        {
+          textureURL: TrainTexture,
+          label: "Bus / Bahn",
+          value: 24,
+          bgIsDark: true,
+        },
+        {
+          textureURL: CarTexture,
+          label: "PKW",
+          value: 20,
+          bgIsDark: true,
+        },
+        {
+          textureURL: BicycleTexture,
+          label: "Fahrrad",
+          value: 12,
+          bgIsDark: true,
+        },
+        {
+          textureURL: "meatTexture",
+          label: "3Km zu Fuß",
+          value: 45,
+          bgIsDark: false,
+        },
+      ]
+    }]
+  }
+
+  switch(sequence){
+    case Sequence.Car: return bicycle;
+    case Sequence.Bicycle : return bicycle;
+    default: return bicycle;
+  }
+}

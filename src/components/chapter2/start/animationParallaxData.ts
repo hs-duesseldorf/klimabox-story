@@ -616,7 +616,7 @@ export const getParallaxData = (
           properties: [
             {
               startValue: 0,
-              endValue: clientWidth * 0.1,
+              endValue: clientWidth * 0.35,
               property: "translateX",
             },
           ],
@@ -626,8 +626,8 @@ export const getParallaxData = (
           end: clientHeight * 7,
           properties: [
             {
-              startValue: clientWidth * 0.1,
-              endValue: -clientWidth * 0.7,
+              startValue: clientWidth * 0.35,
+              endValue: -clientWidth * 0.1,
               property: "translateX",
             },
           ],
@@ -640,11 +640,6 @@ export const getParallaxData = (
               startValue: 1,
               endValue: 1.5,
               property: "scale",
-            },
-            {
-              startValue: -clientWidth * 0.7,
-              endValue: -clientWidth * 1,
-              property: "translateX",
             },
           ],
         },
@@ -659,7 +654,7 @@ export const getParallaxData = (
             },
             {
               startValue: -clientWidth * 1,
-              endValue: clientWidth * 0.1,
+              endValue: clientWidth * 0.35,
               property: "translateX",
             },
           ],
@@ -669,8 +664,8 @@ export const getParallaxData = (
           end: clientHeight * 19,
           properties: [
             {
-              startValue: clientWidth * 0.1,
-              endValue: -clientWidth * 0.6,
+              startValue: clientWidth * 0.35,
+              endValue: clientWidth * 0.05,
               property: "translateX",
             },
           ],
@@ -683,7 +678,7 @@ export const getParallaxData = (
           properties: [
             {
               startValue: 0,
-              endValue: clientWidth * 0.35,
+              endValue: clientWidth * 0.1,
               property: "translateX",
             },
           ],
@@ -694,7 +689,7 @@ export const getParallaxData = (
           end: clientHeight * 5,
           properties: [
             {
-              startValue: clientWidth * 0.35,
+              startValue: clientWidth * 0.1,
               endValue: clientWidth * 1,
               property: "translateX",
             },
@@ -719,7 +714,7 @@ export const getParallaxData = (
           properties: [
             {
               startValue: clientWidth,
-              endValue: -clientWidth * 0.2,
+              endValue: -clientWidth,
               property: "translateX",
             },
           ],
@@ -741,8 +736,8 @@ export const getParallaxData = (
           end: clientHeight * 15,
           properties: [
             {
-              startValue: -clientWidth * 0.2,
-              endValue: clientWidth * 0.35,
+              startValue: -clientWidth,
+              endValue: clientWidth * 0.1,
               property: "translateX",
             },
           ],
@@ -753,7 +748,7 @@ export const getParallaxData = (
           end: clientHeight * 19,
           properties: [
             {
-              startValue: clientWidth * 0.35,
+              startValue: clientWidth * 0.1,
               endValue: -clientWidth,
               property: "translateX",
             },

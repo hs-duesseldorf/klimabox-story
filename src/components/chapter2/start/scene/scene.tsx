@@ -16,6 +16,7 @@ import { EndscreenStreet } from "./endScreenStreet";
 import { Human } from "./human";
 import { StreetLamp } from "./streetlamp";
 import { Quizinterface } from './../../../quiz-statistics/interface/quiz-interface';
+import { Stats } from "../interface/interface";
 
 export const Scene: React.FC<{
   sequence: Sequence;
@@ -27,6 +28,8 @@ export const Scene: React.FC<{
   setSequence: React.Dispatch<React.SetStateAction<Sequence>>;
   quizData: Quizinterface,
   setQuizData: React.Dispatch<React.SetStateAction<Quizinterface>>;
+  statsData: Stats,
+  setStatsData: React.Dispatch<React.SetStateAction<Stats>>;
 }> = ({
   sequence,
   setViewHeight,
@@ -36,7 +39,9 @@ export const Scene: React.FC<{
   setContentData,
   setSequence,
   quizData,
-  setQuizData
+  setQuizData,
+  statsData,
+  setStatsData,
 }) => {
   return (
     <div>
@@ -52,6 +57,7 @@ export const Scene: React.FC<{
           parallaxDataModule = {parallaxData.parallaxDataModule}
           contentDataIntroText ={contentData.introTextData}
           contentDataModule = {quizData}
+          statsData = {statsData} 
           sequence = {sequence}
         />
         <BuildingD parallaxData={parallaxData.backgroundData} />
@@ -61,7 +67,13 @@ export const Scene: React.FC<{
         <StreetLamp parallaxData={parallaxData.backgroundData}/>
 
         <Train sequence={sequence} parallaxData={parallaxData.trainData} />
-        <Bicycle sequence={sequence} parallaxData={parallaxData.bicylceData} />
+        <Bicycle sequence={sequence} parallaxData={parallaxData.bicylceData}
+                  setViewHeight={setViewHeight}
+                  setParallaxData={setParallaxData}
+                  setContentData={setContentData}
+                  setSequence = {setSequence}
+                  setQuizData = {setQuizData} 
+                  setStatsData = {setStatsData}/>
         <Car
           sequence={sequence}
           parallaxData={parallaxData.carData}
@@ -70,6 +82,7 @@ export const Scene: React.FC<{
           setContentData={setContentData}
           setSequence = {setSequence}
           setQuizData = {setQuizData}
+          setStatsData = {setStatsData}
         />
 
         <Street parallaxData={parallaxData.street} />

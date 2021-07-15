@@ -7,7 +7,7 @@ import { Scene } from "./scene/scene";
 import { Text } from "./text";
 import { Sequence } from "./interface/Chapter2Enum";
 import { getParallaxData } from "./animationParallaxData";
-import { getContentData } from "./content";
+import { getContentData, getStatsData } from "./content";
 import { getQuiz } from "./quizData";
 
 const useElementOnScreen = (
@@ -80,6 +80,10 @@ export const StartChapter2: React.FC = () => {
     getContentData(Sequence.Intro)
   );
 
+  const [statsData, setStatsData] = React.useState(
+    getStatsData(Sequence.Intro)
+  );
+
   const [quizData, setQuizData] = React.useState(
     getQuiz(Sequence.Car)
     )
@@ -100,6 +104,8 @@ export const StartChapter2: React.FC = () => {
             setSequence = {setSequence}
             quizData = {quizData}
             setQuizData = {setQuizData}
+            statsData = {statsData} 
+            setStatsData = {setStatsData}
           />
         </div>
         <Text />
