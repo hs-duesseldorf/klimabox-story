@@ -2,7 +2,6 @@ import React from "react";
 import Plx from "react-plx";
 
 import wallImg from "../asset/kapitel2_wand.png";
-import streetLampImg from "../asset/kapitel2_strassenlaterne.png";
 import takeItEasyImg from "../asset/kapitel2_takeItEasy.png";
 import telephoneImg from "../asset/kapitel2_telefon.png";
 import doorImg from "../asset/kapitel2_tuer.png";
@@ -16,11 +15,6 @@ export const EndScreen: React.FC<{ parallaxData: any }> = ({
     <div className={`${styles.endScene} absolute w-full`}>
       <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
         <img src={wallImg} alt="wall" className={`${styles.wall} absolute`} />
-        <img
-          src={streetLampImg}
-          alt="streetLamp"
-          className={`${styles.streetlamp} absolute`}
-        />
         <img
           src={takeItEasyImg}
           alt="takeItEasy"
