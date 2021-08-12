@@ -7,7 +7,7 @@ export const BuildingA: React.FC<{ parallaxData: any }> = ({
   parallaxData,
 }) => {
   return (
-    <div className={`${styles.buildingA} absolute -top-96`}>
+    <div className={`${styles.buildingA} absolute`}>
       <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
         <img src={img} alt="buildingA" className={`absolute`} />
       </Plx>
