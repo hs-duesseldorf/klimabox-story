@@ -8,9 +8,9 @@ export const BuildingA: React.FC<{ parallaxData: any }> = ({
 }) => {
   return (
     <div className={`${styles.buildingA} absolute`}>
-      <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
+      {/*<Plx parallaxData={parallaxData} animateWhenNotInViewport={true}> */}
         <img src={img} alt="buildingA" className={`absolute`} />
-      </Plx>
+      {/*</Plx>*/}
     </div>
   );
 };

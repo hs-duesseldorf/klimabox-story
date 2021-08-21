@@ -18,90 +18,16 @@ import { StreetLamp } from "./streetlamp";
 import { Quizinterface } from "./../../../quiz-statistics/interface/quiz-interface";
 import { Stats } from "../interface/interface";
 
-export const Scene: React.FC<{
-  sequence: Sequence;
-  setViewHeight: React.Dispatch<React.SetStateAction<string>>;
-  parallaxData: any;
-  setParallaxData: React.Dispatch<React.SetStateAction<any>>;
-  contentData: any;
-  setContentData: React.Dispatch<React.SetStateAction<any>>;
-  setSequence: React.Dispatch<React.SetStateAction<Sequence>>;
-  quizData: Quizinterface;
-  setQuizData: React.Dispatch<React.SetStateAction<Quizinterface>>;
-  statsData: Stats;
-  setStatsData: React.Dispatch<React.SetStateAction<Stats>>;
-}> = ({
-  sequence,
-  setViewHeight,
-  parallaxData,
-  setParallaxData,
-  contentData,
-  setContentData,
-  setSequence,
-  quizData,
-  setQuizData,
-  statsData,
-  setStatsData,
-}) => {
+export const Scene: React.FC<{}> = () => {
   return (
     <div>
-      <Plx parallaxData={parallaxData.scene} animateWhenNotInViewport={true}>
-        <BuildingC parallaxData={parallaxData.backgroundData} />
-        <BuildingB parallaxData={parallaxData.backgroundData} />
-        <BuildingA parallaxData={parallaxData.backgroundData} />
-        <Graffiti
-          parallaxData={parallaxData.backgroundData}
-          parallaxDataMassenvisualsierung={parallaxData.massenvisualisierung}
-          parallaxDataMassenvisualsierungBackground={
-            parallaxData.massenvisualisierungBackground
-          }
-          parallaxDataIntroText={parallaxData.parallaxDataIntroText}
-          parallaxDataModule={parallaxData.parallaxDataModule}
-          contentDataIntroText={contentData.introTextData}
-          contentDataModule={quizData}
-          statsData={statsData}
-          sequence={sequence}
-        />
-        <BuildingD parallaxData={parallaxData.backgroundData} />
-        <EndScreen parallaxData={parallaxData.backgroundData} />
-        <EndscreenStreet parallaxData={parallaxData.backgroundData} />
-        <Human parallaxData={parallaxData.backgroundData} />
-        <StreetLamp parallaxData={parallaxData.backgroundData} />
-
-        <Train
-          sequence={sequence}
-          parallaxData={parallaxData.trainData}
-          setViewHeight={setViewHeight}
-          setParallaxData={setParallaxData}
-          setContentData={setContentData}
-          setSequence={setSequence}
-          setQuizData={setQuizData}
-          setStatsData={setStatsData}
-        />
-
-        <Bicycle
-          sequence={sequence}
-          parallaxData={parallaxData.bicylceData}
-          setViewHeight={setViewHeight}
-          setParallaxData={setParallaxData}
-          setContentData={setContentData}
-          setSequence={setSequence}
-          setQuizData={setQuizData}
-          setStatsData={setStatsData}
-        />
-        <Car
-          sequence={sequence}
-          parallaxData={parallaxData.carData}
-          setViewHeight={setViewHeight}
-          setParallaxData={setParallaxData}
-          setContentData={setContentData}
-          setSequence={setSequence}
-          setQuizData={setQuizData}
-          setStatsData={setStatsData}
-        />
-
-        <Street parallaxData={parallaxData.street} />
-      </Plx>
+      <BuildingC parallaxData={null}></BuildingC>
+      <BuildingB parallaxData={null}></BuildingB>
+      <BuildingA parallaxData={null}></BuildingA>
+      <Train />
+      <Bicycle />
+      <Car />
+      <Street />
     </div>
   );
 };
