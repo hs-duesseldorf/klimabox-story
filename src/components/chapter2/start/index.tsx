@@ -65,6 +65,13 @@ export const StartChapter2: React.FC = () => {
   const [sequence, setSequence] = React.useState<Sequence>(Sequence.Intro);
   const [viewHeight, setViewHeight] = React.useState("400vh");
   const [offset, setOffset] = React.useState<String>("0px");
+  const [parallaxData, setParallaxData] = React.useState<any>(
+    getParallaxData(
+      Sequence.Intro,
+      document.documentElement.clientHeight,
+      document.documentElement.clientWidth
+    )
+  );
 
   React.useEffect(() => calculateTopOffset(setOffset), [offset]);
 
@@ -77,7 +84,13 @@ export const StartChapter2: React.FC = () => {
     <Background />
     <Sunrise />
     <div className="sticky" style={{ top: `${offset}` }}>
-      <Scene />
+      <Scene
+        sequence={sequence}
+        setSequence={setSequence}
+        setViewHeight={setViewHeight}
+        parallaxData={parallaxData}
+        setParallaxData={setParallaxData}
+      />
     </div>
     <Text />
     <Continue />

@@ -17,16 +17,47 @@ import { Human } from "./human";
 import { StreetLamp } from "./streetlamp";
 import { Quizinterface } from "./../../../quiz-statistics/interface/quiz-interface";
 import { Stats } from "../interface/interface";
+import img from "../asset/kapitel2_graffiti.png";
+import styles from "../start.module.css";
 
-export const Scene: React.FC<{}> = () => {
+import graffitiTextBackgroundImg from "../asset/kapitel2_graffiti_text_background.png";
+
+export const Scene: React.FC<{
+  sequence: Sequence;
+  setSequence: React.Dispatch<React.SetStateAction<Sequence>>;
+  setViewHeight: React.Dispatch<React.SetStateAction<string>>;
+  parallaxData: any;
+  setParallaxData: React.Dispatch<React.SetStateAction<any>>;
+}> = ({
+        sequence,
+        setSequence,
+        setViewHeight,
+        parallaxData,
+        setParallaxData
+      }) => {
   return (
     <div>
       <BuildingC parallaxData={null}></BuildingC>
       <BuildingB parallaxData={null}></BuildingB>
       <BuildingA parallaxData={null}></BuildingA>
-      <Train />
-      <Bicycle />
-      <Car />
+
+      <Train sequence={sequence}
+             parallaxData={parallaxData.trainData}
+             setViewHeight={setViewHeight}
+             setParallaxData={setParallaxData}
+             setSequence={setSequence} />
+      <Bicycle
+        sequence={sequence}
+        parallaxData={parallaxData.bicylceData}
+        setViewHeight={setViewHeight}
+        setParallaxData={setParallaxData}
+        setSequence={setSequence} />
+
+      <Car sequence={sequence}
+           parallaxData={parallaxData.carData}
+           setViewHeight={setViewHeight}
+           setParallaxData={setParallaxData}
+           setSequence={setSequence} />
       <Street />
     </div>
   );

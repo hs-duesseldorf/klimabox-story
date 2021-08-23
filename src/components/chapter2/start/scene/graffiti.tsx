@@ -10,9 +10,9 @@ import { Massenvisualisierung } from "./massenvisualisierung";
 import { GraffitiContent } from "./graffitiContent";
 import { Sequence } from "../interface/Chapter2Enum";
 import { Stats } from "../interface/interface";
-import { Quizinterface } from './../../../quiz-statistics/interface/quiz-interface';
+import { Quizinterface } from "./../../../quiz-statistics/interface/quiz-interface";
 
-export const Graffiti: React.FC<{
+export const Graffiti: React.FC<{/*
   parallaxData: [];
   parallaxDataMassenvisualsierung: [];
   parallaxDataMassenvisualsierungBackground: [];
@@ -21,31 +21,34 @@ export const Graffiti: React.FC<{
   contentDataIntroText: IntroTextData;
   contentDataModule: Quizinterface;
   statsData: Stats;
-  sequence: Sequence;
+  sequence: Sequence; */
 }> = ({
-  parallaxData,
-  parallaxDataMassenvisualsierung,
-  parallaxDataMassenvisualsierungBackground,
-  parallaxDataIntroText,
-  parallaxDataModule,
-  contentDataIntroText,
-  contentDataModule,
-  statsData,
-  sequence,
-}) => {
+        /*
+        parallaxData,
+        parallaxDataMassenvisualsierung,
+        parallaxDataMassenvisualsierungBackground,
+        parallaxDataIntroText,
+        parallaxDataModule,
+        contentDataIntroText,
+        contentDataModule,
+        statsData,
+        sequence,
+        */
+      }) => {
   return (
     <div className="absolute left-full w-full">
-      <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
-        <img
-          src={img}
-          alt="graffiti"
-          className={`${styles.graffiti} absolute`}
-        ></img>
-        <img
-          src={graffitiTextBackgroundImg}
-          alt="graffitiBackground"
-          className={`${styles.graffitiBackground} absolute`}
-        />
+      {/*<Plx parallaxData={parallaxData} animateWhenNotInViewport={true}> */}
+      <img
+        src={img}
+        alt="graffiti"
+        className={`${styles.graffiti} absolute`}
+      ></img>
+      <img
+        src={graffitiTextBackgroundImg}
+        alt="graffitiBackground"
+        className={`${styles.graffitiBackground} absolute`}
+      />
+      {/*
         <GraffitiContent
           contentDataIntroText={contentDataIntroText}
           contentDataModule={contentDataModule}
@@ -59,8 +62,8 @@ export const Graffiti: React.FC<{
           massenvisualisierungBackground={
             parallaxDataMassenvisualsierungBackground
           }
-        />
-      </Plx>
+        /> */}
+      {/* </Plx>*/}
     </div>
   );
 };

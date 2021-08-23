@@ -3,10 +3,10 @@ import React from "react";
 import { TopicSelection } from "./interfaces/selection";
 
 export const Selection: React.FC<{ topicSelection: TopicSelection }> = ({
-  topicSelection,
-}) => {
+                                                                          topicSelection
+                                                                        }) => {
   return (
-    <div style={topicSelection.containerStyle}>
+    <div style={topicSelection.containerStyle} className={`${topicSelection.containerClassName}`}>
       {topicSelection.selection.map((selection) => {
         return (
           <div
@@ -15,11 +15,11 @@ export const Selection: React.FC<{ topicSelection: TopicSelection }> = ({
             onMouseEnter={selection.mouseEnterEventHandler}
             onClick={selection.mouseClickEventHandler}
           >
-            {selection.link !== undefined? 
-              <img src={selection.imagePath} alt="" style={selection.style}/>:            
-             <a href={selection.link}>
-              <img src={selection.imagePath} alt="" style={selection.style} />
-            </a>}
+            {selection.link !== undefined ?
+              <img src={selection.imagePath} alt="" style={selection.style} /> :
+              <a href={selection.link}>
+                <img src={selection.imagePath} alt="" style={selection.style} />
+              </a>}
           </div>
         );
       })}

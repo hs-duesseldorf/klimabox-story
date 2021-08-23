@@ -77,6 +77,22 @@
         left: 31%;
     }
 
+    .carChoice {
+        padding-top: 0%;
+        top: 1rem;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .bicycleChoice {
+        position: absolute;
+        left: -14%;
+        top: -0.5rem;
+        width: 128%;
+        zIndex: 2;
+    }
+
     .graffiti {
         top: 0rem;
     }
