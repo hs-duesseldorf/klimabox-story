@@ -1,7 +1,7 @@
 import React from "react";
 import Plx from "react-plx";
-import styles from "../start.module.css";
-import img from "../asset/kapitel2_intro_building-2.png";
+import styles from "../../start.module.css";
+import img from "../../asset/kapitel2_intro_building-2.png";
 
 export const BuildingB: React.FC<{ parallaxData: any }> = ({
                                                              parallaxData

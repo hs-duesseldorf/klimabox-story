@@ -1,14 +1,21 @@
 import React from "react";
 
-import styles from "../start.module.css";
-import img from "../asset/kapitel2_auto_auswahl.png";
-import carImg from "../asset/kapitel2_auto_auswahl_effekt.png";
+import styles from "../../start.module.css";
+import img from "../../asset/kapitel2_fahrrad_auswahl.png";
+import bycicleImg from "../../asset/kapitel2_fahrrad_auswahl_effekt.png";
 import Plx from "react-plx";
-import { Sequence } from "../interface/Chapter2Enum";
-import { Selection } from "../../../topic-selection";
-import { getParallaxData } from "../animationParallaxData";
+import { Sequence } from "../../interface/Chapter2Enum";
+import { Selection } from "../../../../topic-selection";
+import { TopicSelection } from "../../../../topic-selection/interfaces/selection";
+import { Quizinterface } from "../../../../quiz-statistics/interface/quiz-interface";
+import { getParallaxData } from "../../animationParallaxData";
+import { getContentData, getStatsData } from "../../content";
+import { getQuiz } from "../../quizData";
 
-export const Car: React.FC<{
+import { Stats } from "../../interface/interface";
+import carImg from "../../asset/kapitel2_auto_auswahl_effekt.png";
+
+export const Bicycle: React.FC<{
   parallaxData: [];
   sequence: Sequence;
   setSequence: React.Dispatch<React.SetStateAction<Sequence>>;
@@ -23,22 +30,22 @@ export const Car: React.FC<{
     setViewHeight("2000vh");
     setParallaxData(
       getParallaxData(
-        Sequence.Car,
+        Sequence.Bicycle,
         document.documentElement.clientHeight,
         document.documentElement.clientWidth
       )
     );
-    setSequence(Sequence.Car);
+    setSequence(Sequence.Bicycle);
   };
 
   const topicSelection = sequence === Sequence.Question ?
     {
       containerStyle: { opacity: silloutteOpacity },
-      containerClassName: styles.carChoice,
+      containerClassName: styles.bicycleChoice,
       selection: [
         {
           style: { width: "100%" },
-          imagePath: carImg,
+          imagePath: bycicleImg,
           mouseEnterEventHandler: mouseEnterHandlerFunction,
           mouseLeaveEventHandler: mouseLeaveHandlerFunction,
           mouseClickEventHandler: mouseClickEventHandlerFunction
@@ -47,9 +54,9 @@ export const Car: React.FC<{
     } : undefined;
 
   return (
-    <div className={`${styles.car} absolute -top-96 `}>
+    <div id="bicycle" className={`${styles.bicycle} absolute -top-96`}>
       <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
-        <img id="car" src={img} alt="car" className="absolute" />
+        <img src={img} alt="Bicycle" className="absolute" />
         {topicSelection !== undefined ? (
           <Selection topicSelection={topicSelection} />
         ) : null}

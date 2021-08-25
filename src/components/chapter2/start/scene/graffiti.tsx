@@ -36,19 +36,19 @@ export const Graffiti: React.FC<{/*
         */
       }) => {
   return (
-    <div className="absolute left-full w-full">
+    <div className="absolute w-full">
       {/*<Plx parallaxData={parallaxData} animateWhenNotInViewport={true}> */}
       <img
         src={img}
         alt="graffiti"
         className={`${styles.graffiti} absolute`}
       ></img>
-      <img
+
+      {/*<img
         src={graffitiTextBackgroundImg}
         alt="graffitiBackground"
         className={`${styles.graffitiBackground} absolute`}
       />
-      {/*
         <GraffitiContent
           contentDataIntroText={contentDataIntroText}
           contentDataModule={contentDataModule}

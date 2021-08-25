@@ -1,16 +1,12 @@
 import React from "react";
 import Plx from "react-plx";
 
-import { Street } from "./street";
-import { BuildingC } from "./buildingC";
-import { BuildingB } from "./buildingB";
-import { BuildingA } from "./buildingA";
 import { Graffiti } from "./graffiti";
 import { BuildingD } from "./buildingD";
 import { EndScreen } from "./endScreen";
-import { Train } from "./train";
-import { Bicycle } from "./bicycle";
-import { Car } from "./car";
+import { Train } from "./sceneComponents/train";
+import { Bicycle } from "./sceneComponents/bicycle";
+import { Car } from "./sceneComponents/car";
 import { Sequence } from "../interface/Chapter2Enum";
 import { EndscreenStreet } from "./endScreenStreet";
 import { Human } from "./human";
@@ -21,6 +17,8 @@ import img from "../asset/kapitel2_graffiti.png";
 import styles from "../start.module.css";
 
 import graffitiTextBackgroundImg from "../asset/kapitel2_graffiti_text_background.png";
+import { IntroScene } from "./introScene";
+import { BlackCut } from "./sceneComponents/blackCut";
 
 export const Scene: React.FC<{
   sequence: Sequence;
@@ -35,12 +33,10 @@ export const Scene: React.FC<{
         parallaxData,
         setParallaxData
       }) => {
+
   return (
     <div>
-      <BuildingC parallaxData={null}></BuildingC>
-      <BuildingB parallaxData={null}></BuildingB>
-      <BuildingA parallaxData={null}></BuildingA>
-
+      <IntroScene parallaxData={null}></IntroScene>
       <Train sequence={sequence}
              parallaxData={parallaxData.trainData}
              setViewHeight={setViewHeight}
@@ -58,7 +54,8 @@ export const Scene: React.FC<{
            setViewHeight={setViewHeight}
            setParallaxData={setParallaxData}
            setSequence={setSequence} />
-      <Street />
+
+      <BlackCut></BlackCut>
     </div>
   );
 };

@@ -10,7 +10,7 @@ import { getParallaxData } from "./animationParallaxData";
 import { getContentData, getStatsData } from "./content";
 import { getQuiz } from "./quizData";
 import styles from "./start.module.css";
-import { Bicycle } from "./scene/bicycle";
+import { Bicycle } from "./scene/sceneComponents/bicycle";
 import { VehicleChoice } from "./vehicleChoice";
 
 
