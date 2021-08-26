@@ -7,10 +7,7 @@ import { Scene } from "./scene/scene";
 import { Text } from "./text";
 import { Sequence } from "./interface/Chapter2Enum";
 import { getParallaxData } from "./animationParallaxData";
-import { getContentData, getStatsData } from "./content";
-import { getQuiz } from "./quizData";
-import styles from "./start.module.css";
-import { Bicycle } from "./scene/sceneComponents/bicycle";
+import { getContentData } from "./content";
 import { VehicleChoice } from "./vehicleChoice";
 
 
@@ -65,6 +62,7 @@ export const StartChapter2: React.FC = () => {
   const [sequence, setSequence] = React.useState<Sequence>(Sequence.Intro);
   const [viewHeight, setViewHeight] = React.useState("400vh");
   const [offset, setOffset] = React.useState<String>("0px");
+  const [chapter2Content, setChapter2Content] = React.useState(getContentData(Sequence.Intro));
   const [parallaxData, setParallaxData] = React.useState<any>(
     getParallaxData(
       Sequence.Intro,
@@ -83,13 +81,15 @@ export const StartChapter2: React.FC = () => {
   return (<div style={{ height: `${viewHeight}` }}>
     <Background />
     <Sunrise />
-    <div className="sticky" style={{ top: `${offset}` }}>
+    <div className="fixed w-full" style={{ top: `${offset}` }}>
       <Scene
         sequence={sequence}
         setSequence={setSequence}
         setViewHeight={setViewHeight}
         parallaxData={parallaxData}
         setParallaxData={setParallaxData}
+        chapter2Content={chapter2Content}
+        setChapter2Content={setChapter2Content}
       />
     </div>
     <Text />

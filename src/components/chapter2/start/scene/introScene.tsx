@@ -1,19 +1,34 @@
 import React from "react";
 import Plx from "react-plx";
 import styles from "../start.module.css";
-import img from "../asset/kapitel1_intro_building-3.png";
 import { BuildingC } from "./sceneComponents/buildingC";
 import { BuildingB } from "./sceneComponents/buildingB";
 import { BuildingA } from "./sceneComponents/buildingA";
-import { Street } from "./street";
+import { Graffiti } from "./sceneComponents/graffiti";
+import { BuildingD } from "./sceneComponents/buildingD";
+import { Chapter2Content } from "../interface/interface";
 
-export const IntroScene: React.FC<{ parallaxData: any }> = ({ parallaxData }) => {
+export const IntroScene: React.FC<{
+  parallaxData: any; chapter2Content: Chapter2Content;
+  parallaxDataMassenvisualsierung: [];
+  parallaxDataMassenvisualsierungBackground: [];
+}> = ({
+        parallaxData,
+        chapter2Content,
+        parallaxDataMassenvisualsierung,
+        parallaxDataMassenvisualsierungBackground
+      }) => {
   return (
     <div>
-      <BuildingC parallaxData={null}></BuildingC>
-      <BuildingB parallaxData={null}></BuildingB>
-      <BuildingA parallaxData={null}></BuildingA>
-      <Street />
+      <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
+        <BuildingC></BuildingC>
+        <BuildingB></BuildingB>
+        <BuildingA buildingStyle={styles.buildingAIntroScene}></BuildingA>
+        <Graffiti chapter2Content={chapter2Content}
+                  parallaxDataMassenvisualsierung={parallaxDataMassenvisualsierung}
+                  parallaxDataMassenvisualsierungBackground={parallaxDataMassenvisualsierungBackground}></Graffiti>
+        <BuildingD></BuildingD>
+      </Plx>
     </div>
   );
 };

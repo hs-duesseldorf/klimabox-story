@@ -1,7 +1,8 @@
-export interface IntroTextData{
-    title: string,
-    text: string,
-    titleStyle: {},
-    textStyle: {},
-    containerStyle: {},
+export interface IntroTextData {
+  title: string,
+  text: string,
+  titleStyle: string,
+  textStyle: string,
+  containerStyle: string,
+  
 }

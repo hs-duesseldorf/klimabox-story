@@ -7,6 +7,8 @@ import Plx from "react-plx";
 import { Sequence } from "../../interface/Chapter2Enum";
 import { Selection } from "../../../../topic-selection";
 import { getParallaxData } from "../../animationParallaxData";
+import { Chapter2Content } from "../../interface/interface";
+import { getContentData } from "../../content";
 
 export const Car: React.FC<{
   parallaxData: [];
@@ -14,13 +16,14 @@ export const Car: React.FC<{
   setSequence: React.Dispatch<React.SetStateAction<Sequence>>;
   setViewHeight: React.Dispatch<React.SetStateAction<string>>;
   setParallaxData: React.Dispatch<React.SetStateAction<any>>;
-}> = ({ parallaxData, sequence, setSequence, setViewHeight, setParallaxData }) => {
+  setChapter2Content: React.Dispatch<React.SetStateAction<Chapter2Content>>;
+}> = ({ parallaxData, sequence, setSequence, setViewHeight, setParallaxData, setChapter2Content }) => {
 
   const [silloutteOpacity, setSilloutteOpacity] = React.useState(0.1);
   const mouseEnterHandlerFunction = () => setSilloutteOpacity(1);
   const mouseLeaveHandlerFunction = () => setSilloutteOpacity(0.1);
   const mouseClickEventHandlerFunction = () => {
-    setViewHeight("2000vh");
+    setViewHeight("4000vh");
     setParallaxData(
       getParallaxData(
         Sequence.Car,
@@ -29,6 +32,7 @@ export const Car: React.FC<{
       )
     );
     setSequence(Sequence.Car);
+    setChapter2Content(getContentData(Sequence.Car));
   };
 
   const topicSelection = sequence === Sequence.Question ?

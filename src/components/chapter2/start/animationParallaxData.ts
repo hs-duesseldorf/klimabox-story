@@ -48,343 +48,15 @@ export const getParallaxData = (
             ]
           }
         ],
-        backgroundData: [
+        blackCutData: [
           {
-            start: clientHeight * 4,
-            end: clientHeight * 5,
-            properties: [
-              {
-                startValue: 0,
-                endValue: -clientWidth * 1,
-                property: "translateX"
-              }
-            ]
-          }
-        ],
-        scene: [
-          {
-            start: clientHeight * 5,
-            end: clientHeight * 6,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 1.7,
-                property: "scale"
-              }
-            ]
-          }
-        ],
-        street: [
-          {
-            start: clientHeight * 11,
-            end: clientHeight * 13,
-            properties: [
-              {
-                startValue: 0,
-                endValue: -clientWidth,
-                property: "translateX"
-              }
-            ]
-          }
-        ],
-        massenvisualisierung: [
-          {
-            start: clientHeight * 7,
-            end: clientHeight * 8,
-            properties: [
-              {
-                startValue: 0,
-                endValue: -clientHeight * 2,
-                property: "translateY"
-              }
-            ]
-          }
-        ],
-        massenvisualisierungBackground: [
-          {
-            start: clientHeight * 7,
+            start: clientHeight * 8,
             end: clientHeight * 9,
             properties: [
               {
                 startValue: 0,
-                endValue: -clientHeight * 3,
+                endValue: -clientWidth * 2,
                 property: "translateY"
-              }
-            ]
-          }
-        ],
-        parallaxDataIntroText: [
-          {
-            start: clientHeight * 9,
-            end: clientHeight * 9.5,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
-              }
-            ]
-          }
-        ],
-        parallaxDataModule: [
-          {
-            start: clientHeight * 0,
-            end: clientHeight * 1,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 9,
-            end: clientHeight * 9.5,
-            properties: [
-              {
-                startValue: 0,
-                endValue: 1,
-                property: "opacity"
-              }
-            ]
-          }
-        ]
-      };
-
-    case Sequence.Car:
-      return {
-        carData: [
-          {
-            start: clientHeight,
-            end: clientHeight * 3,
-            properties: [
-              {
-                startValue: 0,
-                endValue: clientWidth * 0.1,
-                property: "translateX"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 6,
-            end: clientHeight * 7,
-            properties: [
-              {
-                startValue: clientWidth * 0.1,
-                endValue: -clientWidth * 0.7,
-                property: "translateX"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 7,
-            end: clientHeight * 8,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 1.5,
-                property: "scale"
-              },
-              {
-                startValue: -clientWidth * 0.7,
-                endValue: -clientWidth * 1,
-                property: "translateX"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 13,
-            end: clientHeight * 15,
-            properties: [
-              {
-                startValue: 1.5,
-                endValue: 1,
-                property: "scale"
-              },
-              {
-                startValue: -clientWidth * 1,
-                endValue: clientWidth * 0.1,
-                property: "translateX"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
-            properties: [
-              {
-                startValue: clientWidth * 0.1,
-                endValue: -clientWidth * 0.6,
-                property: "translateX"
-              }
-            ]
-          }
-        ],
-        bicylceData: [
-          {
-            start: clientHeight,
-            end: clientHeight * 3,
-            properties: [
-              {
-                startValue: 0,
-                endValue: clientWidth * 0.35,
-                property: "translateX"
-              }
-            ]
-          },
-          // Herausfahren nach der Frage "Wähle das Verkehrsmittel mit dem du am meisten untwegs bist"
-          {
-            start: clientHeight * 4,
-            end: clientHeight * 5,
-            properties: [
-              {
-                startValue: clientWidth * 0.35,
-                endValue: clientWidth * 1,
-                property: "translateX"
-              }
-            ]
-          },
-          // unsichtbar in Position bringen zum einfahren
-          {
-            start: clientHeight * 5,
-            end: clientHeight * 6,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
-              }
-            ]
-          },
-
-          {
-            start: clientHeight * 6,
-            end: clientHeight * 7,
-            properties: [
-              {
-                startValue: clientWidth,
-                endValue: -clientWidth * 0.2,
-                property: "translateX"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 9,
-            end: clientHeight * 10,
-            properties: [
-              {
-                startValue: 0,
-                endValue: 1,
-                property: "opacity"
-              }
-            ]
-          },
-          // Nach dem normalzoomen der Scene
-          {
-            start: clientHeight * 13,
-            end: clientHeight * 15,
-            properties: [
-              {
-                startValue: -clientWidth * 0.2,
-                endValue: clientWidth * 0.35,
-                property: "translateX"
-              }
-            ]
-          },
-          // Ende der Animation
-          {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
-            properties: [
-              {
-                startValue: clientWidth * 0.35,
-                endValue: -clientWidth,
-                property: "translateX"
-              }
-            ]
-          }
-        ],
-        trainData: [
-          {
-            start: clientHeight,
-            end: clientHeight * 3,
-            properties: [
-              {
-                startValue: 0,
-                endValue: clientWidth * 0.25,
-                property: "translateX"
-              }
-            ]
-          },
-          // Herausfahren nach der Frage "Wähle das Verkehrsmittel mit dem du am meisten untwegs bist"
-          {
-            start: clientHeight * 4,
-            end: clientHeight * 5,
-            properties: [
-              {
-                startValue: clientWidth * 0.25,
-                endValue: clientWidth * 2,
-                property: "translateX"
-              }
-            ]
-          },
-          // unsichtbar in Position bringen zum einfahren
-          {
-            start: clientHeight * 5,
-            end: clientHeight * 6,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
-              }
-            ]
-          },
-
-          {
-            start: clientHeight * 6,
-            end: clientHeight * 7,
-            properties: [
-              {
-                startValue: clientWidth * 2,
-                endValue: -clientWidth,
-                property: "translateX"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 9,
-            end: clientHeight * 10,
-            properties: [
-              {
-                startValue: 0,
-                endValue: 1,
-                property: "opacity"
-              }
-            ]
-          },
-          // Nach dem normalzoomen der Scene
-          {
-            start: clientHeight * 13,
-            end: clientHeight * 15,
-            properties: [
-              {
-                startValue: -clientWidth,
-                endValue: clientWidth * 0.2,
-                property: "translateX"
-              }
-            ]
-          },
-          // Ende der Animation
-          {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
-            properties: [
-              {
-                startValue: clientWidth * 0.2,
-                endValue: -clientWidth,
-                property: "translateX"
               }
             ]
           }
@@ -430,8 +102,8 @@ export const getParallaxData = (
         scene: [
           // Graffity Zoom in
           {
-            start: clientHeight * 7,
-            end: clientHeight * 8,
+            start: clientHeight * 12,
+            end: clientHeight * 13,
             properties: [
               {
                 startValue: 1,
@@ -445,6 +117,7 @@ export const getParallaxData = (
               }
             ]
           },
+
           // Graffity Zoom out
           {
             start: clientHeight * 13,
@@ -462,7 +135,178 @@ export const getParallaxData = (
               }
             ]
           }
+        ]
+      };
+
+    case Sequence.Car:
+      return {
+        carData: [
+          {
+            start: clientHeight,
+            end: clientHeight * 3,
+            properties: [
+              {
+                startValue: 0,
+                endValue: clientWidth * 0.1,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 6,
+            end: clientHeight * 7,
+            properties: [
+              {
+                startValue: clientWidth * 0.1,
+                endValue: clientWidth * 2,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
+            properties: [
+              {
+                startValue: clientWidth * 2,
+                endValue: -clientWidth * 1,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 11,
+            end: clientHeight * 12,
+            properties: [
+              {
+                startValue: -clientWidth * 1,
+                endValue: -clientWidth * 0.5,
+                property: "translateX"
+              }
+            ]
+          }
+
         ],
+        bicylceData: [
+          {
+            start: clientHeight,
+            end: clientHeight * 3,
+            properties: [
+              {
+                startValue: 0,
+                endValue: clientWidth * 0.35,
+                property: "translateX"
+              }
+            ]
+          },
+          // Herausfahren nach der Frage "Wähle das Verkehrsmittel mit dem du am meisten untwegs bist"
+          {
+            start: clientHeight * 4,
+            end: clientHeight * 5,
+            properties: [
+              {
+                startValue: clientWidth * 0.35,
+                endValue: clientWidth * 1,
+                property: "translateX"
+              }
+            ]
+          }
+        ],
+        trainData: [
+          {
+            start: clientHeight,
+            end: clientHeight * 3,
+            properties: [
+              {
+                startValue: 0,
+                endValue: clientWidth * 0.25,
+                property: "translateX"
+              }
+            ]
+          },
+          // Herausfahren nach der Frage "Wähle das Verkehrsmittel mit dem du am meisten untwegs bist"
+          {
+            start: clientHeight * 4,
+            end: clientHeight * 5,
+            properties: [
+              {
+                startValue: clientWidth * 0.25,
+                endValue: clientWidth * 2,
+                property: "translateX"
+              }
+            ]
+          }
+        ],
+        blackCutData: [
+          {
+            start: clientHeight * 8,
+            end: clientHeight * 11,
+            properties: [
+              {
+                startValue: 0,
+                endValue: -clientWidth * 4,
+                property: "translateY"
+              }
+            ]
+          }
+        ],
+        backgroundData: [
+          {
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
+            properties: [
+              {
+                startValue: 0,
+                endValue: -clientWidth * 0.8,
+                property: "translateX"
+              }
+            ]
+          }
+        ],
+        scene: [
+          // Graffity Zoom in
+          {
+            start: clientHeight * 13,
+            end: clientHeight * 14,
+            properties: [
+              {
+                startValue: 1,
+                endValue: 3,
+                property: "scale"
+              },
+              {
+                startValue: 0,
+                endValue: -clientWidth * 0.08,
+                property: "translateX"
+              },
+              {
+                startValue: 0,
+                endValue: -clientHeight * 2,
+                property: "translateY"
+              }
+            ]
+          },
+
+          // Graffity Zoom out
+          {
+            start: clientHeight * 20,
+            end: clientHeight * 21,
+            properties: [
+              {
+                startValue: 2.2,
+                endValue: 1,
+                property: "scale"
+              },
+              {
+                startValue: -clientWidth * 0.1,
+                endValue: 0,
+                property: "translateX"
+              }
+            ]
+          }
+        ],
+
+
         street: [
           // alte Straße verschieben
           {
@@ -479,8 +323,8 @@ export const getParallaxData = (
         ],
         massenvisualisierung: [
           {
-            start: clientHeight * 9,
-            end: clientHeight * 13,
+            start: clientHeight * 15,
+            end: clientHeight * 19,
             properties: [
               {
                 startValue: 0,
@@ -492,8 +336,8 @@ export const getParallaxData = (
         ],
         massenvisualisierungBackground: [
           {
-            start: clientHeight * 9,
-            end: clientHeight * 13,
+            start: clientHeight * 15,
+            end: clientHeight * 19,
             properties: [
               {
                 startValue: 0,
@@ -503,8 +347,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 9,
-            end: clientHeight * 9.5,
+            start: clientHeight * 15,
+            end: clientHeight * 15.5,
             properties: [
               {
                 startValue: 0,
@@ -514,8 +358,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 9.5,
-            end: clientHeight * 10,
+            start: clientHeight * 15.5,
+            end: clientHeight * 16,
             properties: [
               {
                 startValue: 100,
@@ -525,8 +369,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 10,
-            end: clientHeight * 10.5,
+            start: clientHeight * 16,
+            end: clientHeight * 16.5,
             properties: [
               {
                 startValue: -100,
@@ -536,8 +380,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 11,
-            end: clientHeight * 11.5,
+            start: clientHeight * 17,
+            end: clientHeight * 17.5,
             properties: [
               {
                 startValue: 100,
@@ -547,8 +391,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 11.5,
-            end: clientHeight * 12,
+            start: clientHeight * 17.5,
+            end: clientHeight * 18,
             properties: [
               {
                 startValue: -100,
@@ -558,8 +402,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 12,
-            end: clientHeight * 12.5,
+            start: clientHeight * 18,
+            end: clientHeight * 18.5,
             properties: [
               {
                 startValue: 100,

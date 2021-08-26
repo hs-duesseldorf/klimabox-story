@@ -6,14 +6,10 @@ import bycicleImg from "../../asset/kapitel2_fahrrad_auswahl_effekt.png";
 import Plx from "react-plx";
 import { Sequence } from "../../interface/Chapter2Enum";
 import { Selection } from "../../../../topic-selection";
-import { TopicSelection } from "../../../../topic-selection/interfaces/selection";
-import { Quizinterface } from "../../../../quiz-statistics/interface/quiz-interface";
 import { getParallaxData } from "../../animationParallaxData";
-import { getContentData, getStatsData } from "../../content";
-import { getQuiz } from "../../quizData";
+import { getContentData } from "../../content";
 
-import { Stats } from "../../interface/interface";
-import carImg from "../../asset/kapitel2_auto_auswahl_effekt.png";
+import { Chapter2Content } from "../../interface/interface";
 
 export const Bicycle: React.FC<{
   parallaxData: [];
@@ -21,7 +17,8 @@ export const Bicycle: React.FC<{
   setSequence: React.Dispatch<React.SetStateAction<Sequence>>;
   setViewHeight: React.Dispatch<React.SetStateAction<string>>;
   setParallaxData: React.Dispatch<React.SetStateAction<any>>;
-}> = ({ parallaxData, sequence, setSequence, setViewHeight, setParallaxData }) => {
+  setChapter2Content: React.Dispatch<React.SetStateAction<Chapter2Content>>;
+}> = ({ parallaxData, sequence, setSequence, setViewHeight, setParallaxData, setChapter2Content }) => {
 
   const [silloutteOpacity, setSilloutteOpacity] = React.useState(0.1);
   const mouseEnterHandlerFunction = () => setSilloutteOpacity(1);
@@ -36,6 +33,7 @@ export const Bicycle: React.FC<{
       )
     );
     setSequence(Sequence.Bicycle);
+    setChapter2Content(getContentData(Sequence.Bicycle));
   };
 
   const topicSelection = sequence === Sequence.Question ?
