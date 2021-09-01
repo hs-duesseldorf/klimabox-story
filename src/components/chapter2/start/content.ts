@@ -9,7 +9,7 @@ import { Quizinterface } from "../../quiz-statistics/interface/quiz-interface";
 import styles from "./start.module.css";
 
 export const getContentData = (sequence: Sequence): Chapter2Content => {
-  const chapter2Content = <Chapter2Content>{};
+  const chapter2Content = {} as Chapter2Content;
   const carQuiz: Quizinterface[] = [
     {
       title:
@@ -35,7 +35,12 @@ export const getContentData = (sequence: Sequence): Chapter2Content => {
           answere: false,
           revealed: false
         }
-      ]
+      ],
+      quizContainerStyle: styles.quizStatisticsContainer,
+      quizTitleStyle: styles.quizStatisticsTitle,
+      quizQuestionmarkStyle: styles.quizStatisticsQuestionmark,
+      quizStyle: styles.quizStatistics,
+      quizQuestionStyle: styles.quizQuestion
     },
 
     {
@@ -62,7 +67,12 @@ export const getContentData = (sequence: Sequence): Chapter2Content => {
           answere: false,
           revealed: false
         }
-      ]
+      ],
+      quizContainerStyle: styles.quizStatisticsContainer,
+      quizTitleStyle: styles.quizStatisticsTitle,
+      quizQuestionmarkStyle: styles.quizStatisticsQuestionmark,
+      quizStyle: styles.quizStatistics,
+      quizQuestionStyle: styles.quizQuestion
     }
   ];
   const bicycleQuiz: Quizinterface[] = [
@@ -90,7 +100,12 @@ export const getContentData = (sequence: Sequence): Chapter2Content => {
           answere: false,
           revealed: false
         }
-      ]
+      ],
+      quizContainerStyle: styles.quizStatisticsContainer,
+      quizTitleStyle: styles.quizStatisticsTitle,
+      quizQuestionmarkStyle: styles.quizStatisticsQuestionmark,
+      quizStyle: styles.quizStatistics,
+      quizQuestionStyle: styles.quizQuestion
     },
 
     {
@@ -117,7 +132,12 @@ export const getContentData = (sequence: Sequence): Chapter2Content => {
           answere: false,
           revealed: false
         }
-      ]
+      ],
+      quizContainerStyle: styles.quizStatisticsContainer,
+      quizTitleStyle: styles.quizStatisticsTitle,
+      quizQuestionmarkStyle: styles.quizStatisticsQuestionmark,
+      quizStyle: styles.quizStatistics,
+      quizQuestionStyle: styles.quizQuestion
     }
   ];
   const trainQuiz: Quizinterface[] = [
@@ -145,7 +165,12 @@ export const getContentData = (sequence: Sequence): Chapter2Content => {
           answere: true,
           revealed: false
         }
-      ]
+      ],
+      quizContainerStyle: styles.quizStatisticsContainer,
+      quizTitleStyle: styles.quizStatisticsTitle,
+      quizQuestionmarkStyle: styles.quizStatisticsQuestionmark,
+      quizStyle: styles.quizStatistics,
+      quizQuestionStyle: styles.quizQuestion
     },
 
     {
@@ -172,7 +197,12 @@ export const getContentData = (sequence: Sequence): Chapter2Content => {
           answere: false,
           revealed: false
         }
-      ]
+      ],
+      quizContainerStyle: styles.quizStatisticsContainer,
+      quizTitleStyle: styles.quizStatisticsTitle,
+      quizQuestionmarkStyle: styles.quizStatisticsQuestionmark,
+      quizStyle: styles.quizStatistics,
+      quizQuestionStyle: styles.quizQuestion
     },
 
     {
@@ -199,9 +229,114 @@ export const getContentData = (sequence: Sequence): Chapter2Content => {
           answere: false,
           revealed: false
         }
-      ]
+      ],
+      quizContainerStyle: styles.quizStatisticsContainer,
+      quizTitleStyle: styles.quizStatisticsTitle,
+      quizQuestionmarkStyle: styles.quizStatisticsQuestionmark,
+      quizStyle: styles.quizStatistics,
+      quizQuestionStyle: styles.quizQuestion
     }
   ];
+
+  const carStats: Stats = {
+    tabs: [
+      {
+        title: "Kohlendioxidemissionen im Straßenverkehr",
+        unit: "%",
+        data: [
+          {
+            textureURL: "meatTexture",
+            label: "Personen kraftwagen und Motorräder",
+            value: 62,
+            bgIsDark: true
+          },
+          {
+            textureURL: "meatTexture",
+            label: "Schwerlastwagen und Busse",
+            value: 26,
+            bgIsDark: true
+          },
+          {
+            textureURL: "meatTexture",
+            label: "Leichte Nutzfahrzeuge",
+            value: 13,
+            bgIsDark: true
+          }
+        ]
+      }
+    ]
+
+  };
+
+  const bicycleStats: Stats = {
+    tabs: [
+      {
+        title: "Strecke 3KM",
+        unit: "Minuten",
+        data: [
+          {
+            textureURL: TrainTexture,
+            label: "Bus / Bahn",
+            value: 24,
+            bgIsDark: true
+          },
+          {
+            textureURL: CarTexture,
+            label: "PKW",
+            value: 20,
+            bgIsDark: true
+          },
+          {
+            textureURL: BicycleTexture,
+            label: "Fahrrad",
+            value: 12,
+            bgIsDark: true
+          },
+          {
+            textureURL: "meatTexture",
+            label: "3KM zu Fuß",
+            value: 45,
+            bgIsDark: false
+          }
+        ]
+      }
+    ]
+  };
+
+  const trainStats: Stats = {
+    tabs: [
+      {
+        title: "Treibhausgasemissionen",
+        unit: "g CO2-Äquivalente",
+        data: [
+          {
+            textureURL: FernVerkehrTexture,
+            label: "Fernverkehr",
+            value: 29,
+            bgIsDark: true
+          },
+          {
+            textureURL: TrainTexture,
+            label: "Straßenbahn",
+            value: 55,
+            bgIsDark: true
+          },
+          {
+            textureURL: BicycleTexture,
+            label: "PKW",
+            value: 143,
+            bgIsDark: true
+          },
+          {
+            textureURL: "meatTexture",
+            label: "1KM Inland-Flug",
+            value: 214,
+            bgIsDark: false
+          }
+        ]
+      }
+    ]
+  };
 
   switch (sequence) {
     default:
@@ -217,6 +352,7 @@ export const getContentData = (sequence: Sequence): Chapter2Content => {
         containerStyle: styles.adContainer
       };
       chapter2Content.quizData = carQuiz[Math.floor(Math.random() * carQuiz.length)];
+      chapter2Content.stats = carStats;
       break;
     case Sequence.Car:
       chapter2Content.introTextData = {
@@ -234,6 +370,7 @@ export const getContentData = (sequence: Sequence): Chapter2Content => {
         containerStyle: styles.adContainer
       };
       chapter2Content.quizData = carQuiz[Math.floor(Math.random() * carQuiz.length)];
+      chapter2Content.stats = carStats;
       break;
     case Sequence.Bicycle:
       chapter2Content.introTextData = {
@@ -248,6 +385,7 @@ export const getContentData = (sequence: Sequence): Chapter2Content => {
         containerStyle: styles.adContainer
       };
       chapter2Content.quizData = bicycleQuiz[Math.floor(Math.random() * bicycleQuiz.length)];
+      chapter2Content.stats = bicycleStats;
       break;
     case Sequence.Train:
       chapter2Content.introTextData = {
@@ -262,6 +400,7 @@ export const getContentData = (sequence: Sequence): Chapter2Content => {
         containerStyle: styles.adContainer
       };
       chapter2Content.quizData = trainQuiz[Math.floor(Math.random() * trainQuiz.length)];
+      chapter2Content.stats = trainStats;
       break;
   }
   return chapter2Content;

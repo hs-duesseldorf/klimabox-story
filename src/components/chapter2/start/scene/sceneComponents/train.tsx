@@ -15,28 +15,50 @@ export const Train: React.FC<{
   parallaxData: [];
   sequence: Sequence;
   setSequence: React.Dispatch<React.SetStateAction<Sequence>>;
+  previousSequence: Sequence;
+  setPreviousSequence: React.Dispatch<React.SetStateAction<Sequence>>;
   setViewHeight: React.Dispatch<React.SetStateAction<string>>;
   setParallaxData: React.Dispatch<React.SetStateAction<any>>;
   setChapter2Content: React.Dispatch<React.SetStateAction<Chapter2Content>>;
-}> = ({ parallaxData, sequence, setSequence, setViewHeight, setParallaxData, setChapter2Content }) => {
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
+}> = ({
+        parallaxData,
+        sequence,
+        setSequence,
+        previousSequence,
+        setPreviousSequence,
+        setViewHeight,
+        setParallaxData,
+        setChapter2Content,
+        setShow
+      }) => {
 
   const [silloutteOpacity, setSilloutteOpacity] = React.useState(0.1);
   const mouseEnterHandlerFunction = () => setSilloutteOpacity(1);
   const mouseLeaveHandlerFunction = () => setSilloutteOpacity(0.1);
   const mouseClickEventHandlerFunction = () => {
-    setViewHeight("4000vh");
-    setParallaxData(
-      getParallaxData(
-        Sequence.Train,
-        document.documentElement.clientHeight,
-        document.documentElement.clientWidth
-      )
-    );
-    setSequence(Sequence.Train);
-    setChapter2Content(getContentData(Sequence.Train));
+    if (previousSequence !== Sequence.Train) {
+      setViewHeight("4000vh");
+      setParallaxData(
+        getParallaxData(
+          Sequence.Train,
+          document.documentElement.clientHeight,
+          document.documentElement.clientWidth
+        )
+      );
+      setSequence(Sequence.Train);
+      setChapter2Content(getContentData(Sequence.Train));
+      if (previousSequence !== Sequence.NotDefined) {
+        //window.scrollTo(0, 0);
+        setShow(true);
+      }
+      setPreviousSequence(Sequence.Train);
+    } else {
+      setSequence(Sequence.Train);
+    }
   };
 
-  const topicSelection = sequence === Sequence.Question ?
+  const topicSelection = sequence === Sequence.Question || sequence === Sequence.SecondQuestion ?
     {
       containerStyle: { opacity: silloutteOpacity },
       selection: [

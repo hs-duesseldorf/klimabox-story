@@ -60,18 +60,15 @@
         top: 48rem;
         right: 80%;
         width: 75%;
-        z-index: 1;
     }
 
     .bicycle {
         top: 51rem;
         width: 20%;
         right: 75%;
-        z-index: 2;
     }
 
     .car {
-        z-index: 1;
         width: 63%;
         top: 48rem;
         left: 31%;
@@ -90,11 +87,12 @@
         left: -14%;
         top: -0.5rem;
         width: 128%;
-        zIndex: 2;
+        z-index: 2;
     }
 
     .blackCut {
         top: 58rem;
+        z-index: 6;
     }
 
     .graffiti {
@@ -104,26 +102,26 @@
     }
 
     .werbetafel {
-        top: 43rem;
-        width: 39%;
-        left: 29rem;
+        top: 38rem;
+        width: 27%;
+        left: 30.5rem;
     }
 
     .graffitiContent {
-        top: 43.7rem;
-        width: 107%;
-        left: 118%;
+        top: 39rem;
+        width: 100%;
+        left: 120%;
     }
 
     .adContainer {
-        width: 7rem;
-        height: 4.4rem;
+        width: 6rem;
+        height: 10.4rem;
         overflow: scroll;
         background-color: rgba(255, 255, 255, 0.8);
     }
 
     .adTitle {
-        font-size: 8px;
+        font-size: 10px;
         font-weight: bold;
         color: black;
         word-wrap: break-word;
@@ -131,9 +129,9 @@
 
     .adText {
         word-wrap: break-word;
-        font-size: 4px;
+        font-size: 5px;
         color: black;
-        white-space: pre-wrap
+        white-space: pre-wrap;
     }
 
 
@@ -149,18 +147,69 @@
         width: 50%;
     }
 
+    .quizStatisticsContainer {
+        position: absolute;
+        top: 0;
+        width: 22.6%;
+        height: 4.5rem;
+        left: 0.1rem;
+        margin-top: 0.5rem;
+    }
+
+    .quizStatisticsTitle {
+        width: 100%;
+        top: 0;
+        color: black;
+        font-weight: bold;
+        font-size: 5px;
+    }
+
+    .quizStatisticsQuestionmark {
+        top: 62%;
+        left: 46%;
+        width: 7%;
+        position: relative;
+    }
+
+    .quizStatistics {
+        width: 100%;
+        left: 0%;
+        color: black;
+        margin-top: 0.5rem;
+    }
+
+    .quizQuestion {
+        background-color: lightgray;
+        font-size: 8px;
+        margin-top: 0.25rem;
+        text-align: center;
+    }
+
+    .showStatsButton {
+        top: 8.5rem;
+        position: absolute;
+        font-size: 9px;
+        left: 2.5%;
+    }
+
+    .secondChoiceChapter2 {
+        left: 1rem;
+        top: 121vh;
+        font-size: larger;
+    }
+
+
     .endScene {
         width: 100%;
-        left: 189%;
+        left: 201%;
         z-index: -1;
-        top: -20rem;
+        top: 15rem;
     }
 
     .streetEnd {
-        left: 201%;
         width: 100%;
-        transform: scale(1.3);
-        top: 14rem;
+        transform: scale(1);
+        top: 39rem;
     }
 
     .wall {
@@ -168,19 +217,22 @@
     }
 
     .allWeHaveIsNow {
-        top: 58rem;
-        left: 71%;
+        width: 16%;
+        top: 21rem;
+        left: 65%;
     }
 
     .streetlamp {
-        top: 38rem;
-        left: 231.5%;
+        width: 23%;
+        top: 40.5rem;
+        left: 30.5%;
         z-index: 1;
     }
 
     .takeItEasy {
-        top: 76rem;
-        left: 53%;
+        width: 17%;
+        top: 28rem;
+        left: 43%;
     }
 
     .human {
@@ -190,13 +242,15 @@
     }
 
     .door {
-        top: 69rem;
-        left: 69%;
+        top: 26rem;
+        left: 64%;
+        width: 20%;
     }
 
     .telephone {
-        top: 79.5rem;
-        left: 92.5%;
+        top: 29.5rem;
+        left: 86.5%;
+        width: 10%;
     }
 
     .massenvisualsierung {
@@ -229,7 +283,22 @@
         font-weight: bold;
     }
 
+    .whiteCut {
+        top: 58rem;
+    }
 
+    .show {
+        animation: show-animation 1s;
+    }
+
+    @keyframes show-animation {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-1000);
+        }
+    }
 }
 
 

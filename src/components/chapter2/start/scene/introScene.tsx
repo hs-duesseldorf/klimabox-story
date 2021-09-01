@@ -7,6 +7,7 @@ import { BuildingA } from "./sceneComponents/buildingA";
 import { Graffiti } from "./sceneComponents/graffiti";
 import { BuildingD } from "./sceneComponents/buildingD";
 import { Chapter2Content } from "../interface/interface";
+import { EndScreen } from "./sceneComponents/endScreen";
 
 export const IntroScene: React.FC<{
   parallaxData: any; chapter2Content: Chapter2Content;
@@ -28,6 +29,7 @@ export const IntroScene: React.FC<{
                   parallaxDataMassenvisualsierung={parallaxDataMassenvisualsierung}
                   parallaxDataMassenvisualsierungBackground={parallaxDataMassenvisualsierungBackground}></Graffiti>
         <BuildingD></BuildingD>
+        <EndScreen></EndScreen>
       </Plx>
     </div>
   );

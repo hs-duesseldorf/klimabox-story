@@ -19,4 +19,5 @@ export interface Stats {
 export interface Chapter2Content {
   introTextData: IntroTextData,
   quizData: Quizinterface,
+  stats: Stats,
 }

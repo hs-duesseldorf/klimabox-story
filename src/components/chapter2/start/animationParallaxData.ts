@@ -137,7 +137,6 @@ export const getParallaxData = (
           }
         ]
       };
-
     case Sequence.Car:
       return {
         carData: [
@@ -184,6 +183,39 @@ export const getParallaxData = (
                 property: "translateX"
               }
             ]
+          },
+          {
+            start: clientHeight * 22,
+            end: clientHeight * 23,
+            properties: [
+              {
+                startValue: -clientWidth * 0.5,
+                endValue: clientWidth * 0.1,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 25,
+            end: clientHeight * 26,
+            properties: [
+              {
+                startValue: clientWidth * 0.1,
+                endValue: clientWidth * 0.5,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
+            properties: [
+              {
+                startValue: clientWidth * 0.5,
+                endValue: -clientWidth * 1,
+                property: "translateX"
+              }
+            ]
           }
 
         ],
@@ -207,6 +239,39 @@ export const getParallaxData = (
               {
                 startValue: clientWidth * 0.35,
                 endValue: clientWidth * 1,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
+            properties: [
+              {
+                startValue: clientWidth * 1,
+                endValue: -clientWidth * 1,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 22,
+            end: clientHeight * 23,
+            properties: [
+              {
+                startValue: -clientWidth * 1,
+                endValue: clientWidth * 0.35,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
+            properties: [
+              {
+                startValue: clientWidth * 0.35,
+                endValue: -clientWidth * 1,
                 property: "translateX"
               }
             ]
@@ -235,6 +300,39 @@ export const getParallaxData = (
                 property: "translateX"
               }
             ]
+          },
+          {
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
+            properties: [
+              {
+                startValue: clientWidth * 2,
+                endValue: -clientWidth * 1,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 22,
+            end: clientHeight * 23,
+            properties: [
+              {
+                startValue: -clientWidth * 1,
+                endValue: clientWidth * 0.25,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
+            properties: [
+              {
+                startValue: clientWidth * 0.25,
+                endValue: -clientWidth * 1,
+                property: "translateX"
+              }
+            ]
           }
         ],
         blackCutData: [
@@ -258,6 +356,17 @@ export const getParallaxData = (
               {
                 startValue: 0,
                 endValue: -clientWidth * 0.8,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
+            properties: [
+              {
+                startValue: -clientWidth * 0.8,
+                endValue: -clientWidth * 2,
                 property: "translateX"
               }
             ]
@@ -289,34 +398,23 @@ export const getParallaxData = (
 
           // Graffity Zoom out
           {
-            start: clientHeight * 20,
-            end: clientHeight * 21,
+            start: clientHeight * 21,
+            end: clientHeight * 22,
             properties: [
               {
-                startValue: 2.2,
+                startValue: 3,
                 endValue: 1,
                 property: "scale"
               },
               {
-                startValue: -clientWidth * 0.1,
+                startValue: -clientWidth * 0.08,
                 endValue: 0,
                 property: "translateX"
-              }
-            ]
-          }
-        ],
-
-
-        street: [
-          // alte Straße verschieben
-          {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
-            properties: [
+              },
               {
-                startValue: 0,
-                endValue: -clientWidth,
-                property: "translateX"
+                startValue: -clientHeight * 2,
+                endValue: 0,
+                property: "translateY"
               }
             ]
           }
@@ -413,47 +511,36 @@ export const getParallaxData = (
             ]
           }
         ],
-        parallaxDataIntroText: [
+        secondVehicleChoice: [
           {
-            start: clientHeight * 11,
-            end: clientHeight * 12,
+            start: clientHeight * 23,
+            end: clientHeight * 24,
             properties: [
               {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
+                startValue: 0,
+                endValue: -clientHeight * 0.45,
+                property: "translateY"
               }
             ]
           }
         ],
-        parallaxDataModule: [
+        blackCutEndSceneData: [
           {
-            start: clientHeight * 0,
-            end: clientHeight * 1,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 11,
-            end: clientHeight * 12,
+            start: clientHeight * 27,
+            end: clientHeight * 30,
             properties: [
               {
                 startValue: 0,
-                endValue: 1,
-                property: "opacity"
+                endValue: -clientWidth * 4,
+                property: "translateY"
               }
             ]
           }
         ]
       };
 
-    case Sequence.Bicycle:
 
+    case Sequence.Bicycle:
       return {
         bicylceData: [
           {

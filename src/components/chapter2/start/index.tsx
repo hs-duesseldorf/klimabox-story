@@ -10,19 +10,6 @@ import { getParallaxData } from "./animationParallaxData";
 import { getContentData } from "./content";
 import { VehicleChoice } from "./vehicleChoice";
 
-
-//Can be Deleted maybe?
-const useUpdateScroll = () => {
-  React.useEffect(() => {
-    function handleScroll() {
-      console.log("scrolled");
-    }
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
-};
-
 const calculateTopOffset = (setOffset: React.Dispatch<React.SetStateAction<String>>) => {
   setTimeout(() => {
     const clientHeight = document.documentElement.clientHeight;
@@ -30,7 +17,7 @@ const calculateTopOffset = (setOffset: React.Dispatch<React.SetStateAction<Strin
     const imageHeight = streetElement?.scrollHeight as number;
     const streetPosition = streetElement?.offsetTop as number;
     setOffset(`-${(streetPosition - clientHeight) / 2 + imageHeight - 5}px`);
-  }, 10);
+  }, 100);
 };
 
 const useElementOnScreen = (
