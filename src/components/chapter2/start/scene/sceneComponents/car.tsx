@@ -37,7 +37,7 @@ export const Car: React.FC<{
   const mouseLeaveHandlerFunction = () => setSilloutteOpacity(0.1);
   const mouseClickEventHandlerFunction = () => {
     if (previousSequence !== Sequence.Car) {
-      setViewHeight("4000vh");
+      setViewHeight(`${document.documentElement.clientHeight * 25}px`);
       setParallaxData(
         getParallaxData(
           Sequence.Car,
@@ -48,12 +48,14 @@ export const Car: React.FC<{
       setSequence(Sequence.Car);
       setChapter2Content(getContentData(Sequence.Car));
       if (previousSequence !== Sequence.NotDefined) {
-        window.scrollTo(0, 0);
         setShow(true);
+        setTimeout(() => window.scrollTo(0, document.documentElement.clientHeight * 11), 1000);
       }
       setPreviousSequence(Sequence.Car);
     } else {
+      setViewHeight(`${document.documentElement.clientHeight * 33}px`);
       setSequence(Sequence.Car);
+      setTimeout(() => window.scrollTo({ top: document.documentElement.clientHeight * 32, behavior: "smooth" }), 100);
     }
   };
 

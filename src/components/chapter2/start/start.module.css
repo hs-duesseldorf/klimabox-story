@@ -226,7 +226,6 @@
         width: 23%;
         top: 40.5rem;
         left: 30.5%;
-        z-index: 1;
     }
 
     .takeItEasy {
@@ -288,15 +287,15 @@
     }
 
     .show {
-        animation: show-animation 1s;
+        animation: show-animation 2s;
     }
 
     @keyframes show-animation {
         from {
-            transform: translateY(0);
+            transform: translateY(0px);
         }
         to {
-            transform: translateY(-1000);
+            transform: translateY(-50rem);
         }
     }
 }

@@ -38,7 +38,7 @@ export const Train: React.FC<{
   const mouseLeaveHandlerFunction = () => setSilloutteOpacity(0.1);
   const mouseClickEventHandlerFunction = () => {
     if (previousSequence !== Sequence.Train) {
-      setViewHeight("4000vh");
+      setViewHeight(`${document.documentElement.clientHeight * 25}px`);
       setParallaxData(
         getParallaxData(
           Sequence.Train,
@@ -49,12 +49,14 @@ export const Train: React.FC<{
       setSequence(Sequence.Train);
       setChapter2Content(getContentData(Sequence.Train));
       if (previousSequence !== Sequence.NotDefined) {
-        //window.scrollTo(0, 0);
         setShow(true);
+        setTimeout(() => window.scrollTo(0, document.documentElement.clientHeight * 11), 1000);
       }
       setPreviousSequence(Sequence.Train);
     } else {
+      setViewHeight(`${document.documentElement.clientHeight * 33}px`);
       setSequence(Sequence.Train);
+      setTimeout(() => window.scrollTo({ top: document.documentElement.clientHeight * 32, behavior: "smooth" }), 100);
     }
   };
 

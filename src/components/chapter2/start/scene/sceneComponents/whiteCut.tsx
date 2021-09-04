@@ -5,7 +5,7 @@ export const WhiteCut: React.FC<{ show: boolean, setShow: React.Dispatch<React.S
                                                                                                                 show,
                                                                                                                 setShow
                                                                                                               }) => {
-  let className = show ? "show" : "";
+  let className = show ? `${styles.show}` : "";
   className += ` ${styles.whiteCut} w-full absolute`;
   return (<div className={className}
                onAnimationEnd={() => {

@@ -7,6 +7,7 @@ export const getParallaxData = (
   clientWidth: number
 ) => {
   switch (sequence) {
+    default:
     case Sequence.Intro:
       return {
         carData: [
@@ -51,21 +52,20 @@ export const getParallaxData = (
         blackCutData: [
           {
             start: clientHeight * 8,
-            end: clientHeight * 9,
+            end: clientHeight * 11,
             properties: [
               {
                 startValue: 0,
-                endValue: -clientWidth * 2,
+                endValue: -clientWidth * 4,
                 property: "translateY"
               }
             ]
           }
         ],
         backgroundData: [
-          // Hintergrund wird zum erstenmal verschoben
           {
-            start: clientHeight * 6,
-            end: clientHeight * 7,
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
             properties: [
               {
                 startValue: 0,
@@ -74,26 +74,13 @@ export const getParallaxData = (
               }
             ]
           },
-
           {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
             properties: [
               {
                 startValue: -clientWidth * 0.8,
-                endValue: -clientWidth * 0.9,
-                property: "translateX"
-              }
-            ]
-          },
-          // Hintergrund wird zum zweiten mal verschoben
-          {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
-            properties: [
-              {
-                startValue: -clientWidth * 0.9,
-                endValue: -clientWidth * 1.87,
+                endValue: -clientWidth * 2,
                 property: "translateX"
               }
             ]
@@ -102,41 +89,181 @@ export const getParallaxData = (
         scene: [
           // Graffity Zoom in
           {
-            start: clientHeight * 12,
-            end: clientHeight * 13,
+            start: clientHeight * 13,
+            end: clientHeight * 14,
             properties: [
               {
                 startValue: 1,
-                endValue: 2.2,
+                endValue: 3,
                 property: "scale"
               },
               {
                 startValue: 0,
-                endValue: -clientWidth * 0.1,
+                endValue: -clientWidth * 0.08,
                 property: "translateX"
+              },
+              {
+                startValue: 0,
+                endValue: -clientHeight * 2,
+                property: "translateY"
               }
             ]
           },
 
           // Graffity Zoom out
           {
-            start: clientHeight * 13,
-            end: clientHeight * 15,
+            start: clientHeight * 21,
+            end: clientHeight * 22,
             properties: [
               {
-                startValue: 2.2,
+                startValue: 3,
                 endValue: 1,
                 property: "scale"
               },
               {
-                startValue: -clientWidth * 0.1,
+                startValue: -clientWidth * 0.08,
                 endValue: 0,
                 property: "translateX"
+              },
+              {
+                startValue: -clientHeight * 2,
+                endValue: 0,
+                property: "translateY"
+              }
+            ]
+          }
+        ],
+        massenvisualisierung: [
+          {
+            start: clientHeight * 15,
+            end: clientHeight * 19,
+            properties: [
+              {
+                startValue: 0,
+                endValue: -clientHeight * 3,
+                property: "translateY"
+              }
+            ]
+          }
+        ],
+        massenvisualisierungBackground: [
+          {
+            start: clientHeight * 15,
+            end: clientHeight * 19,
+            properties: [
+              {
+                startValue: 0,
+                endValue: -clientHeight * 3,
+                property: "translateY"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 15,
+            end: clientHeight * 15.5,
+            properties: [
+              {
+                startValue: 0,
+                endValue: 100,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 15.5,
+            end: clientHeight * 16,
+            properties: [
+              {
+                startValue: 100,
+                endValue: -100,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 16,
+            end: clientHeight * 16.5,
+            properties: [
+              {
+                startValue: -100,
+                endValue: 100,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 17,
+            end: clientHeight * 17.5,
+            properties: [
+              {
+                startValue: 100,
+                endValue: -100,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 17.5,
+            end: clientHeight * 18,
+            properties: [
+              {
+                startValue: -100,
+                endValue: 100,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 18,
+            end: clientHeight * 18.5,
+            properties: [
+              {
+                startValue: 100,
+                endValue: -100,
+                property: "translateX"
+              }
+            ]
+          }
+        ],
+        secondVehicleChoice: [
+          {
+            start: clientHeight * 23,
+            end: clientHeight * 24,
+            properties: [
+              {
+                startValue: 0,
+                endValue: -clientHeight * 0.45,
+                property: "translateY"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
+            properties: [
+              {
+                startValue: -clientHeight * 0.45,
+                endValue: 0,
+                property: "translateY"
+              }
+            ]
+          }
+        ],
+        blackCutEndSceneData: [
+          {
+            start: clientHeight * 27,
+            end: clientHeight * 30,
+            properties: [
+              {
+                startValue: 0,
+                endValue: -clientWidth * 4,
+                property: "translateY"
               }
             ]
           }
         ]
       };
+
     case Sequence.Car:
       return {
         carData: [
@@ -213,6 +340,17 @@ export const getParallaxData = (
               {
                 startValue: clientWidth * 0.5,
                 endValue: -clientWidth * 1,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 31,
+            end: clientHeight * 32,
+            properties: [
+              {
+                startValue: -clientWidth * 1,
+                endValue: -clientWidth * 0.5,
                 property: "translateX"
               }
             ]
@@ -522,6 +660,17 @@ export const getParallaxData = (
                 property: "translateY"
               }
             ]
+          },
+          {
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
+            properties: [
+              {
+                startValue: -clientHeight * 0.45,
+                endValue: 0,
+                property: "translateY"
+              }
+            ]
           }
         ],
         blackCutEndSceneData: [
@@ -542,68 +691,6 @@ export const getParallaxData = (
 
     case Sequence.Bicycle:
       return {
-        bicylceData: [
-          {
-            start: clientHeight,
-            end: clientHeight * 3,
-            properties: [
-              {
-                startValue: 0,
-                endValue: clientWidth * 0.35,
-                property: "translateX"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 6,
-            end: clientHeight * 7,
-            properties: [
-              {
-                startValue: clientWidth * 0.35,
-                endValue: -clientWidth * 0.1,
-                property: "translateX"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 7,
-            end: clientHeight * 8,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 1.5,
-                property: "scale"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 13,
-            end: clientHeight * 15,
-            properties: [
-              {
-                startValue: 1.5,
-                endValue: 1,
-                property: "scale"
-              },
-              {
-                startValue: -clientWidth * 1,
-                endValue: clientWidth * 0.35,
-                property: "translateX"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
-            properties: [
-              {
-                startValue: clientWidth * 0.35,
-                endValue: clientWidth * 0.05,
-                property: "translateX"
-              }
-            ]
-          }
-        ],
         carData: [
           {
             start: clientHeight,
@@ -623,66 +710,132 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: clientWidth * 0.1,
-                endValue: clientWidth * 1,
-                property: "translateX"
-              }
-            ]
-          },
-          // unsichtbar in Position bringen zum einfahren
-          {
-            start: clientHeight * 5,
-            end: clientHeight * 6,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
-              }
-            ]
-          },
-
-          {
-            start: clientHeight * 6,
-            end: clientHeight * 7,
-            properties: [
-              {
-                startValue: clientWidth,
-                endValue: -clientWidth,
+                endValue: clientWidth * 2,
                 property: "translateX"
               }
             ]
           },
           {
             start: clientHeight * 9,
-            end: clientHeight * 10,
+            end: clientHeight * 9.5,
             properties: [
               {
-                startValue: 0,
-                endValue: 1,
-                property: "opacity"
+                startValue: clientWidth * 2,
+                endValue: -clientWidth * 1,
+                property: "translateX"
               }
             ]
           },
-          // Nach dem normalzoomen der Scene
+
           {
-            start: clientHeight * 13,
-            end: clientHeight * 15,
+            start: clientHeight * 22,
+            end: clientHeight * 23,
             properties: [
               {
-                startValue: -clientWidth,
+                startValue: -clientWidth * 1,
                 endValue: clientWidth * 0.1,
                 property: "translateX"
               }
             ]
           },
-          // Ende der Animation
           {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
             properties: [
               {
                 startValue: clientWidth * 0.1,
-                endValue: -clientWidth,
+                endValue: -clientWidth * 1,
+                property: "translateX"
+              }
+            ]
+          }
+
+        ],
+        bicylceData: [
+          {
+            start: clientHeight,
+            end: clientHeight * 3,
+            properties: [
+              {
+                startValue: 0,
+                endValue: clientWidth * 0.35,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 6,
+            end: clientHeight * 7,
+            properties: [
+              {
+                startValue: clientWidth * 0.35,
+                endValue: clientWidth * 2,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
+            properties: [
+              {
+                startValue: clientWidth * 1,
+                endValue: -clientWidth * 1,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 11,
+            end: clientHeight * 12,
+            properties: [
+              {
+                startValue: -clientWidth * 1,
+                endValue: clientWidth * 0.2,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 22,
+            end: clientHeight * 23,
+            properties: [
+              {
+                startValue: clientWidth * 0.2,
+                endValue: clientWidth * 0.35,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 25,
+            end: clientHeight * 26,
+            properties: [
+              {
+                startValue: clientWidth * 0.35,
+                endValue: clientWidth,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
+            properties: [
+              {
+                startValue: clientWidth,
+                endValue: -clientWidth * 1,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 31,
+            end: clientHeight * 32,
+            properties: [
+              {
+                startValue: -clientWidth * 1,
+                endValue: clientWidth * 0.2,
                 property: "translateX"
               }
             ]
@@ -712,71 +865,57 @@ export const getParallaxData = (
               }
             ]
           },
-          // unsichtbar in Position bringen zum einfahren
           {
-            start: clientHeight * 5,
-            end: clientHeight * 6,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
-              }
-            ]
-          },
-
-          {
-            start: clientHeight * 6,
-            end: clientHeight * 7,
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
             properties: [
               {
                 startValue: clientWidth * 2,
-                endValue: -clientWidth,
+                endValue: -clientWidth * 1,
                 property: "translateX"
               }
             ]
           },
           {
-            start: clientHeight * 9,
-            end: clientHeight * 10,
+            start: clientHeight * 22,
+            end: clientHeight * 23,
             properties: [
               {
-                startValue: 0,
-                endValue: 1,
-                property: "opacity"
-              }
-            ]
-          },
-          // Nach dem normalzoomen der Scene
-          {
-            start: clientHeight * 13,
-            end: clientHeight * 15,
-            properties: [
-              {
-                startValue: -clientWidth,
-                endValue: clientWidth * 0.2,
+                startValue: -clientWidth * 1,
+                endValue: clientWidth * 0.25,
                 property: "translateX"
               }
             ]
           },
-          // Ende der Animation
           {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
             properties: [
               {
-                startValue: clientWidth * 0.2,
-                endValue: -clientWidth,
+                startValue: clientWidth * 0.25,
+                endValue: -clientWidth * 1,
                 property: "translateX"
               }
             ]
           }
         ],
-        backgroundData: [
-          // Hintergrund wird zum erstenmal verschoben
+        blackCutData: [
           {
-            start: clientHeight * 6,
-            end: clientHeight * 7,
+            start: clientHeight * 8,
+            end: clientHeight * 11,
+            properties: [
+              {
+                startValue: 0,
+                endValue: -clientWidth * 4,
+                property: "translateY"
+              }
+            ]
+          }
+        ],
+        backgroundData: [
+          {
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
             properties: [
               {
                 startValue: 0,
@@ -785,26 +924,13 @@ export const getParallaxData = (
               }
             ]
           },
-
           {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
             properties: [
               {
                 startValue: -clientWidth * 0.8,
-                endValue: -clientWidth * 0.9,
-                property: "translateX"
-              }
-            ]
-          },
-          // Hintergrund wird zum zweiten mal verschoben
-          {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
-            properties: [
-              {
-                startValue: -clientWidth * 0.9,
-                endValue: -clientWidth * 1.87,
+                endValue: -clientWidth * 2,
                 property: "translateX"
               }
             ]
@@ -813,57 +939,54 @@ export const getParallaxData = (
         scene: [
           // Graffity Zoom in
           {
-            start: clientHeight * 7,
-            end: clientHeight * 8,
+            start: clientHeight * 13,
+            end: clientHeight * 14,
             properties: [
               {
                 startValue: 1,
-                endValue: 2.2,
+                endValue: 3,
                 property: "scale"
               },
               {
                 startValue: 0,
-                endValue: -clientWidth * 0.1,
+                endValue: -clientWidth * 0.08,
                 property: "translateX"
+              },
+              {
+                startValue: 0,
+                endValue: -clientHeight * 2,
+                property: "translateY"
               }
             ]
           },
+
           // Graffity Zoom out
           {
-            start: clientHeight * 13,
-            end: clientHeight * 15,
+            start: clientHeight * 21,
+            end: clientHeight * 22,
             properties: [
               {
-                startValue: 2.2,
+                startValue: 3,
                 endValue: 1,
                 property: "scale"
               },
               {
-                startValue: -clientWidth * 0.1,
+                startValue: -clientWidth * 0.08,
                 endValue: 0,
                 property: "translateX"
-              }
-            ]
-          }
-        ],
-        street: [
-          // alte Straße verschieben
-          {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
-            properties: [
+              },
               {
-                startValue: 0,
-                endValue: -clientWidth,
-                property: "translateX"
+                startValue: -clientHeight * 2,
+                endValue: 0,
+                property: "translateY"
               }
             ]
           }
         ],
         massenvisualisierung: [
           {
-            start: clientHeight * 9,
-            end: clientHeight * 13,
+            start: clientHeight * 15,
+            end: clientHeight * 19,
             properties: [
               {
                 startValue: 0,
@@ -875,8 +998,8 @@ export const getParallaxData = (
         ],
         massenvisualisierungBackground: [
           {
-            start: clientHeight * 9,
-            end: clientHeight * 13,
+            start: clientHeight * 15,
+            end: clientHeight * 19,
             properties: [
               {
                 startValue: 0,
@@ -886,8 +1009,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 9,
-            end: clientHeight * 9.5,
+            start: clientHeight * 15,
+            end: clientHeight * 15.5,
             properties: [
               {
                 startValue: 0,
@@ -897,8 +1020,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 9.5,
-            end: clientHeight * 10,
+            start: clientHeight * 15.5,
+            end: clientHeight * 16,
             properties: [
               {
                 startValue: 100,
@@ -908,8 +1031,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 10,
-            end: clientHeight * 10.5,
+            start: clientHeight * 16,
+            end: clientHeight * 16.5,
             properties: [
               {
                 startValue: -100,
@@ -919,8 +1042,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 11,
-            end: clientHeight * 11.5,
+            start: clientHeight * 17,
+            end: clientHeight * 17.5,
             properties: [
               {
                 startValue: 100,
@@ -930,8 +1053,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 11.5,
-            end: clientHeight * 12,
+            start: clientHeight * 17.5,
+            end: clientHeight * 18,
             properties: [
               {
                 startValue: -100,
@@ -941,8 +1064,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 12,
-            end: clientHeight * 12.5,
+            start: clientHeight * 18,
+            end: clientHeight * 18.5,
             properties: [
               {
                 startValue: 100,
@@ -952,46 +1075,108 @@ export const getParallaxData = (
             ]
           }
         ],
-        parallaxDataIntroText: [
+        secondVehicleChoice: [
           {
-            start: clientHeight * 11,
-            end: clientHeight * 12,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
-              }
-            ]
-          }
-        ],
-        parallaxDataModule: [
-          {
-            start: clientHeight * 0,
-            end: clientHeight * 1,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 11,
-            end: clientHeight * 12,
+            start: clientHeight * 23,
+            end: clientHeight * 24,
             properties: [
               {
                 startValue: 0,
-                endValue: 1,
-                property: "opacity"
+                endValue: -clientHeight * 0.45,
+                property: "translateY"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
+            properties: [
+              {
+                startValue: -clientHeight * 0.45,
+                endValue: 0,
+                property: "translateY"
+              }
+            ]
+          }
+        ],
+        blackCutEndSceneData: [
+          {
+            start: clientHeight * 27,
+            end: clientHeight * 30,
+            properties: [
+              {
+                startValue: 0,
+                endValue: -clientWidth * 4,
+                property: "translateY"
               }
             ]
           }
         ]
       };
+
+
     case Sequence.Train:
       return {
+        carData: [
+          {
+            start: clientHeight,
+            end: clientHeight * 3,
+            properties: [
+              {
+                startValue: 0,
+                endValue: clientWidth * 0.1,
+                property: "translateX"
+              }
+            ]
+          },
+          // Herausfahren nach der Frage "Wähle das Verkehrsmittel mit dem du am meisten untwegs bist"
+          {
+            start: clientHeight * 4,
+            end: clientHeight * 5,
+            properties: [
+              {
+                startValue: clientWidth * 0.1,
+                endValue: clientWidth * 2,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
+            properties: [
+              {
+                startValue: clientWidth * 2,
+                endValue: -clientWidth * 1,
+                property: "translateX"
+              }
+            ]
+          },
+
+          {
+            start: clientHeight * 22,
+            end: clientHeight * 23,
+            properties: [
+              {
+                startValue: -clientWidth * 1,
+                endValue: clientWidth * 0.1,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
+            properties: [
+              {
+                startValue: clientWidth * 0.1,
+                endValue: -clientWidth * 1,
+                property: "translateX"
+              }
+            ]
+          }
+
+        ],
         bicylceData: [
           {
             start: clientHeight,
@@ -1016,145 +1201,35 @@ export const getParallaxData = (
               }
             ]
           },
-          // unsichtbar in Position bringen zum einfahren
           {
-            start: clientHeight * 5,
-            end: clientHeight * 6,
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
             properties: [
               {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
-              }
-            ]
-          },
-
-          {
-            start: clientHeight * 6,
-            end: clientHeight * 7,
-            properties: [
-              {
-                startValue: clientWidth,
-                endValue: -clientWidth * 0.2,
+                startValue: clientWidth * 1,
+                endValue: -clientWidth * 1,
                 property: "translateX"
               }
             ]
           },
           {
-            start: clientHeight * 9,
-            end: clientHeight * 10,
+            start: clientHeight * 22,
+            end: clientHeight * 23,
             properties: [
               {
-                startValue: 0,
-                endValue: 1,
-                property: "opacity"
-              }
-            ]
-          },
-          // Nach dem normalzoomen der Scene
-          {
-            start: clientHeight * 13,
-            end: clientHeight * 15,
-            properties: [
-              {
-                startValue: -clientWidth * 0.2,
+                startValue: -clientWidth * 1,
                 endValue: clientWidth * 0.35,
                 property: "translateX"
               }
             ]
           },
-          // Ende der Animation
           {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
             properties: [
               {
                 startValue: clientWidth * 0.35,
-                endValue: -clientWidth,
-                property: "translateX"
-              }
-            ]
-          }
-        ],
-        carData: [
-          {
-            start: clientHeight,
-            end: clientHeight * 3,
-            properties: [
-              {
-                startValue: 0,
-                endValue: clientWidth * 0.1,
-                property: "translateX"
-              }
-            ]
-          },
-          // Herausfahren nach der Frage "Wähle das Verkehrsmittel mit dem du am meisten untwegs bist"
-          {
-            start: clientHeight * 4,
-            end: clientHeight * 5,
-            properties: [
-              {
-                startValue: clientWidth * 0.1,
-                endValue: clientWidth * 1,
-                property: "translateX"
-              }
-            ]
-          },
-          // unsichtbar in Position bringen zum einfahren
-          {
-            start: clientHeight * 5,
-            end: clientHeight * 6,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
-              }
-            ]
-          },
-
-          {
-            start: clientHeight * 6,
-            end: clientHeight * 7,
-            properties: [
-              {
-                startValue: clientWidth,
-                endValue: -clientWidth,
-                property: "translateX"
-              }
-            ]
-          },
-          {
-            start: clientHeight * 9,
-            end: clientHeight * 10,
-            properties: [
-              {
-                startValue: 0,
-                endValue: 1,
-                property: "opacity"
-              }
-            ]
-          },
-          // Nach dem normalzoomen der Scene
-          {
-            start: clientHeight * 13,
-            end: clientHeight * 15,
-            properties: [
-              {
-                startValue: -clientWidth,
-                endValue: clientWidth * 0.1,
-                property: "translateX"
-              }
-            ]
-          },
-          // Ende der Animation
-          {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
-            properties: [
-              {
-                startValue: clientWidth * 0.1,
-                endValue: -clientWidth,
+                endValue: -clientWidth * 1,
                 property: "translateX"
               }
             ]
@@ -1172,46 +1247,101 @@ export const getParallaxData = (
               }
             ]
           },
-
           {
             start: clientHeight * 6,
             end: clientHeight * 7,
             properties: [
               {
                 startValue: clientWidth * 0.25,
-                endValue: clientWidth * 0.1,
+                endValue: clientWidth * 2,
                 property: "translateX"
               }
             ]
           },
           {
-            start: clientHeight * 13,
-            end: clientHeight * 15,
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
             properties: [
               {
-                startValue: clientWidth * 0.1,
-                endValue: clientWidth * 0.2,
+                startValue: clientWidth * 2,
+                endValue: -clientWidth * 1,
                 property: "translateX"
               }
             ]
           },
           {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
+            start: clientHeight * 11,
+            end: clientHeight * 12,
             properties: [
               {
-                startValue: clientWidth * 0.2,
-                endValue: clientWidth * 0.3,
+                startValue: -clientWidth * 1,
+                endValue: clientWidth * 0.15,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 22,
+            end: clientHeight * 23,
+            properties: [
+              {
+                startValue: clientWidth * 0.15,
+                endValue: clientWidth * 0.25,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 25,
+            end: clientHeight * 26,
+            properties: [
+              {
+                startValue: clientWidth * 0.25,
+                endValue: clientWidth * 2,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
+            properties: [
+              {
+                startValue: clientWidth * 2,
+                endValue: -clientWidth * 1,
+                property: "translateX"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 31,
+            end: clientHeight * 32,
+            properties: [
+              {
+                startValue: -clientWidth * 1,
+                endValue: clientWidth * 0.25,
                 property: "translateX"
               }
             ]
           }
         ],
-        backgroundData: [
-          // Hintergrund wird zum erstenmal verschoben
+        blackCutData: [
           {
-            start: clientHeight * 6,
-            end: clientHeight * 7,
+            start: clientHeight * 8,
+            end: clientHeight * 11,
+            properties: [
+              {
+                startValue: 0,
+                endValue: -clientWidth * 4,
+                property: "translateY"
+              }
+            ]
+          }
+        ],
+        backgroundData: [
+          {
+            start: clientHeight * 9,
+            end: clientHeight * 9.5,
             properties: [
               {
                 startValue: 0,
@@ -1220,26 +1350,13 @@ export const getParallaxData = (
               }
             ]
           },
-
           {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
             properties: [
               {
                 startValue: -clientWidth * 0.8,
-                endValue: -clientWidth * 0.9,
-                property: "translateX"
-              }
-            ]
-          },
-          // Hintergrund wird zum zweiten mal verschoben
-          {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
-            properties: [
-              {
-                startValue: -clientWidth * 0.9,
-                endValue: -clientWidth * 1.87,
+                endValue: -clientWidth * 2,
                 property: "translateX"
               }
             ]
@@ -1248,57 +1365,54 @@ export const getParallaxData = (
         scene: [
           // Graffity Zoom in
           {
-            start: clientHeight * 7,
-            end: clientHeight * 8,
+            start: clientHeight * 13,
+            end: clientHeight * 14,
             properties: [
               {
                 startValue: 1,
-                endValue: 2.2,
+                endValue: 3,
                 property: "scale"
               },
               {
                 startValue: 0,
-                endValue: -clientWidth * 0.1,
+                endValue: -clientWidth * 0.08,
                 property: "translateX"
+              },
+              {
+                startValue: 0,
+                endValue: -clientHeight * 2,
+                property: "translateY"
               }
             ]
           },
+
           // Graffity Zoom out
           {
-            start: clientHeight * 13,
-            end: clientHeight * 15,
+            start: clientHeight * 21,
+            end: clientHeight * 22,
             properties: [
               {
-                startValue: 2.2,
+                startValue: 3,
                 endValue: 1,
                 property: "scale"
               },
               {
-                startValue: -clientWidth * 0.1,
+                startValue: -clientWidth * 0.08,
                 endValue: 0,
                 property: "translateX"
-              }
-            ]
-          }
-        ],
-        street: [
-          // alte Straße verschieben
-          {
-            start: clientHeight * 17,
-            end: clientHeight * 19,
-            properties: [
+              },
               {
-                startValue: 0,
-                endValue: -clientWidth,
-                property: "translateX"
+                startValue: -clientHeight * 2,
+                endValue: 0,
+                property: "translateY"
               }
             ]
           }
         ],
         massenvisualisierung: [
           {
-            start: clientHeight * 9,
-            end: clientHeight * 13,
+            start: clientHeight * 15,
+            end: clientHeight * 19,
             properties: [
               {
                 startValue: 0,
@@ -1310,8 +1424,8 @@ export const getParallaxData = (
         ],
         massenvisualisierungBackground: [
           {
-            start: clientHeight * 9,
-            end: clientHeight * 13,
+            start: clientHeight * 15,
+            end: clientHeight * 19,
             properties: [
               {
                 startValue: 0,
@@ -1321,8 +1435,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 9,
-            end: clientHeight * 9.5,
+            start: clientHeight * 15,
+            end: clientHeight * 15.5,
             properties: [
               {
                 startValue: 0,
@@ -1332,8 +1446,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 9.5,
-            end: clientHeight * 10,
+            start: clientHeight * 15.5,
+            end: clientHeight * 16,
             properties: [
               {
                 startValue: 100,
@@ -1343,8 +1457,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 10,
-            end: clientHeight * 10.5,
+            start: clientHeight * 16,
+            end: clientHeight * 16.5,
             properties: [
               {
                 startValue: -100,
@@ -1354,8 +1468,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 11,
-            end: clientHeight * 11.5,
+            start: clientHeight * 17,
+            end: clientHeight * 17.5,
             properties: [
               {
                 startValue: 100,
@@ -1365,8 +1479,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 11.5,
-            end: clientHeight * 12,
+            start: clientHeight * 17.5,
+            end: clientHeight * 18,
             properties: [
               {
                 startValue: -100,
@@ -1376,8 +1490,8 @@ export const getParallaxData = (
             ]
           },
           {
-            start: clientHeight * 12,
-            end: clientHeight * 12.5,
+            start: clientHeight * 18,
+            end: clientHeight * 18.5,
             properties: [
               {
                 startValue: 100,
@@ -1387,95 +1501,39 @@ export const getParallaxData = (
             ]
           }
         ],
-        parallaxDataIntroText: [
+        secondVehicleChoice: [
           {
-            start: clientHeight * 11,
-            end: clientHeight * 12,
+            start: clientHeight * 23,
+            end: clientHeight * 24,
             properties: [
               {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
-              }
-            ]
-          }
-        ],
-        parallaxDataModule: [
-          {
-            start: clientHeight * 0,
-            end: clientHeight * 1,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 0,
-                property: "opacity"
+                startValue: 0,
+                endValue: -clientHeight * 0.45,
+                property: "translateY"
               }
             ]
           },
           {
-            start: clientHeight * 11,
-            end: clientHeight * 12,
+            start: clientHeight * 28,
+            end: clientHeight * 28.5,
             properties: [
               {
-                startValue: 0,
-                endValue: 1,
-                property: "opacity"
-              }
-            ]
-          }
-        ]
-      };
-
-    default:
-      return {
-        carData: [
-          {
-            start: clientHeight,
-            end: 3000,
-            properties: [
-              {
-                startValue: 0,
-                endValue: clientWidth * 0.1,
-                property: "translateX"
+                startValue: -clientHeight * 0.45,
+                endValue: 0,
+                property: "translateY"
               }
             ]
           }
         ],
-        bicylceData: [
+        blackCutEndSceneData: [
           {
-            start: clientHeight,
-            end: 3000,
+            start: clientHeight * 27,
+            end: clientHeight * 30,
             properties: [
               {
                 startValue: 0,
-                endValue: clientWidth * 0.35,
-                property: "translateX"
-              }
-            ]
-          }
-        ],
-        trainData: [
-          {
-            start: clientHeight,
-            end: 3000,
-            properties: [
-              {
-                startValue: 0,
-                endValue: clientWidth * 0.25,
-                property: "translateX"
-              }
-            ]
-          }
-        ],
-        backgroundData: [
-          {
-            start: clientHeight * 4,
-            end: clientHeight * 5,
-            properties: [
-              {
-                startValue: 0,
-                endValue: -clientWidth * 1,
-                property: "translateX"
+                endValue: -clientWidth * 4,
+                property: "translateY"
               }
             ]
           }
