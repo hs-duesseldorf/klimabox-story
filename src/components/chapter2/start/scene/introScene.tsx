@@ -20,17 +20,15 @@ export const IntroScene: React.FC<{
         parallaxDataMassenvisualsierungBackground
       }) => {
   return (
-    <div>
-      <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
-        <BuildingC></BuildingC>
-        <BuildingB></BuildingB>
-        <BuildingA buildingStyle={styles.buildingAIntroScene}></BuildingA>
-        <Graffiti chapter2Content={chapter2Content}
-                  parallaxDataMassenvisualsierung={parallaxDataMassenvisualsierung}
-                  parallaxDataMassenvisualsierungBackground={parallaxDataMassenvisualsierungBackground}></Graffiti>
-        <BuildingD></BuildingD>
-        <EndScreen></EndScreen>
-      </Plx>
-    </div>
+    <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
+      <BuildingC></BuildingC>
+      <BuildingB></BuildingB>
+      <BuildingA buildingStyle={styles.buildingAIntroScene}></BuildingA>
+      <Graffiti chapter2Content={chapter2Content}
+                parallaxDataMassenvisualsierung={parallaxDataMassenvisualsierung}
+                parallaxDataMassenvisualsierungBackground={parallaxDataMassenvisualsierungBackground}></Graffiti>
+      <BuildingD></BuildingD>
+      <EndScreen></EndScreen>
+    </Plx>
   );
 };

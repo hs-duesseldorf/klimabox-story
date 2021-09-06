@@ -6,7 +6,7 @@ import bycicleImg from "../../asset/kapitel2_fahrrad_auswahl_effekt.png";
 import Plx from "react-plx";
 import { Sequence } from "../../interface/Chapter2Enum";
 import { Selection } from "../../../../topic-selection";
-import { getParallaxData } from "../../animationParallaxData";
+import { getParallaxData, setSceneParallax } from "../../animationParallaxData";
 import { getContentData } from "../../content";
 
 import { Chapter2Content } from "../../interface/interface";
@@ -39,13 +39,7 @@ export const Bicycle: React.FC<{
   const mouseClickEventHandlerFunction = () => {
     if (previousSequence !== Sequence.Bicycle) {
       setViewHeight(`${document.documentElement.clientHeight * 25}px`);
-      setParallaxData(
-        getParallaxData(
-          Sequence.Bicycle,
-          document.documentElement.clientHeight,
-          document.documentElement.clientWidth
-        )
-      );
+      setSceneParallax(getParallaxData(Sequence.Bicycle), setParallaxData);
       setSequence(Sequence.Bicycle);
       setChapter2Content(getContentData(Sequence.Bicycle));
       if (previousSequence !== Sequence.NotDefined) {

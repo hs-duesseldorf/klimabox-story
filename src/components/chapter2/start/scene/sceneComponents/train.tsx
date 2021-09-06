@@ -7,7 +7,7 @@ import { Sequence } from "../../interface/Chapter2Enum";
 
 import { Selection } from "../../../../topic-selection";
 import trainImg from "../../asset/kapitel2_bahn_auswahl_effekt.png";
-import { getParallaxData } from "../../animationParallaxData";
+import { getParallaxData, setSceneParallax } from "../../animationParallaxData";
 import { getContentData } from "../../content";
 import { Chapter2Content } from "../../interface/interface";
 
@@ -39,13 +39,7 @@ export const Train: React.FC<{
   const mouseClickEventHandlerFunction = () => {
     if (previousSequence !== Sequence.Train) {
       setViewHeight(`${document.documentElement.clientHeight * 25}px`);
-      setParallaxData(
-        getParallaxData(
-          Sequence.Train,
-          document.documentElement.clientHeight,
-          document.documentElement.clientWidth
-        )
-      );
+      setSceneParallax(getParallaxData(Sequence.Train), setParallaxData);
       setSequence(Sequence.Train);
       setChapter2Content(getContentData(Sequence.Train));
       if (previousSequence !== Sequence.NotDefined) {

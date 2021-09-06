@@ -1,11 +1,146 @@
 import { Sequence } from "./interface/Chapter2Enum";
+import React from "react";
+
+
+export const setSceneParallax = (parallaxData: any, setParallaxData: React.Dispatch<React.SetStateAction<any>>) => {
+  const clientHeight = document.documentElement.clientHeight;
+  const clientWidth = document.documentElement.clientWidth;
+  const streetElement = document.getElementById("Street");
+  if (streetElement?.scrollHeight === 0) {
+    streetElement!.onload = () => {
+      const imageHeight = streetElement!.scrollHeight as number;
+      const streetPosition = streetElement!.offsetTop as number;
+      parallaxData.scene = [
+        {
+          start: clientHeight,
+          end: clientHeight * 3,
+          properties: [
+            {
+              startValue: 0,
+              endValue: -imageHeight - (streetPosition - clientHeight),
+              property: "translateY"
+            }
+          ]
+        },
+        // Graffity Zoom in
+        {
+          start: clientHeight * 13,
+          end: clientHeight * 14,
+          properties: [
+            {
+              startValue: 1,
+              endValue: 3,
+              property: "scale"
+            },
+            {
+              startValue: 0,
+              endValue: -clientWidth * 0.08,
+              property: "translateX"
+            },
+            {
+              startValue: -imageHeight - (streetPosition - clientHeight),
+              endValue: -clientHeight * 2.25,
+              property: "translateY"
+            }
+          ]
+        },
+
+        // Graffity Zoom out
+        {
+          start: clientHeight * 21,
+          end: clientHeight * 22,
+          properties: [
+            {
+              startValue: 3,
+              endValue: 1,
+              property: "scale"
+            },
+            {
+              startValue: -clientWidth * 0.08,
+              endValue: 0,
+              property: "translateX"
+            },
+            {
+              startValue: -clientHeight * 2.25,
+              endValue: -imageHeight - (streetPosition - clientHeight),
+              property: "translateY"
+            }
+          ]
+        }
+      ];
+      setParallaxData(parallaxData);
+    };
+  } else {
+    const imageHeight = streetElement!.scrollHeight as number;
+    const streetPosition = streetElement!.offsetTop as number;
+    parallaxData.scene = [
+      {
+        start: clientHeight,
+        end: clientHeight * 3,
+        properties: [
+          {
+            startValue: 0,
+            endValue: -imageHeight - (streetPosition - clientHeight),
+            property: "translateY"
+          }
+        ]
+      },
+      // Graffity Zoom in
+      {
+        start: clientHeight * 13,
+        end: clientHeight * 14,
+        properties: [
+          {
+            startValue: 1,
+            endValue: 3,
+            property: "scale"
+          },
+          {
+            startValue: 0,
+            endValue: -clientWidth * 0.08,
+            property: "translateX"
+          },
+          {
+            startValue: -imageHeight - (streetPosition - clientHeight),
+            endValue: -clientHeight * 2.25,
+            property: "translateY"
+          }
+        ]
+      },
+
+      // Graffity Zoom out
+      {
+        start: clientHeight * 21,
+        end: clientHeight * 22,
+        properties: [
+          {
+            startValue: 3,
+            endValue: 1,
+            property: "scale"
+          },
+          {
+            startValue: -clientWidth * 0.08,
+            endValue: 0,
+            property: "translateX"
+          },
+          {
+            startValue: -clientHeight * 2.25,
+            endValue: -imageHeight - (streetPosition - clientHeight),
+            property: "translateY"
+          }
+        ]
+      }
+    ];
+    setParallaxData(parallaxData);
+  }
+};
 
 
 export const getParallaxData = (
-  sequence: Sequence,
-  clientHeight: number,
-  clientWidth: number
+  sequence: Sequence
 ) => {
+  const clientHeight = document.documentElement.clientHeight;
+  const clientWidth = document.documentElement.clientWidth;
   switch (sequence) {
     default:
     case Sequence.Intro:
@@ -87,6 +222,17 @@ export const getParallaxData = (
           }
         ],
         scene: [
+          {
+            start: clientHeight,
+            end: clientHeight * 3,
+            properties: [
+              {
+                startValue: 0,
+                endValue: 0,
+                property: "translateY"
+              }
+            ]
+          },
           // Graffity Zoom in
           {
             start: clientHeight * 13,
@@ -511,6 +657,17 @@ export const getParallaxData = (
           }
         ],
         scene: [
+          {
+            start: clientHeight,
+            end: clientHeight * 3,
+            properties: [
+              {
+                startValue: 0,
+                endValue: 0,
+                property: "translateY"
+              }
+            ]
+          },
           // Graffity Zoom in
           {
             start: clientHeight * 13,
@@ -937,6 +1094,17 @@ export const getParallaxData = (
           }
         ],
         scene: [
+          {
+            start: clientHeight,
+            end: clientHeight * 3,
+            properties: [
+              {
+                startValue: 0,
+                endValue: 0,
+                property: "translateY"
+              }
+            ]
+          },
           // Graffity Zoom in
           {
             start: clientHeight * 13,
@@ -1363,6 +1531,17 @@ export const getParallaxData = (
           }
         ],
         scene: [
+          {
+            start: clientHeight,
+            end: clientHeight * 3,
+            properties: [
+              {
+                startValue: 0,
+                endValue: 0,
+                property: "translateY"
+              }
+            ]
+          },
           // Graffity Zoom in
           {
             start: clientHeight * 13,

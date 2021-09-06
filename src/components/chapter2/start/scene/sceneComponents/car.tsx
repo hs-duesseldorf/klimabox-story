@@ -6,7 +6,7 @@ import carImg from "../../asset/kapitel2_auto_auswahl_effekt.png";
 import Plx from "react-plx";
 import { Sequence } from "../../interface/Chapter2Enum";
 import { Selection } from "../../../../topic-selection";
-import { getParallaxData } from "../../animationParallaxData";
+import { getParallaxData, setSceneParallax } from "../../animationParallaxData";
 import { Chapter2Content } from "../../interface/interface";
 import { getContentData } from "../../content";
 
@@ -38,13 +38,7 @@ export const Car: React.FC<{
   const mouseClickEventHandlerFunction = () => {
     if (previousSequence !== Sequence.Car) {
       setViewHeight(`${document.documentElement.clientHeight * 25}px`);
-      setParallaxData(
-        getParallaxData(
-          Sequence.Car,
-          document.documentElement.clientHeight,
-          document.documentElement.clientWidth
-        )
-      );
+      setSceneParallax(getParallaxData(Sequence.Car), setParallaxData);
       setSequence(Sequence.Car);
       setChapter2Content(getContentData(Sequence.Car));
       if (previousSequence !== Sequence.NotDefined) {
