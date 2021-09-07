@@ -1,6 +1,6 @@
 @media (min-width: 320px) {
     .buildingAIntroScene {
-        top: 26em;
+        top: 32rem;
         width: 44%;
         left: 58%;
     }
@@ -8,13 +8,13 @@
     .buildingB {
         right: 33%;
         width: 36%;
-        top: 41em;
+        top: 41rem;
     }
 
     .buildingC {
         right: 63%;
         width: 39%;
-        top: 43em;
+        top: 43rem;
     }
 
     .sun {
@@ -98,18 +98,622 @@
     .graffiti {
         left: 102%;
         width: 60%;
+        top: 39rem;
+    }
+
+    .werbetafel {
+        top: 40rem;
+        width: 27%;
+        left: 117.5%;
+    }
+
+    .graffitiContent {
+        top: 41rem;
+        width: 22.5%;
+        left: 120%;
+        height: 9rem;
+    }
+
+    .adContainer {
+        width: 100%;
+        height: 7rem;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .adTitle {
+        font-size: 10px;
+        font-weight: bold;
+        color: black;
+        word-wrap: break-word;
+    }
+
+    .adText {
+        word-wrap: break-word;
+        font-size: 5px;
+        color: black;
+        white-space: pre-wrap;
+    }
+
+
+    .graffitiBackground {
+        left: 21.7%;
+        top: 42.5rem;
+        width: 28%;
+    }
+
+    .hochhaus {
+        left: 158%;
+        top: 22rem;
+        width: 50%;
+    }
+
+    .quizStatisticsContainer {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 4.5rem;
+        margin-top: 0.1rem;
+    }
+
+    .quizStatisticsTitle {
+        width: 100%;
+        top: 0;
+        color: black;
+        font-weight: bold;
+        font-size: 5px;
+    }
+
+    .quizStatisticsQuestionmark {
+        top: 62%;
+        left: 46%;
+        width: 7%;
+        position: relative;
+    }
+
+    .quizStatistics {
+        width: 100%;
+        left: 0%;
+        color: black;
+        margin-top: 0.5rem;
+    }
+
+    .quizQuestion {
+        background-color: lightgray;
+        font-size: 8px;
+        margin-top: 0.25rem;
+        text-align: center;
+    }
+
+    .showStatsButton {
+        top: 6.5rem;
+        position: absolute;
+        font-size: 8px;
+        left: 2.5%;
+        margin-top: 0.5rem;
+    }
+
+    .secondChoiceChapter2 {
+        left: 1rem;
+        top: 158vh;
+        font-size: larger;
+    }
+
+    .endScene {
+        width: 100%;
+        left: 201%;
+        z-index: -1;
+        top: 20rem;
+    }
+
+    .streetEnd {
+        width: 100%;
+        transform: scale(1);
+        top: 43rem;
+    }
+
+    .wall {
+        top: 19rem;
+    }
+
+    .allWeHaveIsNow {
+        width: 16%;
+        top: 21rem;
+        left: 65%;
+    }
+
+    .streetlamp {
+        width: 23%;
+        top: 44.5rem;
+        left: 30.5%;
+    }
+
+    .takeItEasy {
+        width: 17%;
+        top: 28rem;
+        left: 43%;
+    }
+
+    .human {
+        top: 59.15rem;
+        left: 219%;
+        z-index: 1;
+    }
+
+    .door {
+        top: 26rem;
+        left: 64%;
+        width: 20%;
+    }
+
+    .telephone {
+        top: 29.5rem;
+        left: 86.5%;
+        width: 10%;
+    }
+
+    .massenvisualsierung {
+        opacity: 1;
+        top: 50rem;
+        left: 96%;
+    }
+
+    .mContainer {
+        position: absolute;
+        top: 20rem;
+        width: 30%;
+        height: 10rem;
+        left: 20%;
+    }
+
+    .mtextStyle {
+        text-align: center;
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        margin: 0px 12% 6%;
+    }
+
+    .mtitleStyle {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 0.5%;
+        color: white;
+        font-weight: bold;
+    }
+
+    .whiteCut {
+        top: 58rem;
+    }
+
+    .show {
+        animation: show-animation 2s;
+    }
+
+    @keyframes show-animation {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-50rem);
+        }
+    }
+}
+
+@media (min-width: 375px) {
+    .buildingAIntroScene {
+        top: 26rem;
+        width: 44%;
+        left: 58%;
+    }
+
+    .buildingB {
+        right: 33%;
+        width: 36%;
+        top: 41rem;
+    }
+
+    .buildingC {
+        right: 63%;
+        width: 39%;
+        top: 43rem;
+    }
+
+    .sun {
+        top: 14%;
+        opacity: 0.7;
+    }
+
+    .street {
+        right: 0.1%;
+        width: 100%;
+        top: 49rem;
+        transform: scale(1.1);
+
+    }
+
+    .clue {
+        bottom: 10%;
+        right: 5%;
+        width: 30%;
+    }
+
+    .headerline {
+        padding: 0 0 3% 18%;
+    }
+
+    .text {
+        top: 12rem;
+        font-size: 13pt;
+        padding-left: 8%;
+    }
+
+    .continue {
+        left: 26.5%;
+        top: 20rem;
+    }
+
+    .chapter2Choice {
+        top: 395vh;
+        width: 20rem;
+    }
+
+    .train {
+        top: 48rem;
+        right: 80%;
+        width: 75%;
+    }
+
+    .bicycle {
+        top: 51rem;
+        width: 20%;
+        right: 75%;
+    }
+
+    .car {
+        width: 63%;
+        top: 48rem;
+        left: 31%;
+    }
+
+    .carChoice {
+        padding-top: 0%;
+        top: 1rem;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .bicycleChoice {
+        position: absolute;
+        left: -14%;
+        top: -0.5rem;
+        width: 128%;
+        z-index: 2;
+    }
+
+    .blackCut {
+        top: 58rem;
+        z-index: 6;
+    }
+
+    .graffiti {
+        left: 102%;
+        width: 60%;
+        top: 39rem;
+    }
+
+    .werbetafel {
+        top: 39rem;
+        width: 27%;
+        left: 117.5%;
+    }
+
+    .graffitiContent {
+        top: 40rem;
+        width: 22.5%;
+        left: 120%;
+        height: 9rem;
+    }
+
+    .adContainer {
+        width: 100%;
+        height: 9rem;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .adTitle {
+        font-size: 10px;
+        font-weight: bold;
+        color: black;
+        word-wrap: break-word;
+    }
+
+    .adText {
+        word-wrap: break-word;
+        font-size: 5px;
+        color: black;
+        white-space: pre-wrap;
+    }
+
+
+    .graffitiBackground {
+        left: 21.7%;
+        top: 42.5rem;
+        width: 28%;
+    }
+
+    .hochhaus {
+        left: 158%;
+        top: 22rem;
+        width: 50%;
+    }
+
+    .quizStatisticsContainer {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 4.5rem;
+        margin-top: 0.1rem;
+    }
+
+    .quizStatisticsTitle {
+        width: 100%;
+        top: 0;
+        color: black;
+        font-weight: bold;
+        font-size: 5px;
+    }
+
+    .quizStatisticsQuestionmark {
+        top: 62%;
+        left: 46%;
+        width: 7%;
+        position: relative;
+    }
+
+    .quizStatistics {
+        width: 100%;
+        left: 0%;
+        color: black;
+        margin-top: 0.5rem;
+    }
+
+    .quizQuestion {
+        background-color: lightgray;
+        font-size: 8px;
+        margin-top: 0.25rem;
+        text-align: center;
+    }
+
+    .showStatsButton {
+        top: 6.5rem;
+        position: absolute;
+        font-size: 8px;
+        left: 9.5%;
+        margin-top: 1.5rem;
+    }
+
+    .secondChoiceChapter2 {
+        left: 1rem;
+        top: 158vh;
+        font-size: larger;
+    }
+
+    .endScene {
+        width: 100%;
+        left: 201%;
+        z-index: -1;
+        top: 20rem;
+    }
+
+    .streetEnd {
+        width: 100%;
+        transform: scale(1);
+        top: 43rem;
+    }
+
+    .wall {
+        top: 19rem;
+    }
+
+    .allWeHaveIsNow {
+        width: 16%;
+        top: 21rem;
+        left: 65%;
+    }
+
+    .streetlamp {
+        width: 23%;
+        top: 44.5rem;
+        left: 30.5%;
+    }
+
+    .takeItEasy {
+        width: 17%;
+        top: 28rem;
+        left: 43%;
+    }
+
+    .human {
+        top: 59.15rem;
+        left: 219%;
+        z-index: 1;
+    }
+
+    .door {
+        top: 26rem;
+        left: 64%;
+        width: 20%;
+    }
+
+    .telephone {
+        top: 29.5rem;
+        left: 86.5%;
+        width: 10%;
+    }
+
+    .massenvisualsierung {
+        opacity: 1;
+        top: 50rem;
+        left: 96.5%;
+    }
+
+    .mContainer {
+        position: absolute;
+        top: 20rem;
+        width: 30%;
+        height: 10rem;
+        left: 20%;
+    }
+
+    .mtextStyle {
+        text-align: center;
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        margin: 0px 12% 6%;
+    }
+
+    .mtitleStyle {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 0.5%;
+        color: white;
+        font-weight: bold;
+    }
+
+    .whiteCut {
+        top: 58rem;
+    }
+
+    .show {
+        animation: show-animation 2s;
+    }
+
+    @keyframes show-animation {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-50rem);
+        }
+    }
+
+}
+
+@media (min-width: 425px) {
+    .buildingAIntroScene {
+        top: 26em;
+        width: 44%;
+        left: 58%;
+    }
+
+    .buildingB {
+        right: 33%;
+        width: 36%;
+        top: 41em;
+    }
+
+    .buildingC {
+        right: 63%;
+        width: 39%;
+        top: 43em;
+    }
+
+    .sun {
+        top: 14%;
+        opacity: 0.7;
+    }
+
+    .street {
+        right: 0.1%;
+        width: 100%;
+        top: 49rem;
+        transform: scale(1.1);
+    }
+
+    .clue {
+        bottom: 10%;
+        right: 5%;
+        width: 30%;
+    }
+
+    .headerline {
+        padding: 0 0 3% 18%;
+    }
+
+    .text {
+        top: 12rem;
+        font-size: 13pt;
+        padding-left: 8%;
+    }
+
+    .continue {
+        left: 26.5%;
+        top: 20rem;
+    }
+
+    .chapter2Choice {
+        top: 395vh;
+        width: 20rem;
+    }
+
+    .train {
+        top: 48rem;
+        right: 80%;
+        width: 75%;
+    }
+
+    .bicycle {
+        top: 51rem;
+        width: 20%;
+        right: 75%;
+    }
+
+    .car {
+        width: 63%;
+        top: 48rem;
+        left: 31%;
+    }
+
+    .carChoice {
+        padding-top: 0%;
+        top: 1rem;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .bicycleChoice {
+        position: absolute;
+        left: -14%;
+        top: -0.5rem;
+        width: 128%;
+        z-index: 2;
+    }
+
+    .blackCut {
+        top: 58rem;
+        z-index: 6;
+    }
+
+    .graffiti {
+        left: 102%;
+        width: 60%;
         top: 35rem;
     }
 
     .werbetafel {
         top: 38rem;
         width: 27%;
-        left: 30.5rem;
+        left: 117.5%;
     }
 
     .graffitiContent {
         top: 39rem;
-        width: 100%;
+        width: 95%;
         left: 120%;
     }
 
@@ -143,7 +747,7 @@
 
     .hochhaus {
         left: 158%;
-        top: 13rem;
+        top: 16rem;
         width: 50%;
     }
 
@@ -190,11 +794,12 @@
         position: absolute;
         font-size: 9px;
         left: 2.5%;
+        margin-top: 0.5rem;
     }
 
     .secondChoiceChapter2 {
         left: 1rem;
-        top: 125vh;
+        top: 157vh;
         font-size: larger;
     }
 
@@ -254,7 +859,7 @@
     .massenvisualsierung {
         opacity: 1;
         top: 50rem;
-        left: 25rem;
+        left: 97%;
     }
 
     .mContainer {
@@ -299,44 +904,23 @@
     }
 }
 
-@media (min-width: 480px) {
-
-}
-
-@media (min-width: 600px) {
-    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-}
-
-@media (min-width: 801px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
-
-@media (min-width: 1025px) {
-    /* big landscape tablets, laptops, and desktops */
-}
-
-@media (min-width: 1281px) {
-    /* hi-res laptops and desktops */
-}
-
-@media screen and (min-width: 1024px) {
-
-    .buildingA {
-        width: 48%;
-        left: 52%;
-        top: -24rem;
+@media (min-width: 768px) {
+    .buildingAIntroScene {
+        top: 9em;
+        width: 44%;
+        left: 58%;
     }
 
     .buildingB {
-        right: -26%;
-        width: 100%;
-        top: 34rem;
+        right: 33%;
+        width: 36%;
+        top: 30em;
     }
 
     .buildingC {
-        right: 65%;
-        width: 35%;
-        top: 35rem;
+        right: 63%;
+        width: 39%;
+        top: 37em;
     }
 
     .sun {
@@ -345,9 +929,10 @@
     }
 
     .street {
-        right: 0.01%;
-        width: 110%;
-        top: 66rem;
+        right: 0.1%;
+        width: 100%;
+        top: 49rem;
+        transform: scale(1.1);
     }
 
     .clue {
@@ -357,43 +942,103 @@
     }
 
     .headerline {
-        padding: 0 0 3% 10%;
+        padding: 0 0 3% 18%;
     }
 
     .text {
-        top: 17rem;
-        padding-left: 20%;
+        top: 12rem;
+        font-size: 13pt;
+        padding-left: 8%;
     }
 
     .continue {
-        left: 61.5%;
-        top: 33rem;
+        left: 48.5%;
+        top: 20rem;
+    }
+
+    .chapter2Choice {
+        top: 364vh;
+        width: 20rem;
     }
 
     .train {
-        top: 60rem;
+        top: 48rem;
         right: 80%;
         width: 75%;
-        z-index: 1;
     }
 
     .bicycle {
-        top: 72rem;
+        top: 54rem;
         width: 20%;
         right: 75%;
-        z-index: 2;
     }
 
     .car {
-        z-index: 1;
         width: 63%;
-        top: 58rem;
+        top: 48rem;
         left: 31%;
     }
 
-    .graffiti {
-        top: 0rem;
+    .carChoice {
+        padding-top: 0%;
+        top: 2rem;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
     }
+
+    .bicycleChoice {
+        position: absolute;
+        left: -14%;
+        top: -0.5rem;
+        width: 128%;
+        z-index: 2;
+    }
+
+    .blackCut {
+        top: 66rem;
+        z-index: 6;
+    }
+
+    .graffiti {
+        left: 102%;
+        width: 60%;
+        top: 23rem;
+    }
+
+    .werbetafel {
+        top: 28rem;
+        width: 27%;
+        left: 117.5%;
+    }
+
+    .graffitiContent {
+        top: 30.2rem;
+        width: 23%;
+        left: 119.8%;
+    }
+
+    .adContainer {
+        width: 98%;
+        height: 200%;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .adTitle {
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+        word-wrap: break-word;
+    }
+
+    .adText {
+        word-wrap: break-word;
+        font-size: 10px;
+        color: black;
+        white-space: pre-wrap;
+    }
+
 
     .graffitiBackground {
         left: 21.7%;
@@ -402,22 +1047,74 @@
     }
 
     .hochhaus {
-        left: 155%;
-        top: -19rem;
+        left: 158%;
+        top: 16rem;
+        width: 50%;
+    }
+
+    .quizStatisticsContainer {
+        position: absolute;
+        top: 0;
+        width: 95.6%;
+        height: 4.5rem;
+        left: 0.1rem;
+        margin-top: 1.5rem;
+    }
+
+    .quizStatisticsTitle {
+        width: 100%;
+        top: 0;
+        color: black;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .quizStatisticsQuestionmark {
+        top: 62%;
+        left: 46%;
+        width: 7%;
+        position: relative;
+    }
+
+    .quizStatistics {
+        width: 100%;
+        left: 0%;
+        color: black;
+        margin-top: 0.5rem;
+    }
+
+    .quizQuestion {
+        background-color: lightgray;
+        font-size: 13px;
+        margin-top: 0.25rem;
+        text-align: center;
+    }
+
+    .showStatsButton {
+        top: 171%;
+        position: absolute;
+        font-size: 12px;
+        left: 21.5%;
+        margin-top: 0.5rem;
+    }
+
+    .secondChoiceChapter2 {
+        left: 1rem;
+        top: 160vh;
+        font-size: larger;
     }
 
     .endScene {
         width: 100%;
-        left: 189%;
+        left: 201%;
         z-index: -1;
-        top: -20rem;
+        top: 17rem;
     }
 
     .streetEnd {
-        left: 201%;
         width: 100%;
-        transform: scale(1.3);
-        top: 14rem;
+        transform: scale(1);
+        top: 33rem;
     }
 
     .wall {
@@ -425,19 +1122,21 @@
     }
 
     .allWeHaveIsNow {
-        top: 58rem;
-        left: 71%;
+        width: 16%;
+        top: 24rem;
+        left: 65%;
     }
 
     .streetlamp {
-        top: 38rem;
-        left: 231.5%;
-        z-index: 1;
+        width: 23%;
+        top: 35.5rem;
+        left: 30.5%;
     }
 
     .takeItEasy {
-        top: 76rem;
-        left: 53%;
+        width: 17%;
+        top: 36rem;
+        left: 43%;
     }
 
     .human {
@@ -447,45 +1146,365 @@
     }
 
     .door {
-        top: 69rem;
-        left: 69%;
+        top: 32rem;
+        left: 64%;
+        width: 20%;
     }
 
     .telephone {
-        top: 79.5rem;
-        left: 92.5%;
+        top: 35.5rem;
+        left: 86.5%;
+        width: 10%;
     }
 
     .massenvisualsierung {
         opacity: 1;
-        top: 100rem;
-    }
-
-    .graffitiContent {
-        top: 46rem;
-        width: 24%;
-        left: 24%;
+        top: 50rem;
+        left: 97%;
     }
 
     .mContainer {
         position: absolute;
-        top: 90rem;
-        width: 24%;
+        top: 20rem;
+        width: 30%;
         height: 10rem;
-        left: 23%;
+        left: 20%;
     }
 
     .mtextStyle {
         text-align: center;
-        font-size: 20px;
+        font-size: 10px;
         font-weight: bold;
+        color: white;
         margin: 0px 12% 6%;
     }
 
     .mtitleStyle {
         text-align: center;
-        font-size: 35px;
+        font-size: 18px;
         margin-top: 0.5%;
+        color: white;
         font-weight: bold;
     }
+
+    .whiteCut {
+        top: 66rem;
+    }
+
+    .show {
+        animation: show-animation 2s;
+    }
+
+    @keyframes show-animation {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-50rem);
+        }
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .buildingAIntroScene {
+        top: -5em;
+        width: 44%;
+        left: 58%;
+    }
+
+    .buildingB {
+        right: 33%;
+        width: 36%;
+        top: 25em;
+    }
+
+    .buildingC {
+        right: 63%;
+        width: 39%;
+        top: 33em;
+    }
+
+    .sun {
+        top: 14%;
+        opacity: 0.7;
+    }
+
+    .street {
+        right: 0.1%;
+        width: 100%;
+        top: 49rem;
+        transform: scale(1.1);
+    }
+
+    .clue {
+        bottom: 10%;
+        right: 5%;
+        width: 30%;
+    }
+
+    .headerline {
+        padding: 0 0 3% 18%;
+    }
+
+    .text {
+        top: 12rem;
+        font-size: 13pt;
+        padding-left: 8%;
+    }
+
+    .continue {
+        left: 48.5%;
+        top: 20rem;
+    }
+
+    .chapter2Choice {
+        top: 364vh;
+        width: 20rem;
+    }
+
+    .train {
+        top: 48rem;
+        right: 80%;
+        width: 75%;
+    }
+
+    .bicycle {
+        top: 54rem;
+        width: 20%;
+        right: 75%;
+    }
+
+    .car {
+        width: 63%;
+        top: 48rem;
+        left: 31%;
+    }
+
+    .carChoice {
+        padding-top: 0%;
+        top: 2rem;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .bicycleChoice {
+        position: absolute;
+        left: -14%;
+        top: -0.5rem;
+        width: 128%;
+        z-index: 2;
+    }
+
+    .blackCut {
+        top: 89rem;
+        z-index: 6;
+    }
+
+    .graffiti {
+        left: 102%;
+        width: 60%;
+        top: 13rem;
+    }
+
+    .werbetafel {
+        top: 28rem;
+        width: 27%;
+        left: 117.5%;
+    }
+
+    .graffitiContent {
+        top: 30.2rem;
+        width: 23%;
+        left: 119.8%;
+    }
+
+    .adContainer {
+        width: 98%;
+        height: 200%;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .adTitle {
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+        word-wrap: break-word;
+    }
+
+    .adText {
+        word-wrap: break-word;
+        font-size: 10px;
+        color: black;
+        white-space: pre-wrap;
+    }
+
+
+    .graffitiBackground {
+        left: 21.7%;
+        top: 42.5rem;
+        width: 28%;
+    }
+
+    .hochhaus {
+        left: 158%;
+        top: 16rem;
+        width: 50%;
+    }
+
+    .quizStatisticsContainer {
+        position: absolute;
+        top: 0;
+        width: 95.6%;
+        height: 4.5rem;
+        left: 0.1rem;
+        margin-top: 1.5rem;
+    }
+
+    .quizStatisticsTitle {
+        width: 100%;
+        top: 0;
+        color: black;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .quizStatisticsQuestionmark {
+        top: 62%;
+        left: 46%;
+        width: 7%;
+        position: relative;
+    }
+
+    .quizStatistics {
+        width: 100%;
+        left: 0%;
+        color: black;
+        margin-top: 0.5rem;
+    }
+
+    .quizQuestion {
+        background-color: lightgray;
+        font-size: 13px;
+        margin-top: 0.25rem;
+        text-align: center;
+    }
+
+    .showStatsButton {
+        top: 171%;
+        position: absolute;
+        font-size: 12px;
+        left: 21.5%;
+        margin-top: 0.5rem;
+    }
+
+    .secondChoiceChapter2 {
+        left: 1rem;
+        top: 172vh;
+        font-size: larger;
+    }
+
+    .endScene {
+        width: 100%;
+        left: 201%;
+        z-index: -1;
+        top: 17rem;
+    }
+
+    .streetEnd {
+        width: 100%;
+        transform: scale(1);
+        top: 28rem;
+    }
+
+    .wall {
+        top: 19rem;
+    }
+
+    .allWeHaveIsNow {
+        width: 16%;
+        top: 24rem;
+        left: 65%;
+    }
+
+    .streetlamp {
+        width: 23%;
+        top: 31.5rem;
+        left: 30.5%;
+    }
+
+    .takeItEasy {
+        width: 17%;
+        top: 36rem;
+        left: 43%;
+    }
+
+    .human {
+        top: 59.15rem;
+        left: 219%;
+        z-index: 1;
+    }
+
+    .door {
+        top: 32rem;
+        left: 64%;
+        width: 20%;
+    }
+
+    .telephone {
+        top: 35.5rem;
+        left: 86.5%;
+        width: 10%;
+    }
+
+    .massenvisualsierung {
+        opacity: 1;
+        top: 59rem;
+        left: 97%;
+    }
+
+    .mContainer {
+        position: absolute;
+        top: 20rem;
+        width: 30%;
+        height: 10rem;
+        left: 20%;
+    }
+
+    .mtextStyle {
+        text-align: center;
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        margin: 0px 12% 6%;
+    }
+
+    .mtitleStyle {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 0.5%;
+        color: white;
+        font-weight: bold;
+    }
+
+    .whiteCut {
+        top: 89rem;
+    }
+
+    .show {
+        animation: show-animation 2s;
+    }
+
+    @keyframes show-animation {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-50rem);
+        }
+    }
+
 }

@@ -92,7 +92,7 @@ export const setSceneParallax = (parallaxData: any, setParallaxData: React.Dispa
         properties: [
           {
             startValue: 1,
-            endValue: 3,
+            endValue: 2,
             property: "scale"
           },
           {
@@ -102,9 +102,10 @@ export const setSceneParallax = (parallaxData: any, setParallaxData: React.Dispa
           },
           {
             startValue: -imageHeight - (streetPosition - clientHeight),
-            endValue: -clientHeight * 2.25,
+            endValue: -clientHeight * 1.75,
             property: "translateY"
           }
+
         ]
       },
 
@@ -114,7 +115,7 @@ export const setSceneParallax = (parallaxData: any, setParallaxData: React.Dispa
         end: clientHeight * 22,
         properties: [
           {
-            startValue: 3,
+            startValue: 2,
             endValue: 1,
             property: "scale"
           },
@@ -124,7 +125,7 @@ export const setSceneParallax = (parallaxData: any, setParallaxData: React.Dispa
             property: "translateX"
           },
           {
-            startValue: -clientHeight * 2.25,
+            startValue: -clientHeight * 1.75,
             endValue: -imageHeight - (streetPosition - clientHeight),
             property: "translateY"
           }
