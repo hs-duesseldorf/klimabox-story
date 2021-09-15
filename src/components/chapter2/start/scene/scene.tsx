@@ -10,6 +10,7 @@ import { BlackCut } from "./sceneComponents/blackCut";
 import { Street } from "./street";
 import { SecondVehicleChoice } from "./sceneComponents/SecondVehicleChoice";
 import { WhiteCut } from "./sceneComponents/whiteCut";
+import { Massenvisualisierung } from "./sceneComponents/massenvisualisierung";
 
 const useElementOnScreen = (
   elementRef: RefObject<Element>,
@@ -34,6 +35,32 @@ const useElementOnScreen = (
   }, [elementRef, threshold, root, rootMargin]);
   return entry;
 };
+
+const useDetectZoom = (setTransformOrigin: React.Dispatch<React.SetStateAction<{}>>) => {
+
+
+  React.useEffect(()=>{
+    const scrollHandle = () => {
+      const clientHeight = document.documentElement.clientHeight;
+      const scrollPosition = document.documentElement.scrollTop;
+      if(clientHeight * 13 <= scrollPosition &&  scrollPosition <= clientHeight * 22){
+        const adContent = document.getElementById("werbetafel");
+        console.log(adContent?.getClientRects());
+        const pointX = (adContent!.getClientRects()[0].x + adContent!.getClientRects()[0].width)/2;
+        const pointY = (adContent!.getClientRects()[0].y + adContent!.getClientRects()[0].height)/2 - adContent!.getClientRects()[0].height * 0.7;
+        console.log(pointY);
+        const applyTransformOrigin = { transformOrigin: `${pointX}px ${pointY}px` }
+        setTransformOrigin( applyTransformOrigin )
+      }
+      else{
+        setTransformOrigin({})
+      }
+    }
+
+    window.addEventListener("scroll", scrollHandle);
+    return () => window.removeEventListener("scroll", scrollHandle);
+  },[setTransformOrigin])
+}
 
 export const Scene: React.FC<{
   sequence: Sequence;
@@ -61,14 +88,16 @@ export const Scene: React.FC<{
     setSequence(s => (entry?.isIntersecting && s === Sequence.Car) || (entry?.isIntersecting && s === Sequence.Train) || (entry?.isIntersecting && s === Sequence.Train)
       ? Sequence.SecondQuestion : s);
   }, [entry?.isIntersecting, setSequence]);
+  const [applyTransformOrigin, setTransformOrigin] = React.useState<{}>();
+  useDetectZoom(setTransformOrigin);
+
 
   return (
     <div>
-      <Plx parallaxData={parallaxData.scene} animateWhenNotInViewport={true}>
+      <Plx style = {applyTransformOrigin} parallaxData={parallaxData.scene} animateWhenNotInViewport={true}>
 
         <IntroScene chapter2Content={chapter2Content} parallaxData={parallaxData.backgroundData}
-                    parallaxDataMassenvisualsierungBackground={parallaxData.massenvisualisierungBackground}
-                    parallaxDataMassenvisualsierung={parallaxData.massenvisualisierung}></IntroScene>
+></IntroScene>
         <Street />
         <Train sequence={sequence}
                parallaxData={parallaxData.trainData}
@@ -107,6 +136,10 @@ export const Scene: React.FC<{
                              parallaxData={parallaxData.secondVehicleChoice}></SecondVehicleChoice>
         <WhiteCut show={show} setShow={setShow}></WhiteCut>
         <BlackCut parallaxData={parallaxData.blackCutEndSceneData}></BlackCut>
+        <Massenvisualisierung
+          massenvisualisierungBackground={parallaxData.massenvisualisierungBackground}
+          parallaxData={parallaxData.massenvisualisierung}
+        />
 
       </Plx>
     </div>

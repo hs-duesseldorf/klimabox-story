@@ -11,22 +11,16 @@ import { EndScreen } from "./sceneComponents/endScreen";
 
 export const IntroScene: React.FC<{
   parallaxData: any; chapter2Content: Chapter2Content;
-  parallaxDataMassenvisualsierung: [];
-  parallaxDataMassenvisualsierungBackground: [];
 }> = ({
         parallaxData,
-        chapter2Content,
-        parallaxDataMassenvisualsierung,
-        parallaxDataMassenvisualsierungBackground
+        chapter2Content
       }) => {
   return (
     <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
       <BuildingC></BuildingC>
       <BuildingB></BuildingB>
       <BuildingA buildingStyle={styles.buildingAIntroScene}></BuildingA>
-      <Graffiti chapter2Content={chapter2Content}
-                parallaxDataMassenvisualsierung={parallaxDataMassenvisualsierung}
-                parallaxDataMassenvisualsierungBackground={parallaxDataMassenvisualsierungBackground}></Graffiti>
+      <Graffiti chapter2Content={chapter2Content}></Graffiti>
       <BuildingD></BuildingD>
       <EndScreen></EndScreen>
     </Plx>

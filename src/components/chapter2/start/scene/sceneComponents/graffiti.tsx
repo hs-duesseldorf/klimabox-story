@@ -9,12 +9,8 @@ import { AdContent } from "./adContent";
 
 export const Graffiti: React.FC<{
   chapter2Content: Chapter2Content;
-  parallaxDataMassenvisualsierung: [];
-  parallaxDataMassenvisualsierungBackground: [];
 }> = ({
         chapter2Content,
-        parallaxDataMassenvisualsierung,
-        parallaxDataMassenvisualsierungBackground
       }) => {
   return (
     <div className="absolute w-full">
@@ -24,15 +20,10 @@ export const Graffiti: React.FC<{
         className={`${styles.graffiti} absolute`}
       ></img>
 
-      <img src={werbetafelImg} alt="werbetafel" className={`absolute ${styles.werbetafel} `}></img>
+      <img id="werbetafel" src={werbetafelImg} alt="werbetafel" className={`absolute ${styles.werbetafel} `}></img>
 
       <AdContent chapter2Content={chapter2Content}></AdContent>
-      <Massenvisualisierung
-        parallaxData={parallaxDataMassenvisualsierung}
-        massenvisualisierungBackground={
-          parallaxDataMassenvisualsierungBackground
-        }
-      />
+
     </div>
   );
 };

@@ -27,7 +27,7 @@ export const AdContent: React.FC<{ chapter2Content: Chapter2Content }> = ({ chap
     setshowStats(true);
   };
   return (
-    <div className={`absolute ${styles.graffitiContent}`}>
+    <div id="graffitiContent" className={`absolute ${styles.graffitiContent}`}>
       {showQuiz ?
         (<div>
           {showStats ? (<Statistics tabs={chapter2Content.stats.tabs} />) :
