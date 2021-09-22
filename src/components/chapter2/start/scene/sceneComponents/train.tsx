@@ -57,6 +57,7 @@ export const Train: React.FC<{
   const topicSelection = sequence === Sequence.Question || sequence === Sequence.SecondQuestion ?
     {
       containerStyle: { opacity: silloutteOpacity },
+      containerClassName: styles.trainChoice,
       selection: [
         {
           imagePath: trainImg,

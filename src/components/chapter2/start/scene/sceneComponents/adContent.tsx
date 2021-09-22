@@ -9,7 +9,7 @@ import styles from "../../start.module.css";
 const useCheckHeight = (setshowQuiz: React.Dispatch<React.SetStateAction<boolean>>) => {
   React.useEffect(() => {
     function handleScroll() {
-      const switchHeight = document.documentElement.clientHeight * 16;
+      const switchHeight = document.documentElement.clientHeight * 17;
       const scrollPosition = document.documentElement.scrollTop;
       setshowQuiz(switchHeight < scrollPosition);
     }
@@ -28,16 +28,18 @@ export const AdContent: React.FC<{ chapter2Content: Chapter2Content }> = ({ chap
   };
   return (
     <div id="graffitiContent" className={`absolute ${styles.graffitiContent}`}>
-      {showQuiz ?
-        (<div>
-          {showStats ? (<Statistics tabs={chapter2Content.stats.tabs} />) :
-            (<div><QuizStatistics quiz={chapter2Content.quizData}></QuizStatistics>
-              <button className={`${styles.showStatsButton}`} onClick={buttonHandle}>
-                Weiter zur Statistik
-              </button>
-            </div>)}
-        </div>)
+      { showQuiz ? ( <div className="relative">
+          { showStats ?
+            ( <Statistics tabs={chapter2Content.stats.tabs} /> ) :
+            ( <QuizStatistics quiz={chapter2Content.quizData}></QuizStatistics> )
+          }
+        </div> )
         : (<IntroText introTextData={chapter2Content.introTextData} />)}
+
+      {!showQuiz || showStats? null : (<button className={`${styles.showStatsButton}`} onClick={buttonHandle}>
+        Weiter zur Statistik
+      </button>)}
+
     </div>
   );
 };

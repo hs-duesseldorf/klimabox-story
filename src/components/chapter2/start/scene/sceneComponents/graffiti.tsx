@@ -3,7 +3,6 @@ import React from "react";
 import styles from "../../start.module.css";
 import img from "../../asset/kapitel2_graffiti.png";
 import werbetafelImg from "../../asset/kapitel2_werbetafel_vertikal.png";
-import { Massenvisualisierung } from "./massenvisualisierung";
 import { Chapter2Content } from "../../interface/interface";
 import { AdContent } from "./adContent";
 

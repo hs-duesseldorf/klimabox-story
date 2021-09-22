@@ -6,7 +6,7 @@ export const BlackCut: React.FC<{ parallaxData: [] }> = ({ parallaxData }) => {
   return (
     <Plx parallaxData={parallaxData} animateWhenNotInViewport={true}>
       <div className={`${styles.blackCut} absolute w-full `}
-           style={{ background: "black", height: document.documentElement.clientHeight }}>
+           style={{ background: "black", height: document.documentElement.clientHeight * 3 }}>
       </div>
     </Plx>);
 };

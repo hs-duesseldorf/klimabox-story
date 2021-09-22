@@ -713,7 +713,7 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientHeight * 3,
+                endValue: -clientHeight * 6,
                 property: "translateY"
               }
             ]
@@ -726,7 +726,7 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientHeight * 3,
+                endValue: -clientHeight * 6,
                 property: "translateY"
               }
             ]
@@ -805,8 +805,8 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientHeight * 0.45,
-                property: "translateY"
+                endValue: 1,
+                property: "opacity"
               }
             ]
           },
@@ -815,9 +815,9 @@ export const getParallaxData = (
             end: clientHeight * 28.5,
             properties: [
               {
-                startValue: -clientHeight * 0.45,
+                startValue: 1,
                 endValue: 0,
-                property: "translateY"
+                property: "opacity"
               }
             ]
           }
@@ -1150,7 +1150,7 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientHeight * 3,
+                endValue: -clientHeight * 6,
                 property: "translateY"
               }
             ]
@@ -1163,7 +1163,7 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientHeight * 3,
+                endValue: -clientHeight * 6,
                 property: "translateY"
               }
             ]
@@ -1587,7 +1587,7 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientHeight * 3,
+                endValue: -clientHeight * 6,
                 property: "translateY"
               }
             ]
@@ -1600,7 +1600,7 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientHeight * 3,
+                endValue: -clientHeight * 6,
                 property: "translateY"
               }
             ]

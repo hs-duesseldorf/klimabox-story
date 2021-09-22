@@ -8,10 +8,7 @@ export const WhiteCut: React.FC<{ show: boolean, setShow: React.Dispatch<React.S
   let className = show ? `${styles.show}` : "";
   className += ` ${styles.whiteCut} w-full absolute`;
   return (<div className={className}
-               onAnimationEnd={() => {
-                 console.log("animation has ended");
-                 setShow(false);
-               }}
-               style={{ background: "white", height: document.documentElement.clientHeight }}>
+               onAnimationEnd={() => setShow(false)}
+               style={{ background: "white", height: document.documentElement.clientHeight * 3}}>
   </div>);
 };
