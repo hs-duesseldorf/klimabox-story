@@ -1,24 +1,34 @@
-.heading {
-  font-size: 9vw;
-  line-height: 1;
+/*.heading {*/
+/*  font-size: 9vw;*/
+/*  line-height: 1;*/
 
-  @media (min-width: theme("screens.md")) {
-    font-size: theme("fontSize.6xl");
-  }
+/*  @media (min-width: theme("screens.md")) {*/
+/*    font-size: theme("fontSize.6xl");*/
+/*  }*/
 
-  @media (min-width: theme("screens.xl")) {
-    font-size: theme("fontSize.7xl");
-  }
+/*  @media (min-width: theme("screens.xl")) {*/
+/*    font-size: theme("fontSize.7xl");*/
+/*  }*/
 
-  @media (min-width: theme("screens.2xl")) {
-    font-size: theme("fontSize.9xl");
-  }
-}
+/*  @media (min-width: theme("screens.2xl")) {*/
+/*    font-size: theme("fontSize.9xl");*/
+/*  }*/
+/*}*/
 
 .sunrise {
-  background: radial-gradient(circle at bottom, #9b5a00, transparent);
+    background: radial-gradient(circle at bottom, #9b5a00, transparent);
 }
 
 .height {
-  height: 1600px;
+    height: 1600px;
+}
+
+
+#milk {
+    left: 60%;
+}
+
+
+@media (min-width: theme("screens.md")) {
+
 }

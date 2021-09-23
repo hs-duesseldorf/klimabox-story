@@ -132,21 +132,29 @@ export const Fridge: React.FC = () => {
       <>
         <Plx parallaxData={parallaxData1} className="absolute bottom-0 opacity-0 z-0 h-screen w-screen"
              id="fridge-items">
-          <div className="fixed cursor-pointer" onClick={() => onClickFridgeItem("meat")}
+          <div className="fixed cursor-pointer sm:hidden" onClick={() => onClickFridgeItem("meat")}
+               style={{ top: "45%", left: "0%" }} id="meat" ref={meatContainer}><img src={imageURL1} alt="Meat"
+                                                                                      className="w-48 sm:w-64 select-none" />
+          </div>
+          <div className="fixed cursor-pointer hidden sm:block" onClick={() => onClickFridgeItem("meat")}
                style={{ top: "45%", left: "15%" }} id="meat" ref={meatContainer}><img src={imageURL1} alt="Meat"
-                                                                                      className="w-64 select-none" />
+                                                                                      className="w-48 sm:w-64 select-none" />
           </div>
           <div className="fixed cursor-pointer" onClick={() => onClickFridgeItem("avocado")}
-               style={{ top: "40%", left: "35%" }} id="avocado" ref={avocadoContainer}><img src={imageURL2}
+               style={ { top: "39%", left: "35%" }} id="avocado" ref={avocadoContainer}><img src={imageURL2}
                                                                                             alt="Avocado"
-                                                                                            className="w-52 select-none" />
+                                                                                            className="w-40 sm:w-52 select-none" />
           </div>
-          <div className="fixed cursor-pointer" onClick={() => onClickFridgeItem("milk")}
-               style={{ top: "28%", left: "56%" }} id="milk" ref={milkContainer}><img src={imageURL3} alt="Milk"
-                                                                                      className="w-32 select-none" />
+          <div className="fixed cursor-pointer sm:hidden" onClick={() => onClickFridgeItem("milk")}
+               style={{ top: "28%", left: "75%" }} id="milk" ref={milkContainer}><img src={imageURL3} alt="Milk"
+                                                                                      className="w-24 sm:w-32 select-none" />
+          </div>
+          <div className="fixed cursor-pointer hidden sm:block" onClick={() => onClickFridgeItem("milk")}
+               style={{ top: "24%", left: "62%" }} id="milk" ref={milkContainer}><img src={imageURL3} alt="Milk"
+                                                                                      className="w-20 sm:w-32 select-none" />
           </div>
           <div className="fixed text-xl xs:text-2xl sm:text-3xl md:text-4xl text-white font-bold max-w-sm"
-               style={{ top: "14%", left: "25%" }}>{text}
+               style={{ top: "20%", left: "25%" }}>{text}
           </div>
         </Plx>
         {
