@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { CommentInterface } from "../../user-dashboard/tickets";
 
 export const Comment: React.FC <{ comment: CommentInterface, handleDeleteComment: (id: string) => void}> = ({ comment, handleDeleteComment }) => {

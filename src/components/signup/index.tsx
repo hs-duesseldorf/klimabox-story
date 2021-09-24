@@ -34,10 +34,9 @@ export const SignUpForm: React.FC = () => {
       password: password,
       password_confirmation: password_confirmation,
     };
-    let response;
     let hasError = false;
     try {
-      response = await createUser(data);
+      await createUser(data);
     } catch (error) {
       hasError = true;
       // @ts-ignore

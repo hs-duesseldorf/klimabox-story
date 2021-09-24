@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
+import React from "react";
 export default interface TopicInterface {
   id: string,
   name: string,

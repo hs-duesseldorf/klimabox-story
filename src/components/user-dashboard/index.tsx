@@ -75,17 +75,15 @@ export const UserDashboard: React.FC = () => {
 
   const handleTopicClick = async (topic: TopicInterface) => {
     if (topic.liked) {
-      let response;
       try {
-        response = await removeTopic(topic)
+        await removeTopic(topic)
       } catch(error) {
         console.log(error)
       }
       fetchTopics()
     } else {
-      let response;
       try {
-        response = await addTopic(topic)
+        await addTopic(topic)
       } catch(error) {
         console.log(error)
       }
@@ -97,9 +95,8 @@ export const UserDashboard: React.FC = () => {
     let data = {
       message: message
     }
-    let response;
     try {
-      response = await createTicket(data)
+      await createTicket(data)
     } catch(error) {
       console.log(error)
     }

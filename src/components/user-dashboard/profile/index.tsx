@@ -18,6 +18,7 @@ export const Profile: React.FC = ()  => {
     } else {
       setUser(undefined)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [localStorage.getItem('user')]);
 
   if (user !== undefined) {

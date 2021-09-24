@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { requestPwReset } from "../../users_api/UserAPI";
 
@@ -11,10 +11,9 @@ export const PwResetRequestForm: React.FC = () => {
     let data = {
       email: email,
     };
-    let response;
     setHasError(false);
     try {
-      response = await requestPwReset(data);
+      await requestPwReset(data);
     } catch (error) {
       setHasError(true);
       return;

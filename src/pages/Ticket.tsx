@@ -3,8 +3,6 @@ import { match } from "react-router-dom";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
 import { TicketShow } from "../components/ticket";
-import { UserDashboard } from "../components/user-dashboard";
-
 
 export const Ticket: React.FC <{ match: match<{ id: string; }> }> = ({ match })=> {
   const [user, setUser] = useState();
@@ -17,6 +15,7 @@ export const Ticket: React.FC <{ match: match<{ id: string; }> }> = ({ match })=
     } else {
       setUser(undefined)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [localStorage.getItem('user')]);
 
 

@@ -21,6 +21,7 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
     } else {
       setUser(undefined)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [localStorage.getItem('user')]);
 
   const handleLogout = async () => {

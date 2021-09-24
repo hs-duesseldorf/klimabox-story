@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {  deleteUser, updateUser } from "../../users_api/UserAPI";
 import { useHistory } from "react-router-dom";
-import UserInterface, { Profile } from "../user-dashboard/profile";
+import UserInterface from "../user-dashboard/profile";
 
 export const EditUser: React.FC  <{ user: UserInterface}> = ({ user }) => {
   let history = useHistory();
@@ -29,18 +29,17 @@ export const EditUser: React.FC  <{ user: UserInterface}> = ({ user }) => {
 
   useEffect(() => {
     setEmail(user.email);
-  }, []);
+  }, [user.email]);
 
   const handleChangeEmail = async (email: string) => {
+    removeErrors()
     let data = {
       email: email
     }
     let response;
-    let hasError = false;
     try {
       response = await updateUser(data ,parseInt(user.id, 10))
     } catch(error) {
-      hasError = true;
       // @ts-ignore
       displayError(error.body.errors);
       return;
@@ -51,9 +50,8 @@ export const EditUser: React.FC  <{ user: UserInterface}> = ({ user }) => {
 
 
   const handleDeleteProfile = async (id: string) => {
-    let response;
     try {
-      response = await deleteUser(parseInt(id, 10))
+      await deleteUser(parseInt(id, 10))
     } catch(error) {
       return;
     }

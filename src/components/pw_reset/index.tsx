@@ -57,19 +57,14 @@ export const PwResetForm: React.FC = () => {
       password: password,
       password_confirmation: password_confirmation,
     };
-    let response;
-    let hasError = false;
     try {
-      response = await updatePw(data);
+      await updatePw(data);
     } catch (error) {
-      let hasError = true;
       // @ts-ignore
       displayError(error.body.errors);
       return;
     }
-    if (!hasError) {
-      history.push("/signin");
-    }
+    history.push("/signin");
   };
 
   return (

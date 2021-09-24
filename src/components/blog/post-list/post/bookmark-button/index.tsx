@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import cn from "classnames";
 
 import { BookmarkIcon } from "./icon";
@@ -13,16 +13,15 @@ export const BookmarkButton: React.FC <{ slug: string, favorit: boolean }> = ({ 
     let favorite_blogpost = {
         slug
     }
-    let response;
     if (active) {
       try {
-        response = await deFavorisePost(favorite_blogpost)
+        await deFavorisePost(favorite_blogpost)
       } catch(error) {
         console.log(error)
       }
     } else {
       try {
-        response = await favorisePost(favorite_blogpost)
+        await favorisePost(favorite_blogpost)
       } catch(error) {
         console.log(error)
       }

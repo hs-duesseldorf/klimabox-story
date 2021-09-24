@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { EditUser } from "../components/edit-user";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
-import { UserDashboard } from "../components/user-dashboard";
 import UserInterface from "../components/user-dashboard/profile";
 
 
@@ -17,6 +16,7 @@ export const Edit: React.FC = () => {
     } else {
       setUser(undefined)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [localStorage.getItem('user')]);
 
   if (user) {

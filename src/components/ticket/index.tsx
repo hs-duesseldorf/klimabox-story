@@ -59,12 +59,9 @@ export const TicketShow: React.FC<{ id: string }> = ({ id }) => {
     let data = {
       message: comment,
     };
-    let response;
-    let hasCommentError = false;
     try {
-      response = await createComment(data, parseInt(id, 10));
+      await createComment(data, parseInt(id, 10));
     } catch (error) {
-      hasCommentError= true;
       // @ts-ignore
       displayError(error.body.errors);
     }
@@ -73,10 +70,9 @@ export const TicketShow: React.FC<{ id: string }> = ({ id }) => {
   };
 
   const handleDeleteTicket = async () => {
-    let response;
     setHasError(false);
     try {
-      response = await deleteTicket(parseInt(id, 10));
+      await deleteTicket(parseInt(id, 10));
     } catch (error) {
       setHasError(true);
       return;
@@ -85,10 +81,9 @@ export const TicketShow: React.FC<{ id: string }> = ({ id }) => {
   };
 
   const handleDeleteComment = async (id: string) => {
-    let response;
     setHasError(false);
     try {
-      response = await deleteComment(parseInt(id, 10));
+      await deleteComment(parseInt(id, 10));
     } catch (error) {
       setHasError(true);
       return;
