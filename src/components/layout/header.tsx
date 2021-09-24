@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import cn from "classnames";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import { Button } from "./button";
 
 import searchIcon from "./search.svg";
 import searchIconDark from "./searchDark.svg";
+import { logout } from "../../users_api/UserAPI";
 
 export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
+  const [user, setUser] = useState()
   const { pathname } = useLocation();
+  let history = useHistory();
+
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem('user');
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      setUser(foundUser);
+    } else {
+      setUser(undefined)
+    }
+  }, [localStorage.getItem('user')]);
+
+  const handleLogout = async () => {
+    try {
+      await logout()
+    } catch(error) {
+      console.log(error)
+    }
+    localStorage.removeItem('user')
+    history.push('/')
+  }
 
   return (
     <div className="absolute w-full top-0 pt-6 pb-6 mb-3 z-10">
@@ -67,12 +91,23 @@ export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => {
                 className="w-full h-full pr-4"
               />
             }
-            <Link to="signin">
-              <Button onDark={onDark}>Einloggen</Button>
-            </Link>
-            <Link to="signup">
-              <Button buttonOutline={true} onDark={onDark}>Registrieren</Button>
-            </Link>
+            { user ? (
+              <>
+                <Link to="dashboard">
+                  <Button onDark={onDark}>Mein Bereich</Button>
+                </Link>
+                <Button buttonOutline={true} onDark={onDark} onClick={() => handleLogout()}>Logout</Button>
+              </>
+            ) : (
+              <>
+                <Link to="signin">
+                  <Button onDark={onDark}>Einloggen</Button>
+                </Link>
+                <Link to="signup">
+                  <Button buttonOutline={true} onDark={onDark}>Registrieren</Button>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>
