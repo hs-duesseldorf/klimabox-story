@@ -48,7 +48,7 @@ export const PwResetForm: React.FC = () => {
     } else {
       setToken("");
     }
-  }, []);
+  }, [history.location.search]);
 
   const handleUpdatePw = async () => {
     removeErrors();

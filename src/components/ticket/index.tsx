@@ -52,6 +52,7 @@ export const TicketShow: React.FC<{ id: string }> = ({ id }) => {
 
   useEffect(() => {
     fetchTicket();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSendComment = async (comment: string) => {
