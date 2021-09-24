@@ -15,8 +15,10 @@ export default interface TopicInterface {
 
 export const UserDashboard: React.FC = () => {
   const [favoritposts, setFavoritPosts] = useState([]);
+  const [favoritsLoaded, setFavortitsLoaded] = useState(false);
   const [topics, setTopics] = useState<TopicInterface[]>([]);
   const [tickets, setTickets] = useState<TicketInterface[]>([]);
+
 
   const fetchFavorits = async () => {
     let response;
@@ -30,6 +32,7 @@ export const UserDashboard: React.FC = () => {
       let slugs = response.slugs
       setFavoritPosts(JSON.parse(JSON.stringify(slugs)))
     }
+    setFavortitsLoaded(true);
   }
 
   const fetchTopics = async () => {
@@ -103,7 +106,6 @@ export const UserDashboard: React.FC = () => {
     fetchTickets();
   }
 
-
   return (
     <div>
       <div className="center-box mt-40">
@@ -116,11 +118,11 @@ export const UserDashboard: React.FC = () => {
             <Ticket tickets={tickets} handleSend={handleSendTicket}/>
           </div>
           <div>
-            <LatestBlogPost posts={favoritposts}/>
+            <LatestBlogPost posts={favoritposts} loaded={favoritsLoaded}/>
             <Topics topics={topics} handleClick={handleTopicClick}/>
           </div>
         </div>
-        <FavoritePosts posts={favoritposts}/>
+        <FavoritePosts posts={favoritposts} loaded={favoritsLoaded}/>
         </div>
     </div>
   );

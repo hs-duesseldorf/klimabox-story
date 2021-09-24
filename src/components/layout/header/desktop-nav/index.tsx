@@ -7,10 +7,12 @@ import type { NavItem } from "..";
 import { Button } from "../button";
 import { SearchButton } from "../search-button";
 
-export const DesktopNav: React.FC<{ items: NavItem[]; onDark?: boolean }> = ({
-  items,
-  onDark,
-}) => {
+export const DesktopNav: React.FC<{
+  items: NavItem[];
+  onDark?: boolean;
+  user?: any;
+  handleLogOut: () => void;
+}> = ({ items, onDark, user, handleLogOut }) => {
   const { pathname } = useLocation();
 
   return (
@@ -37,10 +39,27 @@ export const DesktopNav: React.FC<{ items: NavItem[]; onDark?: boolean }> = ({
       </div>
       <div className="flex items-center">
         <SearchButton />
-        <Button onDark={onDark}>Einloggen</Button>
-        <Button buttonOutline={true} onDark={onDark}>
-          Registrieren
-        </Button>
+        {user ? (
+          <>
+            <Link to="/dashboard">
+              <Button onDark={onDark}>Mein Bereich</Button>
+            </Link>
+            <Button buttonOutline={true} onDark={onDark} onClick={handleLogOut}>
+                Logout
+            </Button>
+          </>
+        ) : (
+          <>
+            <Link to="/signin">
+              <Button onDark={onDark}>Einloggen</Button>
+            </Link>
+            <Link to="/signup">
+              <Button buttonOutline={true} onDark={onDark}>
+                Registrieren
+              </Button>
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );

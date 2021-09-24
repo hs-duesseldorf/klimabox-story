@@ -1,21 +1,23 @@
 import React from "react";
+import { Post } from "../../blog/feed/post";
 
-import { Post } from "../../blog/post-list/post";
-import { usePost } from "../../blog/wp";
+import { LatestPostData, useLatestPost } from "../../blog/wp/latest_post";
+import { Spinner } from "../../spinner";
 
 
-export const LatestBlogPost: React.FC <{ posts: Array<string> }> = ({ posts })   => {
-  const { isLoading, error, data } = usePost("dauerbrenner-braunkohleausstieg-klimaschuetzerinnen-sitzen-auf-heissen-kohlen");
+export const LatestBlogPost: React.FC <{ posts: Array<string>, loaded: boolean }> = ({ posts, loaded })   => {
+  const { loading, error, data } = useLatestPost();
+  const item = React.useMemo<LatestPostData | undefined>(
+    () =>
+      data
+        ? data.posts.edges[0].node
+        : undefined,
+    [data]
+  );
 
-  if (isLoading) return <div>Loading...</div>;
+  if (loading || !loaded) return <div><Spinner /></div>;
   if (error || !data) return <div>Es ist ein Fehler aufgetreten.</div>;
 
-  let favorit = false;
-  posts.forEach((post) => {
-    if (post === data.slug) {
-      favorit = true
-    }
-  })
 
   return (
     <div>
@@ -23,7 +25,7 @@ export const LatestBlogPost: React.FC <{ posts: Array<string> }> = ({ posts })  
         Latest Post
       </h2>
       <div>
-        <Post data={data} favorit={favorit}/>
+        <Post data={item} favorits={posts}/>
       </div>
     </div>
   );
