@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import Plx from "react-plx";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
@@ -16,6 +16,43 @@ export const Fridge: React.FC = () => {
     const [visualization, setVisualization] = React.useState("bg-massvisualize-pig-pattern");
     const [paragraph1, setParagraph1] = React.useState("Zum Frühstück ein Brötchen mit Wurst, am Mittag ein leckeres Kotelett und abends eine Stulle mit Schinken - wir Deutschen essen viel und gerne Fleisch. Wir möchten euch hier nicht über die Auswirkungen von Fleisch-Konsum auf die Gesundheit oder die Behandlung der Tiere sprechen - da wissen wir alle Bescheid. Aber du solltest vielleicht wissen, was du für unser Klima tun kannst, ohne komplett auf Fleisch zu verzichten: Wenn du nicht ganz auf Fleisch verzichten möchtest, kannst du vielleicht regelmäßig einen fleischfreien Tag einlegen oder deinen Fleischkonsum auf die Hälfte reduzieren. Denn so kannst du eine Menge Treibhausgase und Wasser einsparen.  ");
     const [paragraph2, setParagraph2] = React.useState("Wenn du Fleisch essen möchtest, solltest du am besten Huhn oder Schwein essen, denn diese wandeln ihr Futter besser in Fleisch um. Also wie viel Fleisch sich aus wie viel Futter produzieren lässt. Außerdem stoßen Schweine von den Wiederkäuern am wenigsten Methan aus. Dadurch fallen weniger Emissionen an, denn Methan ist 25-mal schädlicher als CO2. Am besten kaufst du Bio-Fleisch, denn die Produktion von Ökoschweinefleisch verbraucht 40 % weniger Treibhausgase als die konventionelle. Bedenke trotzdem, dass auch für deine fleischhaltige Ernährungsweise, egal ob bio oder konventionell, deutlich mehr Landfläche und Wasser benötigt wird als bei der vegetarischen oder veganen. Ein Kilogramm Rind braucht bis zu 15.000 Liter Wasser, 1 Kilogramm Avocados brauchen nur etwa 1000 - 2000 Liter Wasser. Fazit: Eine fleischhaltige Ernährung macht aus dir keinen schlechteren Menschen. Jedoch kann man mit kleinen Anpassungen viel gegen den Klimawandeln machen. Damit wir und die nächsten Generationen weiterhin ein schönes und angenehmes Leben auf diesen Planeten haben können. ");
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const [y, setY] = React.useState(window.scrollY);
+    const [scrollUp, setScrollUp] = React.useState(false);
+
+    function handleWindowSizeChange() {
+      setWidth(window.innerWidth);
+    }
+
+    useEffect(() => {
+      window.addEventListener("resize", handleWindowSizeChange);
+      return () => {
+        window.removeEventListener("resize", handleWindowSizeChange);
+      };
+    }, []);
+
+    let isMobile: boolean = (width <= 768);
+
+    const handleNavigation = useCallback(
+      e => {
+        const window = e.currentTarget;
+        if (y > window.scrollY) {
+          setScrollUp(true);
+        } else if (y < window.scrollY) {
+          setScrollUp(false);
+        }
+        setY(window.scrollY);
+      }, [y]
+    );
+
+    useEffect(() => {
+      setY(window.scrollY);
+      window.addEventListener("scroll", handleNavigation);
+
+      return () => {
+        window.removeEventListener("scroll", handleNavigation);
+      };
+    }, [handleNavigation]);
 
     const meatContainer = useRef(null);
     const avocadoContainer = useRef(null);
@@ -125,38 +162,28 @@ export const Fridge: React.FC = () => {
       // @ts-ignore
       meatContainer.current.style.display = "block";
       setText("Wähle aus, was du am liebsten isst");
-
     };
 
     return (
-      <>
+      <>{scrollUp ? "" :
         <Plx parallaxData={parallaxData1} className="absolute bottom-0 opacity-0 z-0 h-screen w-screen"
              id="fridge-items">
-          <div className="fixed cursor-pointer sm:hidden" onClick={() => onClickFridgeItem("meat")}
-               style={{ top: "45%", left: "0%" }} id="meat" ref={meatContainer}><img src={imageURL1} alt="Meat"
-                                                                                      className="w-48 sm:w-64 select-none" />
-          </div>
-          <div className="fixed cursor-pointer hidden sm:block" onClick={() => onClickFridgeItem("meat")}
-               style={{ top: "45%", left: "15%" }} id="meat" ref={meatContainer}><img src={imageURL1} alt="Meat"
-                                                                                      className="w-48 sm:w-64 select-none" />
+          <div className="fixed cursor-pointer" onClick={() => onClickFridgeItem("meat")}
+               style={isMobile ? { top: "45%", left: "0%" } : { top: "45%", left: "15%" }} id="meat" ref={meatContainer}>
+            <img src={imageURL1} alt="Meat" className="w-48 sm:w-64 select-none" />
           </div>
           <div className="fixed cursor-pointer" onClick={() => onClickFridgeItem("avocado")}
-               style={ { top: "39%", left: "35%" }} id="avocado" ref={avocadoContainer}><img src={imageURL2}
-                                                                                            alt="Avocado"
-                                                                                            className="w-40 sm:w-52 select-none" />
+               style={{ top: "39%", left: "35%" }} id="avocado" ref={avocadoContainer}>
+            <img src={imageURL2} alt="Avocado" className="w-40 sm:w-52 select-none" />
           </div>
-          <div className="fixed cursor-pointer sm:hidden" onClick={() => onClickFridgeItem("milk")}
-               style={{ top: "28%", left: "75%" }} id="milk" ref={milkContainer}><img src={imageURL3} alt="Milk"
-                                                                                      className="w-24 sm:w-32 select-none" />
-          </div>
-          <div className="fixed cursor-pointer hidden sm:block" onClick={() => onClickFridgeItem("milk")}
-               style={{ top: "24%", left: "62%" }} id="milk" ref={milkContainer}><img src={imageURL3} alt="Milk"
-                                                                                      className="w-20 sm:w-32 select-none" />
+          <div className="fixed cursor-pointer" onClick={() => onClickFridgeItem("milk")}
+               style={isMobile ? { top: "28%", left: "75%" } : { top: "24%", left: "62%" }} id="milk" ref={milkContainer}>
+            <img src={imageURL3} alt="Milk" className="w-20 sm:w-32 select-none" />
           </div>
           <div className="fixed text-xl xs:text-2xl sm:text-3xl md:text-4xl text-white font-bold max-w-sm"
                style={{ top: "20%", left: "25%" }}>{text}
           </div>
-        </Plx>
+        </Plx>}
         {
           itemSelected ?
             <div className="h-screen">
@@ -173,10 +200,10 @@ export const Fridge: React.FC = () => {
                 </div>
               </Plx>
               <Plx className="absolute"
-                   style={{ top: "360vh" }}>
+                   style={isMobile ? { top: "460vh" } : { top: "420vh" }}>
                 <div
-                  className="flex flex-col justify-center items-center w-screen h-screen text-white ">
-                  <div className="w-1/2 p-2 backdrop-filter backdrop-blur-lg">
+                  className="flex flex-col justify-center items-center w-screen h-auto md:h-screen text-white mb-20">
+                  <div className="w-4/5 md:w-1/2 p-2 backdrop-filter backdrop-blur-lg">
                     <div className="mb-6 xs:text-xl sm:text-2xl">{paragraph1}
                     </div>
                     <div className="xs:text-xl sm:text-2xl ">{paragraph2}
@@ -184,15 +211,16 @@ export const Fridge: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex flex-col justify-center items-center w-screen h-screen text-black"><h2
-                  className="w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold mb-20 text-white">Ökobilanz-Vergleich</h2>
-                  <div className="w-1/2 mb-6"><CO2Statistics />
+                  className="w-4/5 md:w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold mb-20 text-white">Ökobilanz-Vergleich</h2>
+                  <div className="w-4/5 md:w-1/2 mb-6"><CO2Statistics />
                   </div>
                   <div
-                    className="cursor-pointer w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold text-white hover:underline"
+                    className="cursor-pointer w-4/5 md:w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold text-white hover:underline"
                     onClick={resetFridgeItems}><AnchorLink offset="-100"
                                                            href="#fridge-items">Ein anderes Lebensmittel
                     auswählen</AnchorLink>
                   </div>
+                  <div className="h-28" />
                 </div>
               </Plx>
             </div>
