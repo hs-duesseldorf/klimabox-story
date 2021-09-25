@@ -27,23 +27,47 @@ const useCheckSecondChoiceAvailability =  (setSequence: React.Dispatch<React.Set
 
 const useDetectZoom = (setTransformOrigin: React.Dispatch<React.SetStateAction<{}>>) => {
   React.useEffect(()=>{
+
+    // TODO: hier ist noch Optimierung bezüglich des Zoom prozesses erforderlich.
+    let value;
+    if (window.innerWidth >= 320){
+      value = 200
+    }
+
+    if (window.innerWidth >= 375){
+      value = -300;
+    }
+
+    if (window.innerWidth >= 425){
+      value = -300;
+    }
+
+    if (window.innerWidth >= 600){
+      value = -1500;
+    }
+
+    if (window.innerWidth >= 768){
+      value = -1000;
+    }
+
+    if (window.innerWidth >= 1024){
+      value = window.innerHeight >= 1366? -1500: -150;
+    }
+
+    if (window.innerWidth >= 1440){
+      value = -400;
+    }
+
+    if (window.innerWidth >= 1900){
+      value = -500;
+    }
+
     const scrollHandle = () => {
       const clientHeight = document.documentElement.clientHeight;
       const scrollPosition = document.documentElement.scrollTop;
-      if(clientHeight * 13 <= scrollPosition &&  scrollPosition <= clientHeight * 22){
-        const adContent = document.getElementById("werbetafel");
-        const street = document.getElementById("Street");
-        const pointX = (adContent!.getClientRects()[0].x + adContent!.getClientRects()[0].width)/2;
-        //const pointY = (adContent!.getClientRects()[0].y + adContent!.getClientRects()[0].height)/2 - street!.offsetTop;
-        const pointY = (adContent!.getClientRects()[0].y + adContent!.getClientRects()[0].height)/2 - street!.offsetTop/1.5;
-        const applyTransformOrigin = { transformOrigin: `${pointX}px ${pointY}px` }
-        setTransformOrigin( applyTransformOrigin )
-      }
-      else{
-        setTransformOrigin({})
-      }
+      clientHeight * 13 <= scrollPosition &&  scrollPosition <= clientHeight * 22?
+        setTransformOrigin( { transformOrigin: `center ${value}px` }) : setTransformOrigin({})
     }
-
     window.addEventListener("scroll", scrollHandle);
     return () => window.removeEventListener("scroll", scrollHandle);
   },[setTransformOrigin])
@@ -74,10 +98,9 @@ export const Scene: React.FC<{
   useDetectZoom(setTransformOrigin);
   useCheckSecondChoiceAvailability(setSequence);
 
-
   return (
     <div>
-      <Plx style = {applyTransformOrigin} parallaxData={parallaxData.scene} animateWhenNotInViewport={true}>
+      <Plx id="scaleContainer" style = {applyTransformOrigin} parallaxData={parallaxData.scene} animateWhenNotInViewport={true}>
 
         <IntroScene chapter2Content={chapter2Content} parallaxData={parallaxData.backgroundData}
 ></IntroScene>

@@ -200,6 +200,7 @@
         font-size: 6px;
         left: 16.5%;
         margin-top: 7.5%;
+        transform: translateZ(0);
     }
 
     .secondChoiceChapter2 {
@@ -511,6 +512,7 @@
         font-size: 6px;
         left: 22.5%;
         margin-top: 36%;
+        transform: translateZ(0);
     }
 
     .secondChoiceChapter2 {
@@ -575,7 +577,7 @@
 
     .massenvisualsierung {
         opacity: 1;
-        top: 136rem;
+        top: 167rem;
     }
 
     .mContainer {
@@ -819,6 +821,7 @@
         font-size: 9px;
         left: 2.5%;
         margin-top: 0.5rem;
+        transform: translateZ(0);
     }
 
     .secondChoiceChapter2 {
@@ -1126,6 +1129,7 @@
         font-size: 11px;
         left: 3.5%;
         margin-top: 0.5rem;
+        transform: translateZ(0);
     }
 
     .secondChoiceChapter2 {
@@ -1433,6 +1437,7 @@
         position: absolute;
         font-size: 12px;
         left: 20.5%;
+        transform: translateZ(0);
     }
 
     .secondChoiceChapter2 {
@@ -1740,6 +1745,7 @@
         font-size: 15px;
         left: 20.5%;
         margin-top: 20%;
+        transform: translateZ(0);
     }
 
     .secondChoiceChapter2 {
@@ -1803,7 +1809,7 @@
 
     .massenvisualsierung {
         opacity: 1;
-        top: 86rem;
+        top: 249rem;
     }
 
     .mContainer {
@@ -1816,7 +1822,7 @@
 
     .mtextStyle {
         text-align: center;
-        font-size: 10px;
+        font-size: 20px;
         font-weight: bold;
         color: white;
         margin: 0px 12% 6%;
@@ -1824,7 +1830,7 @@
 
     .mtitleStyle {
         text-align: center;
-        font-size: 18px;
+        font-size: 30px;
         margin-top: 0.5%;
         color: white;
         font-weight: bold;
@@ -1948,7 +1954,7 @@
     }
 
     .blackCut {
-        top: 94rem;
+        top: 100rem;
         z-index: 6;
     }
 
@@ -2049,6 +2055,7 @@
         font-size: 17px;
         left: 26.5%;
         margin-top: 20%;
+        transform: translateZ(0);
     }
 
     .secondChoiceChapter2 {
@@ -2112,7 +2119,7 @@
 
     .massenvisualsierung {
         opacity: 1;
-        top: 94rem;
+        top: 105rem;
     }
 
     .mContainer {
@@ -2140,7 +2147,7 @@
     }
 
     .whiteCut {
-        top: 94rem;
+        top: 100rem;
     }
 
     .show {
@@ -2358,6 +2365,7 @@
         font-size: 20px;
         left: 29.5%;
         margin-top: 0%;
+        transform: translateZ(0);
     }
 
     .secondChoiceChapter2 {
@@ -2421,7 +2429,7 @@
 
     .massenvisualsierung {
         opacity: 1;
-        top: 115rem;
+        top: 157rem;
     }
 
     .mContainer {
