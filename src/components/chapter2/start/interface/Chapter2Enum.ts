@@ -1,7 +1,9 @@
 export enum Sequence {
-    Intro,
-    Question,
-    Car,
-    Bicycle,
-    Train,
-  }
+  NotDefined,
+  Intro,
+  Question,
+  Car,
+  Bicycle,
+  Train,
+  SecondQuestion
+}

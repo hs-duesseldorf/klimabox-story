@@ -1,14 +1,14 @@
 import { IntroTextData } from "./interfaces/interface";
 
 export const IntroText: React.FC<{ introTextData: IntroTextData }> = ({
-  introTextData,
-}) => {
+                                                                        introTextData
+                                                                      }) => {
   return (
-    <div className="container" style={introTextData.containerStyle}>
-      <div className="title" style={introTextData.titleStyle}>
+    <div className={`${introTextData.containerStyle}`}>
+      <div className={`${introTextData.titleStyle}`}>
         {introTextData.title}
       </div>
-      <div className="text" style={introTextData.textStyle}>
+      <div className={` ${introTextData.textStyle}`}>
         {introTextData.text}
       </div>
     </div>
