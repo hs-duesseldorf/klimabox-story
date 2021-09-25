@@ -1,3 +1,6 @@
+import { IntroTextData } from "../../../intro-text/interfaces/interface";
+import { Quizinterface } from "../../../quiz-statistics/interface/quiz-interface";
+
 type NonEmptyArray<T> = [T, ...T[]];
 
 export interface Stats {
@@ -12,3 +15,9 @@ export interface Stats {
     }>;
   }>;
 };
+
+export interface Chapter2Content {
+  introTextData: IntroTextData,
+  quizData: Quizinterface,
+  stats: Stats,
+}
