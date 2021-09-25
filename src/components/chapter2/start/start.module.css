@@ -131,6 +131,7 @@
         font-weight: bold;
         color: black;
         word-wrap: break-word;
+        transform: translateZ(0);
     }
 
     .adText {
@@ -138,6 +139,7 @@
         font-size: 5px;
         color: black;
         white-space: pre-wrap;
+        transform: translateZ(0);
     }
 
 
@@ -168,6 +170,7 @@
         color: black;
         font-weight: bold;
         font-size: 5px;
+        transform: translateZ(0);
     }
 
     .quizStatisticsQuestionmark {
@@ -195,7 +198,7 @@
         top: 6.5rem;
         position: absolute;
         font-size: 6px;
-        left: 12.5%;
+        left: 16.5%;
         margin-top: 7.5%;
     }
 
@@ -261,7 +264,7 @@
 
     .massenvisualsierung {
         opacity: 1;
-        top: 58rem;
+        top: 136rem;
     }
 
     .mContainer {
@@ -412,7 +415,7 @@
     .graffiti {
         left: 102%;
         width: 60%;
-        top: 39rem;
+        top: 34rem;
     }
 
     .werbetafel {
@@ -440,6 +443,7 @@
         font-weight: bold;
         color: black;
         word-wrap: break-word;
+        transform: translateZ(0);
     }
 
     .adText {
@@ -447,6 +451,7 @@
         font-size: 5px;
         color: black;
         white-space: pre-wrap;
+        transform: translateZ(0);
     }
 
 
@@ -476,6 +481,7 @@
         color: black;
         font-weight: bold;
         font-size: 5px;
+        transform: translateZ(0);
     }
 
     .quizStatisticsQuestionmark {
@@ -509,7 +515,7 @@
 
     .secondChoiceChapter2 {
         left: 1rem;
-        top: 101vh;
+        top: 86vh;
         font-size: larger;
         opacity: 0;
     }
@@ -569,7 +575,7 @@
 
     .massenvisualsierung {
         opacity: 1;
-        top: 60rem;
+        top: 136rem;
     }
 
     .mContainer {
@@ -783,6 +789,7 @@
         color: black;
         font-weight: bold;
         font-size: 5px;
+        transform: translateZ(0);
     }
 
     .quizStatisticsQuestionmark {
@@ -876,7 +883,7 @@
 
     .massenvisualsierung {
         opacity: 1;
-        top: 59rem;
+        top: 167rem;
     }
 
     .mContainer {
@@ -1089,6 +1096,7 @@
         color: black;
         font-weight: bold;
         font-size: 8px;
+        transform: translateZ(0);
     }
 
     .quizStatisticsQuestionmark {
@@ -1396,6 +1404,7 @@
         color: black;
         font-weight: bold;
         font-size: 10px;
+        transform: translateZ(0);
     }
 
     .quizStatisticsQuestionmark {
@@ -1702,6 +1711,7 @@
         color: black;
         font-weight: bold;
         font-size: 14px;
+        transform: translateZ(0);
     }
 
     .quizStatisticsQuestionmark {
@@ -2010,6 +2020,7 @@
         color: black;
         font-weight: bold;
         font-size: 14px;
+        transform: translateZ(0);
     }
 
     .quizStatisticsQuestionmark {
@@ -2318,6 +2329,7 @@
         color: black;
         font-weight: bold;
         font-size: 14px;
+        transform: translateZ(0);
     }
 
     .quizStatisticsQuestionmark {

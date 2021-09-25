@@ -32,10 +32,10 @@ const useDetectZoom = (setTransformOrigin: React.Dispatch<React.SetStateAction<{
       const scrollPosition = document.documentElement.scrollTop;
       if(clientHeight * 13 <= scrollPosition &&  scrollPosition <= clientHeight * 22){
         const adContent = document.getElementById("werbetafel");
-        //console.log(adContent?.getClientRects());
+        const street = document.getElementById("Street");
         const pointX = (adContent!.getClientRects()[0].x + adContent!.getClientRects()[0].width)/2;
-        const pointY = (adContent!.getClientRects()[0].y + adContent!.getClientRects()[0].height)/2 - adContent!.getClientRects()[0].height * 0.7;
-        //console.log(pointY);
+        //const pointY = (adContent!.getClientRects()[0].y + adContent!.getClientRects()[0].height)/2 - street!.offsetTop;
+        const pointY = (adContent!.getClientRects()[0].y + adContent!.getClientRects()[0].height)/2 - street!.offsetTop/1.5;
         const applyTransformOrigin = { transformOrigin: `${pointX}px ${pointY}px` }
         setTransformOrigin( applyTransformOrigin )
       }

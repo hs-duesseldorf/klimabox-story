@@ -183,11 +183,33 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientWidth * 4,
+                endValue: -clientWidth * 8,
                 property: "translateY"
               }
             ]
-          }
+          },
+          {
+            start: clientHeight * 10,
+            end: clientHeight * 11,
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 11,
+            end: clientHeight * 15,
+            properties: [
+              {
+                startValue: -clientWidth * 8,
+                endValue: -clientWidth * 20,
+                property: "translateY"
+              }
+            ]
+          },
         ],
         backgroundData: [
           {
@@ -394,11 +416,33 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientWidth * 4,
+                endValue: -clientWidth  * 8,
                 property: "translateY"
               }
             ]
-          }
+          },
+          {
+            start: clientHeight * 29,
+            end: clientHeight * 30,
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 30,
+            end: clientHeight * 31,
+            properties: [
+              {
+                startValue: -clientWidth * 8,
+                endValue: -clientWidth * 20,
+                property: "translateY"
+              }
+            ]
+          },
         ]
       };
 
@@ -618,11 +662,33 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientWidth * 4,
+                endValue: -clientWidth * 8,
                 property: "translateY"
               }
             ]
-          }
+          },
+          {
+            start: clientHeight * 10,
+            end: clientHeight * 11,
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 11,
+            end: clientHeight * 15,
+            properties: [
+              {
+                startValue: -clientWidth * 8,
+                endValue: -clientWidth * 30,
+                property: "translateY"
+              }
+            ]
+          },
         ],
         backgroundData: [
           {
@@ -829,11 +895,33 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientWidth * 4,
+                endValue: -clientWidth  * 8,
                 property: "translateY"
               }
             ]
-          }
+          },
+          {
+            start: clientHeight * 29,
+            end: clientHeight * 30,
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 30,
+            end: clientHeight * 31,
+            properties: [
+              {
+                startValue: -clientWidth * 8,
+                endValue: -clientWidth * 30,
+                property: "translateY"
+              }
+            ]
+          },
         ]
       };
 
@@ -1055,11 +1143,33 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientWidth * 4,
+                endValue: -clientWidth * 8,
                 property: "translateY"
               }
             ]
-          }
+          },
+          {
+            start: clientHeight * 10,
+            end: clientHeight * 11,
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 11,
+            end: clientHeight * 15,
+            properties: [
+              {
+                startValue: -clientWidth * 8,
+                endValue: -clientWidth * 30,
+                property: "translateY"
+              }
+            ]
+          },
         ],
         backgroundData: [
           {
@@ -1266,14 +1376,35 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientWidth * 4,
+                endValue: -clientWidth  * 8,
                 property: "translateY"
               }
             ]
-          }
+          },
+          {
+            start: clientHeight * 29,
+            end: clientHeight * 30,
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 30,
+            end: clientHeight * 31,
+            properties: [
+              {
+                startValue: -clientWidth * 8,
+                endValue: -clientWidth * 20,
+                property: "translateY"
+              }
+            ]
+          },
         ]
       };
-
 
     case Sequence.Train:
       return {
@@ -1492,11 +1623,33 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientWidth * 4,
+                endValue: -clientWidth * 8,
                 property: "translateY"
               }
             ]
-          }
+          },
+          {
+            start: clientHeight * 10,
+            end: clientHeight * 11,
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 11,
+            end: clientHeight * 15,
+            properties: [
+              {
+                startValue: -clientWidth * 8,
+                endValue: -clientWidth * 30,
+                property: "translateY"
+              }
+            ]
+          },
         ],
         backgroundData: [
           {
@@ -1703,11 +1856,33 @@ export const getParallaxData = (
             properties: [
               {
                 startValue: 0,
-                endValue: -clientWidth * 4,
+                endValue: -clientWidth  * 8,
                 property: "translateY"
               }
             ]
-          }
+          },
+          {
+            start: clientHeight * 29,
+            end: clientHeight * 30,
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity"
+              }
+            ]
+          },
+          {
+            start: clientHeight * 30,
+            end: clientHeight * 31,
+            properties: [
+              {
+                startValue: -clientWidth * 8,
+                endValue: -clientWidth * 30,
+                property: "translateY"
+              }
+            ]
+          },
         ]
       };
   }
