@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import Plx from "react-plx";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-
 import imageURL1 from "./kapitel1_table_meat.png";
 import imageURL2 from "./kapitel1_table_avocado.png";
 import imageURL3 from "./kapitel1_table_milk.png";
@@ -32,6 +31,8 @@ export const Fridge: React.FC = () => {
     }, []);
 
     let isMobile: boolean = (width <= 768);
+    let isTablet: boolean = (width > 768 && width <= 1024);
+
 
     const handleNavigation = useCallback(
       e => {
@@ -60,8 +61,8 @@ export const Fridge: React.FC = () => {
 
     const parallaxData1 = [
       {
-        start: 2950,
-        end: 3000,
+        start: 2350,
+        end: 2500,
         easing: "easeIn",
         properties: [
           {
@@ -75,8 +76,8 @@ export const Fridge: React.FC = () => {
 
     const parallaxData2 = [
       {
-        start: 3000,
-        end: 3300,
+        start: 2500,
+        end: 2800,
         easing: "easeIn",
         properties: [
           {
@@ -130,7 +131,7 @@ export const Fridge: React.FC = () => {
           setText("Avocado");
           setFactTitle("200 Avocados");
           setFact("isst ein Mensch");
-          setVisualization("bg-massvisualize-avocado-pattern  bg-contain bg-no-repeat");
+          setVisualization("bg-massvisualize-avocado-pattern  bg-cover");
           setParagraph1("Mit dieser Ernährungsform bist du nicht allein. Schätzungen zufolge teilen über 1 Millionen Menschen in Deutschland deine vegane Essgewohnheit und wahrscheinlich werden es in Zukunft noch mehr werden. Hoffentlich! Denn das wäre nicht durch gut für die Gesundheit und für die Nutztiere, sondern auch für die Umwelt. Die vegane Ernährung verursacht nur ein Drittel an Emissionen, die bei einer omnivoren Ernährung anfallen. Wenn die Welt vegan leben würde, würden bis zu 70 % der weltweit ernährungsbedingten Emissionen reduziert werden. Ein weiteres globales Problem, das durch die Ernährungsform eliminiert wird, ist der Gebrauch von Antibiotika an Tieren. Außerdem wird für den veganen Lebensstil deutlich weniger Fläche und Wasser verbraucht, sodass mehr Menschen ernährt werden könnten und Wasser gespart werden könnte.  ");
           setParagraph2("Jedoch muss gesagt werden, dass es bei einer veganen Ernährung zusätzlich viele Einsparungsmöglichkeiten gibt. So benötigt ein Kilogramm Avocado zwischen 1000 – 2000 Liter und Nüsse sogar bis zu 5000 Liter Wasser. Entsprechend dazu benötigen Tomaten nur 120 Liter und Äpfel 700 Liter Wasser. Auch sollte man am besten auf kurze Transportwege und Regionalität achten. Nichtsdestotrotz hast du durch deine Ernährungsform einen großen positiven Einfluss auf unser Klima. Denn diese ist für die Umwelt die beste Ernährungsform. ");
           break;
@@ -142,7 +143,7 @@ export const Fridge: React.FC = () => {
           setText("Milch & Milchprodukte");
           setFactTitle("500l Milch");
           setFact("trinkt ein Mensch");
-          setVisualization("bg-massvisualize-milk-pattern  bg-contain bg-no-repeat");
+          setVisualization("bg-massvisualize-milk-pattern  bg-cover");
           setParagraph1("Ja, ein Verzicht auf Käse, weitere Milchprodukte und Spiegelei am Morgen ist schwer und mit einem Verzicht auf Fleisch und Fisch bewirkt man schon eine Menge positives für unsere Umwelt. Laut einer Berechnung von Statistika sparst du ungefähr 26 % an Emissionen im Vergleich zu Fleischessern. Da die Landwirtschaft weltweit für 18 % der Treibhausemissionen verantwortlich ist, hat das einen immensen Einfluss auf das Klima. Dank dir verringern sich die Bestände an Nutztieren und somit auch an Tierleid. Zudem benötigt diese Art der Ernährung ungefähr 5-mal weniger Fläche im Vergleich zu der omnivoren Lebensweise. Das alles ist super! Allerdings kannst du noch mehr Fläche und Wasser sparen, wenn du dich vegan ernährst oder dich der veganen Ernährung ein bisschen weiter annäherst! Wenn du dich nicht vegan ernähren möchtest, aber hinsichtlich Umwelt deine Ernährung optimieren möchtest, könntest du vielleicht die Kuhmilch durch eine Milchalternative ersetzen. Denn Milchalternativen sind zum größten Teil umweltschonender. Sie benötigen oft weniger Wasser (außer Mandel- und Reisdrink), Landfläche, Emissionen und haben eine geringere Gewässerbelastung. Wir würden dir Hafer- oder Sojadrink empfehlen. Denn diese beiden Alternativen sind am umweltschonendsten. Und nein, dein Sojadrink zerstört nicht den Regenwald. Denn das Soja, welches dort angebaut wird, wird fast ausschließlich für die Futterproduktion von Nutztieren verwendet. Wenn ihr aber auf Nummer sichergehen wollt, achtet darauf, dass die Sojabohnen in Europa produziert wurden. ");
           setParagraph2("Fazit: Dank dir und deiner Ernährungsweise wird eine Menge CO2 eingespart und die Umwelt weniger belastet. Und das sind doch positive Nachrichten. ");
           break;
@@ -169,16 +170,19 @@ export const Fridge: React.FC = () => {
         <Plx parallaxData={parallaxData1} className="absolute bottom-0 opacity-0 z-0 h-screen w-screen"
              id="fridge-items">
           <div className="fixed cursor-pointer" onClick={() => onClickFridgeItem("meat")}
-               style={isMobile ? { top: "45%", left: "0%" } : { top: "45%", left: "15%" }} id="meat" ref={meatContainer}>
-            <img src={imageURL1} alt="Meat" className="w-48 sm:w-64 select-none" />
+               style={isMobile || isTablet ? { top: "47%", left: "1%" } : { top: "44%", left: "15%" }} id="meat"
+               ref={meatContainer}>
+            <img src={imageURL1} alt="Meat" className="w-44 lg:w-80 select-none" />
           </div>
           <div className="fixed cursor-pointer" onClick={() => onClickFridgeItem("avocado")}
-               style={{ top: "39%", left: "35%" }} id="avocado" ref={avocadoContainer}>
-            <img src={imageURL2} alt="Avocado" className="w-40 sm:w-52 select-none" />
+               style={isMobile || isTablet ? { top: "44%", left: "37%" } : { top: "42%", left: "38%" }} id="avocado"
+               ref={avocadoContainer}>
+            <img src={imageURL2} alt="Avocado" className="w-32 lg:w-56 select-none" />
           </div>
           <div className="fixed cursor-pointer" onClick={() => onClickFridgeItem("milk")}
-               style={isMobile ? { top: "28%", left: "75%" } : { top: "24%", left: "62%" }} id="milk" ref={milkContainer}>
-            <img src={imageURL3} alt="Milk" className="w-20 sm:w-32 select-none" />
+               style={isMobile || isTablet ? { top: "32%", left: "75%" } : { top: "24%", left: "62%" }} id="milk"
+               ref={milkContainer}>
+            <img src={imageURL3} alt="Milk" className="w-20 lg:w-40 select-none" />
           </div>
           <div className="fixed text-xl xs:text-2xl sm:text-3xl md:text-4xl text-white font-bold max-w-sm"
                style={{ top: "20%", left: "25%" }}>{text}
@@ -186,21 +190,21 @@ export const Fridge: React.FC = () => {
         </Plx>}
         {
           itemSelected ?
-            <div className="h-screen">
+            <div className="h-screen w-full">
               <Plx parallaxData={parallaxData2} className={`absolute ${styles.height}`}
                    style={{ top: "150vh" }}>
                 <div
-                  className={`flex justify-center items-center w-screen ${visualization} -mt-6 font-bold ${styles.height}`}>
+                  className={`flex justify-center items-center w-screen overflow-x-hidden ${visualization} -mt-6 font-bold ${styles.height}`}>
                   <div
-                    className="flex flex-col justify-center items-center backdrop-filter backdrop-blur-lg rounded-lg">
-                    <div className="text-3xl xs:text-5xl sm:text-6xl my-12 mx-40">{factTitle}</div>
+                    className="flex flex-col justify-center items-center backdrop-filter backdrop-blur-lg rounded-lg w-80 h-60 lg:w-auto lg:h-auto">
+                    <div className="text-2xl xs:text-3xl sm:text-6xl my-6 lg:my-12 lg:mx-40">{factTitle}</div>
                     <div className="text-xl xs:text-2xl sm:text-4xl">{fact}</div>
                     <div className="text-xl xs:text-2xl sm:text-4xl mb-12">in seinem Leben</div>
                   </div>
                 </div>
               </Plx>
               <Plx className="absolute"
-                   style={isMobile ? { top: "460vh" } : { top: "420vh" }}>
+                   style={isMobile ? { top: "420vh" } : {top: "320vh"}}>
                 <div
                   className="flex flex-col justify-center items-center w-screen h-auto md:h-screen text-white mb-20">
                   <div className="w-4/5 md:w-1/2 p-2 backdrop-filter backdrop-blur-lg">
