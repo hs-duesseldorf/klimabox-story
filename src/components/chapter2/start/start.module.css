@@ -1,47 +1,2476 @@
-.buildingA {
-    width: 45%;
+@media (min-width: 320px) {
+    .buildingAIntroScene {
+        top: 32rem;
+        width: 44%;
+        left: 58%;
+    }
+
+    .buildingB {
+        right: 33%;
+        width: 36%;
+        top: 41rem;
+    }
+
+    .buildingC {
+        right: 63%;
+        width: 39%;
+        top: 43rem;
+    }
+
+    .sun {
+        top: 14%;
+        opacity: 0.7;
+    }
+
+    .street {
+        right: 0.1%;
+        width: 100%;
+        top: 49rem;
+        transform: scale(1.1);
+
+    }
+
+    .clue {
+        bottom: 10%;
+        right: 5%;
+        width: 30%;
+    }
+
+    .headerline {
+        padding: 0 0 3% 18%;
+    }
+
+    .text {
+        top: 12rem;
+        font-size: 13pt;
+        padding-left: 8%;
+    }
+
+    .continue {
+        left: 26.5%;
+        top: 20rem;
+    }
+
+    .chapter2Choice {
+        top: 395vh;
+        width: 20rem;
+    }
+
+    .train {
+        top: 48rem;
+        right: 80%;
+        width: 75%;
+    }
+
+    .bicycle {
+        top: 51rem;
+        width: 20%;
+        right: 75%;
+    }
+
+    .car {
+        width: 63%;
+        top: 48rem;
+        left: 31%;
+    }
+
+    .carChoice {
+        padding-top: 0%;
+        top: 1rem;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .bicycleChoice {
+        position: absolute;
+        left: -14%;
+        top: -0.5rem;
+        width: 128%;
+        z-index: 2;
+    }
+
+    .trainChoice {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .blackCut {
+        top: 58rem;
+        z-index: 6;
+    }
+
+    .graffiti {
+        left: 102%;
+        width: 60%;
+        top: 39rem;
+    }
+
+    .werbetafel {
+        top: 40rem;
+        width: 27%;
+        left: 117.5%;
+    }
+
+    .graffitiContent {
+        top: 41rem;
+        width: 22.5%;
+        left: 120%;
+        height: 22vh;
+    }
+
+    .adContainer {
+        width: 100%;
+        height: inherit;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .adTitle {
+        font-size: 10px;
+        font-weight: bold;
+        color: black;
+        word-wrap: break-word;
+        transform: translateZ(0);
+    }
+
+    .adText {
+        word-wrap: break-word;
+        font-size: 5px;
+        color: black;
+        white-space: pre-wrap;
+        transform: translateZ(0);
+    }
+
+
+    .graffitiBackground {
+        left: 21.7%;
+        top: 42.5rem;
+        width: 28%;
+    }
+
+    .hochhaus {
+        left: 158%;
+        top: 22rem;
+        width: 50%;
+    }
+
+    .quizStatisticsContainer {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 4.5rem;
+        margin-top: 0.1rem;
+        transform: translateZ(0);
+    }
+
+    .quizStatisticsTitle {
+        width: 100%;
+        top: 0;
+        color: black;
+        font-weight: bold;
+        font-size: 5px;
+        transform: translateZ(0);
+    }
+
+    .quizStatisticsQuestionmark {
+        top: 62%;
+        left: 46%;
+        width: 7%;
+        position: relative;
+    }
+
+    .quizStatistics {
+        width: 100%;
+        left: 0%;
+        color: black;
+        margin-top: 0.5rem;
+    }
+
+    .quizQuestion {
+        background-color: lightgray;
+        font-size: 6px;
+        margin-top: 0.25rem;
+        text-align: center;
+    }
+
+    .showStatsButton {
+        top: 6.5rem;
+        position: absolute;
+        font-size: 6px;
+        left: 16.5%;
+        margin-top: 7.5%;
+        transform: translateZ(0);
+    }
+
+    .secondChoiceChapter2 {
+        left: 1rem;
+        top: 101vh;
+        font-size: larger;
+        opacity: 0;
+    }
+
+    .endScene {
+        width: 100%;
+        left: 201%;
+        z-index: -1;
+        top: 20rem;
+    }
+
+    .streetEnd {
+        width: 100%;
+        transform: scale(1);
+        top: 43rem;
+    }
+
+    .wall {
+        top: 19rem;
+    }
+
+    .allWeHaveIsNow {
+        width: 16%;
+        top: 21rem;
+        left: 65%;
+    }
+
+    .streetlamp {
+        width: 23%;
+        top: 44.5rem;
+        left: 30.5%;
+    }
+
+    .takeItEasy {
+        width: 17%;
+        top: 28rem;
+        left: 43%;
+    }
+
+    .human {
+        top: 59.15rem;
+        left: 219%;
+        z-index: 1;
+    }
+
+    .door {
+        top: 26rem;
+        left: 64%;
+        width: 20%;
+    }
+
+    .telephone {
+        top: 29.5rem;
+        left: 86.5%;
+        width: 10%;
+    }
+
+    .massenvisualsierung {
+        opacity: 1;
+        top: 136rem;
+    }
+
+    .mContainer {
+        position: absolute;
+        top: 20rem;
+        width: 30%;
+        height: 10rem;
+        left: 36%;
+    }
+
+    .mtextStyle {
+        text-align: center;
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        margin: 0px 12% 6%;
+    }
+
+    .mtitleStyle {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 0.5%;
+        color: white;
+        font-weight: bold;
+    }
+
+    .whiteCut {
+        top: 58rem;
+    }
+
+    .show {
+        animation: show-animation 2s;
+    }
+
+    @keyframes show-animation {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-50rem);
+        }
+    }
 }
 
-.buildingB {
-    right: 38%;
-    width: 35%;
-    padding-top: 55%;
+@media (min-width: 375px) {
+
+    .buildingAIntroScene {
+        top: 29rem;
+        width: 44%;
+        left: 58%;
+    }
+
+    .buildingB {
+        right: 33%;
+        width: 36%;
+        top: 41rem;
+    }
+
+    .buildingC {
+        right: 63%;
+        width: 39%;
+        top: 43rem;
+    }
+
+    .sun {
+        top: 14%;
+        opacity: 0.7;
+    }
+
+    .street {
+        right: 0.1%;
+        width: 100%;
+        top: 49rem;
+        transform: scale(1.1);
+
+    }
+
+    .clue {
+        bottom: 10%;
+        right: 5%;
+        width: 30%;
+    }
+
+    .headerline {
+        padding: 0 0 3% 18%;
+    }
+
+    .text {
+        top: 12rem;
+        font-size: 13pt;
+        padding-left: 8%;
+    }
+
+    .continue {
+        left: 26.5%;
+        top: 20rem;
+    }
+
+    .chapter2Choice {
+        top: 395vh;
+        width: 20rem;
+    }
+
+    .train {
+        top: 48rem;
+        right: 80%;
+        width: 75%;
+    }
+
+    .bicycle {
+        top: 51rem;
+        width: 20%;
+        right: 75%;
+    }
+
+    .car {
+        width: 63%;
+        top: 48rem;
+        left: 31%;
+    }
+
+    .carChoice {
+        padding-top: 0%;
+        top: 1rem;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .bicycleChoice {
+        position: absolute;
+        left: -14%;
+        top: -0.5rem;
+        width: 128%;
+        z-index: 2;
+    }
+
+    .trainChoice {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .blackCut {
+        top: 58rem;
+        z-index: 6;
+    }
+
+    .graffiti {
+        left: 102%;
+        width: 60%;
+        top: 34rem;
+    }
+
+    .werbetafel {
+        top: 39rem;
+        width: 27%;
+        left: 117.5%;
+    }
+
+    .graffitiContent {
+        top: 40rem;
+        width: 22.5%;
+        left: 120%;
+        height: 22vh;
+    }
+
+    .adContainer {
+        width: 100%;
+        height: inherit;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .adTitle {
+        font-size: 10px;
+        font-weight: bold;
+        color: black;
+        word-wrap: break-word;
+        transform: translateZ(0);
+    }
+
+    .adText {
+        word-wrap: break-word;
+        font-size: 5px;
+        color: black;
+        white-space: pre-wrap;
+        transform: translateZ(0);
+    }
+
+
+    .graffitiBackground {
+        left: 21.7%;
+        top: 42.5rem;
+        width: 28%;
+    }
+
+    .hochhaus {
+        left: 158%;
+        top: 22rem;
+        width: 50%;
+    }
+
+    .quizStatisticsContainer {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 4.5rem;
+        margin-top: 0.1rem;
+    }
+
+    .quizStatisticsTitle {
+        width: 100%;
+        top: 0;
+        color: black;
+        font-weight: bold;
+        font-size: 5px;
+        transform: translateZ(0);
+    }
+
+    .quizStatisticsQuestionmark {
+        top: 62%;
+        left: 46%;
+        width: 7%;
+        position: relative;
+    }
+
+    .quizStatistics {
+        width: 100%;
+        left: 0%;
+        color: black;
+        margin-top: 0.5rem;
+    }
+
+    .quizQuestion {
+        background-color: lightgray;
+        font-size: 6px;
+        margin-top: 0.25rem;
+        text-align: center;
+    }
+
+    .showStatsButton {
+        top: 6.5rem;
+        position: absolute;
+        font-size: 6px;
+        left: 22.5%;
+        margin-top: 36%;
+        transform: translateZ(0);
+    }
+
+    .secondChoiceChapter2 {
+        left: 1rem;
+        top: 86vh;
+        font-size: larger;
+        opacity: 0;
+    }
+
+    .endScene {
+        width: 100%;
+        left: 201%;
+        z-index: -1;
+        top: 17rem;
+    }
+
+    .streetEnd {
+        width: 100%;
+        transform: scale(1);
+        top: 41rem;
+    }
+
+    .wall {
+        top: 19rem;
+    }
+
+    .allWeHaveIsNow {
+        width: 16%;
+        top: 21rem;
+        left: 65%;
+    }
+
+    .streetlamp {
+        width: 23%;
+        top: 42.5rem;
+        left: 30.5%;
+    }
+
+    .takeItEasy {
+        width: 17%;
+        top: 28rem;
+        left: 43%;
+    }
+
+    .human {
+        top: 59.15rem;
+        left: 219%;
+        z-index: 1;
+    }
+
+    .door {
+        top: 26rem;
+        left: 64%;
+        width: 20%;
+    }
+
+    .telephone {
+        top: 29.5rem;
+        left: 86.5%;
+        width: 10%;
+    }
+
+    .massenvisualsierung {
+        opacity: 1;
+        top: 167rem;
+    }
+
+    .mContainer {
+        position: absolute;
+        top: 20rem;
+        width: 30%;
+        height: 10rem;
+        left: 36%;
+    }
+
+    .mtextStyle {
+        text-align: center;
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        margin: 0px 12% 6%;
+    }
+
+    .mtitleStyle {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 0.5%;
+        color: white;
+        font-weight: bold;
+    }
+
+    .whiteCut {
+        top: 58rem;
+    }
+
+    .show {
+        animation: show-animation 2s;
+    }
+
+    @keyframes show-animation {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-50rem);
+        }
+    }
+
 }
 
-.buildingC {
-    right: 65%;
-    width: 35%;
-    padding-top: 59%;
+@media (min-width: 425px) {
+    .buildingAIntroScene {
+        top: 26rem;
+        width: 44%;
+        left: 58%;
+    }
+
+    .buildingB {
+        right: 33%;
+        width: 36%;
+        top: 41rem;
+    }
+
+    .buildingC {
+        right: 63%;
+        width: 39%;
+        top: 43rem;
+    }
+
+    .sun {
+        top: 14%;
+        opacity: 0.7;
+    }
+
+    .street {
+        right: 0.1%;
+        width: 100%;
+        top: 49rem;
+        transform: scale(1.1);
+    }
+
+    .clue {
+        bottom: 10%;
+        right: 5%;
+        width: 30%;
+    }
+
+    .headerline {
+        padding: 0 0 3% 18%;
+    }
+
+    .text {
+        top: 12rem;
+        font-size: 13pt;
+        padding-left: 8%;
+    }
+
+    .continue {
+        left: 26.5%;
+        top: 20rem;
+    }
+
+    .chapter2Choice {
+        top: 395vh;
+        width: 20rem;
+    }
+
+    .train {
+        top: 48rem;
+        right: 80%;
+        width: 75%;
+    }
+
+    .bicycle {
+        top: 51rem;
+        width: 20%;
+        right: 75%;
+    }
+
+    .car {
+        width: 63%;
+        top: 48rem;
+        left: 31%;
+    }
+
+    .carChoice {
+        padding-top: 0%;
+        top: 1rem;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .bicycleChoice {
+        position: absolute;
+        left: -14%;
+        top: -0.5rem;
+        width: 128%;
+        z-index: 2;
+    }
+
+    .trainChoice {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .blackCut {
+        top: 58rem;
+        z-index: 6;
+    }
+
+    .graffiti {
+        left: 102%;
+        width: 60%;
+        top: 35rem;
+    }
+
+    .werbetafel {
+        top: 38rem;
+        width: 27%;
+        left: 117.5%;
+    }
+
+    .graffitiContent {
+        top: 39rem;
+        width: 95%;
+        left: 120%;
+    }
+
+    .adContainer {
+        width: 6rem;
+        height: 10.4rem;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .adTitle {
+        font-size: 10px;
+        font-weight: bold;
+        color: black;
+        word-wrap: break-word;
+    }
+
+    .adText {
+        word-wrap: break-word;
+        font-size: 5px;
+        color: black;
+        white-space: pre-wrap;
+    }
+
+
+    .graffitiBackground {
+        left: 21.7%;
+        top: 42.5rem;
+        width: 28%;
+    }
+
+    .hochhaus {
+        left: 158%;
+        top: 16rem;
+        width: 50%;
+    }
+
+    .quizStatisticsContainer {
+        position: absolute;
+        top: 0;
+        width: 22.6%;
+        height: 4.5rem;
+        left: 0.1rem;
+        margin-top: 0.5rem;
+    }
+
+    .quizStatisticsTitle {
+        width: 100%;
+        top: 0;
+        color: black;
+        font-weight: bold;
+        font-size: 5px;
+        transform: translateZ(0);
+    }
+
+    .quizStatisticsQuestionmark {
+        top: 62%;
+        left: 46%;
+        width: 7%;
+        position: relative;
+    }
+
+    .quizStatistics {
+        width: 100%;
+        left: 0%;
+        color: black;
+        margin-top: 0.5rem;
+    }
+
+    .quizQuestion {
+        background-color: lightgray;
+        font-size: 8px;
+        margin-top: 0.25rem;
+        text-align: center;
+    }
+
+    .showStatsButton {
+        top: 8.5rem;
+        position: absolute;
+        font-size: 9px;
+        left: 2.5%;
+        margin-top: 0.5rem;
+        transform: translateZ(0);
+    }
+
+    .secondChoiceChapter2 {
+        left: 1rem;
+        top: 73vh;
+        font-size: larger;
+        opacity: 0;
+    }
+
+    .endScene {
+        width: 100%;
+        left: 201%;
+        z-index: -1;
+        top: 17rem;
+    }
+
+    .streetEnd {
+        width: 100%;
+        transform: scale(1);
+        top: 41rem;
+    }
+
+    .wall {
+        top: 19rem;
+    }
+
+    .allWeHaveIsNow {
+        width: 16%;
+        top: 21rem;
+        left: 65%;
+    }
+
+    .streetlamp {
+        width: 23%;
+        top: 42.5rem;
+        left: 30.5%;
+    }
+
+    .takeItEasy {
+        width: 17%;
+        top: 28rem;
+        left: 43%;
+    }
+
+    .human {
+        top: 59.15rem;
+        left: 219%;
+        z-index: 1;
+    }
+
+    .door {
+        top: 26rem;
+        left: 64%;
+        width: 20%;
+    }
+
+    .telephone {
+        top: 29.5rem;
+        left: 86.5%;
+        width: 10%;
+    }
+
+    .massenvisualsierung {
+        opacity: 1;
+        top: 167rem;
+    }
+
+    .mContainer {
+        position: absolute;
+        top: 22rem;
+        width: 30%;
+        height: 10rem;
+        left: 35%;
+    }
+
+    .mtextStyle {
+        text-align: center;
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        margin: 0px 12% 6%;
+    }
+
+    .mtitleStyle {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 0.5%;
+        color: white;
+        font-weight: bold;
+    }
+
+    .whiteCut {
+        top: 58rem;
+    }
+
+    .show {
+        animation: show-animation 2s;
+    }
+
+    @keyframes show-animation {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-50rem);
+        }
+    }
 }
 
-.sun {
-    top: 14%;
-    opacity: 0.7;
+@media (min-width: 600px) {
+    .buildingAIntroScene {
+        top: 17rem;
+        width: 44%;
+        left: 58%;
+    }
+
+    .buildingB {
+        right: 33%;
+        width: 36%;
+        top: 34rem;
+    }
+
+    .buildingC {
+        right: 63%;
+        width: 39%;
+        top: 39rem;
+    }
+
+    .sun {
+        top: 14%;
+        opacity: 0.7;
+    }
+
+    .street {
+        right: 0.1%;
+        width: 100%;
+        top: 49rem;
+        transform: scale(1.1);
+    }
+
+    .clue {
+        bottom: 10%;
+        right: 5%;
+        width: 30%;
+    }
+
+    .headerline {
+        padding: 0 0 3% 18%;
+    }
+
+    .text {
+        top: 12rem;
+        font-size: 13pt;
+        padding-left: 8%;
+    }
+
+    .continue {
+        left: 26.5%;
+        top: 20rem;
+    }
+
+    .chapter2Choice {
+        top: 395vh;
+        width: 20rem;
+    }
+
+    .train {
+        top: 48rem;
+        right: 80%;
+        width: 75%;
+    }
+
+    .bicycle {
+        top: 53rem;
+        width: 20%;
+        right: 75%;
+    }
+
+    .car {
+        width: 63%;
+        top: 48rem;
+        left: 31%;
+    }
+
+    .carChoice {
+        padding-top: 0%;
+        top: 1.5rem;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .bicycleChoice {
+        position: absolute;
+        left: -14%;
+        top: -0.5rem;
+        width: 128%;
+        z-index: 2;
+    }
+
+    .trainChoice {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .blackCut {
+        top: 61rem;
+        z-index: 6;
+    }
+
+    .graffiti {
+        left: 102%;
+        width: 60%;
+        top: 30rem;
+    }
+
+    .werbetafel {
+        top: 33rem;
+        width: 27%;
+        left: 117.5%;
+    }
+
+    .graffitiContent {
+        top: 35rem;
+        width: 95%;
+        left: 120%;
+    }
+
+    .adContainer {
+        width: 23%;
+        height: 107%;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .adTitle {
+        font-size: 10px;
+        font-weight: bold;
+        color: black;
+        word-wrap: break-word;
+    }
+
+    .adText {
+        word-wrap: break-word;
+        font-size: 7px;
+        color: black;
+        white-space: pre-wrap;
+    }
+
+
+    .graffitiBackground {
+        left: 21.7%;
+        top: 42.5rem;
+        width: 28%;
+    }
+
+    .hochhaus {
+        left: 158%;
+        top: 5rem;
+        width: 50%;
+    }
+
+    .quizStatisticsContainer {
+        position: absolute;
+        top: 0;
+        width: 22.6%;
+        height: 4.5rem;
+        left: 0.1rem;
+        margin-top: 0.5rem;
+    }
+
+    .quizStatisticsTitle {
+        width: 100%;
+        top: 0;
+        color: black;
+        font-weight: bold;
+        font-size: 8px;
+        transform: translateZ(0);
+    }
+
+    .quizStatisticsQuestionmark {
+        top: 62%;
+        left: 46%;
+        width: 7%;
+        position: relative;
+    }
+
+    .quizStatistics {
+        width: 100%;
+        left: 0%;
+        color: black;
+        margin-top: 0.5rem;
+    }
+
+    .quizQuestion {
+        background-color: lightgray;
+        font-size: 8px;
+        margin-top: 0.25rem;
+        text-align: center;
+    }
+
+    .showStatsButton {
+        top: 10.5rem;
+        position: absolute;
+        font-size: 11px;
+        left: 3.5%;
+        margin-top: 0.5rem;
+        transform: translateZ(0);
+    }
+
+    .secondChoiceChapter2 {
+        left: 1rem;
+        top: 44vh;
+        font-size: x-large;
+        opacity: 0;
+    }
+
+    .endScene {
+        width: 100%;
+        left: 201%;
+        z-index: -1;
+        top: 13rem;
+    }
+
+    .streetEnd {
+        width: 100%;
+        transform: scale(1);
+        top: 36rem;
+    }
+
+    .wall {
+        top: 19rem;
+    }
+
+    .allWeHaveIsNow {
+        width: 16%;
+        top: 21rem;
+        left: 65%;
+    }
+
+    .streetlamp {
+        width: 23%;
+        top: 38.5rem;
+        left: 30.5%;
+    }
+
+    .takeItEasy {
+        width: 17%;
+        top: 28rem;
+        left: 43%;
+    }
+
+    .human {
+        top: 59.15rem;
+        left: 219%;
+        z-index: 1;
+    }
+
+    .door {
+        top: 26rem;
+        left: 64%;
+        width: 20%;
+    }
+
+    .telephone {
+        top: 29.5rem;
+        left: 86.5%;
+        width: 10%;
+    }
+
+    .massenvisualsierung {
+        opacity: 1;
+        top: 61rem;
+    }
+
+    .mContainer {
+        position: absolute;
+        top: 22rem;
+        width: 30%;
+        height: 10rem;
+        left: 35%;
+    }
+
+    .mtextStyle {
+        text-align: center;
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        margin: 0px 12% 6%;
+    }
+
+    .mtitleStyle {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 0.5%;
+        color: white;
+        font-weight: bold;
+    }
+
+    .whiteCut {
+        top: 61rem;
+    }
+
+    .show {
+        animation: show-animation 2s;
+    }
+
+    @keyframes show-animation {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-50rem);
+        }
+    }
 }
 
-.street {
-    right: 0.01%;
-    width: 110%;
-    padding-top: 79%;
+@media (min-width: 768px) {
+    .buildingAIntroScene {
+        top: 9em;
+        width: 44%;
+        left: 58%;
+    }
+
+    .buildingB {
+        right: 33%;
+        width: 36%;
+        top: 30em;
+    }
+
+    .buildingC {
+        right: 63%;
+        width: 39%;
+        top: 37em;
+    }
+
+    .sun {
+        top: 14%;
+        opacity: 0.7;
+    }
+
+    .street {
+        right: 0.1%;
+        width: 100%;
+        top: 49rem;
+        transform: scale(1.1);
+    }
+
+    .clue {
+        bottom: 10%;
+        right: 5%;
+        width: 30%;
+    }
+
+    .headerline {
+        padding: 0 0 3% 18%;
+    }
+
+    .text {
+        top: 12rem;
+        font-size: 13pt;
+        padding-left: 8%;
+    }
+
+    .continue {
+        left: 48.5%;
+        top: 20rem;
+    }
+
+    .chapter2Choice {
+        top: 364vh;
+        width: 20rem;
+    }
+
+    .train {
+        top: 48rem;
+        right: 80%;
+        width: 75%;
+    }
+
+    .bicycle {
+        top: 54rem;
+        width: 20%;
+        right: 75%;
+    }
+
+    .car {
+        width: 63%;
+        top: 48rem;
+        left: 31%;
+    }
+
+    .carChoice {
+        padding-top: 0%;
+        top: 2rem;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .bicycleChoice {
+        position: absolute;
+        left: -14%;
+        top: -0.5rem;
+        width: 128%;
+        z-index: 2;
+    }
+
+    .trainChoice {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .blackCut {
+        top: 66rem;
+        z-index: 6;
+    }
+
+    .graffiti {
+        left: 102%;
+        width: 60%;
+        top: 23rem;
+    }
+
+    .werbetafel {
+        top: 28rem;
+        width: 27%;
+        left: 117.5%;
+    }
+
+    .graffitiContent {
+        top: 30.2rem;
+        width: 23%;
+        left: 119.8%;
+        height: 29vh;
+    }
+
+    .adContainer {
+        width: 98%;
+        height: inherit;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .adTitle {
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+        word-wrap: break-word;
+    }
+
+    .adText {
+        word-wrap: break-word;
+        font-size: 10px;
+        color: black;
+        white-space: pre-wrap;
+    }
+
+
+    .graffitiBackground {
+        left: 21.7%;
+        top: 42.5rem;
+        width: 28%;
+    }
+
+    .hochhaus {
+        left: 158%;
+        top: 16rem;
+        width: 50%;
+    }
+
+    .quizStatisticsContainer {
+        position: absolute;
+        top: 0;
+        width: 95.6%;
+        height: 4.5rem;
+        left: 0.1rem;
+        margin-top: 1.5rem;
+    }
+
+    .quizStatisticsTitle {
+        width: 100%;
+        top: 0;
+        color: black;
+        font-weight: bold;
+        font-size: 10px;
+        transform: translateZ(0);
+    }
+
+    .quizStatisticsQuestionmark {
+        top: 62%;
+        left: 46%;
+        width: 7%;
+        position: relative;
+    }
+
+    .quizStatistics {
+        width: 100%;
+        left: 0%;
+        color: black;
+        margin-top: 0.5rem;
+    }
+
+    .quizQuestion {
+        background-color: lightgray;
+        font-size: 13px;
+        margin-top: 0.25rem;
+        text-align: center;
+    }
+
+    .showStatsButton {
+        top: 82%;
+        position: absolute;
+        font-size: 12px;
+        left: 20.5%;
+        transform: translateZ(0);
+    }
+
+    .secondChoiceChapter2 {
+        left: 1rem;
+        top: 35vh;
+        font-size: xx-large;
+    }
+
+    .endScene {
+        width: 100%;
+        left: 201%;
+        z-index: -1;
+        top: 5rem;
+    }
+
+    .streetEnd {
+        width: 100%;
+        transform: scale(1);
+        top: 33rem;
+    }
+
+    .wall {
+        top: 19rem;
+    }
+
+    .allWeHaveIsNow {
+        width: 16%;
+        top: 24rem;
+        left: 65%;
+    }
+
+    .streetlamp {
+        width: 23%;
+        top: 35.5rem;
+        left: 30.5%;
+    }
+
+    .takeItEasy {
+        width: 17%;
+        top: 36rem;
+        left: 43%;
+    }
+
+    .human {
+        top: 59.15rem;
+        left: 219%;
+        z-index: 1;
+    }
+
+    .door {
+        top: 32rem;
+        left: 64%;
+        width: 20%;
+    }
+
+    .telephone {
+        top: 35.5rem;
+        left: 86.5%;
+        width: 10%;
+    }
+
+    .massenvisualsierung {
+        opacity: 1;
+        top: 66rem;
+    }
+
+    .mContainer {
+        position: absolute;
+        top: 39rem;
+        width: 30%;
+        height: 10rem;
+        left: 36%;
+    }
+
+    .mtextStyle {
+        text-align: center;
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        margin: 0px 12% 6%;
+    }
+
+    .mtitleStyle {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 0.5%;
+        color: white;
+        font-weight: bold;
+    }
+
+    .whiteCut {
+        top: 66rem;
+    }
+
+    .show {
+        animation: show-animation 2s;
+    }
+
+    @keyframes show-animation {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-50rem);
+        }
+    }
+
 }
 
-.clue {
-    bottom: 10%;
-    right: 5%;
-    width: 30%;
+@media (min-width: 1024px) {
+    .buildingAIntroScene {
+        top: 9rem;
+        width: 44%;
+        left: 58%;
+    }
+
+    .buildingB {
+        right: 33%;
+        width: 36%;
+        top: 38rem;
+    }
+
+    .buildingC {
+        right: 63%;
+        width: 39%;
+        top: 47rem;
+    }
+
+    .sun {
+        top: 14%;
+        opacity: 0.7;
+    }
+
+    .street {
+        right: 0.1%;
+        width: 100%;
+        top: 64rem;
+        transform: scale(1.1);
+    }
+
+    .clue {
+        bottom: 10%;
+        right: 5%;
+        width: 30%;
+    }
+
+    .headerline {
+        padding: 0 0 3% 18%;
+    }
+
+    .text {
+        top: 12rem;
+        font-size: 13pt;
+        padding-left: 8%;
+    }
+
+    .continue {
+        left: 48.5%;
+        top: 20rem;
+    }
+
+    .chapter2Choice {
+        top: 364vh;
+        width: 20rem;
+    }
+
+    .train {
+        top: 61rem;
+        right: 80%;
+        width: 75%;
+    }
+
+    .bicycle {
+        top: 70rem;
+        width: 20%;
+        right: 75%;
+    }
+
+    .car {
+        width: 63%;
+        top: 63rem;
+        left: 31%;
+    }
+
+    .carChoice {
+        padding-top: 0%;
+        top: 2rem;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .bicycleChoice {
+        position: absolute;
+        left: -14%;
+        top: -0.5rem;
+        width: 128%;
+        z-index: 2;
+    }
+
+    .trainChoice {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .blackCut {
+        top: 86rem;
+        z-index: 6;
+    }
+
+    .graffiti {
+        left: 102%;
+        width: 60%;
+        top: 31rem;
+    }
+
+    .werbetafel {
+        top: 36rem;
+        width: 27%;
+        left: 117.5%;
+    }
+
+    .graffitiContent {
+        top: 39.2rem;
+        width: 23%;
+        left: 119.8%;
+        height: 24rem;
+    }
+
+    .adContainer {
+        width: 98%;
+        height: inherit;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .adTitle {
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+        word-wrap: break-word;
+    }
+
+    .adText {
+        word-wrap: break-word;
+        font-size: 10px;
+        color: black;
+        white-space: pre-wrap;
+    }
+
+
+    .graffitiBackground {
+        left: 21.7%;
+        top: 42.5rem;
+        width: 28%;
+    }
+
+    .hochhaus {
+        left: 158%;
+        top: 2rem;
+        width: 50%;
+    }
+
+    .quizStatisticsContainer {
+        position: absolute;
+        top: 0;
+        width: 95.6%;
+        height: 4.5rem;
+        left: 0.1rem;
+        margin-top: 1.5rem;
+    }
+
+    .quizStatisticsTitle {
+        width: 100%;
+        top: 0;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        transform: translateZ(0);
+    }
+
+    .quizStatisticsQuestionmark {
+        top: 62%;
+        left: 46%;
+        width: 7%;
+        position: relative;
+    }
+
+    .quizStatistics {
+        width: 100%;
+        left: 0%;
+        color: black;
+        margin-top: 0.5rem;
+    }
+
+    .quizQuestion {
+        background-color: lightgray;
+        font-size: 18px;
+        margin-top: 0.8rem;
+        text-align: center;
+    }
+
+    .showStatsButton {
+        position: relative;
+        font-size: 15px;
+        left: 20.5%;
+        margin-top: 20%;
+        transform: translateZ(0);
+    }
+
+    .secondChoiceChapter2 {
+        left: 1rem;
+        top: 35vh;
+        font-size: xx-large;
+    }
+
+    .endScene {
+        width: 100%;
+        left: 201%;
+        z-index: -1;
+        top: 16rem;
+    }
+
+    .streetEnd {
+        width: 100%;
+        transform: scale(1);
+        top: 43rem;
+    }
+
+    .wall {
+        top: 13rem;
+    }
+
+    .allWeHaveIsNow {
+        width: 16%;
+        top: 24rem;
+        left: 65%;
+    }
+
+    .streetlamp {
+        width: 23%;
+        top: 46.5rem;
+        left: 30.5%;
+    }
+
+    .takeItEasy {
+        width: 17%;
+        top: 36rem;
+        left: 43%;
+    }
+
+    .human {
+        top: 59.15rem;
+        left: 219%;
+        z-index: 1;
+    }
+
+    .door {
+        top: 32rem;
+        left: 64%;
+        width: 20%;
+    }
+
+    .telephone {
+        top: 35.5rem;
+        left: 86.5%;
+        width: 10%;
+    }
+
+    .massenvisualsierung {
+        opacity: 1;
+        top: 249rem;
+    }
+
+    .mContainer {
+        position: absolute;
+        top: 39rem;
+        width: 30%;
+        height: 10rem;
+        left: 36%;
+    }
+
+    .mtextStyle {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        margin: 0px 12% 6%;
+    }
+
+    .mtitleStyle {
+        text-align: center;
+        font-size: 30px;
+        margin-top: 0.5%;
+        color: white;
+        font-weight: bold;
+    }
+
+    .whiteCut {
+        top: 86rem;
+    }
+
+    .show {
+        animation: show-animation 2s;
+    }
+
+    @keyframes show-animation {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-50rem);
+        }
+    }
+
 }
 
-.headerline {
-    bottom: 13.5%;
-    right: 28%;
+@media (min-width: 1440px) {
+    .buildingAIntroScene {
+        top: -4rem;
+        width: 44%;
+        left: 58%;
+    }
+
+    .buildingB {
+        right: 33%;
+        width: 36%;
+        top: 38rem;
+    }
+
+    .buildingC {
+        right: 63%;
+        width: 39%;
+        top: 42rem;
+    }
+
+    .sun {
+        top: 14%;
+        opacity: 0.7;
+    }
+
+    .street {
+        right: 0.1%;
+        width: 100%;
+        top: 64rem;
+        transform: scale(1.1);
+    }
+
+    .clue {
+        bottom: 10%;
+        right: 5%;
+        width: 30%;
+    }
+
+    .headerline {
+        padding: 0 0 3% 14%;
+        font-size: 200%;
+    }
+
+    .text {
+        top: 12rem;
+        padding-left: 8%;
+        font-size: 171%;
+    }
+
+    .continue {
+        left: 48.5%;
+        top: 20rem;
+    }
+
+    .chapter2Choice {
+        top: 347vh;
+        width: 70%;
+        font-size: 173%;
+    }
+
+    .train {
+        top: 61rem;
+        right: 80%;
+        width: 75%;
+    }
+
+    .bicycle {
+        top: 74rem;
+        width: 20%;
+        right: 75%;
+    }
+
+    .car {
+        width: 63%;
+        top: 63rem;
+        left: 31%;
+    }
+
+    .carChoice {
+        padding-top: 0%;
+        top: 4rem;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .bicycleChoice {
+        position: absolute;
+        left: -14%;
+        top: -1.5rem;
+        width: 128%;
+        z-index: 2;
+    }
+
+    .trainChoice {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .blackCut {
+        top: 100rem;
+        z-index: 6;
+    }
+
+    .graffiti {
+        left: 102%;
+        width: 60%;
+        top: 13rem;
+    }
+
+    .werbetafel {
+        top: 26rem;
+        width: 27%;
+        left: 117.5%;
+    }
+
+    .graffitiContent {
+        top: 37.2rem;
+        width: 23%;
+        left: 120%;
+        height: 24rem;
+    }
+
+    .adContainer {
+        width: 98%;
+        height: inherit;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .adTitle {
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+        word-wrap: break-word;
+    }
+
+    .adText {
+        word-wrap: break-word;
+        font-size: 10px;
+        color: black;
+        white-space: pre-wrap;
+    }
+
+
+    .graffitiBackground {
+        left: 21.7%;
+        top: 42.5rem;
+        width: 28%;
+    }
+
+    .hochhaus {
+        left: 158%;
+        top: 2rem;
+        width: 50%;
+    }
+
+    .quizStatisticsContainer {
+        position: absolute;
+        top: 0;
+        width: 95.6%;
+        height: 4.5rem;
+        left: 0.1rem;
+        margin-top: 1.5rem;
+    }
+
+    .quizStatisticsTitle {
+        width: 100%;
+        top: 0;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        transform: translateZ(0);
+    }
+
+    .quizStatisticsQuestionmark {
+        top: 62%;
+        left: 46%;
+        width: 7%;
+        position: relative;
+    }
+
+    .quizStatistics {
+        width: 100%;
+        left: 0%;
+        color: black;
+        margin-top: 0.5rem;
+    }
+
+    .quizQuestion {
+        background-color: lightgray;
+        font-size: 18px;
+        margin-top: 0.8rem;
+        text-align: center;
+    }
+
+    .showStatsButton {
+        position: relative;
+        font-size: 17px;
+        left: 26.5%;
+        margin-top: 20%;
+        transform: translateZ(0);
+    }
+
+    .secondChoiceChapter2 {
+        left: 1rem;
+        top: 83vh;
+        font-size: xx-large;
+    }
+
+    .endScene {
+        width: 100%;
+        left: 201%;
+        z-index: -1;
+        top: 16rem;
+    }
+
+    .streetEnd {
+        width: 100%;
+        transform: scale(1);
+        top: 35rem;
+    }
+
+    .wall {
+        top: 13rem;
+    }
+
+    .allWeHaveIsNow {
+        width: 16%;
+        top: 19rem;
+        left: 65%;
+    }
+
+    .streetlamp {
+        width: 23%;
+        top: 40.5rem;
+        left: 30.5%;
+    }
+
+    .takeItEasy {
+        width: 17%;
+        top: 36rem;
+        left: 43%;
+    }
+
+    .human {
+        top: 59.15rem;
+        left: 219%;
+        z-index: 1;
+    }
+
+    .door {
+        top: 32rem;
+        left: 64%;
+        width: 20%;
+    }
+
+    .telephone {
+        top: 35.5rem;
+        left: 86.5%;
+        width: 10%;
+    }
+
+    .massenvisualsierung {
+        opacity: 1;
+        top: 105rem;
+    }
+
+    .mContainer {
+        position: absolute;
+        top: 66rem;
+        width: 30%;
+        height: 10rem;
+        left: 36%;
+    }
+
+    .mtextStyle {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        margin: 0px 12% 6%;
+    }
+
+    .mtitleStyle {
+        text-align: center;
+        font-size: 33px;
+        margin-top: 0.5%;
+        color: white;
+        font-weight: bold;
+    }
+
+    .whiteCut {
+        top: 100rem;
+    }
+
+    .show {
+        animation: show-animation 2s;
+    }
+
+    @keyframes show-animation {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-50rem);
+        }
+    }
+
 }
 
-.text {
-    top: 17rem;
-    padding-left: 20%;
-}
+@media (min-width: 1900px) {
+    .buildingAIntroScene {
+        top: -29rem;
+        width: 44%;
+        left: 58%;
+    }
 
-.continue{
-    left: 61.5%;
-    top: 73%;
+    .buildingB {
+        right: 33%;
+        width: 36%;
+        top: 38rem;
+    }
+
+    .buildingC {
+        right: 63%;
+        width: 39%;
+        top: 58rem;
+    }
+
+    .sun {
+        top: 14%;
+        opacity: 0.7;
+    }
+
+    .street {
+        right: 0.1%;
+        width: 100%;
+        top: 76rem;
+        transform: scale(1.1);
+    }
+
+    .clue {
+        bottom: 10%;
+        right: 5%;
+        width: 30%;
+    }
+
+    .headerline {
+        padding: 0 0 3% 14%;
+        font-size: 200%;
+    }
+
+    .text {
+        top: 12rem;
+        padding-left: 8%;
+        font-size: 171%;
+    }
+
+    .continue {
+        left: 48.5%;
+        top: 20rem;
+    }
+
+    .chapter2Choice {
+        top: 341vh;
+        width: 70%;
+        font-size: 173%;
+    }
+
+    .train {
+        top: 67rem;
+        right: 80%;
+        width: 75%;
+    }
+
+    .bicycle {
+        top: 86rem;
+        width: 20%;
+        right: 75%;
+    }
+
+    .car {
+        width: 63%;
+        top: 71rem;
+        left: 31%;
+    }
+
+    .carChoice {
+        padding-top: 0%;
+        top: 4rem;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .bicycleChoice {
+        position: absolute;
+        left: -14%;
+        top: -1.5rem;
+        width: 128%;
+        z-index: 2;
+    }
+
+    .trainChoice {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .blackCut {
+        top: 115rem;
+        z-index: 6;
+    }
+
+    .graffiti {
+        left: 102%;
+        width: 60%;
+        top: 15rem;
+    }
+
+    .werbetafel {
+        top: 26rem;
+        width: 27%;
+        left: 117.5%;
+    }
+
+    .graffitiContent {
+        top: 44.2rem;
+        width: 23%;
+        left: 120%;
+        height: 34rem;
+    }
+
+    .adContainer {
+        width: 98%;
+        height: inherit;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .adTitle {
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+        word-wrap: break-word;
+    }
+
+    .adText {
+        word-wrap: break-word;
+        font-size: 10px;
+        color: black;
+        white-space: pre-wrap;
+    }
+
+
+    .graffitiBackground {
+        left: 21.7%;
+        top: 42.5rem;
+        width: 28%;
+    }
+
+    .hochhaus {
+        left: 158%;
+        top: 2rem;
+        width: 50%;
+    }
+
+    .quizStatisticsContainer {
+        position: absolute;
+        top: 0;
+        width: 95.6%;
+        height: 4.5rem;
+        left: 0.1rem;
+        margin-top: 1.5rem;
+    }
+
+    .quizStatisticsTitle {
+        width: 100%;
+        top: 0;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        transform: translateZ(0);
+    }
+
+    .quizStatisticsQuestionmark {
+        top: 62%;
+        left: 46%;
+        width: 7%;
+        position: relative;
+    }
+
+    .quizStatistics {
+        width: 100%;
+        left: 0%;
+        color: black;
+        margin-top: 0.5rem;
+    }
+
+    .quizQuestion {
+        background-color: lightgray;
+        font-size: 18px;
+        margin-top: 0.8rem;
+        text-align: center;
+    }
+
+    .showStatsButton {
+        position: relative;
+        font-size: 20px;
+        left: 29.5%;
+        margin-top: 0%;
+        transform: translateZ(0);
+    }
+
+    .secondChoiceChapter2 {
+        left: 1rem;
+        top: 83vh;
+        font-size: xx-large;
+    }
+
+    .endScene {
+        width: 100%;
+        left: 201%;
+        z-index: -1;
+        top: 16rem;
+    }
+
+    .streetEnd {
+        width: 100%;
+        transform: scale(1);
+        top: 36rem;
+    }
+
+    .wall {
+        top: 13rem;
+    }
+
+    .allWeHaveIsNow {
+        width: 16%;
+        top: 19rem;
+        left: 65%;
+    }
+
+    .streetlamp {
+        width: 23%;
+        top: 40.5rem;
+        left: 30.5%;
+    }
+
+    .takeItEasy {
+        width: 17%;
+        top: 36rem;
+        left: 43%;
+    }
+
+    .human {
+        top: 59.15rem;
+        left: 219%;
+        z-index: 1;
+    }
+
+    .door {
+        top: 32rem;
+        left: 64%;
+        width: 20%;
+    }
+
+    .telephone {
+        top: 35.5rem;
+        left: 86.5%;
+        width: 10%;
+    }
+
+    .massenvisualsierung {
+        opacity: 1;
+        top: 157rem;
+    }
+
+    .mContainer {
+        position: absolute;
+        top: 66rem;
+        width: 30%;
+        height: 10rem;
+        left: 36%;
+    }
+
+    .mtextStyle {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        margin: 0px 12% 6%;
+    }
+
+    .mtitleStyle {
+        text-align: center;
+        font-size: 33px;
+        margin-top: 0.5%;
+        color: white;
+        font-weight: bold;
+    }
+
+    .whiteCut {
+        top: 115rem;
+    }
+
+    .show {
+        animation: show-animation 2s;
+    }
+
+    @keyframes show-animation {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-200rem);
+        }
+    }
+
 }
