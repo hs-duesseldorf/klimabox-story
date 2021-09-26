@@ -1,0 +1,56 @@
+
+.graffiti1{
+    width: 100%;
+    height: 162%;
+    top: -79%;
+    left: -34%;
+}
+
+.graffiti2{
+    width: 100%;
+    height: 195%;
+    top: -119%;
+    left: 118%;
+}
+
+.street{
+    width: 100%;
+    height: 100%;
+}
+
+.tree1{
+    width: 29%;
+    height: 73%;
+    left: 10%;
+    top: 5%;
+}
+.tree2{
+    width: 29%;
+    height: 73%;
+    left: 51%;
+    top: 2%;
+}
+
+.tree3{
+    width: 29%;
+    height: 73%;
+    left: 112%;
+    top: 6%;
+}
+
+.hochhaus{
+    top: -64%;
+    left: 61%;
+    width: 61%;
+}
+
+.car{
+    left: 37%;
+    top: 45%;
+    width: 51%;
+}
+
+.human{
+    top: 40%;
+    left: 51%;
+}
