@@ -31,6 +31,9 @@ module.exports = {
         17: "17pt",
         20: "20pt",
       },
+      fontSize: {
+        'xxs': '0.5rem',
+      },
       fontFamily: {
         sans: [
           "Arial",
