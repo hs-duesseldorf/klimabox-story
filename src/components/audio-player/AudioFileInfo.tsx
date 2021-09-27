@@ -7,7 +7,7 @@ const AudioFileInfo = ({ interview } ) => {
     const [duration, setDuration] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
 
-    const { title, description, text, imgSrc, audioSrc, isOpen} = interview;
+    const { text, imgSrc, audioSrc } = interview;
     
     const audioRef = useRef(new Audio(audioSrc));
     const progressBar = useRef<HTMLInputElement>(null);
@@ -59,7 +59,7 @@ const AudioFileInfo = ({ interview } ) => {
         console.log('progress bar max value: ', progressBar.current?.max);
         console.log('current time value: ', audioRef.current.currentTime);
         console.log('current time value floored: ', Math.floor(audioRef.current.currentTime));
-        if (progressBar.current != null && audioRef.current.currentTime != (null || undefined)){
+        if (progressBar.current != null && audioRef.current.currentTime !== (null || undefined)){
             progressBar.current.valueAsNumber = Math.floor(audioRef.current.currentTime);
         }
         progressBar.current?.style.setProperty('--seek-before-width', `${Number(progressBar.current?.value) / duration * 100}%`);
@@ -77,8 +77,8 @@ const AudioFileInfo = ({ interview } ) => {
         <div className=" bg-em1-extralight h-240 relative ">
             <div className="flex flex-auto">
                 {interview.imgSrc ? 
-                    <img className="w-1/2 object-cover" id="audio-player-image" src={imgSrc}/> :
-                    <img className="w-1/2 object-cover" id="audio-player-image" src={altImg}/>
+                    <img className="w-1/2 object-cover" id="audio-player-image" src={imgSrc} alt=""/> :
+                    <img className="w-1/2 object-cover" id="audio-player-image" src={altImg} alt=""/>
                 }
                 <div className="flex items-center w-1/2 container mx-auto px-4 md:px-12 -mt-12 text-xxs sm:text-sm md:text-base overflow-hidden">{text}</div>
                 <div className="flex items-center absolute justify-between bottom-0 mx-auto py-2 bg-white bg-opacity-60 right-0 left-0">
@@ -103,9 +103,11 @@ const AudioFileInfo = ({ interview } ) => {
                             <p className="text-xs">
                                 { calcTime(currentTime) }
                             </p>
-                            <p className="text-xs">
-                                { (duration && !isNaN(duration)) && calcTime(duration) }
-                            </p>
+                            {(duration && !isNaN(duration)) &&
+                                <p className="text-xs">
+                                { calcTime(duration) }
+                                </p>
+                            }
                         </div>
                     </div> 
                 </div>

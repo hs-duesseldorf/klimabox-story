@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
+
 import AudioPlayer from "./AudioPlayer";
 import { interviews } from "./interviews";
 
-const Audio = () => {
+const AudioIndex = () => {
 
     return(
-        <div>
-            <AudioPlayer interviews={interviews}></AudioPlayer>
-        </div>
+        
+        <AudioPlayer interviews={interviews}></AudioPlayer>
+        
     )
 }
 
-export default Audio;
+export default AudioIndex;

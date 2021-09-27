@@ -43,6 +43,9 @@ module.exports = {
       maxWidth: {
         "layout-max": "96rem",
       },
+      h:{
+        "double":"200vh", 
+      },
       padding: {
         "1/2": "50%",
         "2/3": "66.67%",
