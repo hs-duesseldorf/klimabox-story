@@ -41,7 +41,7 @@ export const Start: React.FC = () => {
             <Fridge />
           </div>
         </div>
-        <div id="newspaper" className="relative h-300%">
+        <div id="newspaper">
           <Newspaper />
         </div>
       </div>
