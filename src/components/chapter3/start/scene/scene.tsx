@@ -8,6 +8,9 @@ import { getParallaxData } from "./animationParallaxData";
 import Plx from "react-plx";
 import { Car } from "./sceneComponents/car";
 import { Human } from "./sceneComponents/human";
+import { Wall } from "./sceneComponents/wall";
+import { Lamp } from "./sceneComponents/lamp";
+import { BlackCut } from "./sceneComponents/blackCut";
 
 export const Scene: React.FC =() => {
   const [parallaxData, setParallaxData] = React.useState<any>(getParallaxData());
@@ -19,6 +22,7 @@ export const Scene: React.FC =() => {
           <Graffiti styleName={styles.graffiti1}></Graffiti>
           <Hochhaus></Hochhaus>
           <Graffiti styleName={styles.graffiti2}></Graffiti>
+          <Wall></Wall>
         </Plx>
 
         <Street></Street>
@@ -27,10 +31,13 @@ export const Scene: React.FC =() => {
           <Tree styleName={styles.tree1}></Tree>
           <Tree styleName={styles.tree2}></Tree>
           <Tree styleName={styles.tree3}></Tree>
+          <Lamp></Lamp>
         </Plx>
 
-        <Human parallaxData={parallaxData.carData}></Human>
+        <Human parallaxData={parallaxData.humanData}></Human>
         <Car parallaxData={parallaxData.carData}></Car>
+
+        <BlackCut parallaxData={parallaxData.blackCut}></BlackCut>
       </div>
     </div>
   )

@@ -54,3 +54,40 @@
     top: 40%;
     left: 51%;
 }
+
+.wall{
+    left: 164%;
+    top: -11%;
+    width: 100%;
+    height: 100%;
+}
+
+.door{
+    top: 41%;
+    left: 26%;
+}
+
+.takeItEasy{
+    top: 46%;
+    left: 9%;
+}
+
+.techSolutions{
+    top: 14%;
+    left: 25%;
+}
+
+.telephone{
+    top: 42%;
+    left: 52%;
+}
+
+.lamp {
+    top: 29%;
+    left: 157%;
+    width: 14%;
+}
+
+.blackCut{
+    top: 100%;
+}
