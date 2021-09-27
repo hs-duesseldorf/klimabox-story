@@ -28,6 +28,17 @@ export const getParallaxData = () => {
     ],
     humanData:[
       {
+        start: clientHeight,
+        end: clientHeight * 1.2,
+        properties: [
+          {
+            startValue: 0,
+            endValue: 1,
+            property: "opacity"
+          }
+        ]
+      },
+      {
         start: clientHeight * 3,
         end: clientHeight * 6,
         properties: [
@@ -109,6 +120,87 @@ export const getParallaxData = () => {
 
 
 
-    ]
+    ],
+    sceneData:[
+      {
+        start: clientHeight * 14,
+        end: clientHeight * 16,
+        properties: [
+          {
+            startValue: 1,
+            endValue: 1.5,
+            property: "scale"
+          },
+          {
+            startValue: 0,
+            endValue: -clientWidth * 0.6,
+            property: "translateX"
+          },
+        ]
+      },
+      {
+        start: clientHeight * 18,
+        end: clientHeight * 19,
+        properties: [
+          {
+            startValue: 1.5,
+            endValue: 1,
+            property: "scale"
+          },
+          {
+            startValue: 1,
+            endValue: 0,
+            property: "opacity"
+          },
+        ]
+      },
+    ],
+    blackCut2:[
+      {
+        start: clientHeight * 17,
+        end: clientHeight * 19,
+        properties: [
+          {
+            startValue: clientHeight,
+            endValue: -clientHeight * 2,
+            property: "translateY"
+          }
+        ]
+      },
+      {
+        start: clientHeight * 22,
+        end: clientHeight * 23,
+        properties: [
+          {
+            startValue: 1,
+            endValue: 0,
+            property: "opacity"
+          }
+        ]
+      },
+      {
+        start: clientHeight * 23,
+        end: clientHeight * 24,
+        properties: [
+          {
+            startValue: -clientHeight * 2,
+            endValue: -clientHeight * 20,
+            property: "translateY"
+          }
+        ]
+      },
+
+    ],
+    indoorSceneData: [{
+      start: clientHeight * 22,
+      end: clientHeight * 23,
+      properties: [
+        {
+          startValue: 0,
+          endValue: 1,
+          property: "opacity"
+        },
+      ]
+    }],
   }
 }

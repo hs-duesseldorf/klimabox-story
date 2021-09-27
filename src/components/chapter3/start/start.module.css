@@ -53,6 +53,7 @@
 .human{
     top: 40%;
     left: 51%;
+    opacity: 0;
 }
 
 .wall{
@@ -90,4 +91,41 @@
 
 .blackCut{
     top: 100%;
+}
+
+.laptop{
+    top: 50%;
+    left: 77%;
+}
+
+.tv{
+    top: 35%;
+    left: 80%;
+}
+
+.indoorLamp{
+    top: 36%;
+    left: 71%;
+}
+
+.drone{
+    top: 73%;
+    left: 37%;
+}
+
+.plant1{
+    top: 61%;
+    left: 84%;
+}
+
+.plant2{
+    top: 60%;
+    left: 55%;
+    width: 5%;
+}
+
+.plant3{
+    top: 56%;
+    left: 63%;
+    width: 4%;
 }
