@@ -10,7 +10,7 @@ export class SideNav extends React.Component<sideNavProps>{
     render() {
         var color = this.props.hasDarkBackground? "#FFF": "#555";
         return (
-            <div className="fixed top-8 right-0">
+            <div className="fixed top-8 right-0 cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 300 600">
                     <g className="right-0 hover:opacity-90" id="nav" data-name="nav" opacity="0.7">
                     <g id="graph" data-name="graph">

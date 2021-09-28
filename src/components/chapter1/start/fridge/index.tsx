@@ -7,6 +7,8 @@ import imageURL2 from "./kapitel1_table_avocado.png";
 import imageURL3 from "./kapitel1_table_milk.png";
 import { CO2Statistics } from "../../../statistics/co2";
 import styles from "../start.module.css";
+import { Quiz } from "../../../quiz";
+import { QuizInterface } from "../../../quiz/interface/quiz-interface";
 
 export const Fridge: React.FC = () => {
     const [text, setText] = React.useState("Wähle aus, was du am liebsten isst");
@@ -20,6 +22,26 @@ export const Fridge: React.FC = () => {
     const meatContainer = useRef(null);
     const avocadoContainer = useRef(null);
     const milkContainer = useRef(null);
+
+    const quizData: QuizInterface = {
+      question: "Wie viel Prozent der Deutschen nutzen täglich einen Computer?",
+      answers: [{
+        text: "test 1",
+        correctAnswer: true
+      },
+        {
+          text: "test 2",
+          correctAnswer: false
+        },
+        {
+          text: "test 3",
+          correctAnswer: false
+        },
+        {
+          text: "test 4",
+          correctAnswer: false
+        }]
+    };
 
     const parallaxData1 = [
       {
@@ -128,6 +150,7 @@ export const Fridge: React.FC = () => {
 
     };
 
+
     return (
       <>
         <Plx parallaxData={parallaxData1} className="absolute bottom-0 opacity-0 z-0 h-screen w-screen"
@@ -175,8 +198,9 @@ export const Fridge: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col justify-center items-center w-screen h-screen text-black"><h2
-                  className="w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold mb-20 text-white">Ökobilanz-Vergleich</h2>
+                <div className="flex flex-col justify-center items-center w-screen h-screen text-black">
+                  <h2
+                    className="w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold mb-20 text-white">Ökobilanz-Vergleich</h2>
                   <div className="w-1/2 mb-6"><CO2Statistics />
                   </div>
                   <div
@@ -185,6 +209,9 @@ export const Fridge: React.FC = () => {
                                                            href="#fridge-items">Ein anderes Lebensmittel
                     auswählen</AnchorLink>
                   </div>
+                </div>
+                <div className="flex flex-col justify-center items-center w-screen h-screen text-black">
+                  <Quiz quiz={quizData} />
                 </div>
               </Plx>
             </div>

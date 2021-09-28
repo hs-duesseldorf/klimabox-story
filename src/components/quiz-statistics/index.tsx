@@ -2,10 +2,10 @@ import React, { RefObject } from "react";
 
 import wrongImg from "./asset/Wrong.png";
 import questionMarkImg from "./asset/Questionmark.png";
-import { Quizinterface } from "./interface/quiz-interface";
+import { QuizStatisticsInterface } from "./interface/quiz-statistics-interface";
 import correctImg from "./asset/Correct.png";
 
-export const QuizStatistics: React.FC<{ quiz: Quizinterface }> = ({ quiz }) => {
+export const QuizStatistics: React.FC<{ quiz: QuizStatisticsInterface }> = ({ quiz }) => {
   const [image, setImage] = React.useState(questionMarkImg);
   const allRightAnswers = quiz.choices.reduce((count, currentValue) => (currentValue.answere ? count + 1 : count), 0);
   const questionRef = React.useRef(null);

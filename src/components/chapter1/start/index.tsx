@@ -16,6 +16,7 @@ export const Start: React.FC = () => {
     const mountainScene = useRef<HTMLDivElement>(null);
     const intersectingMountainScene = useIntersection(mountainScene);
 
+
     return (
       <div className="text-white relative">
         <div ref={mountainScene}>
