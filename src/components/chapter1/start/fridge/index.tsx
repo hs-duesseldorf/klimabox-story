@@ -7,8 +7,6 @@ import imageURL2 from "./kapitel1_table_avocado.png";
 import imageURL3 from "./kapitel1_table_milk.png";
 import { CO2Statistics } from "../../../statistics/co2";
 import styles from "../start.module.css";
-import { Quiz } from "../../../quiz";
-import { QuizInterface } from "../../../quiz/interface/quiz-interface";
 
 export const Fridge: React.FC = () => {
     const [text, setText] = React.useState("Wähle aus, was du am liebsten isst");
