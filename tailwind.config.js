@@ -43,8 +43,8 @@ module.exports = {
       maxWidth: {
         "layout-max": "96rem",
       },
-      h:{
-        "double":"200vh", 
+      height:{
+        double: "200vh", 
       },
       padding: {
         "1/2": "50%",
@@ -73,6 +73,12 @@ module.exports = {
       xs: "380px",
       ...defaultTheme.screens,
     },
+    zIndex: {
+      '-1': -1,
+      '2': 2,
+      '5': 5,
+      '8': 8 
+    }
   },
   variants: {
     extend: {

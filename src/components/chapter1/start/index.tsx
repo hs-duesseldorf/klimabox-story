@@ -11,7 +11,7 @@ import { BlackScreen } from "./blackScreen";
 import mountainBackground from "./background/background.png";
 import fridgeBackground from "./fridge/kapitel1_fridge_background.png";
 import { useIntersection } from "use-intersection";
-import { Newspaper } from "../newspaper";
+import { Newspaper } from "./newspaper";
 
 export const Start: React.FC = () => {
     const mountainScene = useRef<HTMLDivElement>(null);
