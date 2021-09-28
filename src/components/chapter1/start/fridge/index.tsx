@@ -23,26 +23,6 @@ export const Fridge: React.FC = () => {
     const avocadoContainer = useRef(null);
     const milkContainer = useRef(null);
 
-    const quizData: QuizInterface = {
-      question: "Wie viel Prozent der Deutschen nutzen täglich einen Computer?",
-      answers: [{
-        text: "test 1",
-        correctAnswer: true
-      },
-        {
-          text: "test 2",
-          correctAnswer: false
-        },
-        {
-          text: "test 3",
-          correctAnswer: false
-        },
-        {
-          text: "test 4",
-          correctAnswer: false
-        }]
-    };
-
     const parallaxData1 = [
       {
         start: 2950,
@@ -209,9 +189,6 @@ export const Fridge: React.FC = () => {
                                                            href="#fridge-items">Ein anderes Lebensmittel
                     auswählen</AnchorLink>
                   </div>
-                </div>
-                <div className="flex flex-col justify-center items-center w-screen h-screen text-black">
-                  <Quiz quiz={quizData} />
                 </div>
               </Plx>
             </div>
