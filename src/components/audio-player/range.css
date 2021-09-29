@@ -1,0 +1,86 @@
+body, html { width: 100%; }
+  .range{
+      --bar-bg: #FFFFFF;
+      --seek-before-width: 0;
+      --thumb: #E78182;
+       
+      appearance: none;
+      background: var(--bar-bg);
+      border-radius: 6px;
+      position: relative;
+      width: 100%;
+      height: 6px;
+      outline: none;
+  }
+
+  /* range: safari */
+  .range::-webkit-slider-runnable-track {
+    background: var(--bar-bg);
+    border-radius: 6px;
+    position: relative;
+    width: 100%;
+    height: 6px;
+    outline: none;
+  }
+  
+  /* range: firefox */
+  .range::-moz-range-track {
+    background: var(--bar-bg);
+    border-radius: 6px;
+    position: relative;
+    width: 100%;
+    height: 6px;
+    outline: none;
+  }
+  .range::-moz-focus-outer {
+      border: 0;
+  }
+
+  /* range progress: chrome & safari */
+  .range::before {
+      content: '';
+      height: 6px;
+      display: block;
+      width: var(--seek-before-width);
+      background-color : var(--thumb);
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      cursor: pointer;
+  }
+  /* range progress: firefox */
+  .range::-moz-range-progress {
+      background: var(--thumb);
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+      height: 6px;
+  }
+
+  /* thumb: chrome & safari */
+  .range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      position: relative;
+      margin: -5px 0 0 0;
+      z-index: 3;
+      box-sizing: border-box;
+  }
+  /* thumb: firefox */
+  .range::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: transparent;
+    background-color: var(--thumb);
+    cursor: pointer;
+    position: relative; 
+    z-index: 3;
+    box-sizing: border-box;
+  }

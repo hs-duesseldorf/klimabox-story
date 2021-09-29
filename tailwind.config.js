@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        em1: { DEFAULT: "#197EB7", light: "#3D99CE" },
+        em1: { DEFAULT: "#197EB7", light: "#3D99CE", extralight: "#6FC1E7" },
         em2: { DEFAULT: "#B1CA6C", enhanced: "#B6CF72" },
         em3: { DEFAULT: "#E78182" },
         bg: {
@@ -31,6 +31,9 @@ module.exports = {
         17: "17pt",
         20: "20pt",
       },
+      fontSize: {
+        'xxs': '0.5rem',
+      },
       fontFamily: {
         sans: [
           "Arial",
@@ -39,6 +42,9 @@ module.exports = {
       },
       maxWidth: {
         "layout-max": "96rem",
+      },
+      height:{
+        double: "200vh", 
       },
       padding: {
         "1/2": "50%",
@@ -67,6 +73,12 @@ module.exports = {
       xs: "380px",
       ...defaultTheme.screens,
     },
+    zIndex: {
+      '-1': -1,
+      '2': 2,
+      '5': 5,
+      '8': 8 
+    }
   },
   variants: {
     extend: {
