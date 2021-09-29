@@ -6,8 +6,8 @@ import Plx from "react-plx";
 export const Buildings: React.FC = () => {
   const parallaxData = [
     {
-      start: 2000,
-      end: 2500,
+      start: 1800,
+      end: 2300,
       properties: [
         {
           startValue: 1,
