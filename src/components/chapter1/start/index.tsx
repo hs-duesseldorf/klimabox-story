@@ -51,9 +51,9 @@ export const Start: React.FC = () => {
         </div>
         <div>
           <div className="relative z-30 hidden md:block"
-               style={isMobile || isTablet ? { paddingTop: "-2vh" } : { paddingTop: "80vh" }}><BlackScreen />
+               style={isMobile || isTablet ? { paddingTop: "-5vh" } : { paddingTop: "80vh" }}><BlackScreen />
           </div>
-          <div className="relative z-30 md:hidden" style={{ paddingTop: "0" }}><BlackScreen />
+          <div className="relative z-30 md:hidden" style={{ paddingTop: "-5vh" }}><BlackScreen />
           </div>
           <div id="fridge" className="relative h-screen">
             <Fridge />
