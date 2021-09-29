@@ -1,6 +1,4 @@
-export const getParallaxData = () => {
-  const clientHeight = document.documentElement.clientHeight;
-  const clientWidth = document.documentElement.clientWidth;
+export const getParallaxData = (clientHeight: number, clientWidth: number) => {
   return {
     carData: [
       {
@@ -26,7 +24,7 @@ export const getParallaxData = () => {
         ]
       }
     ],
-    humanData:[
+    humanData: [
       {
         start: clientHeight,
         end: clientHeight * 1.2,
@@ -78,12 +76,12 @@ export const getParallaxData = () => {
       properties: [
         {
           startValue: 0,
-          endValue: -clientWidth *1.15,
+          endValue: -clientWidth * 1.15,
           property: "translateX"
         }
       ]
     }],
-    blackCut:[
+    blackCut: [
       {
         start: clientHeight * 5,
         end: clientHeight * 7,
@@ -116,12 +114,11 @@ export const getParallaxData = () => {
             property: "translateY"
           }
         ]
-      },
-
+      }
 
 
     ],
-    sceneData:[
+    sceneData: [
       {
         start: clientHeight * 14,
         end: clientHeight * 16,
@@ -135,7 +132,7 @@ export const getParallaxData = () => {
             startValue: 0,
             endValue: -clientWidth * 0.6,
             property: "translateX"
-          },
+          }
         ]
       },
       {
@@ -151,11 +148,11 @@ export const getParallaxData = () => {
             startValue: 1,
             endValue: 0,
             property: "opacity"
-          },
+          }
         ]
-      },
+      }
     ],
-    blackCut2:[
+    blackCut2: [
       {
         start: clientHeight * 17,
         end: clientHeight * 19,
@@ -188,19 +185,182 @@ export const getParallaxData = () => {
             property: "translateY"
           }
         ]
-      },
-
+      }
     ],
-    indoorSceneData: [{
-      start: clientHeight * 22,
-      end: clientHeight * 23,
+    indoorSceneData: [
+      {
+        start: clientHeight * 22,
+        end: clientHeight * 23,
+        properties: [
+          {
+            startValue: 0,
+            endValue: 1,
+            property: "opacity"
+          }
+        ]
+      },
+      //if smartphone path
+      {
+        start: clientHeight * 47,
+        end: clientHeight * 48,
+        properties: [
+          {
+            startValue: 1,
+            endValue: 1.5,
+            property: "zoom"
+          }
+        ]
+      }],
+    indoorRoom: [
+      {
+        start: clientHeight * 27,
+        end: clientHeight * 28,
+        properties: [
+          {
+            startValue: 0,
+            endValue: 20,
+            property: "blur"
+          }
+        ]
+      },
+      {
+        start: clientHeight * 34,
+        end: clientHeight * 35,
+        properties: [
+          {
+            startValue: 20,
+            endValue: 0,
+            property: "blur"
+          }
+        ]
+      }],
+    massenvisualisierung: [{
+      start: clientHeight * 30,
+      end: clientHeight * 35,
       properties: [
         {
           startValue: 0,
-          endValue: 1,
-          property: "opacity"
-        },
+          endValue: -clientHeight * 6,
+          property: "translateY"
+        }
       ]
     }],
-  }
-}
+    tecChoiceData: [
+      {
+        start: clientHeight * 36,
+        end: clientHeight * 38,
+        properties: [
+          {
+            startValue: 0,
+            endValue: 1,
+            property: "opacity"
+          }
+        ]
+      }, {
+        start: clientHeight * 40,
+        end: clientHeight * 42,
+        properties: [
+          {
+            startValue: 1,
+            endValue: 0,
+            property: "opacity"
+          }
+        ]
+      }],
+    smartPhoneData: [
+      {
+        start: clientHeight * 44,
+        end: clientHeight * 46,
+        properties: [
+          {
+            startValue: 0,
+            endValue: clientWidth * 0.4,
+            property: "translateX"
+          },
+          {
+            startValue: 0,
+            endValue: -clientHeight * 0.2,
+            property: "translateY"
+          }
+        ]
+      }, {
+        start: clientHeight * 47,
+        end: clientHeight * 50,
+        properties: [
+          {
+            startValue: 0,
+            endValue: 90,
+            property: "rotateZ"
+          },
+          {
+            startValue: 1,
+            endValue: 2,
+            property: "zoom"
+          }
+        ]
+      },
+      {
+        start: clientHeight * 47,
+        end: clientHeight * 47.5,
+        properties: [
+          {
+            startValue: clientWidth * 0.4,
+            endValue: clientWidth * 0.1,
+            property: "translateX"
+          },
+          {
+            startValue: -clientHeight * 0.2,
+            endValue: -clientHeight * 0.3,
+            property: "translateY"
+          }
+        ]
+      },
+      {
+        start: clientHeight * 47.5,
+        end: clientHeight * 48,
+        properties: [
+          {
+            startValue: clientWidth * 0.1,
+            endValue: clientWidth * 0.15,
+            property: "translateX"
+          },
+          {
+            startValue: -clientHeight * 0.3,
+            endValue: -clientHeight * 0.7,
+            property: "translateY"
+          }
+        ]
+      },
+      {
+        start: clientHeight * 48,
+        end: clientHeight * 50,
+        properties: [
+          {
+            startValue: clientWidth * 0.15,
+            endValue: clientWidth * 0.17,
+            property: "translateX"
+          },
+          {
+            startValue: -clientHeight * 0.7,
+            endValue: -clientHeight * 1.2,
+            property: "translateY"
+          }
+        ]
+      }
+    ],
+    smartPhoneIconStart: [
+      {
+        start: clientHeight * 51,
+        end: clientHeight * 52,
+        properties: [
+          {
+            startValue: 0,
+            endValue: 1,
+            property: "opacity"
+          }
+        ]
+      }
+    ],
+
+  };
+};
