@@ -50,6 +50,7 @@ const chapterProps: Omit<ChapterProps, "id">[] = [
   { title: "Mobilität", imageSrc: trainImage, slug: "mobilitaet" },
   {
     title: "Big Tech ohne großen Fußabdruck",
+    slug: "big-tech",
     imageSrc: codeImage,
   },
   { title: "Nachhaltig shoppen", imageSrc: clothsImage },

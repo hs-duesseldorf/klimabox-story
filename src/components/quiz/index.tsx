@@ -24,7 +24,7 @@ export const Quiz: React.FC<{ quiz: QuizInterface }> = ({ quiz }) => {
 
   return (
     <>
-      <div className="flex flex-col bg-transparent w-2/3 p-12">
+      <div className="flex flex-col bg-transparent w-full p-12">
         <div className="flex mb-6 md:mb-0">
           <h2 className="text-xl xs:text-2xl sm:text-3xl font-bold w-4/5">{quiz.question}</h2>
           <img

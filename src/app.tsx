@@ -13,6 +13,7 @@ import { Post } from "./pages/post";
 
 import { Chapter1 } from "./pages/chapter1";
 import { Chapter2 } from "./pages/chapter2";
+import { Chapter3 } from "./pages/chapter3";
 
 export const App: React.FC = () => (
   <HelmetProvider>
@@ -22,6 +23,7 @@ export const App: React.FC = () => (
         <Switch>
           <Route path="/vom-esstisch-in-die-arktis" component={Chapter1} />
           <Route path="/mobilitaet" component={Chapter2} />
+          <Route path="/big-tech" component={Chapter3} />
 
           <Route path="/blog/:slug" component={Post} />
           <Route path="/blog" component={Blog} />
