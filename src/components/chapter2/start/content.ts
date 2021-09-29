@@ -5,12 +5,12 @@ import BicycleTexture from "./asset/BicycleTexture.png";
 import CarTexture from "./asset/CarTexture.png";
 import TrainTexture from "./asset/TrainTexture.png";
 import FernVerkehrTexture from "./asset/FernverkehrTexture.png";
-import { Quizinterface } from "../../quiz-statistics/interface/quiz-interface";
+import { QuizStatisticsInterface } from "../../quiz-statistics/interface/quiz-statistics-interface";
 import styles from "./start.module.css";
 
 export const getContentData = (sequence: Sequence): Chapter2Content => {
   const chapter2Content = {} as Chapter2Content;
-  const carQuiz: Quizinterface[] = [
+  const carQuiz: QuizStatisticsInterface[] = [
     {
       title:
         "Wie viel Tonnen CO2 ließen sich in Deutschland vermeiden, wenn ca. 30% der Kurzstrecken in den Innenstädten nicht mit dem Auto, sondern mit dem Fahrrad oder zu Fuß zurückgelegt werden?",
@@ -75,7 +75,7 @@ export const getContentData = (sequence: Sequence): Chapter2Content => {
       quizQuestionStyle: styles.quizQuestion
     }
   ];
-  const bicycleQuiz: Quizinterface[] = [
+  const bicycleQuiz: QuizStatisticsInterface[] = [
     {
       title:
         "Wie viel Prozent der Deutschen fahren regelmäßig mit dem Fahrrad?",
@@ -140,7 +140,7 @@ export const getContentData = (sequence: Sequence): Chapter2Content => {
       quizQuestionStyle: styles.quizQuestion
     }
   ];
-  const trainQuiz: Quizinterface[] = [
+  const trainQuiz: QuizStatisticsInterface[] = [
     {
       title:
         "Wie viel CO2 könnte jährlich eingespart werden, wenn gerade einmal 1% aller Autofahrer:innen ihren Wagen stehen lassen und stattdessen den öffentlichen Nahverkehr nutzen würden?",

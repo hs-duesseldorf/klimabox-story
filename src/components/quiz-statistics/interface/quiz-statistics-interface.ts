@@ -1,4 +1,4 @@
-export interface Quizinterface {
+export interface QuizStatisticsInterface {
   title: string,
   choices: {
     choice: string,

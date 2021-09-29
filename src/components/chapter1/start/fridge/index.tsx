@@ -128,6 +128,7 @@ export const Fridge: React.FC = () => {
 
     };
 
+
     return (
       <>
         <Plx parallaxData={parallaxData1} className="absolute bottom-0 opacity-0 z-0 h-screen w-screen"
@@ -175,8 +176,9 @@ export const Fridge: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col justify-center items-center w-screen h-screen text-black"><h2
-                  className="w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold mb-20 text-white">Ökobilanz-Vergleich</h2>
+                <div className="flex flex-col justify-center items-center w-screen h-screen text-black">
+                  <h2
+                    className="w-1/2 text-xl xs:text-3xl sm:text-4xl font-bold mb-20 text-white">Ökobilanz-Vergleich</h2>
                   <div className="w-1/2 mb-6"><CO2Statistics />
                   </div>
                   <div
