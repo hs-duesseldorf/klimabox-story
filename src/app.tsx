@@ -13,7 +13,6 @@ import { Post } from "./pages/post";
 
 import { Chapter1 } from "./pages/chapter1";
 import { Chapter2 } from "./pages/chapter2";
-import AudioIndex from "./components/audio-player/index";
 
 export const App: React.FC = () => (
   <HelmetProvider>
@@ -23,7 +22,6 @@ export const App: React.FC = () => (
         <Switch>
           <Route path="/vom-esstisch-in-die-arktis" component={Chapter1} />
           <Route path="/mobilitaet" component={Chapter2} />
-          <Route path="/audio-test" component={AudioIndex}/>
           <Route path="/blog/:slug" component={Post} />
           <Route path="/blog" component={Blog} />
           <Route exact path="/" component={Stories} />
