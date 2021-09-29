@@ -215,14 +215,19 @@
 }
 
 .appScreen {
-    top: 21%;
-    width: 90%;
+    top: 77%;
+    width: 82%;
     transform: rotateZ(90deg);
-    left: 22%;
+    left: -15%;
+}
+
+.appScreenBackground{
+    top: 26%;
 }
 
 .topbar {
     transform: rotateZ(180deg);
+    top: -7%;
 }
 
 .time {
@@ -243,6 +248,122 @@
     color: black;
     padding-top: 1%;
     font-size: 82%;
+}
+
+.quizContainer{
+    top: -5rem;
+    left: -44%;
+    width: 185%;
+    transform: scale(0.5);
+    background: lightgray;
+    border-radius: 35px;
+}
+
+.smartphoneAppTextContainer{
+    width: 80%;
+    height: 13rem;
+    left: 9%;
+    margin-top: 6%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.smartphoneAppTextTitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    word-wrap: break-word;
+}
+
+.smartphoneAppTextText {
+    word-wrap: break-word;
+    font-size: 10px;
+    color: black;
+    white-space: pre-wrap;
+}
+
+.ladekabel{
+    top: 21%;
+    width: 25%;
+    left: 34%;
+}
+.ladekabelText{
+    top: 11%;
+    color: black;
+    left: 20%;
+}
+
+.ladeBalkenGruen {
+    width: 5%;
+    height: 5%;
+    background: limegreen;
+    border-radius: 6px;
+    left: 89%;
+    top: 1.5%;
+}
+
+.ladeBalkenGelb {
+    width: 4%;
+    height: 5%;
+    background: #FEED55;
+    border-radius: 6px;
+    left: 89%;
+    top: 1.5%;
+}
+
+.notebookChoiceSmartphoneRoute {
+    width: 24%;
+    top: 27%;
+    left: 55%;
+}
+
+.tabletChoiceSmartphoneRoute{
+    width: 20%;
+    top: 30%;
+    left: 23%;
+}
+.smartphoneRouteChoiceText{
+    color: black;
+    top: 16%;
+    left: 25%;
+}
+.smartphoneEndScene{
+    background: lightgray;
+    width: 98%;
+    height: 15%;
+    left: 1%;
+    top: 1%;
+    border-radius: 13px;
+    border: 3px black;
+}
+
+.messageServiceTopRight{
+    font-size: 71%;
+    left: 92%;
+    color: black;
+    top: 2%;
+}
+
+.messageServiceTopLeft{
+    font-size: 71%;
+    left: 2%;
+    color: black;
+    top: 2%;
+}
+
+.messageServicePerson
+{
+    font-size: 71%;
+    left: 2%;
+    color: black;
+    top: 7%;
+}
+
+.messageServiceText{
+    font-size: 47%;
+    left: 2%;
+    color: black;
+    top: 11%;
 }
 
 @keyframes show-animation {

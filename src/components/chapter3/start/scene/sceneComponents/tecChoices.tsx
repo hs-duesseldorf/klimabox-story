@@ -6,7 +6,6 @@ import styles from "../../start.module.css";
 import { Sequence } from "../../interfaces/Chapter3Enum";
 import { getParallaxData } from "../animationParallaxData";
 
-
 export const TecChoices: React.FC<{
   setSequence: React.Dispatch<React.SetStateAction<Sequence>>,
   setParallaxData: React.Dispatch<React.SetStateAction<any>>,
@@ -19,7 +18,7 @@ export const TecChoices: React.FC<{
   const clickhandler = (sequence: Sequence) => {
     switch (sequence) {
       case Sequence.Smartphone: setSequence(Sequence.Smartphone);
-        setClientHeight("6000vh");
+        setClientHeight("6100vh");
         setParallaxData(getParallaxData(document.documentElement.clientHeight, document.documentElement.clientWidth));
         break;
       default:
