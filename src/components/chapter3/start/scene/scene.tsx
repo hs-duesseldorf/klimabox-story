@@ -44,7 +44,7 @@ export const Scene: React.FC = () => {
     <div style={{ height: `${clientHeight}` }}>
 
       <div className="fixed w-full h-full">
-        <Plx className={"absolute absolute w-full h-full"} parallaxData={parallaxData.sceneData}
+        <Plx className={"absolute w-full h-full"} parallaxData={parallaxData.sceneData}
              animateWhenNotInViewport={true}>
           <Plx className={`absolute w-full h-full`} parallaxData={parallaxData.backgroundData}
                animateWhenNotInViewport={true}>
