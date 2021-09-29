@@ -16,7 +16,7 @@ const items: NavItem[] = [
 ];
 
 export const Header: React.FC<{ onDark?: boolean }> = ({ onDark }) => (
-  <div className="absolute w-full top-0 pt-6 pb-6 mb-3 z-10">
+  <div className="absolute w-full top-0 pt-6 pb-6 mb-3 z-50">
     <div className="center-box">
       <div className={cn("uppercase tracking-wider", onDark && "text-white")}>
         <div className="flex items-center">

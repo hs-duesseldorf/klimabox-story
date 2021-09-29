@@ -163,6 +163,7 @@ export const Fridge: React.FC = () => {
       // @ts-ignore
       meatContainer.current.style.display = "block";
       setText("Wähle aus, was du am liebsten isst");
+
     };
 
     return (

@@ -62,6 +62,10 @@ module.exports = {
         "95%": "95%",
         "100%": "100%",
       },
+      borderRadius: {
+        'round': '1.2rem',
+        ...defaultTheme.borderRadius,
+      }
     },
     screens: {
       xs: "380px",
