@@ -36,10 +36,10 @@ export function CategoriesFilterControl() {
     if (loggedInUser) {
       const foundUser = JSON.parse(loggedInUser);
       setUser(foundUser);
+      fetchTopics();
     } else {
       setUser(undefined);
     }
-    fetchTopics();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [localStorage.getItem('user')]);
 

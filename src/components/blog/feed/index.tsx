@@ -31,6 +31,8 @@ function PostList({ sortMethod }: { sortMethod: SortMethod<FeedItemData> }) {
 
     if (loggedInUser) {
       fetchFavorits();
+    } else {
+      setLoaded(true);
     }
     if (data) setFirstRenderDone(true);
   }, [data]);
