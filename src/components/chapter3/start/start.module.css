@@ -1,0 +1,377 @@
+
+.graffiti1 {
+    width: 100%;
+    height: 162%;
+    top: -79%;
+    left: -34%;
+}
+
+.graffiti2 {
+    width: 100%;
+    height: 195%;
+    top: -119%;
+    left: 118%;
+}
+
+.street {
+    width: 100%;
+    height: 100%;
+}
+
+.tree1 {
+    width: 29%;
+    height: 73%;
+    left: 10%;
+    top: 5%;
+}
+
+.tree2 {
+    width: 29%;
+    height: 73%;
+    left: 51%;
+    top: 2%;
+}
+
+.tree3 {
+    width: 29%;
+    height: 73%;
+    left: 112%;
+    top: 6%;
+}
+
+.hochhaus {
+    top: -64%;
+    left: 61%;
+    width: 61%;
+}
+
+.car {
+    left: 37%;
+    top: 45%;
+    width: 51%;
+}
+
+.human {
+    top: 40%;
+    left: 51%;
+    opacity: 0;
+}
+
+.wall {
+    left: 164%;
+    top: -11%;
+    width: 100%;
+    height: 100%;
+}
+
+.door {
+    top: 41%;
+    left: 26%;
+}
+
+.takeItEasy {
+    top: 46%;
+    left: 9%;
+}
+
+.techSolutions {
+    top: 14%;
+    left: 25%;
+}
+
+.telephone {
+    top: 42%;
+    left: 52%;
+}
+
+.lamp {
+    top: 29%;
+    left: 157%;
+    width: 14%;
+}
+
+.blackCut {
+    top: 100%;
+}
+
+.laptop {
+    top: 43%;
+    left: 77%;
+}
+
+.tv {
+    top: 30%;
+    left: 80%;
+}
+
+.indoorLamp {
+    top: 34%;
+    left: 71%;
+}
+
+.drone {
+    top: 64%;
+    left: 37%;
+}
+
+.plant1 {
+    top: 55%;
+    left: 84%;
+}
+
+.plant2 {
+    top: 54%;
+    left: 55%;
+    width: 5%;
+}
+
+.plant3 {
+    top: 50%;
+    left: 63%;
+    width: 4%;
+}
+
+.massenvisualsierung1 {
+    top: -108%;
+    width: 100%;
+    height: 100%;
+}
+
+.massenvisualsierung2 {
+    top: -29%;
+    width: 100%;
+    height: 100%;
+}
+
+.mText {
+    text-align: center;
+    top: -50%;
+    background: rgba(1, 1, 1, 0.5);
+    font-size: 270%;
+    backdrop-filter: blur(5px);
+    height: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.mContainer {
+    top: 220%;
+}
+
+.mParticle {
+    animation: show-animation 4s infinite ease-in-out;
+}
+
+.desk {
+    top: 2%;
+}
+
+.notebook {
+    top: 50%;
+    left: 62%;
+}
+
+.tablet {
+    top: 71%;
+    left: 39%;
+}
+
+.smartphone {
+    top: 75%;
+    left: 19%;
+}
+
+.choiceText {
+    width: 60%;
+    top: 30%;
+    left: 21%;
+    font-size: 215%;
+    backdrop-filter: blur(6px);
+    text-align: center;
+    background: rgba(1, 1, 1, 0.4);
+    border-radius: 25px;
+}
+
+.smartphonePath {
+    top: 48%;
+    left: -40%;
+}
+
+.app {
+    top: 47.5%;
+    left: 68%;
+}
+
+.appSelection {
+    top: 47.3%;
+    width: 8%;
+    left: 67.4%;
+}
+
+.klimaboxAppLogo {
+    top: 52.5%;
+    left: 68%;
+    font-size: 62%;
+}
+
+.appScreen {
+    top: 77%;
+    width: 82%;
+    transform: rotateZ(90deg);
+    left: -15%;
+}
+
+.appScreenBackground{
+    top: 26%;
+}
+
+.topbar {
+    transform: rotateZ(180deg);
+    top: -7%;
+}
+
+.time {
+    left: 1%;
+    color: black;
+    padding-top: 1%;
+    font-size: 82%;
+}
+
+.battery {
+    padding-top: 1%;
+    left: 89%;
+    width: 8%;
+}
+
+.batteryLife {
+    left: 83%;
+    color: black;
+    padding-top: 1%;
+    font-size: 82%;
+}
+
+.quizContainer{
+    top: -5rem;
+    left: -44%;
+    width: 185%;
+    transform: scale(0.5);
+    background: lightgray;
+    border-radius: 35px;
+}
+
+.smartphoneAppTextContainer{
+    width: 80%;
+    height: 13rem;
+    left: 9%;
+    margin-top: 6%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.smartphoneAppTextTitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    word-wrap: break-word;
+}
+
+.smartphoneAppTextText {
+    word-wrap: break-word;
+    font-size: 10px;
+    color: black;
+    white-space: pre-wrap;
+}
+
+.ladekabel{
+    top: 21%;
+    width: 25%;
+    left: 34%;
+}
+.ladekabelText{
+    top: 11%;
+    color: black;
+    left: 20%;
+}
+
+.ladeBalkenGruen {
+    width: 5%;
+    height: 5%;
+    background: limegreen;
+    border-radius: 6px;
+    left: 89%;
+    top: 1.5%;
+}
+
+.ladeBalkenGelb {
+    width: 4%;
+    height: 5%;
+    background: #FEED55;
+    border-radius: 6px;
+    left: 89%;
+    top: 1.5%;
+}
+
+.notebookChoiceSmartphoneRoute {
+    width: 24%;
+    top: 27%;
+    left: 55%;
+}
+
+.tabletChoiceSmartphoneRoute{
+    width: 20%;
+    top: 30%;
+    left: 23%;
+}
+.smartphoneRouteChoiceText{
+    color: black;
+    top: 16%;
+    left: 25%;
+}
+.smartphoneEndScene{
+    background: lightgray;
+    width: 98%;
+    height: 15%;
+    left: 1%;
+    top: 1%;
+    border-radius: 13px;
+    border: 3px black;
+}
+
+.messageServiceTopRight{
+    font-size: 71%;
+    left: 92%;
+    color: black;
+    top: 2%;
+}
+
+.messageServiceTopLeft{
+    font-size: 71%;
+    left: 2%;
+    color: black;
+    top: 2%;
+}
+
+.messageServicePerson
+{
+    font-size: 71%;
+    left: 2%;
+    color: black;
+    top: 7%;
+}
+
+.messageServiceText{
+    font-size: 47%;
+    left: 2%;
+    color: black;
+    top: 11%;
+}
+
+@keyframes show-animation {
+    from {
+        top: -130%
+    }
+    to {
+        top: 70%
+    }
+}
+

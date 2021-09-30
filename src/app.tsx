@@ -21,6 +21,7 @@ import { Ticket } from "./pages/Ticket";
 import { PwResetRequest } from "./pages/PwResetRequest";
 import { PwReset } from "./pages/PwReset";
 import { EmailConfirm } from "./pages/EmailConfirm";
+import { Chapter3 } from "./pages/chapter3";
 
 export const App: React.FC = () => (
   <HelmetProvider>
@@ -30,6 +31,7 @@ export const App: React.FC = () => (
         <Switch>
           <Route path="/vom-esstisch-in-die-arktis" component={Chapter1} />
           <Route path="/mobilitaet" component={Chapter2} />
+          <Route path="/big-tech" component={Chapter3} />
 
           <Route path="/blog/:slug" component={Post} />
           <Route path="/blog" component={Blog} />

@@ -45,9 +45,9 @@ module.exports = {
         "2/3": "66.67%",
       },
       backgroundImage: theme => ({
-        'massvisualize-pig-pattern': "url('components/chapter1/start/fridge/massvisualize_pig.png')",
-        'massvisualize-avocado-pattern': "url('components/chapter1/start/fridge/avocado.gif')",
-        'massvisualize-milk-pattern': "url('components/chapter1/start/fridge/milk.gif')",
+        'massvisualize-pig-pattern': "url('components/chapter1/start/fridge/massvisualization/massvisualize_pig.png')",
+        'massvisualize-avocado-pattern': "url('components/chapter1/start/fridge/massvisualization/avocado.gif')",
+        'massvisualize-milk-pattern': "url('components/chapter1/start/fridge/massvisualization/milk.gif')",
       }),
       spacing: {
         "10%": "10%",
@@ -65,6 +65,10 @@ module.exports = {
       outline: {
         em1: '2px solid #3D99CE',
         black: '2px solid #6f6f6f'
+      },
+      borderRadius: {
+        'round': '1.2rem',
+        ...defaultTheme.borderRadius,
       }
     },
     screens: {

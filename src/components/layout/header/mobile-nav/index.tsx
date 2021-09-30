@@ -60,14 +60,14 @@ export function MobileNav({
                 </Link>
               </div>
               <div>
-                  <button onClick={handleLogOut}>Dashboard</button>
+                  <button onClick={handleLogOut}>Logout</button>
               </div>
             </>
           ) : (
             <>
               <div>
                 <Link to="/signin">
-                  <button>L</button>
+                  <button>Login</button>
                 </Link>
               </div>
               <div>
