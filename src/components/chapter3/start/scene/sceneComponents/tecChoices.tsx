@@ -17,7 +17,8 @@ export const TecChoices: React.FC<{
 
   const clickhandler = (sequence: Sequence) => {
     switch (sequence) {
-      case Sequence.Smartphone: setSequence(Sequence.Smartphone);
+      case Sequence.Smartphone:
+        setSequence(Sequence.Smartphone);
         setClientHeight("6100vh");
         setParallaxData(getParallaxData(document.documentElement.clientHeight, document.documentElement.clientWidth));
         break;
@@ -29,7 +30,7 @@ export const TecChoices: React.FC<{
   return (
     <div>
       <p className={`absolute ${styles.choiceText}`}>Welches Gerät nutzt du am liebsten?</p>
-      <img src={imgSmartphone} alt="imgSmartphone" className={`absolute ${styles.smartphone}`}
+      <img src={imgSmartphone} alt="imgSmartphone" className={`absolute ${styles.smartphone} cursor-pointer`}
            onClick={() => clickhandler(Sequence.Smartphone)} />
       <img src={imgNotebook} alt="imgNotebook" className={`absolute ${styles.notebook}`} />
       <img src={imgTablet} alt="imgTablet" className={`absolute ${styles.tablet}`} />

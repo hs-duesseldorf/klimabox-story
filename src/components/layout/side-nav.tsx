@@ -10,7 +10,7 @@ export class SideNav extends React.Component<sideNavProps>{
     render() {
         let color = this.props.hasDarkBackground? "#FFF": "#555";
         return (
-            <div className="fixed top-8 right-0 hidden sm:block cursor-pointer">
+            <div className="fixed top-8 right-0 hidden sm:block cursor-pointer z-30">
                 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 300 600">
                     <g className="right-0 hover:opacity-90" id="nav" data-name="nav" opacity="0.7">
                     <g id="graph" data-name="graph">
@@ -32,10 +32,12 @@ export class SideNav extends React.Component<sideNavProps>{
                                 <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="152.5" opacity="0" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">Mobilität</text>
                             </Link>
                         </g> 
-                        <g id="chapter_3" data-name="chapter_3" className="group"> 
+                        <g id="chapter_3" data-name="chapter_3" className="group">
+                          <Link to="/big-tech">
                                 <circle id="circle_3" data-name="circle_3" cx="300" cy="215" r="15" fill={this.props.chapter < 3? color : "#197eb7"}/>
                                 <text id="text_3" data-name="text_3" className="transform group-hover:-translate-x-95% transition duration-500 ease-in-out" dx="270" dy="222.5" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">3</text>
                                 <text className="transform group-hover:-translate-x-2/3 group-hover:opacity-100 transition duration-500 ease-in-out" dx="460" dy="222.5" opacity="0" fill={color} fontSize="20" fontFamily="ArialMT, Arial" textAnchor="end">Big Tech ohne Fußabdruck</text>
+                          </Link>
                         </g> 
                         <g id="chapter_4" data-name="chapter_4" className="group"> 
                                 <circle id="circle_4" data-name="circle_4" cx="300" cy="285" r="15" fill={this.props.chapter < 4? color : "#197eb7"}/>
@@ -56,7 +58,6 @@ export class SideNav extends React.Component<sideNavProps>{
                     <path className="hover:opacity-100" id="Icon_awesome-music" data-name="Icon awesome-music" d="M32,2A2,2,0,0,0,29.4.094L9.4,6A2,2,0,0,0,8,7.906V24.245A8.646,8.646,0,0,0,6,24c-3.314,0-6,1.791-6,4s2.686,4,6,4,6-1.791,6-4V13.394L28,8.706V20.245A8.646,8.646,0,0,0,26,20c-3.314,0-6,1.791-6,4s2.686,4,6,4,6-1.791,6-4V2Z" transform="translate(284.2, 490)" fill={color} opacity="0.7"/>
                     </g>
                 </svg>
-
             </div>
         );
     }

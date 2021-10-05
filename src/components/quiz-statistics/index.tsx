@@ -43,7 +43,7 @@ export const QuizStatistics: React.FC<{ quiz: QuizStatisticsInterface }> = ({ qu
             onClick={(e) => {
               clickHandler(e, choice);
             }}
-            className={` ${quiz.quizQuestionStyle} rounded-lg shadow-lg`}
+            className={` ${quiz.quizQuestionStyle} rounded-lg shadow-lg cursor-pointer`}
             key={i}
           >
             {choice.choice}
