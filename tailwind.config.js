@@ -62,6 +62,10 @@ module.exports = {
         "95%": "95%",
         "100%": "100%",
       },
+      outline: {
+        em1: '2px solid #3D99CE',
+        black: '2px solid #6f6f6f'
+      },
       borderRadius: {
         'round': '1.2rem',
         ...defaultTheme.borderRadius,

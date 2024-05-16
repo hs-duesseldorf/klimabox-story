@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Header } from "./header";
 import { Footer } from "./footer";
+import { Header } from "./header";
 import { SideNav } from "./side-nav";
 
 type LayoutProps = {

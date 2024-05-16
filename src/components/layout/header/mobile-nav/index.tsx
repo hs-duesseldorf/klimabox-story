@@ -10,9 +10,13 @@ import { SearchButton } from "../search-button";
 export function MobileNav({
   items,
   onDark,
+  user,
+  handleLogOut,
 }: {
   items: NavItem[];
   onDark?: boolean;
+  user?: any;
+  handleLogOut: () => void;
 }) {
   const { pathname } = useLocation();
   const [open, setOpen] = React.useState(false);
@@ -48,12 +52,31 @@ export function MobileNav({
           <SearchButton />
         </div>
         <div>
-          <div>
-            <button>Einloggen</button>
-          </div>
-          <div>
-            <button>Registrieren</button>
-          </div>
+          {user ? (
+            <>
+              <div>
+                <Link to="/dashboard">
+                  <button>Mein Bereich</button>
+                </Link>
+              </div>
+              <div>
+                  <button onClick={handleLogOut}>Logout</button>
+              </div>
+            </>
+          ) : (
+            <>
+              <div>
+                <Link to="/signin">
+                  <button>Login</button>
+                </Link>
+              </div>
+              <div>
+                <Link to="signup">
+                  <button>Registrieren</button>
+                </Link>
+              </div>
+            </>
+          )}
         </div>
       </div>
       <div className="absolute top-0 right-0 pointer-events-auto">

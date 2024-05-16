@@ -9,8 +9,10 @@ import { BookmarkButton } from "../../single/bookmark-button";
 import { DetailBar } from "./detail-bar";
 
 import styles from "./post.module.css";
+import { LatestPostData } from "../../wp/latest_post";
 
 export type ParsedPostData = {
+  slug: string;
   path: string;
   title: string;
   excerpt: string;
@@ -22,10 +24,11 @@ export type ParsedPostData = {
   tags?: TagData[];
 };
 
-export const Post: React.FC<{ data?: FeedItemData }> = ({ data }) => {
+export const Post: React.FC<{ data?: FeedItemData | LatestPostData, favorits: string[]}> = ({ data, favorits }) => {
   const parsedData = React.useMemo<ParsedPostData | undefined>(
     () =>
       data && {
+        slug: data.slug,
         path: `/blog/${data.slug}`,
         title: data.title,
         excerpt: data.excerpt,
@@ -84,7 +87,7 @@ export const Post: React.FC<{ data?: FeedItemData }> = ({ data }) => {
         </div>
       )}
       <div className="absolute right-1 -top-5">
-        <BookmarkButton disabled={!parsedData} />
+        <BookmarkButton slug={parsedData ? parsedData.slug : ""} disabled={!parsedData} posts={favorits} />
       </div>
     </div>
   );
